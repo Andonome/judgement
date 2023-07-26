@@ -64,28 +64,44 @@ Select a name by combining what everyone knows it for, with the type of land.
 
 'Rolling hills' ruled by somewhere famous for its library, might be called 'Bookhills', while a swamp, famous for its bards, might be called 'Songmarsh'.
 
+Write its name above.
+
 ## It leads to...
 
 Every area exists as an isolated little island, surviving alone in a sea of monstrous wilderness.
 But what about the road out of the area, which travel to new cities?
 
-Roll 1D4 to determine the number of roads out of the settlement.
+Roll 1D6 to determine the number of roads out of the settlement.
 
 1. A single road leads away from this area. If you have more than one settlement, this road leads back to last settlement.
-2. Two roads lead out.
-3. Three roads lead out, making the area an active location for trading.
-4. Four main roads lead away from the area.
-    * It contains a massive city, not simply a town at the centre.
-    * It contains 1D3 other walled towns inside its borders.
-    * One road must go to the settlement before the last (if it exists).
+2. Two roads out: one road back, and a new road onwards.
+3. Three roads lead out, draw two new roads out.
+4. j
+5. Four main roads lead away from the area, making this a proper town. Draw three more roads away.
+    * Draw two circles around it to show its importance.
+6. Four roads out of this massive city.
+    * Every village within 20 miles becomes a town.
+    * Villages without walls surround it, protected by its infantry, and by the nearby towns.
+
+### Cities
+
+Cities are surrounded by little villages with no walls, and around them, more towns.
+They create safety for all around them, with constant influx of guards, and the town around form a mild barrier.
 
 ### The Road Between
 
 For each connecting settlement, draw a road.
-Each road is 1D6 x 5 miles long.
-Draw it at 2cm per 5 miles.
+Roll to check its length.
 
-If you roll a 6, draw a connecting road to any previous settlement.
+1. 4 miles long.
+1. 8 miles long.
+1. 12 miles long.
+1. 16 miles long, 
+1. 20 miles long.
+1. Special (1D3):
+    1. Draw a road to any previous settlement.
+    1. A lonely tavern sits along this 24 mile road, with its own walls and supplies.
+    1. This 24 mile road splits in two half way along.
 
 ### Relationship
 
