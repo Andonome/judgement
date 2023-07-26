@@ -1,0 +1,180 @@
+\chapter{Encounters}
+
+\begin{boxtable}[l|XXXXX|c]
+&
+  \textbf{Village}  &
+  \textbf{Village, Edge}  &
+  \textbf{Village, Edge, Forest}  &
+  \textbf{Edge, Forest}  &
+  \textbf{Forest}  &
+  \\\hline
+\textbf{Hot} &
+  Flood    &
+  Heatwave       &
+  Bandits  &
+  Flood  &
+  Peace &
+  \textbf{4} \\
+\textbf{Hot, Mild} &
+  Peace &
+  Traders &
+  Rain  &
+  Vegetation  &
+  Cold Blooded Monster  &
+  \textbf{3}  \\
+\textbf{Hot, Mild, Cold}  &
+  Peace     &
+  Broken path    &
+  Storm  &
+  Peace  &
+  Warm Blooded Monster  &
+  \textbf{2}  \\
+Mild, Cold
+  &
+  Peace     &
+  Bandits        &
+  Peace &
+  Warm Blooded Monster  &
+  Peace  &
+  \textbf{1}  \\
+Cold &
+  Traders  &
+  Icy road       &
+  Snowfall  &
+  Peace  &
+  Hibernating monster  &
+  \textbf{0}  \\\hline
+&
+  \textbf{0}  &
+  \textbf{1}     &
+  \textbf{2}  &
+  \textbf{3}  &
+  \textbf{4}  & \\
+
+\end{boxtable}
+
+\begin{multicols}{2}
+
+\subsubsection*{Roll 2D3.}
+
+\begin{enumerate}
+  \item
+  The `left D3' determines the row.
+  \begin{itemize}
+    \item
+    Add -1 in the safety of nestled villages.
+    \item
+    Add +1 in the deep forests, beyond the last road.
+  \end{itemize}
+  \item
+  The `right D3' determines the column.
+  \begin{itemize}
+    \item
+    Add -1 in the cold seasons.
+    \item
+    Add +1 in the hot seasons.
+  \end{itemize}
+  \item
+  Add the encounters from every row and column.
+  
+\end{enumerate}
+
+\paragraph{Example:}
+Out at the \gls{edge}, the \gls{gm} rolls and finds the result of \textit{3, 2}'.
+Rolling a `3' (on the left-hand die) highlights the top row, and the `2' highlights the middle column.
+
+\begin{boxtable}[XXX|c]
+  \textbf{Village, Edge}  &
+  \textbf{Village, Edge, Forest}  &
+  \textbf{Edge, Forest} 
+  \\\hline
+  \underline{Peace}  &
+  \underline{Rain}  &
+  \underline{Vegetation}  &
+  \textbf{3}  \\
+  Broken path &
+  \underline{Storm} &
+  Peace &
+  \textbf{2} \\
+  Bandits &
+  \underline{Peace} &
+  Warm Blooded Monster &
+  \textbf{1}  \\\hline
+  \textbf{1}  &
+  \textbf{2}  &
+  \textbf{3}  \\
+\end{boxtable}
+
+The left-hand die has struck across `Peace', `Rain', and `Vegetation', while the right-hand die adds `Storm', and another `Peace'.
+
+\begin{exampletext}
+  The journey remains peaceful for several days, but clouds gather darkness overhead.
+  It breaks suddenly, at night, and the clouds pour out the threats they made over the last week.
+\end{exampletext}
+
+The \gls{gm} rolls 1D6 to find out what kind of weird vegetation will come into play, then rolls 2D6 to see how many days the troupe will enjoy their peace.
+
+The storm also gets a 1D6 roll, just to see how bad it is.
+
+\subsubsection{Peace}
+
+Every time you roll peace, add another 1D6 days of peace before the encounter hits.
+The party may arrive at their destination unharmed, with all encounters discarded.
+
+\subsubsection{Floods}
+
+Heat often brings flooding, especially around rivers.
+The \gls{tn} to overcome problems with flooding equals $7 + 1D6$.
+Floods can destroy bridges, roads, and even houses, although most people who live in areas prone to flooding will build their houses somewhere high, or put them on stilts.
+
+\subsubsection{Heatwaves}
+
+The forests present many dangers, but they at least provide protection against one of the most insidious.
+Heat begins by stripping people of their senses, and soon burns their skin.
+
+Mechanically, heatwaves inflict 1D6 Fatige on anyone in the area, although the right clothing and preparation (Intelligence + Wyldcrafting) will half the amount taken.
+
+Anyone foolish enough to wear heavy armour in a heatwave will always take the full brunt of the Fatigue Points, plus one per Weight Rating of the armour.
+
+\subsubsection{Bandits \& Brigands}
+
+Once farmers cannot sustain themselves any more, many turn to banditry.
+
+The number appearing is equal to $1D6\times 2 + 4$.
+
+If the left and right-hand dice both point to the bandits, then the party have encountered \emph{brigands} -- soldiers turned to crime.
+Brigands plan better, have excellent training, and the best weapons money can buy.
+
+
+\subsubsection{Traders \& Nomads}
+
+Local traders wander back and forth, pedalling what they have to places that do not have that thing.
+They form the blood of civilization.
+Unfortunately, they have a very short life expectancy, given all the beasts and bandits on the road.
+As a result, most wander the road armed, wearing armour outside of the warmer seasons, and often with a crossbow at their side.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{multicols}
