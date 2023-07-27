@@ -106,6 +106,8 @@ Roll to check its length.
 
 Draw the road at a scale of 1 mile = 0.5 cm.
 
+If a previous civilization lies inside the range of the road, connect them.
+
 ### Relationship
 
 Each new settlement has a relationship to its neighbour.
