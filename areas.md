@@ -78,8 +78,9 @@ Roll 1D6 to determine the number of roads out of the settlement.
 3. Two roads lead out, the second splits in two. There is nothing at the crossroads.
 4. Three roads lead out, draw two new roads out.
 5. Four main roads lead away from the area, making this a proper town. Draw three more roads away.
-    * Draw two circles around it to show its importance.
+    * Draw a circle around it to show its importance.
 6. Four roads out of this massive city.
+    * Draw two circles around it to show its importance.
     * Every village within 20 miles becomes a town.
     * Villages without walls surround it, protected by its infantry, and by the nearby towns.
 
