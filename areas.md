@@ -75,8 +75,8 @@ Roll 1D6 to determine the number of roads out of the settlement.
 
 1. A single road leads away from this area. If you have more than one settlement, this road leads back to last settlement.
 2. Two roads out: one road back, and a new road onwards.
-3. Three roads lead out, draw two new roads out.
-4. j
+3. Two roads lead out, the second splits in two. There is nothing at the crossroads.
+4. Three roads lead out, draw two new roads out.
 5. Four main roads lead away from the area, making this a proper town. Draw three more roads away.
     * Draw two circles around it to show its importance.
 6. Four roads out of this massive city.
