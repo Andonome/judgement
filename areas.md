@@ -103,6 +103,8 @@ Roll to check its length.
     1. A lonely tavern sits along this 24 mile road, with its own walls and supplies.
     1. This 24 mile road splits in two half way along.
 
+Draw the road at a scale of 1 mile = 0.5 cm.
+
 ### Relationship
 
 Each new settlement has a relationship to its neighbour.
