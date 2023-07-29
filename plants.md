@@ -1,4 +1,4 @@
-Exotic, dangerous, and occasionaly useful flora of Fenestra.
+Exotic, dangerous, and occasionally useful flora of Fenestra.
 
 ## Uproot
 Eating the root (after preparation) gives you +1 Strength for a scene.
@@ -12,7 +12,7 @@ Seekers sit passively, filling up with dust, waiting for a seed.
 The seeds are sticky, and float on the wind until they latch onto an animal (or traveller).
 One the carrier comes within range - poof!
 The dust spreads everywhere, and the seeds have been properly joined.
-The dust causes nautia, and sometimes hallucinations.
+The dust causes nausea, and sometimes hallucinations.
 
 ## Bedleafs
 These massive plants appear a little like gunnera, but larger.
@@ -65,9 +65,9 @@ even though the light is dimmer.
 ## Bloodwood
 Just the scent of sap extracted from the Bloodwood tree makes your blood rush. Refined, this sap is considered a potent aphrodisiac, 
 and many a noble past their prime is willing to pay well for it. Unfortunately, the sap is secreted only during the harshest winters, 
-and tends to attract and irritate local wildlife, making procuring it a risky endeavor.
+and tends to attract and irritate local wildlife, making procuring it a risky endeavour.
 
 ## Whistling Cane
-These swamp plants play an eerie tune on windy days. Inexperienced travelers might stray from their path, into the dangerous bog, 
+These swamp plants play an eerie tune on windy days. Inexperienced travellers might stray from their path, into the dangerous bog, 
 looking for the source of the sound. They can be crafted into musical instruments, but they're never popular, since their sound is 
 always sorrowful.
