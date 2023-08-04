@@ -1,64 +1,92 @@
-# Areas and Rulers
+## Area
 
 Welcome to Fenestra.
 Let's look around.
 
-## This is a land of...
+### Features of the Land
 
-(1D6)
+- Imagine a circle spanning your page
+- Draw 6 points along the circle, evenly spaced.
+- Label them 1-6.
+- Roll 1D6 and draw mountains around point *N*.
+- Draw hills outside of the mountains, towards the two nearby points.
+- Take the opposite point - this is the water. Roll 1D6 to find out what type of watery area this is:
+- Roll 1D6 to find out the type of water:
+    1. Swamp.
+    1. Lake.
+    1. Large lake, which also covers the centre of the map.
+    1. Sea, extending to the edge of the map.
+    1. Sea, which extends to the centre of the map, then the edge.
+    1. Vast sea. It borders the next numbered point, and covers everything until the edge of the map.
+- Add 2D6-4 islands to your water. Draw each one smaller than the last.
+- Roll 1D6 - this point has a road leading out to other lands. Draw it with a dotted line.
 
-1. rolling hills
-2. impenetrable forest
-3. coastal beaches
-4. open planes
-5. swampland
-6. an archipelago
+All the land is covered in trees, but do not draw them.
 
-## Ruled by...
+## Towns and Rivers
 
-(1D6)
+### Adding Towns
 
-1. 1D3 + 2 factions, each ready to kill the others (re-roll on this table with +1)
+- Roll 4D6 and add a town to every point which comes up on the dice. Ignore repeats.
+    - Draw a small circle to indicate the town.
+    - Towns on mountains indicate dwarves.
+- Draw a river from the mountains to each town.
+- Extend the rivers from the town to the water, touching every numbered point on the way.
+- For each town, roll 1D6 and add that many walled villages around it.
+    - Roll 1D6 for each walled village. It sits 1D6 miles from its town. Draw a dotted line to indicate the road.
+    - Each walled town sits next to water or rivers, as evenly spaced from each other as possible.
+    - If you roll an even number, the settlement has a road to the next (after the last number, comes the first).
+- Take each island-covered area, and add up to 1D6 settlements.
+    - If the islands lie by a point with a town, connect them.
+
+### It is Ruled by...
+
+For each town, roll 1D6 to determine its ruler.
+
+1. Multiple warring factions - roll twice more, with +1 to the first roll.
 2. a warlord, amassing an army to expand their power
-4. an opulent noble who demands half the wealth of all who enter
-3. a sorcerer king with no experience or business ruling
-3. a lich who demands all the dead in the area
+3. an opulent noble who demands 20% tithes from all who enter
+4. a sorcerer king with no experience or business ruling
+5. a lich who demands all the dead in the area
 6. a spoilt noble who has never seen a peasant
 7. A deceptive thieves' guild, with fingers in every pie
 
-## Dominated by...
+### Relations
 
-(add both dice)
+For each town, roll 1D6 to determine the relation between it and the next town.
 
-2. Gnomes
-3. Dwarves
-4. Elves
-5. or more; Humans
+1. War - Armies will clash soon. Draw 1D3 military outposts around each one.
+1. Bitter - they do not trade or speak.
+1. Neutral - draw a road connecting them, if none exists.
+1. Trading - draw a road between them, going through any walled towns.
+1. Allies - draw a road between them and place a Lonely Tavern upon it.
+1. Fierce allies - if one goes to war, the other will too.
 
-## Famous for...
+### Famous for...
 
-(roll another die and add it, twice)
+For each town, roll 1D6 and add the number of walled village and island settlements around it.
 
-3. Cartographers
-4. Deadly and magical plants
-5. Beast Arenas
-6. Trackers
-7. White rock
-8. Market artefacts
-9. Catacombs
-10. Craftsmen
+2. Cartographers
+3. Deadly and magical plants
+4. Beast Arenas
+5. Trackers
+6. White rock
+7. Jousting
+8. Catacombs
+9. Craftsmen
+10. Demihuman suburbs
 11. Bards
 12. Library
 13. Witchery
 14. Bath houses
 15. Horses
-16. Jousting
-17. Corrupt guards
-18. Demihuman suburbs
+16. Corrupt guards
+17. Massive ships
+18. Pirates
 
 *Mark your settlement on a piece of paper, and note its features*
 
-## They call it...
+### They call it...
 
 Select a name by combining what everyone knows it for, with the type of land.
 
@@ -66,69 +94,23 @@ Select a name by combining what everyone knows it for, with the type of land.
 
 Write its name above.
 
-## It leads to...
+## Oddities
 
-Every area exists as an isolated little island, surviving alone in a sea of monstrous wilderness.
-But what about the road out of the area, which travel to new cities?
+Every unoccupied point receives a hidden element:
 
-Roll 1D6 to determine the number of roads out of the settlement.
+1. Gnolls
+1. Gnomes
+1. Elves
+1. Lost city
+1. Witch commune
+1. Goblin warren
 
-1. A single road leads away from this area. If you have more than one settlement, this road leads back to last settlement.
-2. Two roads out: one road back, and a new road onwards.
-3. Two roads lead out, the second splits in two. There is nothing at the crossroads.
-4. Three roads lead out, draw two new roads out.
-5. Four main roads lead away from the area, making this a proper town. Draw three more roads away.
-    * Draw a circle around it to show its importance.
-6. Four roads out of this massive city.
-    * Draw two circles around it to show its importance.
-    * Every village within 20 miles becomes a town.
-    * Villages without walls surround it, protected by its infantry, and by the nearby towns.
+## Fiends
 
-### Cities
+Roll 3D6: each point which comes up has one fiend.
+    (does a fiend live in the city? or war with the inhabitants? Are the elves ruled by a dragon?)
 
-Cities are surrounded by little villages with no walls, and around them, more towns.
-They create safety for all around them, with constant influx of guards, and the town around form a mild barrier.
-
-### The Road Between
-
-For each connecting settlement, draw a road.
-Roll to check its length.
-
-1. 4 miles long.
-1. 8 miles long.
-1. 12 miles long.
-1. 16 miles long, 
-1. 20 miles long.
-1. Special (1D3):
-    1. Draw a road to any previous settlement.
-    1. A lonely tavern sits along this 24 mile road, with its own walls and supplies.
-    1. This 24 mile road splits in two half way along.
-
-Draw the road at a scale of 1 mile = 0.5 cm.
-
-If a previous civilization lies inside the range of the road, connect them.
-
-### Relationship
-
-Each new settlement has a relationship to its neighbour.
-
-1. Hatred: war brews between the two nobles.  Neither trusts sentries of the other.
-2. Irritation: the two sides have had little skirmishes, and plenty of disagreements about which villages belong to whom.
-3. Neutral parties - neither speaks much with the other, but as long as trade seems mutually profitable, no problem.
-4. Allies in trade - their people depend upon each other for their primary goods.
-5. Alliances have been sworn, and they have embarked upon a shared venture.
-6. Fierce allies - neither will break their word when given to the other, and they seek to make as many more connections together as they can.
-
-Draw its relationship along the road.
-
-# Local Fiends
-
-Horrifying creatures and groups hold large territories, and humans generally live, and forge roads, along the borders.
-If neither feind wishes to approach the other, then the border between the groups becomes a little safer.
-
-Take a cell which exists between your civilizations, created by the roads, and roll to find what kind of fiend lives there.
-
-## The legendary...
+### The legendary...
 
 1. Troupe of outlaws
 1. Ogre king
@@ -139,7 +121,7 @@ Take a cell which exists between your civilizations, created by the roads, and r
 
 (take the fiend's number and add it to all other rolls)
 
-## Who Wishes...
+### Who Wishes...
 
 1. to return to society, without giving up their gold.
 1. to kill a local noble who keeps sending trackers after them.
@@ -160,7 +142,7 @@ Take a cell which exists between your civilizations, created by the roads, and r
 1. to watch birds in peace (do not make noise on the road).
 1. a child to raise as their own.
 
-## Watch out, because they have...
+### Watch out, because they have...
 
 1. gained the sympathies of local villagers, who will help them.
 1. great many soldiers - 1D3 x 30 of them exist, with around 15 in each camp.
@@ -175,4 +157,7 @@ Take a cell which exists between your civilizations, created by the roads, and r
 1. cast a spell which forces those who venture close to forget what they came for.
 1. a garden which grows all manner of magical and deadly plants.
 1. the ability to detect sentient life anywhere in the area.
+
+
+---
 
