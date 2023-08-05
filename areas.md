@@ -9,10 +9,6 @@ It should only take an hour...
 
 Take a pencil, and a blank sheet of paper.
 
-Draw a line across the page to make a square for your map.
-The rest of the page is for notes about areas on the map.
-Leave room for 8 to 10 keys for the areas.
-
 ### Features of the Land
 
 - Imagine a circle spanning your page
@@ -20,8 +16,8 @@ Leave room for 8 to 10 keys for the areas.
 - Label them 1-6.
 - Roll 1D6 and draw mountains around point *N*.
 - Draw hills outside of the mountains, until you reach the nearest two points.
-- Take the opposite point - this is the water.
-- Roll 1D6 to find out what type of watery area this is:
+- Take the opposite point - there lies the water.
+- Roll 1D6 to find out the type of watery area:
     1. Swamp.
     1. Lake.
     1. Large lake, which also covers the centre of the map.
@@ -35,7 +31,8 @@ Leave room for 8 to 10 keys for the areas.
 - Draw a dotted line between all islands and nearby towns, indicating sea-routes.
 - Draw contour-lines around any lakes or sea.
 
-All the land beyond your mountains is covered in forest, but do not draw it.
+Forests cover all lands beyond the mountain, but do not draw them.
+Just know that they cover everything.
 
 ## Towns and Rivers
 
@@ -70,11 +67,11 @@ For each town, roll 1D6, and add the number of walled villages around it.
 10. Madness
 11. Witchcraft
 12. Beast Arenas
-    - Each one has 1D3 military outposts guarding against the other.
 13. Friendly with the next town - the locals go back and forth all the time.
 14. Statues of heroes litter the roads around.
 15. Pious monks pray on every corner.
-16. War is brewing with whoever lives on the next point on the map. Once the arrow supplies arrive, soldiers will march.
+16. War brews with whoever lives on the next point on the map. Once the arrow supplies arrive, soldiers will march.
+    - Each one has 1D3 military outposts guarding against the other.
 17. Demi-human suburbs, where all manner of other races live.
 18. The grandest library in the area.
 
@@ -82,7 +79,7 @@ For each town, roll 1D6, and add the number of walled villages around it.
 
 Select a name by combining what everyone knows it for, with the type of land.
 
-- A town in the hills is famous for its library. That's why they call it 'Page Valley'.
+- People know a town in the hills for its library. That's why they call it 'Page Valley'.
 - A swamp-edge town, famous for its bards, known as 'Songmarsh'.
 - A town by the sea, famed for Witchery. They call it 'Hexwave'.
 
@@ -110,23 +107,6 @@ Note the town's ruler under its name.
 - At each town, draw a road to the next town.
 - If you have more than 3 towns, go half-way along each road, and connect to half-way along the opposite road (2 towns along).
 - If you have a crossroads, place a Lonely Tavern.
-
-### Lonely Taverns
-
-These taverns exist on long stretches of road, far from any town, and charge high prices for a drink.
-They must live off traders passing through, and survive whatever the forest brings out.
-Normal people don't stay for long.
-Those who stay a while often have problems with the local law, as these places often make their own laws.
-Barkeeps punish any robbery close to the tavern harshly, but don't often care about what people do around the towns.
-
-Roll 1D6 to find the barkeep:
-
-1. A veteran of the Night Guard, with a hundred war-stories. Of course when he tells them, nobody can get a drink, so don't ask!
-1. Someone from one of the hidden oddities - perhaps a gnome, or someone descended from a nearby lost city.
-1. An outlander from so far away, nobody has ever heard of it. Every story he tells sounds made-up, but the strange accent shows he really does come from outside.
-1. A powerful mage who swore an oath never to use magic again. He won't say why.
-1. A collective - you stay as long as you like, earn your keep, then go when you please. Sometimes in the colder Seasons, the place just lies barren.
-1. A dwarf who records all he can. The patrons say he works as a spy for someone, but they disagree about whom.
 
 ## Hidden Oddities
 
@@ -202,4 +182,22 @@ For example:
 ### Inking
 
 Pull out a pen and emphasise what you can.
+
+
+### Lonely Taverns
+
+These taverns exist on long stretches of road, far from any town, and charge high prices for a drink.
+They must live off traders passing through, and survive whatever the forest brings out.
+Normal people don't stay for long.
+Those who stay a while often have problems with the local law, as these places often make their own laws.
+Barkeeps punish any robbery close to the tavern harshly, but don't often care about what people do around the towns.
+
+Roll 1D6 to find the barkeep:
+
+1. A veteran of the Night Guard, with a hundred war-stories. Of course when he tells them, nobody can get a drink, so don't ask!
+1. Someone from one of the hidden oddities - perhaps a gnome, or someone descended from a nearby lost city.
+1. An outlander from so far away, nobody has ever heard of it. Every story he tells sounds made-up, but the strange accent shows he really does come from outside.
+1. A powerful mage who swore an oath never to use magic again. He won't say why.
+1. A collective - you stay as long as you like, earn your keep, then go when you please. Sometimes in the colder Seasons, the place just lies barren.
+1. A dwarf who records all he can. The patrons say he works as a spy for someone, but they disagree about whom.
 
