@@ -3,7 +3,7 @@
 Welcome to Fenestra.
 Let's look around.
 
-It will only take an hour...
+It should only take an hour...
 
 ## The Page
 
@@ -105,16 +105,39 @@ For each town, roll 1D6 to determine its ruler.
 
 Note the town's ruler under its name.
 
-## Off Road Oddities
+## Roads
+
+- At each town, draw a road to the next town.
+- If you have more than 3 towns, go half-way along each road, and connect to half-way along the opposite road (2 towns along).
+- If you have a crossroads, place a Lonely Tavern.
+
+### Lonely Taverns
+
+These taverns exist on long stretches of road, far from any town, and charge high prices for a drink.
+They must live off traders passing through, and survive whatever the forest brings out.
+Normal people don't stay for long.
+Those who stay a while often have problems with the local law, as these places often make their own laws.
+Barkeeps punish any robbery close to the tavern harshly, but don't often care about what people do around the towns.
+
+Roll 1D6 to find the barkeep:
+
+1. A veteran of the Night Guard, with a hundred war-stories. Of course when he tells them, nobody can get a drink, so don't ask!
+1. Someone from one of the hidden oddities - perhaps a gnome, or someone descended from a nearby lost city.
+1. An outlander from so far away, nobody has ever heard of it. Every story he tells sounds made-up, but the strange accent shows he really does come from outside.
+1. A powerful mage who swore an oath never to use magic again. He won't say why.
+1. A collective - you stay as long as you like, earn your keep, then go when you please. Sometimes in the colder Seasons, the place just lies barren.
+1. A dwarf who records all he can. The patrons say he works as a spy for someone, but they disagree about whom.
+
+## Hidden Oddities
 
 Every unoccupied point, plus the map's centre, receives a hidden element:
 
+1. Goblin warren
 1. Gnolls
-1. Gnomes
-1. Elves
 1. Lost city
 1. Witch commune
-1. Goblin warren
+1. Elves
+1. Gnomes
 
 ## Fiends
 
