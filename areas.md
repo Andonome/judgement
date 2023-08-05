@@ -3,100 +3,111 @@
 Welcome to Fenestra.
 Let's look around.
 
+It will only take an hour...
+
+## The Page
+
+Take a pencil, and a blank sheet of paper.
+
+Draw a line across the page to make a square for your map.
+The rest of the page is for notes about areas on the map.
+Leave room for 8 to 10 keys for the areas.
+
 ### Features of the Land
 
 - Imagine a circle spanning your page
 - Draw 6 points along the circle, evenly spaced.
 - Label them 1-6.
 - Roll 1D6 and draw mountains around point *N*.
-- Draw hills outside of the mountains, towards the two nearby points.
-- Take the opposite point - this is the water. Roll 1D6 to find out what type of watery area this is:
-- Roll 1D6 to find out the type of water:
+- Draw hills outside of the mountains, until you reach the nearest two points.
+- Take the opposite point - this is the water.
+- Roll 1D6 to find out what type of watery area this is:
     1. Swamp.
     1. Lake.
     1. Large lake, which also covers the centre of the map.
+        - Add 1D3 islands.
     1. Sea, extending to the edge of the map.
-    1. Sea, which extends to the centre of the map, then the edge.
-    1. Vast sea. It borders the next numbered point, and covers everything until the edge of the map.
-- Add 2D6-4 islands to your water. Draw each one smaller than the last.
-- Roll 1D6 - this point has a road leading out to other lands. Draw it with a dotted line.
+        - Add 1D6-1 islands, then give half a walled village.
+    1. Sea, which extends to the centre of the map, then out to the edge.
+        - Add 1D6 islands, each with a walled village.
+    1. Vast sea. It stretches from this point, to the next numbered-point,\footnote{All points go in a circular order, so after 6 comes 1.} and then out to the edge of the map.
+        - Add 1D6+1 islands to your water, and give each a walled village.
+- Draw a dotted line between all islands and nearby towns, indicating sea-routes.
+- Draw contour-lines around any lakes or sea.
 
-All the land is covered in trees, but do not draw them.
+All the land beyond your mountains is covered in forest, but do not draw it.
 
 ## Towns and Rivers
 
 ### Adding Towns
 
-- Roll 4D6 and add a town to every point which comes up on the dice. Ignore repeats.
+- Roll 4D6 and add one town to every point which comes up on the dice. Ignore repeats.
     - Draw a small circle to indicate the town.
     - Towns on mountains indicate dwarves.
 - Draw a river from the mountains to each town.
-- Extend the rivers from the town to the water, touching every numbered point on the way.
-- For each town, roll 1D6 and add that many walled villages around it.
-    - Roll 1D6 for each walled village. It sits 1D6 miles from its town. Draw a dotted line to indicate the road.
-    - Each walled town sits next to water or rivers, as evenly spaced from each other as possible.
-    - If you roll an even number, the settlement has a road to the next (after the last number, comes the first).
-- Take each island-covered area, and add up to 1D6 settlements.
-    - If the islands lie by a point with a town, connect them.
+    - Each river starts from a separate point in the mountains.
+    - Rivers join after leaving a town, but never split.
+    - When towns sit behind a lake, the river meets the lake instead.
+- Extend each river from a town to the water, weaving through every numbered point along the way.
+- For each town, add 1D6 x 2 walled villages around it.
+    - Most walled villages sit next to water or rivers.
+    - All walled villages have a road to their town.
+    - Nearby walled villages have roads leading to each other.
+- Draw a dotted line between each town, indicating a road.
+- Roll 1D6 - this point has a route leading off the map, to lands uncharted. Draw the route with a dotted line.
+
+### Famous for...
+
+For each town, roll 1D6, and add the number of walled villages around it.
+
+3. Cartographers
+4. Deadly and magical plants
+5. Bath houses
+6. Trackers
+7. White rock
+8. Craftsmen
+9. Bards
+10. Madness
+11. Witchcraft
+12. Beast Arenas
+    - Each one has 1D3 military outposts guarding against the other.
+13. Friendly with the next town - the locals go back and forth all the time.
+14. Statues of heroes litter the roads around.
+15. Pious monks pray on every corner.
+16. War is brewing with whoever lives on the next point on the map. Once the arrow supplies arrive, soldiers will march.
+17. Demi-human suburbs, where all manner of other races live.
+18. The grandest library in the area.
+
+### They call it...
+
+Select a name by combining what everyone knows it for, with the type of land.
+
+- A town in the hills is famous for its library. That's why they call it 'Page Valley'.
+- A swamp-edge town, famous for its bards, known as 'Songmarsh'.
+- A town by the sea, famed for Witchery. They call it 'Hexwave'.
+
+Write the town's name on the line next to its number.
 
 ### It is Ruled by...
 
 For each town, roll 1D6 to determine its ruler.
 
 1. Multiple warring factions - roll twice more, with +1 to the first roll.
-2. a warlord, amassing an army to expand their power
-3. an opulent noble who demands 20% tithes from all who enter
-4. a sorcerer king with no experience or business ruling
-5. a lich who demands all the dead in the area
-6. a spoilt noble who has never seen a peasant
-7. A deceptive thieves' guild, with fingers in every pie
+2. Warlord, amassing an army to expand their power.
+    - Shipments of weapons come from the road to other lands.
+3. Opulent noble, who demands 20% tithes from all who enter.
+    - The local hidden Oddities annoy and fascinate them equally.
+4. Sorcerer king with no experience or business ruling.
+    - He once killed a fiend (roll 1D6 below to find which type), how hard could balls and arranged marriages be?
+5. A servant of the next fiend. All who oppose them die on the road (see below).
+6. Spoilt noble who has never seen a peasant.
+7. A crime-lord, with a history of theft, now risen to fortune...but not nobility.
 
-### Relations
+Note the town's ruler under its name.
 
-For each town, roll 1D6 to determine the relation between it and the next town.
+## Off Road Oddities
 
-1. War - Armies will clash soon. Draw 1D3 military outposts around each one.
-1. Bitter - they do not trade or speak.
-1. Neutral - draw a road connecting them, if none exists.
-1. Trading - draw a road between them, going through any walled towns.
-1. Allies - draw a road between them and place a Lonely Tavern upon it.
-1. Fierce allies - if one goes to war, the other will too.
-
-### Famous for...
-
-For each town, roll 1D6 and add the number of walled village and island settlements around it.
-
-2. Cartographers
-3. Deadly and magical plants
-4. Beast Arenas
-5. Trackers
-6. White rock
-7. Jousting
-8. Catacombs
-9. Craftsmen
-10. Demihuman suburbs
-11. Bards
-12. Library
-13. Witchery
-14. Bath houses
-15. Horses
-16. Corrupt guards
-17. Massive ships
-18. Pirates
-
-*Mark your settlement on a piece of paper, and note its features*
-
-### They call it...
-
-Select a name by combining what everyone knows it for, with the type of land.
-
-'Rolling hills' ruled by somewhere famous for its library, might be called 'Bookhills', while a swamp, famous for its bards, might be called 'Songmarsh'.
-
-Write its name above.
-
-## Oddities
-
-Every unoccupied point receives a hidden element:
+Every unoccupied point, plus the map's centre, receives a hidden element:
 
 1. Gnolls
 1. Gnomes
@@ -107,57 +118,65 @@ Every unoccupied point receives a hidden element:
 
 ## Fiends
 
-Roll 3D6: each point which comes up has one fiend.
-    (does a fiend live in the city? or war with the inhabitants? Are the elves ruled by a dragon?)
+- Roll 3D6: each point which comes up has one fiend between it and the next point.
+- Place the fiend on your map with the next number available, starting with '7'.
+- For each fiend, roll three dice, to determine its type, wishes, and ability.
 
 ### The legendary...
 
-1. Troupe of outlaws
+1. Bandit troupe
 1. Ogre king
-1. Necromancer
 1. Dragon
 1. Dryad
+1. Lich
 1. Hag
 
-(take the fiend's number and add it to all other rolls)
+Roll 1D6 twice, and add the fiend's number to each roll, to find out its desires and abilities.
+
+*You roll a '3', indicating a dragon. You roll '2, 6'.
+3+2 = 5, so this dragon needs standard medical supplies. Perhaps it has a tooth-ache.
+3+3 = 6, so this dragon wears full plat armour*
 
 ### Who Wishes...
 
-1. to return to society, without giving up their gold.
-1. to kill a local noble who keeps sending trackers after them.
-1. an alliance with the next fiend.
-1. to be serenaded by elven song.
-1. something beautiful to look at.
-1. better clothes.
-1. standard medical equipment.
-1. fresh corpses, and plenty of them. Humans preferred.
-1. standard supplies from villages. It's so hard to find someone who delivers!
-1. a massive pot, three bags of thyme, a gnomish cook and four fresh men.
-1. to acquire magical ingredients.
-1. the head of a local, disrespectful noble.
-1. magical ingredients.
-1. the legendary jewels owned by another troublesome person (roll to find the next danger).
-1. an alliance with the next fiend.
-1. to take the territory of the next fiend.
-1. to watch birds in peace (do not make noise on the road).
-1. a child to raise as their own.
+2. to return to society, without giving up their gold.
+3. to cement an alliance with the next fiend.
+4. something beautiful to look at.
+5. standard medical equipment.
+6. standard supplies from villages. It's so hard to find someone who delivers!
+7. a massive pot, three bags of thyme, a gnomish cook, and four fresh men.
+8. to acquire magical ingredients.
+9. to find out where those nearby hidden oddities live...
+10. to kill the next fiend, and take all they have.
+11. to watch birds in peace (do not make noise on the road).
+12. a child to raise as her own.
 
 ### Watch out, because they have...
 
-1. gained the sympathies of local villagers, who will help them.
-1. great many soldiers - 1D3 x 30 of them exist, with around 15 in each camp.
-1. made an alliance with another troublesome character (specifically, the next creature on the list)
-1. imprisoned a gnomish alchemist, and can force him to cast spells.
-1. a powerful magical item.
-1. myriad tunnels underground: currently empty, mostly. But nobody knows the full extent of them, only that myriad openings exist, most of which have been covered by a shallow layer of topsoil.
-1. complete plate armour.
-1. made a deal with the locals that they will not stray from the path. If anyone breaks this oath, one village shall be destroyed.
-1. a small fortress on an island. No one can approach safely, or without being noticed.
-1. a powerful magical item.
-1. cast a spell which forces those who venture close to forget what they came for.
-1. a garden which grows all manner of magical and deadly plants.
-1. the ability to detect sentient life anywhere in the area.
+2. gained the sympathies of some local villagers, who will help them.
+3. great many soldiers - 1D3 x 30 of them exist, with around 15 in each camp.
+4. made a temporary alliance with the last fiend on the list.
+5. imprisoned a gnomish alchemist, and can force him to cast spells.
+6. complete plate armour!
+7. a powerful magical item.
+8. myriad tunnels underground: currently empty, mostly. But nobody knows the full extent of them, only that myriad openings exist, most of which have been covered by a shallow layer of topsoil.
+9. a small fortress on an island. No one can approach safely, or without being noticed.
+10. a powerful magical item.
+11. cast a spell which forces those who venture close to forget what they came for.
+12. a garden which grows all manner of magical and deadly plants.
 
+## Finishing Touches
 
----
+### Name the Area
+
+Combine the fiend with the highest number, with the local water-type.
+For example:
+
+- 'Hag' + 'lake' = 'Haglake'
+- 'Dryad' + 'islands' = 'Drylands'
+- 'Lich' + 'sea' = 'Portlich' (stress on the first syllable!)
+
+### Inking
+
+Pull out a pen and emphasise what you can.
 
