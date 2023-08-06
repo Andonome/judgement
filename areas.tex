@@ -424,6 +424,46 @@ Roll $1D6$ to find the barkeep:
 People call them `stone dragons', to remind the young how deadly an apparently empty city becomes.
 Strange creatures always take residence in them.
 
+
+\begin{figure*}[b!]
+
+\begin{nametable}[c|p{.4\textwidth}|L|L]{Foraging}
+
+  \textbf{Roll} & \textbf{Place} & \textbf{Prize 1} & \textbf{Prize 2}\\\hline
+
+  \textbf{6} &
+    Under a hidden floorboard -- broken patches show something underneath &
+    \lootJewellery &
+    \lootMagic \\
+
+  \textbf{5} &
+    Hidden room, behind an old bookcase &
+    \lootJewellery &
+    \lootJewellery and \lootBig \\
+
+  \textbf{4} &
+    In empty home, inside a dark and empty doorway &
+    \lootJewellery, and \lootJewellery &
+    \lootJewellery, and \lootBig \\
+
+  \textbf{3} &
+    Inside a largely preserved house.
+    The family died peacefully, somehow\ldots &
+    \lootMedium &
+    \lootJewellery \\
+
+  \textbf{2} &
+    Behind a fully stone door, clearly used as a safe.
+  Opening it requires Intelligence + Crafts (\gls{tn} 13 to do so quietly, otherwise, \gls{tn} 7) & \lootJewellery & \lootMagic  \\
+
+  \textbf{1} &
+    Lying under a pile of human bones &
+    \lootBig &
+    \lootMagic \\
+
+\end{nametable}
+
+\end{figure*}
 \mapentry{The Cataclysm}
 
 Everyone fled the city long ago.
@@ -486,6 +526,7 @@ Ignore any repeats.
   Of course, only the largest of buildings, such as town halls, or theatres, can house such a massive creature.
 \end{enumerate}
 
+
 \mapentry{Dweller Relations}
 Each dweller in a lost city has a relationship with the others, depending on their relative numbers.
 Those with a higher number control or prey on those with a lower number.
@@ -505,30 +546,6 @@ Those with a higher number control or prey on those with a lower number.
 
 Draw a line, triangle, or square, to show the relations of the dwellers in the lost city.
 
-
-\begin{figure*}[b]
-
-\begin{nametable}[c|p{.4\textwidth}|L|L]{Foraging}
-
-  \textbf{Roll} & \textbf{Place} & \textbf{Prize 1} & \textbf{Prize 2}\\\hline
-
-  \textbf{6} & Under a hidden floorboard -- broken patches show something underneath & \lootJewellery & \lootMagic \\
-
-  \textbf{5} & Hidden room, behind an old bookcase & \lootBig & Lowest numbered dweller with \arabic{r4} \\
-
-  \textbf{4} & An empty home, just inside an dark and empty doorway & \lootJewellery & \lootBig \\
-
-  \textbf{3} & Sitting in the centre of an expensive family home, where skeletons remain, fully clothed. This family left on their own terms. & \lootMedium & \lootJewellery \\
-
-  \textbf{2} & Behind a fully stone door, clearly used as a safe.
-  Opening it prompts a second & \lootJewellery & \lootMagic  \\
-
-  \textbf{1} & Lying under a pile of bones & \lootBig & \lootMagic \\
-
-\end{nametable}
-
-\end{figure*}
-
 \mapentry{Tall Towers in the Labyrinth}
 
 Wooden rooves rot, leaving bear stone walls across much of the fallen city.
@@ -546,8 +563,12 @@ Roll $4D6$ to find how many tall buildings lie in the area.
   \item
   This tower has a single candle, and the light is clearly visible at night.
   If anyone enters, any sentient city-dwellers in the area will see them blocking the light, and investigate.
-
-  If no sentient life exists in the area, the candle has been left by a traveller who has left a note stating which creatures he has seen.
+  \begin{itemize}
+    \item
+    If no sentient life exists in the area, the candle has been left by a traveller who has left a note stating which creatures he has seen.
+    \item
+    All further towers on the roll of a \arabic{enumi} create an encounter with the dwellers with the lowest number.
+  \end{itemize}
   \item
   This tower stands tall enough to see all around.
   The bones of dead humans fill the stairway.
@@ -570,18 +591,21 @@ Any griffins in the area will inhabit all towers which number `4' or more!
 
 \mapentry{Whispers in the Cold Labyrinth}
 
-When the \glspl{pc} want to move through a lost city, they make a group roll of Dexterity + Stealth (\gls{tn} 10) to remain quiet.
+When the \glspl{pc} want to move through a lost city, they make a group roll of Dexterity + Stealth to remain quiet.
+The \gls{tn} is normally 10, but often easier.
 
 \begin{itemize}
   \item
-  +1 if moving at night (when the animals see less well, and the undead have other business to attend to.
+  -1 if moving at night.
   \item
-  +1 in the rain.
+  -1 in the rain.
   \item
-  +1 in a storm.
-  \item
-  -1 for foraging for valuables.
+  -1 in a storm.
 \end{itemize}
+
+\mapentry{The Chase}
+
+Any time the \glspl{pc} accidentally make a noise, they can try to gingerly run and hide.
 
 \begin{itemize}
   \item
@@ -600,6 +624,12 @@ When the \glspl{pc} want to move through a lost city, they make a group roll of 
 Each time the \glspl{pc} forage, they roll Intelligence + Vigilance (\gls{tn} 10) to figure out where the best loot lies.
 If they succeed, roll a two D6's -- the first determines the place, and the second determines the prize!
 
-Once they have a prize, cross it off the list.
+\begin{itemize}
+  \item
+  Once they have a prize, cross it off the list.
+  \item
+  If the \glspl{pc} split up, each one can perform individual rolls, so they will loot far more efficiently, but run more chance of one getting caught alone.
+
+\end{itemize}
 
 \end{multicols}
