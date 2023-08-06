@@ -424,10 +424,46 @@ Roll $1D6$ to find the barkeep:
 People call them `stone dragons', to remind the young how deadly an apparently empty city becomes.
 Strange creatures always take residence in them.
 
-Roll $3D6$ -- each number which comes up determines one tribe.
-Ignore any repeats.
+\mapentry{The Cataclysm}
 
-\mapentry{Wandering Tribes}
+Everyone fled the city long ago.
+The neighbouring towns don't always remember exactly where the city lies, but they always remember the tale of how it fell.
+
+\begin{enumerate}
+  \item
+  They burnt the wrong witch, and her enraged sister came to the city.
+  She made plants grow between every brick, and pulled down hailstones in the shape of carrots.
+  They killed her in the end, but the walls lay cracked beyond repair, and the central citadel had fallen.
+  \item
+  A fire started.
+  As people banded together to walk outside and escape the smoke, hungry residents of the forest began to watch them, and pick them off, bit by bit.
+  Some stayed in the nearby villages, but they could not keep everyone inside, so the rest tried to take boats or walk away.
+
+  Many who remained died of smoke inhalation.
+  The rest found that walls without guards do little good, as the fire died out, and beasts began to creep in.
+
+  By the time some inhabitants dared to return to the blackened rocks of their city, the forest had claimed the town as its own.
+  Then the city's new dwellers grew hungry, and one day the villages disappeared.
+  \item
+  A dragon came, full of hatred and hunger.
+  They say it still sleeps somewhere in the city, but who knows?
+  \item
+  Underground tunnels opened, and little goblins popped up.
+  Others followed soon, and one day, not long after, a horde ascended from the \gls{deep} to feast upon the city.
+  \item
+  Foolishness and bad luck lead to an unlikely series of calamities.
+  The local lords began a war with another civilization, and lost.
+  With fewer soldiers about, people suffered more casualties from the forest.
+  Less food from the farms lead to theft, and the lords demanded executions.
+
+  When the city's fighting-beasts escaped their cages, and fled from the arena through the streets, people decided they could take no more, and many left.
+  With a reduced population, limited food, and walls too long to properly guard, the city collapsed in on itself, bit by bit.
+\end{enumerate}
+
+\mapentry{Wandering Dwellers}
+
+Roll $3D6$ -- each number which comes up determines one type of city-dweller.
+Ignore any repeats.
 
 \begin{enumerate}
   \item
@@ -450,20 +486,120 @@ Ignore any repeats.
   Of course, only the largest of buildings, such as town halls, or theatres, can house such a massive creature.
 \end{enumerate}
 
-\mapentry{Monstrous Relations}
-Each tribe in a lost city has a relationship with the others.
+\mapentry{Dweller Relations}
+Each dweller in a lost city has a relationship with the others, depending on their relative numbers.
+Those with a higher number control or prey on those with a lower number.
 
 \begin{enumerate}
   \item
-  Tribes within \arabic{enumi} step of each other become allies if sentient, and otherwise ignore each other.
+  Dwellers within \arabic{enumi} step of each other become allies if sentient, and otherwise ignore each other.
   \item
-  A tribe \arabic{enumi} greater than another becomes aggressive, and the two begin to fight.
+  A dweller numbered \arabic{enumi} greater than another becomes aggressive, and the two begin to fight.
   \item
-  Tribes \arabic{enumi} ahead of another kill the lower form, and use the bodies to feed, or cast spells.
+  Dwellers \arabic{enumi} ahead of another kill the lower form, and use the bodies to feed, or cast spells.
   \item
-  Tribes \arabic{enumi} or \stepcounter{enumi}\arabic{enumi} ahead of another use magic or threats to control the lower tribe.
+  Dwellers \arabic{enumi} ahead of another use magic or threats to control the lesser dweller.
+  \item
+  Any dweller \arabic{enumi} ahead of another will ignore them entirely.
 \end{enumerate}
 
-Draw a line, triangle, or square, to show the relations of the tribes in the lost city.
+Draw a line, triangle, or square, to show the relations of the dwellers in the lost city.
+
+
+\begin{figure*}[b]
+
+\begin{nametable}[c|p{.4\textwidth}|L|L]{Foraging}
+
+  \textbf{Roll} & \textbf{Place} & \textbf{Prize 1} & \textbf{Prize 2}\\\hline
+
+  \textbf{6} & Under a hidden floorboard -- broken patches show something underneath & \lootJewellery & \lootMagic \\
+
+  \textbf{5} & Hidden room, behind an old bookcase & \lootBig & Lowest numbered dweller with \arabic{r4} \\
+
+  \textbf{4} & An empty home, just inside an dark and empty doorway & \lootJewellery & \lootBig \\
+
+  \textbf{3} & Sitting in the centre of an expensive family home, where skeletons remain, fully clothed. This family left on their own terms. & \lootMedium & \lootJewellery \\
+
+  \textbf{2} & Behind a fully stone door, clearly used as a safe.
+  Opening it prompts a second & \lootJewellery & \lootMagic  \\
+
+  \textbf{1} & Lying under a pile of bones & \lootBig & \lootMagic \\
+
+\end{nametable}
+
+\end{figure*}
+
+\mapentry{Tall Towers in the Labyrinth}
+
+Wooden rooves rot, leaving bear stone walls across much of the fallen city.
+Some walls collapse, opening new passages, while trees grow and thorny bushes grow to block doors and streets.
+A twisted, mossy, labyrinth forms.
+
+Despite the rot and chaos, some buildings still stand tall.
+Roll $4D6$ to find how many tall buildings lie in the area.
+
+\begin{enumerate}
+  \item
+  This tower has fallen to the ground, leaving nothing.
+  \item
+  This tower has one wall remaining -- a Speed + Athletics check (\gls{tn} 8) allows the climber to see a little in all four directions, but they cannot see anything clearly.
+  \item
+  This tower has a single candle, and the light is clearly visible at night.
+  If anyone enters, any sentient city-dwellers in the area will see them blocking the light, and investigate.
+
+  If no sentient life exists in the area, the candle has been left by a traveller who has left a note stating which creatures he has seen.
+  \item
+  This tower stands tall enough to see all around.
+  The bones of dead humans fill the stairway.
+
+  Any movement which disturbs the bones will send them falling down the stairs with a clank and a thud.
+  \Glspl{pc} must roll Dexterity + Stealth (\gls{tn} 11) to move past the bones without issue, or else waste \pgls{interval} moving everything down by hand (in this case they roll Dexterity + Crafts, \gls{tn} 7).
+  \item
+  The tallest of towers allow anyone inside to see all around.
+  They can receive a complete list of towers in the area, along with a +2 bonus to any forraging rolls, due to their understanding of the flow of the city.
+  \item
+  The tallest towers often have the least stability.
+  The \gls{pc} who climbs this far will receive the same benefits as above, but if their \gls{weight} is above 5, the structure begins collapsing.
+
+  They can run down (Speed + Athletics, \gls{tn} 9), but failure indicates the building has collapsed upon them, inflicting $4D6$ Damage.
+
+  Or the \gls{pc} can elect to jump, and try to grab something nearby (Speed + Athletics, \gls{tn} 12), but failure indicates that they will suffer a nasty fall of $2D6$ Damage.
+\end{enumerate}
+
+Any griffins in the area will inhabit all towers which number `4' or more!
+
+\mapentry{Whispers in the Cold Labyrinth}
+
+When the \glspl{pc} want to move through a lost city, they make a group roll of Dexterity + Stealth (\gls{tn} 10) to remain quiet.
+
+\begin{itemize}
+  \item
+  +1 if moving at night (when the animals see less well, and the undead have other business to attend to.
+  \item
+  +1 in the rain.
+  \item
+  +1 in a storm.
+  \item
+  -1 for foraging for valuables.
+\end{itemize}
+
+\begin{itemize}
+  \item
+  They can try to escape without making more noise with another Speed + Stealth check, this time at \gls{tn} 10.
+  \item
+  The dweller with the lowest number arrives the first time the \glspl{pc} fail a check, then the next dweller on the list, and so on.
+  \item
+  Once all dwellers have been alerted, the first two arrive to investigate the noise at the same time.
+  From then on, all dwellers come to investigate at every noise.
+  \item
+  Up to $1D3$ dwellers emerge at a time.
+\end{itemize}
+
+\mapentry{Foraging Quietly}
+
+Each time the \glspl{pc} forage, they roll Intelligence + Vigilance (\gls{tn} 10) to figure out where the best loot lies.
+If they succeed, roll a two D6's -- the first determines the place, and the second determines the prize!
+
+Once they have a prize, cross it off the list.
 
 \end{multicols}
