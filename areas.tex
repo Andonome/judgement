@@ -110,13 +110,12 @@ If it has 4 walled villages, roll $1D6+4$.
 \begin{enumerate}
 \setcounter{enumi}{2}
 \item
+  Fresh town -- every day, stone and wood comes in to build a little more each day.
+  Occasionally, parts of the wall collapse and archers flock to protect it.
+\item
   Trackers
 \item
-  Cartographers
-\item
   Deadly and magical plants
-\item
-  Bath houses
 \item
   \ifodd\value{r4}
     Ale (and the guild has tight control over the area)
@@ -136,14 +135,20 @@ If it has 4 walled villages, roll $1D6+4$.
 \item
   Witchcraft
 \item
+  \ifodd\value{r4}
   Friendly with the next town -- the locals go back and forth all the
-  time.
+    time.
+  \else
+    Cartographers
+  \fi
 \item
   Statues of heroes and gods litter the roads around.
 \item
   Beast Arenas (where people watch the beasts of the forest fight)
 \item
   Pious monks pray on every corner.
+\item
+  Bath houses
 \item
   War brews with the next town.
   Soldiers will march soon\ldots
