@@ -424,7 +424,7 @@ Roll $1D6$ to find this season's barkeep (they change all the time):
 \item
   An outlander from so far away, nobody has ever heard of it. Every
   story she tells sounds made-up, but the strange accent shows she really
-  does come from outside.
+  does come from somewhere distant.
 \item
   A powerful mage who swore an oath never to use magic again. He won't
   say why.
@@ -442,24 +442,28 @@ Roll $1D6$ to find this season's barkeep (they change all the time):
 Roll $3D6$ -- the \glspl{pc} can order any of these meals.
 
 \begin{enumerate}
-\item
+  \item
   \textbf{Get bent:} the barkeep's in a foul mood, because they need a day off.
-\item
-  \textbf{Bugger-all:} the first few barrels went rotten, and now someone's stolen the entire pot of soup.
-\item
-  \textbf{Griffin-wing:} freshly killed this morning, while they tried to take off with a gnomish patron.
-\item
+  \item
+  \ifodd\value{r4}
+    \textbf{Bugger-all:} the first few barrels went rotten, and now someone's stolen the entire pot of soup.
+  \else
+    \textbf{Griffin-wing:} freshly killed this morning, after the griffin tried to fly away with a gnomish patron.
+  \fi
+  \item
   \textbf{Mystery-stew, actually crawler-gloop (webbing as sauce!):} why are you hesitating?
   It goes rotten quick, so get eating!
-\item
+  \item
   \textbf{Eye-spy:} made with actual woodspy.
-\item
+  \item
   \textbf{Deer:} thank the man in black, sitting in the corner.
-\item
-  \textbf{Dwarf-beard:} actually just a type of seaweed, left as payment by a local trader; but it tastes just like the real thing!
-\item
-  \textbf{Snormoss soup:} the chef doesn't know that too much makes you drowsy.
-  A moment later, and half the tavern starts to sleep.
+  \item
+  \ifodd\value{r4}
+    \textbf{Dwarf-beard:} actually just a type of seaweed, left as payment by a local trader; but it tastes just like the real thing!
+  \else
+    \textbf{Snormoss soup:} the chef doesn't know that too much makes you drowsy.
+    A moment later, and half the tavern starts to sleep.
+  \fi
 \end{enumerate}
 
 \subsection{Lost Cities}
