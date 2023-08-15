@@ -20,20 +20,20 @@
   Traders &
   Rain  &
   Vegetation  &
-  Cold Blooded Monster  &
+  Cold Blooded Creature  &
   \textbf{3}  \\
 \textbf{Hot, Mild, Cold}  &
   Traders  &
   Broken path    &
   Storm  &
   Peace  &
-  Warm Blooded Monster  &
+  Warm Blooded Creature  &
   \textbf{2}  \\
 \textbf{Mild, Cold} &
   Peace     &
   Bandits        &
   Peace &
-  Warm Blooded Monster  &
+  Warm Blooded Creature  &
   Peace  &
   \textbf{1}  \\
 \textbf{Cold} &
@@ -97,7 +97,7 @@ Rolling a `3' (on the left-hand die) highlights the top row, and the `2' highlig
   \textbf{2} \\
   Bandits &
   \underline{Peace} &
-  Warm Blooded Monster &
+  Warm Blooded Creature &
   \textbf{1}  \\\hline
   \textbf{1}  &
   \textbf{2}  &
@@ -115,18 +115,18 @@ The \gls{gm} rolls 1D6 to find out what kind of weird vegetation will come into 
 
 The storm also gets a 1D6 roll, just to see how bad it is.
 
-\subsubsection{Peace}
+\subsection{Peace}
 
 Every time you roll peace, add another 1D6 days of peace before the encounter hits.
 The party may arrive at their destination unharmed, with all encounters discarded.
 
-\subsubsection{Floods}
+\subsection{Floods}
 
 Heat often brings flooding, especially around rivers.
 The \gls{tn} to overcome problems with flooding equals $7 + 1D6$.
 Floods can destroy bridges, roads, and even houses, although most people who live in areas prone to flooding will build their houses somewhere high, or put them on stilts.
 
-\subsubsection{Heatwaves}
+\subsection{Heatwaves}
 
 The forests present many dangers, but they at least provide protection against one of the most insidious.
 Heat begins by stripping people of their senses, and soon burns their skin.
@@ -135,7 +135,7 @@ Mechanically, heatwaves inflict 1D6 Fatige on anyone in the area, although the r
 
 Anyone foolish enough to wear heavy armour in a heatwave will always take the full brunt of the Fatigue Points, plus one per Weight Rating of the armour.
 
-\subsubsection{Bandits \& Brigands}
+\subsection{Bandits \& Brigands}
 
 Once farmers cannot sustain themselves any more, many turn to banditry.
 
@@ -145,24 +145,51 @@ If the left and right-hand dice both point to the bandits, then the party have e
 Brigands plan better, have excellent training, and the best weapons money can buy.
 
 
-\subsubsection{Traders \& Nomads}
+\subsection{Traders \& Nomads}
 
 Local traders wander back and forth, pedalling what they have to places that do not have that thing.
 They form the blood of civilization.
 Unfortunately, they have a very short life expectancy, given all the beasts and bandits on the road.
 As a result, most wander the road armed, wearing armour outside of the warmer seasons, and often with a crossbow at their side.
 
+\newcommand\showEncounter[1]{%
+  \item
+  \nameref{#1} (\autopageref{#1})
+}
+
+\subsection{Warm-Blooded Creatures}
+
+\begin{enumerate}
+  \showEncounter{bear}
+  \showEncounter{griffin}
+  \showEncounter{wolf}
+  \showEncounter{boar}
+  \showEncounter{dryad}
+  \showEncounter{auroch}
+\end{enumerate}
 
 
+\subsection{Cold-Blooded Creatures}
 
+\begin{enumerate}
+  \showEncounter{basilisk}
+  \showEncounter{chitincrawler}
+  \showEncounter{woodspy}
+  \showEncounter{mouthdigger}
+  \showEncounter{ooze}
+  \showEncounter{umber_hulk}
+\end{enumerate}
 
+\subsection{Vegetation}
 
-
-
-
-
-
-
+\begin{enumerate}
+  \showEncounter{dryads_kiss}
+  \showEncounter{uproot}
+  \showEncounter{seekers}
+  \showEncounter{bedleaves}
+  \showEncounter{thorny_thickets}
+  \showEncounter{mage_oak}
+\end{enumerate}
 
 
 
