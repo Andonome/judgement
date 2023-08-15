@@ -277,6 +277,7 @@ The party may arrive at their destination unharmed, with all encounters discarde
 \newcommand\showEncounter[1]{%
   \item
   \nameref{#1} (\autopageref{#1})
+
 }
 
 Add -1 during cold Seasons, and +1 during hot Seasons.
@@ -303,10 +304,32 @@ Add -1 during cold Seasons, and +1 during hot Seasons.
 
 Once farmers cannot sustain themselves any more, many turn to banditry.
 
-The number appearing is equal to $1D6\times 2 + 4$.
-
-If the left and right-hand dice both point to the bandits, then the party have encountered \emph{brigands} -- soldiers turned to crime.
+When soldiers cannot or will not sustain themselves on their duties, they become brigands.
 Brigands plan better, have excellent training, and the best weapons money can buy.
+
+The number appearing is equal to $1D6\times 2 + 4$.
+Rolling an odd number means brigands, rather than bandits.
+
+\newcommand\showBandits{
+  \item
+  \setcounter{enc}{\value{enumi}}
+  \multiply\value{enc} by 2
+  \addtocounter{enc}{4}
+  \arabic{enc} \ifodd\value{enumi}
+    Brigands
+  \else
+    Bandits
+  \fi
+}
+
+\begin{enumerate}
+  \showBandits
+  \showBandits
+  \showBandits
+  \showBandits
+  \showBandits
+  \showBandits
+\end{enumerate}
 
 \subsection{Traders \& Nomads}
 
@@ -317,18 +340,20 @@ As a result, most wander the road armed, wearing armour outside of the warmer se
 
 \subsection{Monsters}
 
-Add -1 during cold Seasons, and +1 during hot Seasons.
+Add -2 during cold Seasons, and +2 during hot Seasons.
 
 \begin{enumerate}
-  \setcounter{enumi}{-1}
+  \setcounter{enumi}{-2}
+  \showEncounter{ghast}
   \showEncounter{wolf}
-  \showEncounter{bear}
-  \showEncounter{griffin}
-  \showEncounter{woodspy}
   \showEncounter{dryad}
+  \showEncounter{mouthdigger}
+  \showEncounter{woodspy}
+  \showEncounter{griffin}
+  \showEncounter{bear}
   \showEncounter{chitincrawler}
   \showEncounter{basilisk}
-  \showEncounter{mouthdigger}
+  \showEncounter{umber_hulk}
 \end{enumerate}
 
 \subsection{Complications}
