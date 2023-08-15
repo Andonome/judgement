@@ -1,139 +1,256 @@
 \chapter[Encounters at the Crossroads]{Encounters}
 
-\begin{boxtable}[l|XXXXX|c]
-&
-  \textbf{Village}  &
-  \textbf{Village, Edge}  &
-  \textbf{Village, Edge, Forest}  &
-  \textbf{Edge, Forest}  &
-  \textbf{Forest}  &
-  \\\hline
-\textbf{Hot} &
-  Flood    &
-  Heatwave       &
-  Bandits  &
-  Flood  &
-  Peace &
-  \textbf{4} \\
-\textbf{Hot, Mild} &
-  Peace     &
-  Traders &
-  Rain  &
-  Vegetation  &
-  Cold Blooded Creature  &
-  \textbf{3}  \\
-\textbf{Hot, Mild, Cold}  &
-  Traders  &
-  Broken path    &
-  Storm  &
-  Peace  &
-  Warm Blooded Creature  &
-  \textbf{2}  \\
-\textbf{Mild, Cold} &
-  Peace     &
-  Bandits        &
-  Peace &
-  Warm Blooded Creature  &
-  Peace  &
-  \textbf{1}  \\
-\textbf{Cold} &
-  Peace &
-  Icy road       &
-  Snowfall  &
-  Peace  &
-  Hibernating monster  &
-  \textbf{0}  \\\hline
-&
-  \textbf{0}  &
-  \textbf{1}     &
-  \textbf{2}  &
-  \textbf{3}  &
-  \textbf{4}  & \\
+\setcounter{enc}{0}
+\setcounter{track}{0}
 
-\end{boxtable}
+% This is an array of encounters.
+
+\newcommand\encBigList{
+  \ifcase\value{enc}\relax
+    \ifcase\value{track}\relax% Hot Seasons
+      Flood
+    \or
+      Bandits
+    \or
+      Heatwave
+    \or
+      Flood
+    \else
+      Peace
+    \fi
+  \or
+    \ifcase\value{track}\relax% Hot + Mild Seasons
+      Peace
+    \or
+      Traders
+    \or
+      Rain
+    \or
+      Peace
+    \else
+      Monster
+    \fi
+  \or
+    \ifcase\value{track}\relax% All Seasons
+      Traders
+    \or
+      Broken Path
+    \or
+      Storm
+    \or
+      Peace
+    \else
+      Monster
+    \fi
+  \or
+    \ifcase\value{track}\relax% Mild + Cold Seasons
+      Peace
+    \or
+      Bandits
+    \or
+      Peace
+    \or
+      Monster
+    \else
+      Peace
+    \fi
+  \else
+    \ifcase\value{track}\relax% Mild + Cold Seasons
+      Peace
+    \or
+      Icy Roads
+    \or
+      Snowfall
+    \or
+      Peace
+    \else
+      Peace
+    \fi
+  \fi
+}
+
+\subsection{Hot Seasons}
+
+\begin{multicols}{3}
+
+\begin{nametable}[l|YYY]{Villages}
+  & \textbf{1} & \textbf{2} & \textbf{3} \\
+  \setcounter{enc}{0}
+  \setcounter{track}{0}
+  \textbf{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{0}
+  \textbf{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{0}
+  \textbf{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+\end{nametable}
+
+\begin{nametable}[l|YYY]{Edge}
+  & \textbf{1} & \textbf{2} & \textbf{3} \\
+  \setcounter{enc}{0}
+  \setcounter{track}{1}
+  \textbf{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{1}
+  \textbf{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{1}
+  \textbf{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+\end{nametable}
+
+\begin{nametable}[l|YYY]{Forest}
+  & \textbf{1} & \textbf{2} & \textbf{3} \\
+  \setcounter{enc}{0}
+  \setcounter{track}{2}
+  \textbf{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{2}
+  \textbf{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{2}
+  \textbf{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+\end{nametable}
+
+\end{multicols}
+
+\subsection{Mild Seasons}
+
+\begin{multicols}{3}
+
+\begin{nametable}[l|YYY]{Villages}
+  & \textbf{1} & \textbf{2} & \textbf{3} \\
+  \setcounter{enc}{1}
+  \setcounter{track}{0}
+  \textbf{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{0}
+  \textbf{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{0}
+  \textbf{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+\end{nametable}
+
+\begin{nametable}[l|YYY]{Edge}
+  & \textbf{1} & \textbf{2} & \textbf{3} \\
+  \setcounter{enc}{1}
+  \setcounter{track}{1}
+  \textbf{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{1}
+  \textbf{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{1}
+  \textbf{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+\end{nametable}
+
+\begin{nametable}[l|YYY]{Forest}
+  & \textbf{1} & \textbf{2} & \textbf{3} \\
+  \setcounter{enc}{1}
+  \setcounter{track}{2}
+  \textbf{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{2}
+  \textbf{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{2}
+  \textbf{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+\end{nametable}
+\end{multicols}
+
+\subsection{Cold Seasons}
+
+\begin{multicols}{3}
+
+\begin{nametable}[l|YYY]{Villages}
+  & \textbf{1} & \textbf{2} & \textbf{3} \\
+  \setcounter{enc}{2}
+  \setcounter{track}{0}
+  \textbf{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{0}
+  \textbf{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{0}
+  \textbf{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+\end{nametable}
+
+\begin{nametable}[l|YYY]{Edge}
+  & \textbf{1} & \textbf{2} & \textbf{3} \\
+  \setcounter{enc}{2}
+  \setcounter{track}{1}
+  \textbf{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{1}
+  \textbf{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{1}
+  \textbf{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+\end{nametable}
+
+\begin{nametable}[l|YYY]{Forest}
+  & \textbf{1} & \textbf{2} & \textbf{3} \\
+  \setcounter{enc}{2}
+  \setcounter{track}{2}
+  \textbf{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{2}
+  \textbf{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \stepcounter{enc}
+  \setcounter{track}{2}
+  \textbf{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+\end{nametable}
+
+\end{multicols}
 
 \begin{multicols}{2}
 
-\subsubsection*{Roll 2D3.}
+
+\subsubsection*{Rolls}
+
 
 \begin{enumerate}
   \item
-  The `left D3' determines the row.
-  \begin{itemize}
-    \item
-    Add -1 in the safety of nestled villages.
-    \item
-    Add +1 in the deep forests, beyond the last road.
-  \end{itemize}
+  Start with the current Season.
   \item
-  The `right D3' determines the column.
-  \begin{itemize}
-    \item
-    Add -1 in the cold seasons.
-    \item
-    Add +1 in the hot seasons.
-  \end{itemize}
+  Select the location: villages, edge, or forest.
   \item
-  Add the encounters from every row and column.
-  
+  Roll 1D3 to find the column, and add those three encounters.
+  \item
+  Roll 1D3 to determine the row, and add the two new encounters from the row.
+  \item
+  Combine all five encounters into a narrative.
 \end{enumerate}
-
-\paragraph{Example:}
-Out at the \gls{edge}, the \gls{gm} rolls and finds the result of \textit{3, 2}'.
-Rolling a `3' (on the left-hand die) highlights the top row, and the `2' highlights the middle column.
-
-\begin{boxtable}[XXX|c]
-  \textbf{Village, Edge}  &
-  \textbf{Village, Edge, Forest}  &
-  \textbf{Edge, Forest} 
-  \\\hline
-  \underline{Peace}  &
-  \underline{Rain}  &
-  \underline{Vegetation}  &
-  \textbf{3}  \\
-  Broken path &
-  \underline{Storm} &
-  Peace &
-  \textbf{2} \\
-  Bandits &
-  \underline{Peace} &
-  Warm Blooded Creature &
-  \textbf{1}  \\\hline
-  \textbf{1}  &
-  \textbf{2}  &
-  \textbf{3}  \\
-\end{boxtable}
-
-The left-hand die has struck across `Peace', `Rain', and `Vegetation', while the right-hand die adds `Storm', and another `Peace'.
-
-\begin{exampletext}
-  The journey remains peaceful for several days, but clouds gather darkness overhead.
-  It breaks suddenly, at night, and the clouds pour out the threats they made over the last week.
-\end{exampletext}
-
-The \gls{gm} rolls 1D6 to find out what kind of weird vegetation will come into play, then rolls 2D6 to see how many days the troupe will enjoy their peace.
-
-The storm also gets a 1D6 roll, just to see how bad it is.
 
 \subsection{Peace}
 
 Every time you roll peace, add another 1D6 days of peace before the encounter hits.
 The party may arrive at their destination unharmed, with all encounters discarded.
 
-\subsection{Floods}
+\newcommand\showEncounter[1]{%
+  \item
+  \nameref{#1} (\autopageref{#1})
+}
 
-Heat often brings flooding, especially around rivers.
-The \gls{tn} to overcome problems with flooding equals $7 + 1D6$.
-Floods can destroy bridges, roads, and even houses, although most people who live in areas prone to flooding will build their houses somewhere high, or put them on stilts.
+Add -1 during cold Seasons, and +1 during hot Seasons.
 
-\subsection{Heatwaves}
-
-The forests present many dangers, but they at least provide protection against one of the most insidious.
-Heat begins by stripping people of their senses, and soon burns their skin.
-
-Mechanically, heatwaves inflict 1D6 Fatige on anyone in the area, although the right clothing and preparation (Intelligence + Wyldcrafting) will half the amount taken.
-
-Anyone foolish enough to wear heavy armour in a heatwave will always take the full brunt of the Fatigue Points, plus one per Weight Rating of the armour.
+\begin{enumerate}
+  \setcounter{enumi}{-1}
+  \item
+  Hibernating Chitincrawler (\autopageref{chitincrawler})
+  \item
+  Deer
+  \showEncounter{auroch}
+  \showEncounter{boar}
+  \showEncounter{mage_oak}
+  \showEncounter{uproot}
+  \ifodd\value{r3}
+    \showEncounter{dryads_kiss}
+  \else
+    \showEncounter{bedleaves}
+  \fi
+  \showEncounter{seekers}
+\end{enumerate}
 
 \subsection{Bandits \& Brigands}
 
@@ -144,7 +261,6 @@ The number appearing is equal to $1D6\times 2 + 4$.
 If the left and right-hand dice both point to the bandits, then the party have encountered \emph{brigands} -- soldiers turned to crime.
 Brigands plan better, have excellent training, and the best weapons money can buy.
 
-
 \subsection{Traders \& Nomads}
 
 Local traders wander back and forth, pedalling what they have to places that do not have that thing.
@@ -152,55 +268,38 @@ They form the blood of civilization.
 Unfortunately, they have a very short life expectancy, given all the beasts and bandits on the road.
 As a result, most wander the road armed, wearing armour outside of the warmer seasons, and often with a crossbow at their side.
 
-\newcommand\showEncounter[1]{%
-  \item
-  \nameref{#1} (\autopageref{#1})
-}
+\subsection{Monsters}
 
-\subsection{Warm-Blooded Creatures}
+Add -1 during cold Seasons, and +1 during hot Seasons.
 
 \begin{enumerate}
+  \setcounter{enumi}{-1}
+  \showEncounter{wolf}
   \showEncounter{bear}
   \showEncounter{griffin}
-  \showEncounter{wolf}
-  \showEncounter{boar}
-  \showEncounter{dryad}
-  \showEncounter{auroch}
-\end{enumerate}
-
-
-\subsection{Cold-Blooded Creatures}
-
-\begin{enumerate}
-  \showEncounter{basilisk}
-  \showEncounter{chitincrawler}
   \showEncounter{woodspy}
+  \showEncounter{dryad}
+  \showEncounter{chitincrawler}
+  \showEncounter{basilisk}
   \showEncounter{mouthdigger}
-  \showEncounter{ooze}
-  \showEncounter{umber_hulk}
 \end{enumerate}
 
-\subsection{Vegetation}
+\subsection{Complications}
 
-\begin{enumerate}
-  \showEncounter{dryads_kiss}
-  \showEncounter{uproot}
-  \showEncounter{seekers}
-  \showEncounter{bedleaves}
-  \showEncounter{thorny_thickets}
-  \showEncounter{mage_oak}
-\end{enumerate}
+\subsubsection{Floods}
 
+Heat often brings flooding, especially around rivers.
+The \gls{tn} to overcome problems with flooding equals $7 + 1D6$.
+Floods can destroy bridges, roads, and even houses, although most people who live in areas prone to flooding will build their houses somewhere high, or put them on stilts.
 
+\subsubsection{Heatwaves}
 
+The forests present many dangers, but they at least provide protection against one of the most insidious.
+Heat begins by stripping people of their senses, and soon burns their skin.
 
+Mechanically, heatwaves inflict 1D6 Fatige on anyone in the area, although the right clothing and preparation (Intelligence + Wyldcrafting) will half the amount taken.
 
-
-
-
-
-
-
+Anyone foolish enough to wear heavy armour in a heatwave will always take the full brunt of the Fatigue Points, plus one per Weight Rating of the armour.
 
 
 \end{multicols}
