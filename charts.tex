@@ -21,3 +21,68 @@
       \end{nametable}
 }
 
+% This is an array of encounters.
+
+\newcommand\encBigList{
+  \ifcase\value{enc}\relax
+    \ifcase\value{track}\relax% Hot Seasons
+      Flood
+    \or
+      Bandits
+    \or
+      Hot Spell
+    \or
+      Flood
+    \else
+      Peace
+    \fi
+  \or
+    \ifcase\value{track}\relax% Hot + Mild Seasons
+      Peace
+    \or
+      Traders
+    \or
+      Rain
+    \or
+      Peace
+    \else
+      Monster
+    \fi
+  \or
+    \ifcase\value{track}\relax% All Seasons
+      Traders
+    \or
+      Broken Path
+    \or
+      Storm
+    \or
+      Peace
+    \else
+      Monster
+    \fi
+  \or
+    \ifcase\value{track}\relax% Mild + Cold Seasons
+      Peace
+    \or
+      Bandits
+    \or
+      Peace
+    \or
+      Monster
+    \else
+      Peace
+    \fi
+  \else
+    \ifcase\value{track}\relax% Mild + Cold Seasons
+      Peace
+    \or
+      Icy Roads
+    \or
+      Heavy Snow
+    \or
+      Peace
+    \else
+      Peace
+    \fi
+  \fi
+}
