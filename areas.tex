@@ -441,28 +441,45 @@ Roll $1D6$ to find this season's barkeep (they change all the time):
 
 Roll $3D6$ -- the \glspl{pc} can order any of these meals.
 
-\begin{enumerate}
-  \item
-  \textbf{Get bent:} the barkeep's in a foul mood, because they need a day off.
-  \item
-  \ifodd\value{r4}
-    \textbf{Bugger-all:} the first few barrels went rotten, and now someone's stolen the entire pot of soup.
-  \else
-    \textbf{Griffin-wing:} freshly killed this morning, after the griffin tried to fly away with a gnomish patron.
+\newcommand\menuItem[3][(\arabic{r12} \glspl{cp})]{%
+  \randomdozen%
+  \randomthree%
+  \randomfourB%
+  \ifodd\value{enumi}
+    \randomthreeC%
+    \randomfour%
   \fi
   \item
-  \textbf{Mystery-stew, actually crawler-gloop (webbing as sauce!):} why are you hesitating?
-  It goes rotten quick, so get eating!
-  \item
-  \textbf{Eye-spy:} made with actual woodspy.
-  \item
-  \textbf{Deer:} thank the man in black, sitting in the corner.
-  \item
-  \ifodd\value{r4}
-    \textbf{Dwarf-beard:} actually just a type of seaweed, left as payment by a local trader; but it tastes just like the real thing!
+  \textbf{#2:}
+  #3
+  #1
+}
+
+\begin{enumerate}
+  \ifodd\value{r3}
+    \menuItem[]{Bugger-all}{the first few barrels went rotten, and now someone's stolen the entire pot of soup.
+    The menu will be limited for the day.}
   \else
-    \textbf{Snormoss soup:} the chef doesn't know that too much makes you drowsy.
-    A moment later, and half the tavern starts to sleep.
+    \menuItem[]{Get bent}{the barkeep's in a foul mood, because they need a day off.}
+  \fi
+  \menuItem{Griffin-wing}{freshly killed this morning, after the griffin tried to fly away with a gnomish patron.}
+  \menuItem{Mystery-stew}{why are you hesitating?
+  It goes rotten quick, so get eating!
+  \footnote{Chitincrawler `meat' (webbing as sauce!)}
+  }
+    \ifnum\value{r4}<2
+      \newcommand\morningSoup{uproot}
+    \else
+      \newcommand\morningSoup{marching_mushroom}
+    \fi
+    \menuItem{Sunrise Soup}{the chef found a new plant this morning, and he's already learning how to cook it!
+    \footnote{In fact this is \nameref{\morningSoup}, see \autopageref{\morningSoup}, for the effects.}
+    }
+  \menuItem{Deer}{thank the man in black, sitting in the corner.}
+  \ifodd\value{r4}
+    \menuItem{Dwarf-beard}{actually just a type of seaweed, left as payment by a local trader; but it tastes just like the real thing!}
+  \else
+    \menuItem{Eye-Spy}{made with actual woodspy.}
   \fi
 \end{enumerate}
 
