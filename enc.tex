@@ -1,75 +1,75 @@
 \chapter[Encounters at the Crossroads]{Encounters}
 
-\setcounter{enc}{0}
-\setcounter{track}{0}
+\section{Things on the Road}
 
-% This is an array of encounters.
+\begin{multicols}{2}
 
-\newcommand\encBigList{
-  \ifcase\value{enc}\relax
-    \ifcase\value{track}\relax% Hot Seasons
-      Flood
-    \or
-      Bandits
-    \or
-      Hot Spell
-    \or
-      Flood
-    \else
-      Peace
-    \fi
-  \or
-    \ifcase\value{track}\relax% Hot + Mild Seasons
-      Peace
-    \or
-      Traders
-    \or
-      Rain
-    \or
-      Peace
-    \else
-      Monster
-    \fi
-  \or
-    \ifcase\value{track}\relax% All Seasons
-      Traders
-    \or
-      Broken Path
-    \or
-      Storm
-    \or
-      Peace
-    \else
-      Monster
-    \fi
-  \or
-    \ifcase\value{track}\relax% Mild + Cold Seasons
-      Peace
-    \or
-      Bandits
-    \or
-      Peace
-    \or
-      Monster
-    \else
-      Peace
-    \fi
-  \else
-    \ifcase\value{track}\relax% Mild + Cold Seasons
-      Peace
-    \or
-      Icy Roads
-    \or
-      Snowfall
-    \or
-      Peace
-    \else
-      Peace
-    \fi
-  \fi
-}
+All encounters combine multiple elements together.
+
+\begin{enumerate}
+  \item
+  Start with the current Season
+
+  \begin{exampletext}
+    Let's assume a warm Season.
+  \end{exampletext}
+  \item
+  Select the location: villages, edge, or forest
+
+  \begin{exampletext}
+    And assume the forest for now.
+  \end{exampletext}
+  \item
+  Roll $1D3$ to find the row, and add those three encounters
+
+  \begin{exampletext}
+    So `2' would mean `rain + peace + monster'.
+  \end{exampletext}
+
+  \item
+  Roll $1D3$ and add the remaining two encounters on that column.
+
+  \begin{exampletext}
+    Rolling `1' means adding `hot spell + storm'.
+  \end{exampletext}
+
+  \item
+  Combine all five encounters into a narrative.
+
+  \begin{exampletext}
+    Both `Peace' and `Monster' have a chart.
+    Rolling `Aurochs' and `Chitincrawler' means we have all the elements we need for a full encounter.
+  \end{exampletext}
+
+\end{enumerate}
+
+\begin{exampletext}
+  \begin{speechtext}
+    A storm gathers along the hot road.
+    Take 4 \glspl{fatigue}, or more if wearing armour.
+
+    Is anyone wearing armour?
+  \end{speechtext}
+
+  \ldots here the \glspl{pc} can decide how badly they want that protective covering.
+
+  \begin{speechtext}
+    Around the next corner, a horrid mess of webbing blocks the path.
+    Behind you, a great arachnid leaps out, galloping like a horse!''
+
+    Thunder roars from the sky\ldots and the forest as the storm breaks, and rain begins to fall.
+  \end{speechtext}
+
+  The `thunder from the forest', comes from a herd of aurochs.
+  Freaked out by the storm, a bovine stampede heads towards the troupe.
+  On the second round of combat, they arrive, interrupting whatever has happened.
+
+\end{exampletext}
+
+\end{multicols}
 
 \bigLine
+
 \begin{multicols}{2}
 
 \subsection{Hot Seasons}
