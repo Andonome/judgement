@@ -283,10 +283,10 @@ Rolling an odd number means brigands, rather than bandits.
 
 \newcommand\showBandits{
   \item
-  \setcounter{gold}{\value{list}}
+  \setcounter{gold}{\value{diceNo}}
   \multiply\value{gold} by 2
   \addtocounter{gold}{4}
-  \arabic{gold} \ifodd\value{list}
+  \arabic{gold} \ifodd\value{diceNo}
     Brigands
   \else
     Bandits
