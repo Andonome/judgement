@@ -45,6 +45,41 @@
 
 \encMonsters
 
+\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+
+\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+
+\end{multicols}
+
+\newpage
+
+\begin{multicols}{2}
+
+\ifnum\value{temperature}<1
+  \wolf
+  \ghast
+\else
+  \chitincrawler
+
+  \basilisk
+\fi
+
+\griffin
+
+\ifnum\value{temperature}<1
+  \dryad
+\fi
+
+\mouthdigger
+
+\woodspy
+
+\woodspy
+
+\ifnum\value{temperature}=1
+  \umberhulk
+\fi
+
 \end{multicols}
 
 \end{document}
