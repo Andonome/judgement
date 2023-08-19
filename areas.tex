@@ -37,7 +37,7 @@ Take a pencil, a blank sheet of paper, and four dice.
     Sea, extending to the edge of the map.
     Add $1D6-1$ islands, then give half of them a walled village.
   \item
-    Sea, which extends to the centre of the map, then out to the edge.
+    Sea, which extends to the centre of the map, then out to the edge of the map.
     Add $1D6$ islands, each with a walled village.
   \item
     Vast sea. It stretches from this point, to the next numbered-point,%
@@ -67,7 +67,7 @@ Much of the travel takes place along rivers, which let people travel faster than
     Towns on mountains indicate dwarves, in which case, place their symbol by the town: `\Dw'.
   \end{itemize}
   \item
-  Draw a river from the mountains to each town (or the closest lake).
+  Draw a river from the mountains to each town (or the closest body of water).
   \begin{itemize}
   \item
     Each river starts as far away from the others as they can.
@@ -94,12 +94,14 @@ Much of the travel takes place along rivers, which let people travel faster than
   \item
   Roll $2D6$; each point you roll has a route leading off the map, to lands uncharted.
   Draw the routes with a dotted line.
+  \footnote{Draw routes from uninhabited points.
+  We will find out what lives there later.}
 \end{enumerate}
 
 \mapentry[mapCharacter]{Town Character}
 
 For each town, roll 1D6, and add a number equal to the total walled villages surrounding it.
-If it has 4 walled villages, roll $1D6+4$.
+For example, if it has 4 walled villages, roll $1D6+4$.
 
 \begin{multicols}{2}
 
@@ -161,50 +163,54 @@ land.
 Write the town's name next to it, and underline it.
 
 \begin{itemize}
-\item
+  \item
   People know a town in the hills for its library. That's why they call
   it `Page Valley'.
-\item
-  A swamp-edge town, famous for its bards, known as `Songmarsh'.
-\item
+  \item
+  `Bards' + `Islands' = `Lyrisles'
+  \item
+  `Metallurgists' + `forest' = `Iron Basin' (perhaps a dried-up lake sits nearby)
+  \item
   A town by the sea, famed for Witchery.
   They call it `Hexwave'.%
   \footnote{If you think these names sound stupid, you should look up the meaning of your hometown's name.}
 \end{itemize}
 
+Try some word-association with the town's theme.
+
 \mapentry{It is Ruled by\ldots{}}
 
 For each town, roll 1D6 to determine its ruler.
+Write down the information on a key, referencing each point by its number.
 
 \begin{dlist}
-\item
+  \item
   Multiple warring factions -- roll twice more, with +1 to the second roll.
-\item
+  \item
   Warlord, amassing an army to expand their power.
   Shipments of weapons come from the road to other lands.
-\item
+  \item
   Opulent noble, who demands 20\% tithes from all who enter.
   The local oddities annoy and fascinate them equally (from step \ref{mapOddities}).
-\item
+  \item
   Sorcerer king with no experience or business ruling.
   He once killed a fiend, how hard could balls and arranged marriages be?
   (roll 1D6 to find which type of fiend, on step \ref{fiendTypes})
-\item
+  \item
   Spoilt noble who has never seen a peasant.
-\item
+  \item
   A servant of the next fiend you roll (see step \ref{fiendTypes}).
   All who oppose them die on the road.
-\item
+  \item
   A crime-lord, with a history of theft, now risen to fortune\ldots but not nobility.
-\end{dlist}
 
-Write down the information on a key, referencing each point by its number.
+\end{dlist}
 
 \mapentry{Lonely Roads}
 
 \begin{enumerate}
   \item
-  At each town, draw a road to the next town, which winds through any villages along the way.
+  At each town, draw a road to every other town, which winds through any villages along the way.
   \begin{itemize}
     \item
     Where the roads cross water, draw a small bridge.
@@ -674,7 +680,7 @@ Roll $3D6$ -- each number which comes up determines one type of city-dweller.
 Ignore any repeats.
 
 \begin{dlist}
-  \item
+  \item\label{lostOoze}
   \textbf{Oozes} of all types slide across the streets, which seem strangely clean, and free of debris or foliage.
   \item
   \textbf{Chitincrawlers} hide in every abode.
@@ -690,7 +696,7 @@ Ignore any repeats.
   \textbf{Crazed Witches} occasionally enter these cities, looking for spell components.
 
   Roll $1D6$ to find their number.
-  \item
+  \item\label{lostDemilich}
   \textbf{Demilich} covens help these undead sorcerers study with their own kind.
   However, their lack of basic empathy makes them dangerous to each other -- none of them really trust the others, so they share information slowly, always hinting that they have more to teach while masking their true abilities.
 
@@ -700,9 +706,10 @@ Ignore any repeats.
   Of course, only the largest of buildings, such as town halls, or theatres, can house such a massive creature.
 \end{dlist}
 
-
 \mapentry{Dweller Relations}
 Each dweller in a lost city has a relationship with the others, depending on their relative numbers.
+(For example, oozes are \ref{lostOoze}, and the demilich is \ref{lostDemilich}, so their relation is `\ref{lostDemilich} minus \ref{lostOoze}'.)
+
 Those with a higher number control or prey on those with a lower number.
 
 \begin{enumerate}
