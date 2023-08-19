@@ -7,6 +7,10 @@
 \input{charts.tex}
 
 \externalReferent{judgement}
+\externalReferent{core}
+\iftoggle{core}{
+  \input{../core/charts.tex}
+}{}
 
 \begin{document}
 
@@ -33,6 +37,10 @@
   \encMildForest
 \fi
 
+\subsection*{Peace}
+
+\encPeace
+
 \subsection*{Bandits}
 
 \encBandits
@@ -45,15 +53,39 @@
 
 \encMonsters
 
-\humansoldier[\npc{\T[8]\Hu}{Bandits}]
-
-\humansoldier[\npc{\T[8]\Hu}{Bandits}]
-
 \end{multicols}
 
 \newpage
 
+\iftoggle{core}{
+  \stackingDamageChart
+
+  \begin{multicols}{2}
+
+  \textbf{Mana Regeneration}
+
+  \noindent
+  \manaRegenChart
+
+  \noindent
+  \manaCoveringChart
+
+  \larcenyChart
+  \initiativechart
+
+  \end{multicols}
+
+  \chasechart
+  \gatheringChart
+  \newpage
+
+}{}
+
 \begin{multicols}{2}
+
+\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+
+\humansoldier[\npc{\T[8]\Hu}{Bandits}]
 
 \ifnum\value{temperature}<1
   \wolf
