@@ -17,7 +17,10 @@ $(BOOK).sls: | $(BOOK).glo
 $(BOOK).pdf: $(BOOK).sls $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
 
-all: $(BOOK).pdf 
+shield.pdf: shield.tex $(BOOK).pdf
+	pdflatex shield.tex
+
+all: $(BOOK).pdf shield.pdf
 	latexmk -jobname=$(BOOK) -shell-escape -pdf main.tex
 
 clean:

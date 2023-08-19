@@ -1,3 +1,7 @@
+\newcommand\encRef[1]{%
+  \nameref{#1} (\autopageref{#1})%
+}
+
 \newcommand{\moralechart}{
   \begin{nametable}{Morale Chart}
     Bonus & Situation \\\hline
@@ -181,7 +185,6 @@
     \setcounter{track}{2}
     \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
   \end{nametable}
-  \end{multicols}
 }
 
 \newcommand\encColdVillages{
@@ -231,3 +234,82 @@
     \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
   \end{nametable}
 }
+
+
+\newcommand\showBandits{
+  \item
+  \setcounter{gold}{\value{diceNo}}
+  \multiply\value{gold} by 2
+  \addtocounter{gold}{4}
+  \arabic{gold} \ifodd\value{diceNo}
+    Brigands
+  \else
+    Bandits
+  \fi
+}
+
+\newcommand\encBandits{
+  \begin{multicols}{2}
+  \begin{dlist}
+    \showBandits
+    \showBandits
+    \showBandits
+    \showBandits
+    \showBandits
+    \showBandits
+  \end{dlist}
+  \end{multicols}
+}
+
+\newcommand\encPeace{
+  \begin{boxtable}[cccL]
+    \textbf{Cold} & \textbf{Mild} & \textbf{Hot}  & \textbf{Encounter} \\
+    \hline
+    \dicef{1} &           &           & Hibernating \encRef{chitincrawler}  \\
+    \dicef{2} & \dicef{1} &           & Deer               \\
+    \dicef{3} & \dicef{2} & \dicef{1} & \encRef{auroch}    \\
+    \dicef{4} & \dicef{3} & \dicef{2} & \encRef{boar}      \\
+    \dicef{5} & \dicef{4} & \dicef{3} & \encRef{mage_oak}  \\
+    \dicef{6} & \dicef{5} & \dicef{4} & \encRef{uproot}    \\
+              & \dicef{6} & \dicef{5} & \encRef{bedleaves} \\
+              &           & \dicef{6} & \encRef{seekers}   \\
+  \end{boxtable}
+}
+
+\newcommand\encTraders{
+  \begin{multicols}{2}
+  \begin{dlist}
+    \item
+    Wine.
+    \item
+    Bows and arrows of all sizes, and a couple of crossbows.
+    \item
+    Pitch (to make torches).
+    \item
+    Salted meats.
+    \item
+    Silks.
+    \item
+    A live monster (roll on the Monster chart, with the Hot Season results).
+  \end{dlist}
+  \end{multicols}
+}
+
+\newcommand\encMonsters{
+    \begin{boxtable}[cccL]
+      \textbf{Cold} & \textbf{Mild} & \textbf{Hot}  & \textbf{Encounter} \\
+      \hline
+      \dicef{1} &           &           & \encRef{ghast}                                                     \\
+      \dicef{2} &           &           & \encRef{wolf}                                                      \\
+      \dicef{3} & \dicef{1} &           & \encRef{dryad}                                                     \\
+      \dicef{4} & \dicef{2} & \dicef{1} & \encRef{griffin}                                                   \\
+      \dicef{5} & \dicef{3} & \dicef{2} & \encRef{bear}                                                      \\
+      \dicef{6} & \dicef{4} & \dicef{3} & \encRef{woodspy}                                                   \\
+      \dicef{5} & \dicef{5} & \dicef{4} & \encRef{mouthdigger}                                               \\
+                & \dicef{6} & \dicef{5} & \encRef{chitincrawler}                                             \\
+                & \dicef{6} & \dicef{6} & \encRef{basilisk}                                                  \\
+                &           & \dicef{6} & \encRef{umber_hulk}                                                \\
+
+    \end{boxtable}
+}
+

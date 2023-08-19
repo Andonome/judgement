@@ -1,0 +1,50 @@
+\documentclass[a4paper,openany]{book}
+
+\usepackage{config/bind}
+
+\title{\Glsentrytext{gm} Shield}
+
+\input{charts.tex}
+
+\externalReferent{judgement}
+
+\begin{document}
+
+\input{config/GS.tex}
+
+\begin{multicols}{2}
+
+\ifcase\value{temperature}\relax% Hot Seasons
+\or
+  \encColdVillages
+  \encColdEdge
+  \encColdForest
+\or
+  \encMildVillages
+  \encMildEdge
+  \encMildForest
+\or
+  \encWarmVillages
+  \encWarmEdge
+  \encWarmForest
+\else
+  \encMildVillages
+  \encMildEdge
+  \encMildForest
+\fi
+
+\subsection*{Bandits}
+
+\encBandits
+
+\subsection*{Traders}
+
+\encTraders
+
+\subsection*{Monsters}
+
+\encMonsters
+
+\end{multicols}
+
+\end{document}
