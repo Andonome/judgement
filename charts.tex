@@ -86,3 +86,148 @@
     \fi
   \fi
 }
+
+\newcommand\encWarmVillages{
+  \begin{nametable}[l|YYY]{Villages}
+    & \dicef[\Large]{1} & \dicef[\Large]{2} & \dicef[\Large]{3} \\
+    \hline
+    \setcounter{enc}{0}
+    \setcounter{track}{0}
+    \dicef[\Large]{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{0}
+    \dicef[\Large]{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{0}
+    \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \end{nametable}
+}
+
+\newcommand\encWarmEdge{
+  \begin{nametable}[l|YYY]{Edge}
+    & \dicef[\Large]{1} & \dicef[\Large]{2} & \dicef[\Large]{3} \\
+    \hline
+    \setcounter{enc}{0}
+    \setcounter{track}{1}
+    \dicef[\Large]{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{1}
+    \dicef[\Large]{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{1}
+    \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \end{nametable}
+}
+
+\newcommand\encWarmForest{
+  \begin{nametable}[l|YYY]{Forest}
+    & \dicef[\Large]{1} & \dicef[\Large]{2} & \dicef[\Large]{3} \\
+    \hline
+    \setcounter{enc}{0}
+    \setcounter{track}{2}
+    \dicef[\Large]{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{2}
+    \dicef[\Large]{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{2}
+    \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \end{nametable}
+}
+
+\newcommand\encMildVillages{
+  \begin{nametable}[l|YYY]{Villages}
+    & \dicef[\Large]{1} & \dicef[\Large]{2} & \dicef[\Large]{3} \\
+    \hline
+    \setcounter{enc}{1}
+    \setcounter{track}{0}
+    \dicef[\Large]{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{0}
+    \dicef[\Large]{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{0}
+    \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \end{nametable}
+}
+
+\newcommand\encMildEdge{
+  \begin{nametable}[l|YYY]{Edge}
+    & \dicef[\Large]{1} & \dicef[\Large]{2} & \dicef[\Large]{3} \\
+    \hline
+    \setcounter{enc}{1}
+    \setcounter{track}{1}
+    \dicef[\Large]{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{1}
+    \dicef[\Large]{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{1}
+    \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \end{nametable}
+}
+
+\newcommand\encMildForest{
+  \begin{nametable}[l|YYY]{Forest}
+    & \dicef[\Large]{1} & \dicef[\Large]{2} & \dicef[\Large]{3} \\
+    \hline
+    \setcounter{enc}{1}
+    \setcounter{track}{2}
+    \dicef[\Large]{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{2}
+    \dicef[\Large]{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{2}
+    \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \end{nametable}
+  \end{multicols}
+}
+
+\newcommand\encColdVillages{
+  \begin{nametable}[l|YYY]{Villages}
+    & \dicef[\Large]{1} & \dicef[\Large]{2} & \dicef[\Large]{3} \\
+    \hline
+    \setcounter{enc}{2}
+    \setcounter{track}{0}
+    \dicef[\Large]{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{0}
+    \dicef[\Large]{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{0}
+    \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \end{nametable}
+}
+
+\newcommand\encColdEdge{
+  \begin{nametable}[l|YYY]{Edge}
+    & \dicef[\Large]{1} & \dicef[\Large]{2} & \dicef[\Large]{3} \\
+    \hline
+    \setcounter{enc}{2}
+    \setcounter{track}{1}
+    \dicef[\Large]{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{1}
+    \dicef[\Large]{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{1}
+    \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \end{nametable}
+}
+
+\newcommand\encColdForest{
+  \begin{nametable}[l|YYY]{Forest}
+    & \dicef[\Large]{1} & \dicef[\Large]{2} & \dicef[\Large]{3} \\
+    \hline
+    \setcounter{enc}{2}
+    \setcounter{track}{2}
+    \dicef[\Large]{1} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{2}
+    \dicef[\Large]{2} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+    \stepcounter{enc}
+    \setcounter{track}{2}
+    \dicef[\Large]{3} \Repeat{3}{& \encBigList \stepcounter{track} } \\
+  \end{nametable}
+}
