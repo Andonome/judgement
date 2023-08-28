@@ -7,7 +7,7 @@
 \externalReferent{core}
 \externalReferent{stories}
 
-\include{charts.tex}
+\input{charts.tex}
 
 \begin{document}
 
@@ -23,24 +23,26 @@
 
 \mainmatter
 
-\include{areas.tex}
+\include{areas}
 
-\include{enc.tex}
+\include{enc}
 
-\include{rules.tex}
+\include{rules}
 
-\include{bestiary.tex}
+\include{bestiary}
 
 \iftoggle{stories}{}%
-  {\include{humanoids.tex}}
+  {\include{humanoids}}
 
-\include{undead.tex}
+\include{undead}
 
-\include{fiends.tex}
+\include{fiends}
 
-\include{growths.tex}
+\include{growths}
 
-\include{gm.tex}
+\include{guilds}
+
+\include{gm}
 
 \printindex
 
