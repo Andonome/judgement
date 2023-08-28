@@ -1,4 +1,4 @@
-\chapter{Guild Halls}
+\chapter{Guilded Temples}
 
 Nothing in \gls{fenestra} exists to serve.
 As any idiot can plainly see, everything in the world wants to strangle civilization, and kill everything which walks on the surface.
@@ -7,23 +7,31 @@ So when people look to the divine, they do not look for salvation, but for dange
 Each of the gods in \gls{fenestra} takes the souls of those who die in their domain back to their own realm.
 The god of the cold takes those who freeze to death, and the god of the forests takes the souls of those eaten by the forest's creatures.
 
+Temples exists to protect civilization from the wrath of their god.
+Each one also has a divine monopoly within their domain, which includes anything that could plausibly defend against the god.
+
+The temples are guilds, and each guild hall also serves as a temple.
+Citizens of \gls{fenestra} make no distinction between asking for salvation from violence and purchasing armour.
+The captains of the \gls{guard} may as well be bishops, and priests of the Temple of Poison shepherd the civilized world with preservatives.
+
 \section{Temples of Death}
 
 \begin{multicols}{2}
 
 \newcommand\guild[7]{
-  \subsection[#1]{\textxswup~#1 -- Death by #2}
+  \subsection[The Temple of #1]{The Temple of #1 \\ \textxswup~Death by #2~\textxswup}
   \ifdefmacro{#1}{}{\index{#1}}
   \index{#2 (God)}
   \ifdefmacro{#6}{}{\index{#6}}
   \index{Gods}
 
 
-  \begin{quotation}
+  \begin{exampletext}
   \noindent
   #3
-  \end{quotation}
+  \end{exampletext}
 
+  \noindent
   \begin{minipage}{\linewidth}
   \begin{description}
   \item[Domain:] #4
