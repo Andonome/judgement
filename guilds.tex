@@ -1,38 +1,36 @@
 \chapter{Guilded Temples}
 
-Nothing in \gls{fenestra} exists to serve.
-As any idiot can plainly see, everything in the world wants to strangle civilization, and kill everything which walks on the surface.
-So when people look to the divine, they do not look for salvation, but for danger.
+As any idiot can plainly see, the gods do not love humanity.
+They treat people like children playing with insects.
+And when a god finally kills someone, they claim that human soul for their realm.
+Death by cold means joining Sable's frozen realm, and death by violence allows Wrecan to pull the soul into her realm of eternal violence.
 
-Each of the gods in \gls{fenestra} takes the souls of those who die in their domain back to their own realm.
-The god of the cold takes those who freeze to death, and the god of the forests takes the souls of those eaten by the forest's creatures.
-
+So when humanity look to the divine, they do not look for salvation, but for danger.
 Temples exists to protect civilization from the wrath of their god.
-Each one also has a divine monopoly within their domain, which includes anything that could plausibly defend against the god.
 
-The temples are guilds, and each guild hall also serves as a temple.
+The temples are guilds with a divinely mandated monopoly, and each guild hall also serves as a temple.
 Even a `guild hall' which is nothing more than an old lady's house still offers divine guidance.
-Citizens of \gls{fenestra} make no distinction between asking for salvation from violence and purchasing armour.
-The Temple of Hate offers respite from Hate, and the Temple of Frost offers warmth.
-
-The captains of the \gls{guard} may as well be bishops, and priests of the Temple of Poison shepherd the civilized world with preservatives.
+The Temple of Hate encourages reconciliations, the Temple of Frost offers warmth, and the \gls{guard} work for the Temple of Beasts, where they kill the Sylf's children.
 
 \section{Temples of Death}
 
 \begin{multicols}{2}
 
 \newcommand\guild[8][\textxswup]{
+  \vspace{2em}
+  \noindent
+  \begin{minipage}{\linewidth}
   \subsection[The Temple of #3]{#1~#2~#1 \\ \& \\ The Temple of #3}
   \ifdefmacro{#2}{}{\index{#2}}
   \index{#3 (God)}
   \ifdefmacro{#7}{}{\index{#7}}
   \index{Gods}
 
-
   \begin{exampletext}
   \noindent
   #4
   \end{exampletext}
+  \end{minipage}
 
   \noindent
   \begin{minipage}{\linewidth}
@@ -50,6 +48,70 @@ The captains of the \gls{guard} may as well be bishops, and priests of the Templ
 
   \subsubsection{#7}
 }
+
+\guild[\APLinv]{Abderian}% Name
+  {Poison}% Death
+  {
+    Led doors, covered in ivy, open to usher in a city warden, still dressed in the finery he wore for feasts in life.
+
+    ``I told my daughter to bury me in my dinner jacket.
+    I always knew she was the good sort'', he smiled.
+
+    An tall and impossibly thin woman balances a wine class between two fingers and hands it to him.
+
+    ``So what's for dinner in this noble realm?'', but the smile turns to a stare half way through a swig of wine, as he scans the room, and notes all the filthy beggars staring at their wine, without drinking it.
+
+    {\sffamily ``We have some nobility''}, she says thoughtfully.
+    {\sffamily ``We even have kings, from the olden days''}, pointing to a skin-clad skeleton, trying to lift a crown from the floor.
+
+    The warden chokes and coughs, and notes the specks of blood on his dinner jacket.
+
+    ``Is this wine poisoned?!''
+
+    {\sffamily ``All wine is poison.
+    We just drink it stronger here.''}
+  }% God
+  {poisons, rot, mould, fungus, ale, feasts}% Domain
+  {salt, distillation, rendering, vinegar, and wine}% Defence
+  {Servers}% Watchers
+  {
+    Brewing, and baking.
+  }% Guild activities
+
+Every warden has one in their kitchen, and every town has a bakery near their slums.
+They provide bread for the hungry, and beer for the sober.
+Despite this, very few appreciate the guild.
+
+The wardens complain that they insist on a monopoly on cooking \emph{in every warden's home}, and wardens who refuse end up poisoned sooner rather than later.
+But the Wheat Guild%
+\footnote{`The Temple of Poison', hardly makes for good advertising. The Guild still fiercely maintain their divine battle to ensure food safety, but they always identify as a `temple of wine', or 'brotherhood of beer', or similar.}
+are quick to note that nobody with an official Wheat Guild cook has ever succumbed to poison, so this only shows that everyone should employ one.
+
+\paragraph{Rank \& Structure}
+
+\begin{description}
+  \item[Bakers]
+  come from the streets, and generally return after a few months.
+  The working hours and heat in the kitchens tire even the fittest of humans.
+  \item[Tenders]
+  tend the bars, if they can curry enough favour to move away from baking.
+  \item[Cooks]
+  require a good nose, fast hands, and enough savings to bribe their way into the position.
+  \item[Keepers]
+  need fast eyes to read and tabulate books.
+  They test every bottle, and remember the daily-changing price of every drink.
+  They also test or switch their bottles to make sure they don't leave any shoes for someone else to step into, as nobody from the streets can imagine a better position than being a keeper.
+  \item[Landlords]
+  renounce any official status as wardens, buy a property, and join the guild near its top rank.
+  They purchase supplies, barter with traders for wholesale prices, and keep in contact with the cooks who work with wardens.
+  \item[Cooks]
+  know all the guild's best recipes, both for food and poison.
+  Besides their special recipes, they do not in fact cook very much, as they too come from warden families, and have better things to do.
+\end{description}
+
+\subsubsection{Temple Taverns}
+
+Not every tavern is a temple, but the bigger the town, the more keen the Wheat Guild will feel on establishing themselves in the area.
 
 \guild[\decotwo]{Eldren}% Name
   {Sickness}% Death
@@ -86,8 +148,8 @@ Even the gods have their own laws and technicalities.
   Forgotten hopes, poems the writer never starts, and people who could not be born as their parents never met.
   Not a single soul resides in \hphantom{Nemo}'s realm, as her victims never existed.
 
-  Speaking her name attracts her attention, so it soon became a curse, then a rarity, and eventually became existed.
-  The doula claim pass her name from one to another, by entering each others' dreams, then writing the name on sand, one glyph at a time.
+  Speaking her name attracts her attention, so it soon became a curse, then a rarity, and eventually unbecame altogether.
+  Only the doula remember, as they pass her name from one to another, by entering each others' dreams, then writing the name on sand, one glyph at a time.
   }% God
   {regret, failure to thrive, the road untaken}% Domain
   {hope}% Defence
@@ -253,7 +315,7 @@ Add +1 for shoddy evident, and +2 if the accuser insults the warden.
 \end{dlist}
 
 \paragraph{The Jester}
-always screeches accusations.
+always screeches accusations and demand ridiculous punishments.
 Wardens can never agree with jesters publicly -- they would look foolish -- so they must provide a harsher or lighter penalty than the jester.
 This leads jesters to proposing the harshest and most ridiculous of punishments (``\emph{pull off his eyelids my lord!}'', ``\emph{put her children in the forest, and let her run about finding them all night!}'').
 
@@ -310,7 +372,7 @@ Others rest their fingers, while townsfolk drop off a log of wood in return for 
     And when full villages disappear in a night, many wonder if Sylf herself came to eat them.
   }% God
   {the deep forest, darkness, barbarism, and anything which feeds on humanity}% Domain
-  {dogs, bows, and strong humans staying up all night}% Defence
+  {dogs, bows, and keeping watch all night}% Defence
   {\Glsentrytext{guard}}% Watchers
   {
     Protecting traders, manufacturing bows, and burning the forest.
@@ -488,9 +550,10 @@ The temple of hate allows people to practice inner calm, but never hands out pea
     The upper shop keeps, copies, and sells books.
   }% Guild activities
 
-When people wander into a dark cave, wondering what lies inside, or jump across a chasm, just to see if they can, then fall and die, people say curiosity took them.
-When children ask what lies in curiosity's realm, they get a smack across the head, and learn to stop asking questions.
+When people wander into a dark cave, wondering what lies inside, or jump across a chasm, just to see if they can, then fall and die, they go to the realm of curiosity.
 
+Parents teach their children about the dangers from an early age.
+Any child who asks what lies in curiosity's realm gets a swift smack across the head, and learns to stop asking those questions.
 And if that doesn't work, they can join the scribes.
 No need to search in the dangerous dark when you can read about what's there, or so the theory goes.
 But the scribes, like the helpers, cannot help themselves, and too many end up investigating something they should have left alone.
