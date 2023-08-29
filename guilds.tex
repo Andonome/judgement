@@ -11,7 +11,10 @@ Temples exists to protect civilization from the wrath of their god.
 Each one also has a divine monopoly within their domain, which includes anything that could plausibly defend against the god.
 
 The temples are guilds, and each guild hall also serves as a temple.
+Even a `guild hall' which is nothing more than an old lady's house still offers divine guidance.
 Citizens of \gls{fenestra} make no distinction between asking for salvation from violence and purchasing armour.
+The Temple of Hate offers respite from Hate, and the Temple of Frost offers warmth.
+
 The captains of the \gls{guard} may as well be bishops, and priests of the Temple of Poison shepherd the civilized world with preservatives.
 
 \section{Temples of Death}
@@ -19,7 +22,7 @@ The captains of the \gls{guard} may as well be bishops, and priests of the Templ
 \begin{multicols}{2}
 
 \newcommand\guild[7]{
-  \subsection[The Temple of #1]{The Temple of #1 \\ \textxswup~Death by #2~\textxswup}
+  \subsection[The Temple of #2]{\textxswup~#1~\textxswup \\ The Temple of #2}
   \ifdefmacro{#1}{}{\index{#1}}
   \index{#2 (God)}
   \ifdefmacro{#6}{}{\index{#6}}
@@ -107,7 +110,7 @@ Anyone who becomes cynical and contemptuous of the long process finds themself s
 
 Those few with the grit to stay become master craftsmen.
 
-\paragraph{Rand \& Structure}
+\paragraph{Rank \& Structure}
 displays itself in two distinct ways.
 
 \begin{description}
@@ -130,5 +133,102 @@ Wardens pay substantially more, as they often require the armourers to travel to
 
 Despite their calling, they never profit from war.
 People need enough armour just to survive the forests -- if they start killing each other as well, entire villages could disappear, leaving them with less demand overall.
+
+\guild{Sylf}% Name
+  {Beasts}% Death
+  {%
+    A painfully pregnant belly, and a thorax bloated with eggs; the mother of \gls{fenestra}'s predators overflows with life.
+    She meanders around the world, laying monstrosities and feeding them with anything she finds on the world's surface.
+
+    She holds the forms, abilities, and hunger of every predator in the world.
+    And when full villages disappear in a night, many wonder if Sylf herself came to eat them.
+  }% God
+  {The deep forest, darkness, barbarism, and anything which feeds on humanity}% Domain
+  {Dogs, bows, and strong humans staying up all night}% Defence
+  {\Glsentrytext{guard}}% Watchers
+  {
+    Protecting traders, manufacturing bows, and burning the forest.
+  }% Guild activities
+
+Informally, anyone who stays watch for beasts at night guards against Sylf.
+However, the \gls{guard} proper take in anyone they can, i.e. anyone society has deemed surplus.
+The \gls{guard} answer the call of villages struggling to survive, build new settlements, and perform missions beyond the \gls{edge}.
+
+Those who survive a few years fall into a few categories.
+Firstly, anyone from a rich family can often buy their child into a promotion good enough to keep them safe.
+Secondly, the fastest of the \gls{guard} can survive almost any danger, as long as they don't take the lead often, and stay alert when someone makes them.
+Almost every beast in the forests will stop attacking once it has a body to feed on, so above all, survival depends on sprinting faster than one's companions.
+
+\paragraph{Rank \& Structure}
+
+\begin{description}
+  \item[Fodder]
+  do as anyone tells them, until the forest eats them, or they gain proper rank.
+  None may enter a settlement of any kind.
+  They sleep outside, at the foot of remote towers.
+
+  \textbf{Pay:} no.
+
+  \item[Archers]
+  have joined a group past the \gls{edge} and survived.
+  This encourages others to treat them like real people, but does not earn them the right to return to civilization without special permission.
+
+  Despite they name, they do not need to use a bow, but most do.
+
+  \textbf{Pay:} 10 \glspl{cp} per week, which they may donate to family or a temple, but may not keep.
+
+  \item[Cutters]
+  have at least one kill witnessed by a Horse Rider or better.
+  They may enter any settlement if they have a solid reason.
+
+  They build new settlements, protect caravans, and occasionally try to sneak off to relax in a town somewhere, without anyone noticing.
+
+  \textbf{Pay:} 30 \glspl{cp} per week, which they may donate, save, or use to purchase weapons.%
+  \footnote{Paying the \gls{guard} leads to terrible stagflation problems, as every death means some more coinage goes missing.
+  Of course, people frown upon the practice, but still understand that it's a necessary evil.}
+
+  \item[Riders]
+  have at least three heads from the forest -- beasts preferred, but bandits will do.
+  They protect fast caravans, deliver urgent messages between settlements, and provide fast reinforcements to villages around the \gls{edge} dealing with basilisks.
+
+  \textbf{Pay:} 1 \gls{sp} per week, which allows them to save up for weapons and armour.
+
+  \item[Jotters]
+  need only show their literacy, and some basic organizational skills.
+  They can go straight from Cutters, as long as the local \gls{guard} have need of a writer at the time.
+
+  \textbf{Pay:} 2 \gls{sp} per week.
+
+  \item[Rangers]
+  must return with captured beasts (although their young, or even eggs, will suffice) in order to gain this rank.
+  They track down deserters, burn nests, shoot sleeping creatures in the dark, and often travel through the forest with such stealth and foresight that can move alone.
+  
+  \textbf{Pay:} 3~\gls{sp} per week, which nobody wants to give them, but they go through armour and arrows so quickly that nobody can argue.
+
+  \item[Builders]
+  organize men to build walls in new settlements, or strengthen existing walls.
+
+  \textbf{Pay:} 4 \gls{sp} per week.
+
+  \item[Overseers]
+  plan new settlements, organize funds, ensure new recruits have weapons (or don't, if weapons become too expensive), and otherwise do as they please.
+
+  \textbf{Pay:} Nothing.
+  They take what they need, and keep all the books.
+
+\end{description}
+
+\noindent
+Would-be \gls{guard} begin their journey far from any civilization, in one of the \gls{guard} outposts.
+This leaves them with no possibility to protest their position.
+
+Anyone can give the Fodder any order, at any time.
+Eventually, they become miserable enough to request a weapon, and join a band of others, in the hopes of gaining some rank by slaughtering a beast.
+
+\paragraph{Funding}
+comes from wardens, who pay the guard to keep settlements safe.
+
+The wardens generally think of the \gls{guard} as a protection racket -- stop payment, and you could lose a village.
+The \gls{guard} think of the wardens as middle-men, since they receive their funds from the surrounding villages.
 
 \end{multicols}
