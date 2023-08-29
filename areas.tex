@@ -115,14 +115,14 @@ For example, if it has 4 walled villages, roll $1D6+4$.
   \item
   Deadly and magical plants
   \item
-  Ale (and the guild has tight control over the area)
+  Ale, and the Guild has tight control over the area (\autopageref{god:Poison})
   \item
   White rock (actually limestone)
   \item
   \ifodd\value{r4}
-  Wood-crafters
+    Wood-carvers
   \else
-  Metallurgists
+    Metallurgists
   \fi
   \item
  Bards
@@ -169,7 +169,11 @@ Write the town's name next to it, and underline it.
   \item
   `Bards' + `Islands' = `Lyrisles'
   \item
-  `Metallurgists' + `forest' = `Iron Basin' (perhaps a dried-up lake sits nearby)
+  \ifodd\value{r4}
+    `Metallurgists' + `forest' = `Iron Basin' (perhaps a dried-up lake sits nearby)
+  \else
+    `Wood-carvers' + `forest' = `Taming Woods'
+  \fi
   \item
   A town by the sea, famed for Witchery.
   They call it `Hexwave'.%

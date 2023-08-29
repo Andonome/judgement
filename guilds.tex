@@ -21,9 +21,9 @@ The Temple of Hate encourages reconciliations, the Temple of Frost offers warmth
   \noindent
   \begin{minipage}{\linewidth}
   \subsection[The Temple of #3]{#2~#1~#2 \\ \& \\ The Temple of #3}
-  \ifdefmacro{#1}{}{\index{#1}}
-  \index{#3 (God)}
-  \ifdefmacro{#7}{}{\index{#7}}
+  \ifdefmacro{#1}{}{\index{#1}\label{god:#1}}
+  \index{#3 (God)}\label{god:#3}
+  \ifdefmacro{#7}{}{\index{#7}\label{guild:#7}}
   \index{Gods}
 
   \begin{exampletext}
