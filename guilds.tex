@@ -16,12 +16,12 @@ The Temple of Hate encourages reconciliations, the Temple of Frost offers warmth
 
 \begin{multicols}{2}
 
-\newcommand\guild[8][\textxswup]{
+\newcommand\guild[8]{
   \vspace{2em}
   \noindent
   \begin{minipage}{\linewidth}
-  \subsection[The Temple of #3]{#1~#2~#1 \\ \& \\ The Temple of #3}
-  \ifdefmacro{#2}{}{\index{#2}}
+  \subsection[The Temple of #3]{#2~#1~#2 \\ \& \\ The Temple of #3}
+  \ifdefmacro{#1}{}{\index{#1}}
   \index{#3 (God)}
   \ifdefmacro{#7}{}{\index{#7}}
   \index{Gods}
@@ -49,7 +49,8 @@ The Temple of Hate encourages reconciliations, the Temple of Frost offers warmth
   \subsubsection{#7}
 }
 
-\guild[\APLinv]{Abderian}% Name
+\guild{Abderian}% Name
+  {\APLinv}% Symbol
   {Poison}% Death
   {
     Led doors, covered in ivy, open to usher in a city warden, still dressed in the finery he wore for feasts in life.
@@ -113,7 +114,8 @@ are quick to note that nobody with an official Wheat Guild cook has ever succumb
 
 Not every tavern is a temple, but the bigger the town, the more keen the Wheat Guild will feel on establishing themselves in the area.
 
-\guild[\decotwo]{Eldren}% Name
+\guild{Eldren}% Name
+  {\decotwo}% Symbol
   {Sickness}% Death
   {
     Those who reach the end unharmed can let their soul fall out peacefully.
@@ -141,7 +143,8 @@ Further down, a long hallways presents doors, where less comfortable residents t
 Unfortunately the temple forbids alcohol, as they do not want to risk a single soul to death by poison.
 Even the gods have their own laws and technicalities.
 
-\guild[\decosix]{\hphantom{Nemo}}% Name
+\guild{\hphantom{Nemo}}% Name
+  {\decosix}% Symbol
   {Misgenesis}% Death
   {
   Some things die before they begin.
@@ -186,7 +189,8 @@ And almost nobody can really track how effective a blessing has been, but eventu
 The doula tend to live away from others, in case of mishaps with their witchcraft.
 They have no grand halls, just shoddy old houses, or occasionally a potion shop in a large city.
 
-\guild[\statDot]{Paik}% Name
+\guild{Paik}% Name
+  {\statDot}% Symbol
   {Justice}% Death
   {
     As you enter the pit, the executioner leans in to whisper, ``just don't make a fuss, give them a good show, okay?''.
@@ -328,7 +332,8 @@ Jesters often enjoy parading about the streets in their ridiculous get-up.
 They may look like ridiculous little men, with the bells and red hat, but nobody would dare make fun of a jester.
 Anyone who laughs at him in the wrong way, or fails to laugh in the right way, he may remember when they come to the pit\ldots
 
-\guild[\hexstar]{Sable}% Name
+\guild{Sable}% Name
+  {\hexstar}% Symbol
   {Frost}% Death
   {
     He lies comfortably naked with white, glistening snow, pulled over his pale chest like a blanket.
@@ -363,7 +368,8 @@ At least half work on looms at any given time.
 Others rest their fingers, while townsfolk drop off a log of wood in return for some embers -- starting a fire with the embers of the temple of frost brings good luck throughout the cold seasons.
 
 
-\guild[\textxswdown]{Sylf}% Name
+\guild{Sylf}% Name
+  {\textxswdown}% Symbol
   {Beasts}% Death
   {%
     A painfully pregnant belly, and a thorax bloated with eggs; the mother of \gls{fenestra}'s predators overflows with life.
@@ -482,6 +488,7 @@ Other light towers exist just to stop the forest getting too close to a nearby t
 These generally defend against the side of a town without water, which makes them ten times as dangerous as any other \gls{guard} tower, since someone must fetch water daily.
 
 \guild{Wrecan}% Name
+  {\textxswup}% Symbol
   {Hate}% Death
   {When men fight, when hunger threatens and temper flairs, she comes for souls.
   Within her realm, everyone must pick a side, and every side gains new enemies.
@@ -531,7 +538,8 @@ The constant noise of hammers, metal, and shrieks from accidents forces everyone
 
 The temple of hate allows people to practice inner calm, but never hands out peace freely.
 
-\guild[\bell]{Yonder}% Name
+\guild{Yonder}% Name
+  {\bell}% Symbol
   {Curiosity}% Death
   {
     A feint bell rings in the distance.
