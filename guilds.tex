@@ -21,34 +21,34 @@ The captains of the \gls{guard} may as well be bishops, and priests of the Templ
 
 \begin{multicols}{2}
 
-\newcommand\guild[7]{
-  \subsection[The Temple of #2]{\textxswup~#1~\textxswup \\ The Temple of #2}
-  \ifdefmacro{#1}{}{\index{#1}}
-  \index{#2 (God)}
-  \ifdefmacro{#6}{}{\index{#6}}
+\newcommand\guild[8][\textxswup]{
+  \subsection[The Temple of #3]{#1~#2~#1 \\ The Temple of #3}
+  \ifdefmacro{#2}{}{\index{#2}}
+  \index{#3 (God)}
+  \ifdefmacro{#7}{}{\index{#7}}
   \index{Gods}
 
 
   \begin{exampletext}
   \noindent
-  #3
+  #4
   \end{exampletext}
 
   \noindent
   \begin{minipage}{\linewidth}
   \begin{description}
-  \item[Domain:] #4
+  \item[Domain:] #5
 
-  \item[Defence:] #5
+  \item[Defence:] #6
 
-  \item[Watchers:] #6
+  \item[Watchers:] #7
 
-  \item[Activities:] #7
+  \item[Activities:] #8
 
   \end{description}
   \end{minipage}
 
-  \subsubsection{#6}
+  \subsubsection{#7}
 }
 
 
@@ -252,5 +252,33 @@ And above, the rest of the guard look out their narrow windows, and occasionally
 Roads which go somewhere often receive passing caravans, and the fodder may get some food, or even find equipment donated to them.
 Other light towers exist just to stop the forest getting too close to a nearby town.
 These generally defend against the side of a town without water, which makes them ten times as dangerous as any other \gls{guard} tower, since someone must fetch water daily.
+
+\guild[\decotwo]{Eldren}% Name
+  {Sickness}% Death
+  {
+    Those who reach the end unharmed can let their soul fall out peacefully.
+    Death by old age guarantees a place with the peaceful dead, in Eldren's realm.
+  }% God
+  {Pensions, disability, family, and ancestry}% Domain
+  {None}% Defence
+  {Helpers}% Watchers
+  {
+    Caring for the old, sick and infirm.
+  }% Guild activities
+
+Parents with disables children try to have their children work as a helper, rather than joining the \gls{guard}.
+
+Most live their lives inside a city, not far from their temple.
+A rare few travel around neighbouring villages, checking for anyone who's become a burden to their community.
+
+\paragraph{Funding}
+comes from people who give a little to the temple throughout their lives, in the hopes of one day dying in it.
+
+\subsubsection{Temple Hospitality}
+Approaching the doors, the sick may find a woman with her left-hand limbs missing, and an older man with downs syndrome, ushering them into large, open halls, full of beds where people chat.
+
+Further down, a long hallways presents doors, where less comfortable residents try to die peacefully.
+Unfortunately the temple forbids alcohol, as they do not want to risk a single soul to death by poison.
+Even the gods have their own laws and technicalities.
 
 \end{multicols}
