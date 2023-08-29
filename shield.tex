@@ -16,6 +16,41 @@
 
 \input{config/GS.tex}
 
+\newpage
+
+\begin{multicols}{2}
+
+\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+
+\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+
+\ifnum\value{temperature}<1
+  \wolf
+  \ghast
+\else
+  \chitincrawler
+
+  \basilisk
+\fi
+
+\griffin
+
+\ifnum\value{temperature}<1
+  \dryad
+\fi
+
+\mouthdigger
+
+\woodspy
+
+\woodspy
+
+\ifnum\value{temperature}=1
+  \umberhulk
+\fi
+
+\end{multicols}
+
 \begin{multicols}{2}
 
 \ifcase\value{temperature}\relax% Hot Seasons
@@ -53,11 +88,12 @@
 
 \encMonsters
 
+
+
 \end{multicols}
 
-\newpage
-
 \iftoggle{core}{
+  \newpage
   \stackingDamageChart
 
   \begin{multicols}{2}
@@ -77,41 +113,6 @@
 
   \chasechart
   \gatheringChart
-  \newpage
 
 }{}
-
-\begin{multicols}{2}
-
-\humansoldier[\npc{\T[8]\Hu}{Bandits}]
-
-\humansoldier[\npc{\T[8]\Hu}{Bandits}]
-
-\ifnum\value{temperature}<1
-  \wolf
-  \ghast
-\else
-  \chitincrawler
-
-  \basilisk
-\fi
-
-\griffin
-
-\ifnum\value{temperature}<1
-  \dryad
-\fi
-
-\mouthdigger
-
-\woodspy
-
-\woodspy
-
-\ifnum\value{temperature}=1
-  \umberhulk
-\fi
-
-\end{multicols}
-
 \end{document}
