@@ -5,6 +5,9 @@
 
 \section{Things on the Road}
 
+When it rains, it pours; and when creatures attack, the \glspl{pc} will often find them among interesting plants, or else bandits might attack by weakening a bridge while the \glspl{pc} cross it.
+
+
 \begin{multicols}{2}
 
 All encounters combine multiple elements together.
@@ -14,68 +17,66 @@ All encounters combine multiple elements together.
   Start with the current Season
 
   \begin{exampletext}
-    Let's assume a warm Season.
+    Let's assume a hot Season.
   \end{exampletext}
   \item
-  Select the location: villages, edge, or forest
+  Select the location: villages, edge, or forest.
 
   \begin{exampletext}
     And assume the forest for now.
   \end{exampletext}
   \item
-  Roll $1D3$ to find the row, and add those three encounters
+  Roll $1D3$ to find the row, and add those three encounters.
 
   \begin{exampletext}
-    So `2' would mean `rain + peace + monster'.
+    So `2' would mean
+    \setcounter{enc}{1}%
+    \setcounter{track}{2}%
+    `\encBigList'\stepcounter{track},
+    `\encBigList'\stepcounter{track}, and
+    `\encBigList'.
   \end{exampletext}
 
   \item
   Roll $1D3$ and add the remaining two encounters on that column.
 
   \begin{exampletext}
-    Rolling `1' means adding `hot spell + storm'.
+    Rolling `2' means adding
+    \setcounter{enc}{0}%
+    \setcounter{track}{3}%
+    that `\encBigList'\stepcounter{enc}\stepcounter{enc}, and
+    `\encBigList'
+    (we already have the result between them).
   \end{exampletext}
 
   \item
-  Combine all five encounters into a narrative.
-
-  \begin{exampletext}
-    Both `Peace' and `Monster' have a chart.
-    Rolling `Aurochs' and `Chitincrawler' means we have all the elements we need for a full encounter.
-  \end{exampletext}
+  Roll to see what monsters and sightings the \glspl{pc} come across, and combine all five encounters into a single encounter.
 
 \end{enumerate}
 
-\begin{exampletext}
   \begin{speechtext}
-    A storm gathers along the hot road.
-    Take 4 \glspl{fatigue}, or more if wearing armour.
+    The rain drizzles from every leaf in the forest, making a constant racket.
+    Pulling back your hood to look around, you see a plant with gigantic leaves -- the perfect spot to shield from the rain.
+    Unfortunately a boar seems to have taken the place already.
+    She rests, unaware that you stand only ten steps away.
 
-    Is anyone wearing armour?
+    What do you do?
   \end{speechtext}
 
-  \ldots here the \glspl{pc} can decide how badly they want that protective covering.
+  \ldots\ldots
 
   \begin{speechtext}
-    Around the next corner, a horrid mess of webbing blocks the path.
-    Behind you, a great arachnid leaps out, galloping like a horse!''
-
-    Thunder roars from the sky\ldots and the forest as the storm breaks, and rain begins to fall.
+    You have your bow out, but before loosing it, long, dark-brown legs wrap around the tree above the boar.
+    Each leg seems longer than horse, but grips the tree silently.
   \end{speechtext}
 
-  The `thunder from the forest', comes from a herd of aurochs.
-  Freaked out by the storm, a bovine stampede heads towards the troupe.
-  On the second round of combat, they arrive, interrupting whatever has happened.
-
-\end{exampletext}
 
 \end{multicols}
 
 \vfill\null
-\bigLine
 
-\noindent
-\begin{minipage}{\linewidth}
+\clearpage
+
 \begin{multicols}{2}
 
 \subsection{Hot Seasons}
@@ -98,8 +99,45 @@ Stone-walled cities often create miniature lakes or run-off areas for the river 
 
 \encWarmForest
 
+\begin{multicols}{2}
+\subsubsection*{Monsters}
+
+\setcounter{enc}{4}
+\begin{dlist}
+  \Repeat{6}{
+    \item
+    \encMons
+  }
+\end{dlist}
+
+\subsubsection*{Sightings}
+
+\setcounter{track}{3}
+\begin{dlist}
+  \Repeat{6}{
+    \item
+    \encSight
+  }
+\end{dlist}
+
 \end{multicols}
-\end{minipage}
+
+\subsubsection{Floods}
+
+Heat often brings flooding, especially around rivers.
+The \gls{tn} to overcome problems with flooding equals $7 + 1D6$.
+Floods can destroy bridges, roads, and even houses, although most people who live in areas prone to flooding will build their houses somewhere high, or put them on stilts.
+
+\subsubsection{Hot Spell}
+
+The forests present many dangers, but they at least provide protection against one of the most insidious.
+Heat begins by stripping people of their senses, and soon burns their skin.
+
+Mechanically, heatwaves inflict 1D6 Fatige on anyone in the area, although the right clothing and preparation (Intelligence + Wyldcrafting) will half the amount taken.
+
+Anyone foolish enough to wear heavy armour in a heatwave will always take the full brunt of the Fatigue Points, plus one per Weight Rating of the armour.
+
+\end{multicols}
 
 \bigLine
 
@@ -120,10 +158,32 @@ But anyone on the land should leave their house quickly.
 
 \encMildForest
 
+\begin{multicols}{2}
+\subsubsection*{Monsters}
+\label{monsterEncounters}
+
+\setcounter{enc}{3}
+\begin{dlist}
+  \Repeat{6}{
+    \item
+    \encMons
+  }
+\end{dlist}
+
+\subsubsection*{Sightings}
+
+\setcounter{track}{2}
+\begin{dlist}
+  \Repeat{6}{
+    \item
+    \encSight
+  }
+\end{dlist}
+
 \end{multicols}
 
-\noindent
-\begin{minipage}{\linewidth}
+\end{multicols}
+
 \bigLine
 \begin{multicols}{2}
 
@@ -141,19 +201,34 @@ Wolves and bears
 
 \encColdForest
 
+\subsubsection*{Monsters}
+
+\begin{multicols}{2}
+\setcounter{enc}{1}
+\begin{dlist}
+  \Repeat{6}{
+    \item
+    \encMons
+  }
+\end{dlist}
+
+\subsubsection*{Sightings}
+
+\setcounter{track}{2}
+\begin{dlist}
+  \Repeat{6}{
+    \item
+    \encSight
+  }
+\end{dlist}
+
 \end{multicols}
-\end{minipage}
+
+\end{multicols}
 
 \bigLine
 
 \begin{multicols}{2}
-
-\subsection{Peace}
-
-Every time you roll peace, add another 1D6 days of peace before the encounter hits.
-The party may arrive at their destination unharmed, with all encounters discarded.
-
-\encPeace
 
 \subsection{Bandits \& Brigands}
 
@@ -184,28 +259,6 @@ Traders carry all manner of goods.
 Roll $3D6$ and add all results.
 
 \encTraders
-
-\subsection{Monsters}
-\label{monsterEncounters}
-
-\encMonsters
-
-\subsection{Complications}
-
-\subsubsection{Floods}
-
-Heat often brings flooding, especially around rivers.
-The \gls{tn} to overcome problems with flooding equals $7 + 1D6$.
-Floods can destroy bridges, roads, and even houses, although most people who live in areas prone to flooding will build their houses somewhere high, or put them on stilts.
-
-\subsubsection{Hot Spell}
-
-The forests present many dangers, but they at least provide protection against one of the most insidious.
-Heat begins by stripping people of their senses, and soon burns their skin.
-
-Mechanically, heatwaves inflict 1D6 Fatige on anyone in the area, although the right clothing and preparation (Intelligence + Wyldcrafting) will half the amount taken.
-
-Anyone foolish enough to wear heavy armour in a heatwave will always take the full brunt of the Fatigue Points, plus one per Weight Rating of the armour.
 
 \end{multicols}
 
