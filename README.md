@@ -1,1 +1,5 @@
-This will one day be the main book for the GM/ Judge to run BIND.
+[Download][download]
+
+This will one day be the main book for the Judge to run BIND.
+
+[download]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/judgement.pdf?job=compile_pdf
