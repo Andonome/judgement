@@ -86,9 +86,18 @@
 
 \subsection*{Monsters}
 
-\encMonsters
+\setcounter{enc}{\value{temperature}}
+\stepcounter{enc}
+\ifnum\value{temperature}=1
+  \stepcounter{enc}
+\fi
 
-
+\begin{dlist}
+  \Repeat{6}{
+    \item
+    \encMons
+  }
+\end{dlist}
 
 \end{multicols}
 
@@ -115,4 +124,5 @@
   \gatheringChart
 
 }{}
+
 \end{document}

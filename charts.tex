@@ -333,21 +333,49 @@
   \end{multicols}
 }
 
-\newcommand\encMonsters{
-    \begin{boxtable}[cccL]
-      \textbf{Cold} & \textbf{Mild} & \textbf{Hot}  & \textbf{Encounter} \\
-      \hline
-      \dicef{1} &           &           & \encRef{ghast}                                                     \\
-      \dicef{2} &           &           & \encRef{wolf}                                                      \\
-      \dicef{3} & \dicef{1} &           & \encRef{dryad}                                                     \\
-      \dicef{4} & \dicef{2} & \dicef{1} & \encRef{griffin}                                                   \\
-      \dicef{5} & \dicef{3} & \dicef{2} & \encRef{bear}                                                      \\
-      \dicef{6} & \dicef{4} & \dicef{3} & \encRef{woodspy}                                                   \\
-                & \dicef{5} & \dicef{4} & \encRef{mouthdigger}                                               \\
-                & \dicef{6} & \dicef{5} & \encRef{chitincrawler}                                             \\
-                &           & \dicef{6} & \encRef{basilisk}                                                  \\
+\newcommand\encMons{
+  \ifcase\value{enc}\relax%
+  \or%
+    \encRef{ghast}
+  \or%
+    \encRef{wolf}
+  \or%
+    \encRef{dryad}
+  \or%
+    \encRef{griffin}
+  \or%
+    \encRef{bear}
+  \or%
+    \encRef{woodspy}
+  \or%
+    \encRef{mouthdigger}
+  \or%
+    \encRef{chitincrawler}
+  \or%
+    \encRef{basilisk}
+  \else%
+    \encRef{umber_hulk}
+  \fi%
+  \stepcounter{enc}%
+}
 
-    \end{boxtable}
+
+\newcommand\encMonsters{
+  \setcounter{enc}{1}
+  \begin{boxtable}[cccL]
+    \textbf{Cold} & \textbf{Mild} & \textbf{Hot}  & \textbf{Encounter} \\
+    \hline
+    \dicef{1} &           &           & \encMons                       \\
+    \dicef{2} &           &           & \encMons                       \\
+    \dicef{3} & \dicef{1} &           & \encMons                       \\
+    \dicef{4} & \dicef{2} & \dicef{1} & \encMons                       \\
+    \dicef{5} & \dicef{3} & \dicef{2} & \encMons                       \\
+    \dicef{6} & \dicef{4} & \dicef{3} & \encMons                       \\
+              & \dicef{5} & \dicef{4} & \encMons                       \\
+              & \dicef{6} & \dicef{5} & \encMons                       \\
+              &           & \dicef{6} & \encMons                       \\
+
+  \end{boxtable}
 }
 
 
