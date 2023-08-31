@@ -361,13 +361,27 @@
   \or%
     \encRef{bedleaves}
   \or%
-    \encRef{seekers}
+    \encRef{marching_mushroom}
   \else%
-    \encRef{umber_hulk}
+    \encRef{seekers}
   \fi%
   \stepcounter{track}%
 }
 
+\newcommand\trackMonth{%
+  \ifcase\value{season}\or%
+    January\or February\or March\or April\or May\or June\or%
+    July\or August\or September\or October\or November\else December\fi%
+}
+
+\newcommand\showSeasonLine[1]{
+  \setcounter{season}{#1}
+  \trackMonth &
+  \textbf{\showSeason} &
+  \showTemperature &
+  \showAstroEvents
+  \\
+}
 
 \newcommand\encMonsters{
   \setcounter{enc}{1}

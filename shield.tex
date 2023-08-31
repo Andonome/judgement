@@ -18,6 +18,11 @@
 
 \newpage
 
+\setcounter{track}{\month}
+\section*{~\showSeason~\hint{\showTemperature}}
+
+{\flushleft\Huge\showAstroEvents}
+
 \begin{multicols}{2}
 
 \humansoldier[\npc{\T[8]\Hu}{Bandits}]
@@ -29,8 +34,6 @@
   \ghast
 \else
   \chitincrawler
-
-  \basilisk
 \fi
 
 \griffin
@@ -43,13 +46,13 @@
 
 \woodspy
 
-\woodspy
-
-\ifnum\value{temperature}=1
-  \umberhulk
+\ifnum\value{temperature}=3
+  \basilisk
 \fi
 
 \end{multicols}
+
+\pagebreak
 
 \begin{multicols}{2}
 
@@ -72,24 +75,6 @@
   \encMildForest
 \fi
 
-\subsubsection*{Sightings}
-
-\setcounter{track}{1}
-\begin{dlist}
-  \Repeat{6}{
-    \item
-    \encSight
-  }
-\end{dlist}
-
-\subsection*{Bandits}
-
-\encBandits
-
-\subsection*{Traders}
-
-\encTraders
-
 \subsection*{Monsters}
 
 \setcounter{enc}{\value{temperature}}
@@ -104,6 +89,25 @@
     \encMons
   }
 \end{dlist}
+
+\subsection*{Sightings}
+
+\setcounter{track}{\value{temperature}}
+\stepcounter{track}
+\begin{dlist}
+  \Repeat{6}{
+    \item
+    \encSight
+  }
+\end{dlist}
+
+\subsection*{Bandits}
+
+\encBandits
+
+\subsection*{Traders}
+
+\encTraders
 
 \end{multicols}
 
