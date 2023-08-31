@@ -2,9 +2,6 @@ BOOK = $(shell basename "$$(pwd)")
 
 output: $(BOOK).pdf
 
-global: config/bind.sty .switch-gls
-.switch-gls:
-	@touch -r Makefile .switch-gls
 config/bind.sty:
 	@git submodule update --init
 
@@ -17,7 +14,7 @@ $(BOOK).sls: | $(BOOK).glo
 $(BOOK).pdf: $(BOOK).sls $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
 
-shield.pdf: shield.tex $(BOOK).pdf
+shield.pdf: shield.tex $(BOOK).sls
 	pdflatex shield.tex
 
 all: $(BOOK).pdf shield.pdf
