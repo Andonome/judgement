@@ -54,22 +54,58 @@ All encounters combine multiple elements together.
 
 \end{enumerate}
 
-  \begin{speechtext}
-    The rain drizzles from every leaf in the forest, making a constant racket.
-    Pulling back your hood to look around, you see a plant with gigantic leaves -- the perfect spot to shield from the rain.
-    Unfortunately a boar seems to have taken the place already.
-    She rests, unaware that you stand only ten steps away.
+We combine \underline{every} result in to a single encounter.
 
-    What do you do?
-  \end{speechtext}
+\begin{nametable}[l|Y||Y||Y]{Forest}
+  & \dicef[\Large]{1} & \dicef[\Large]{2}~$\Downarrow$ & \dicef[\Large]{3} \\
+  \hline
+  \setcounter{enc}{0}
+  \setcounter{track}{2}
+  \dicef[\Large]{1} & \encBigList \stepcounter{track}  & \textbf{\encBigList} \stepcounter{track} & \encBigList \stepcounter{track} \\
+  \hline
+  \hline
+  \stepcounter{enc}
+  \setcounter{track}{2}
+  \dicef[\Large]{2}$\Rightarrow$ \Repeat{3}{& \textbf{\encBigList} \stepcounter{track} } \\
+  \hline
+  \hline
+  \stepcounter{enc}
+  \setcounter{track}{2}
+  \dicef[\Large]{3} & \encBigList \stepcounter{track}  & \textbf{\encBigList} \stepcounter{track} & \encBigList \stepcounter{track} \\
+\end{nametable}
+
+The combinations have no formula.
+You simply have to draw everything together, in the first way that comes to mind.
+
+\begin{speechtext}
+  The rain drizzles from every leaf in the forest, making a constant racket.
+  Pulling back your hood to look around, you see a plant with gigantic leaves -- the perfect spot to shield from the rain.
+  Unfortunately a boar seems to have taken the place already.
+  She rests, unaware that you stand only ten steps away.
+
+  What do you do?
+\end{speechtext}
 
   \ldots\ldots
 
-  \begin{speechtext}
-    You have your bow out, but before loosing it, long, dark-brown legs wrap around the tree above the boar.
-    Each leg seems longer than horse, but grips the tree silently.
-  \end{speechtext}
+\begin{speechtext}
+  You have your bow out, but before loosing it, long, dark-brown legs wrap around the tree above the boar.
+  Each leg seems longer than horse, but grips the tree silently.
+\end{speechtext}
 
+Every combination holds a lot of options.
+
+\begin{description}
+  \item[Chitincrawler + Traders]
+  might imply an empty caravan, with a chitincrawler eating one horse, while the others remain strapped to their carriage, and panicking.
+
+  The traders have fled up the road without their wares.
+  \item[Griffins + Chitincrawler]
+  could imply being stalked by some griffins, and soon after the \glspl{pc} spot an obvious chitincrawler web-trap above them.
+  With some cunning, they could set one danger against the other\ldots
+  \item[Bandits + Snow]
+  suggests a clever trap, where bandits hide in the snow with bows, waiting to fire on anyone who looks like they have something nice.
+\end{description}
 
 \end{multicols}
 
