@@ -25,30 +25,33 @@
 
 \begin{multicols}{2}
 
-\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+%\humansoldier[\npc{\T[8]\Hu}{Bandits}]
 
-\humansoldier[\npc{\T[8]\Hu}{Bandits}]
-
-\ifnum\value{temperature}<1
-  \wolf
+\ifcase\value{temperature}
+  % Temperature 0 (cold)
   \ghast
-\else
+  \wolf
+\or\or\or
+  % Temperature 3 (hot)
+  \basilisk
+\fi
+
+\mouthdigger
+
+\ifnum\value{temperature}>0
   \chitincrawler
 \fi
 
 \griffin
 
-\ifnum\value{temperature}<1
-  \dryad
+\ifnum\value{temperature}>0
+  \bear
+  \ifnum\value{temperature}<3
+    \dryad
+  \fi
 \fi
-
-\mouthdigger
 
 \woodspy
-
-\ifnum\value{temperature}=3
-  \basilisk
-\fi
 
 \end{multicols}
 
@@ -107,7 +110,11 @@
 
 \subsection*{Traders}
 
+Roll $3D6$ and add all results.
+
 \encTraders
+
+\vfill\null
 
 \end{multicols}
 
