@@ -454,6 +454,7 @@
         \item
         check the perimiter -- just run round everywhere that's not forest.
       \end{dlist}
+    And ignore the `complications', because nobody cares about this job.
     \item
     Help a village
     \begin{dlist}
@@ -469,28 +470,34 @@
       Bonus points for finding the nest.
       \item
       clear the perrimiter -- they need someone to raise and chop all around the edges.
+      \item
+      particularly large griffin, known for taking off with sheep.
+      \item
+      defeat the local brigands.
+      If the brigands find out about the \glspl{pc}, they will simply leave for a season.
     \end{dlist}
     \item
     Help transport a
     \begin{multicols}{2}
     \begin{dlist}
       \item
-      child.
+      child
       \item
-      convict.
+      convict
       \item
-      guild leader.
+      guild leader
       \item
-      wounded ranger.
+      wounded ranger
       \item
-      magical item.
+      magical item
       \item
-      secret document.
+      secret document
     \end{dlist}
     \end{multicols}
     \ldots to the next town.
     \item
     A Night Rider needs you to
+    \label{riderMissions}
     \begin{dlist}
       \item
       lay these three traps around a nearby village.
@@ -498,40 +505,51 @@
       \item
       deliver a message to a local fiend.
       You do not have to approach them, but you \emph{do} need evidence that they received the message.
+      \label{fiendLetter}
       \item
       track down and kill a team of local bandits.
       \item
       tell a distant village to resume paying their taxes to their warden, and start causing trouble if they refuse.
+      \label{taxesMission}
     \end{dlist}
     \item
     A travelling tradesman wants you to
       \begin{dlist}
         \item
-        ignore your orders and come guard his caravan.
-        He'll pay you 30~\glspl{cp}.
+        come guard his caravan on a journey to the next town.
+        He'll pay you 30~\glspl{sp}.
         \item
         take this shortsword -- it should keep you safe.
         \item
-        take his wine delivery up to his room, at the top of the tower.
+        tell him about what the \gls{guard} are up to.
+        He will join you on the road and pay 5 \glspl{sp} per person for the `news'.
         \item
-        join him going to the next town, and vouch that the bag of 200 \glspl{sp} belongs to the \gls{guard} (he doesn't like the border taxes).
+        join her going to the next town, and vouch that the bag of 300 \glspl{sp} belongs to the \gls{guard} and not her, so she doesn't have to pay a tax on it.
+        \item
+        help deliver something to a local fiend.
+        She has just what it wants
+      (as per \autopageref{fiendDesires}).
+        She can pay a total of 60~\glspl{sp}.
       \end{dlist}
-    Tell nobody -- you could get in a lot of trouble for moonlighting.
+    Tell nobody -- you could get in a lot of trouble for moonlighting
+    (re-roll to find the orders).
   \item
   Seek out the
     \begin{dlist}
       \item
       \gls{guard} deserter, and return with their head.
       \item
-      local goblin warren and report back once you know where they live.
+      local oddity and report back once you know where they live
+      (see \nameref{mapOddities}, \autopageref{mapOddities}).
       \item
       elven fence, who sells stolen items to traders from far-away lands.
       \item
       native speaker of Gnomish, because someone needs a book translated.
       \item
-      particularly large griffin, known for taking off with sheep.
+      doula, famed for her healing abilities, to help the local warden.
       \item
-      doula, famed for her healing abilities, to help the local lord.
+      local fiend, and find out what it wants
+      (as per `\nameref{fiendDesires}', \autopageref{fiendDesires}).
     \end{dlist}
   \item
   Capture a
@@ -575,10 +593,25 @@
 \newcommand\missionComplications{
   \begin{dlist}
     \item
-    Another group has a similar mission...or the same? (roll $1D6$ on the same table as last time).
+    Take this Wanderer from the Guild of Knowledge with you to chronicle the mission (see \autopageref{knowledgeWanderer} for \nameref{knowledgeWanderer}).
+    And \emph{don't} let him get hurt.
     \item
-    When the \glspl{pc} think they've found the target, they have in fact found a detailed illusion, crafted by a gnomish illusionist.
+    Rival \glspl{guard} a related mission.
+    Roll the second $D6$ again, to find their quarry.
+    Both items are related.
+
+    \begin{exampletext}
+      For example, if you roll a \ref{riderMissions} then \ref{fiendLetter}, the \glspl{pc} would have to deliver a letter to a fiend.
+      If the rivals rolled a \ref{taxesMission}, they would have to threaten a village into paying its taxes, and these two missions would interfere with each other somehow.
+
+      Perhaps both missions involve targets who travel together, or perhaps one mission's success leads to the other's failure.
+    \end{exampletext}
     \item
-    One of the other guilds acts against them.
+    A nearby fiend does not want the mission to succeed.
+    \item
+    A gnomish illusionist works against the party.
+    Perhaps someone hired them, perhaps they just don't like how the \gls{guard} operate around these parts.
+    \item
+    A distant warden hopes for their failure, and has sent his men to stop them.
   \end{dlist}
 }
