@@ -2,7 +2,7 @@ compile_pdf:
   image: ctornau/latex
   script:
     - apt-get update -y
-    - apt-get install -y inkscape make git-lfs
+    - apt-get install -y inkscape make git-lfs qrencode
     - git submodule update --init
     - git submodule foreach git lfs pull
     - make all

@@ -5,7 +5,10 @@ output: $(BOOK).pdf
 config/bind.sty:
 	@git submodule update --init
 
-svg-inkscape: | config/bind.sty
+shield_link.png:
+	grep -q 'shield\.pdf' README.md
+	tail -n 1 README.md  | cut -d' ' -f2 |qrencode -o shield_link.png
+svg-inkscape: | config/bind.sty shield_link.png
 	@pdflatex -shell-escape -jobname $(BOOK) main.tex
 $(BOOK).glo: | svg-inkscape
 	@pdflatex -jobname $(BOOK) main.tex
@@ -25,6 +28,9 @@ clean:
 	*.pdf \
 	svg-inkscape \
 	*.fdb_latexmk \
+	*.png \
+	*.ilg \
+	*.ing \
 	*.fls
 
 .PHONY: clean all
