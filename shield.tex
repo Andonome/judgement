@@ -12,6 +12,14 @@
   \input{../core/commands.tex}
 }{}
 
+\externalReferent{stories}
+\iftoggle{stories}{
+  \input{../stories/commands.tex}
+}{}
+
+\pagestyle{empty}
+\frontmatter
+
 \begin{document}
 
 \input{config/GS.tex}
@@ -108,13 +116,17 @@
 
 \encBandits
 
+\moralechart
+
 \subsection*{Traders}
 
 Roll $3D6$ and add all results.
 
 \encTraders
 
-\moralechart
+\iftoggle{stories}{
+  \namesOfHumans
+}{}
 
 \subsection{Village Events}
 
