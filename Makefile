@@ -17,7 +17,7 @@ $(BOOK).sls: | $(BOOK).glo
 $(BOOK).pdf: $(BOOK).sls $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
 
-shield.pdf: shield.tex $(BOOK).sls
+shield.pdf: shield.tex charts.tex $(BOOK).sls
 	pdflatex shield.tex
 
 all: $(BOOK).pdf shield.pdf
