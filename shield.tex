@@ -126,6 +126,8 @@ Roll $3D6$ and add all results.
 
 \iftoggle{stories}{
   \namesOfHumans
+
+  \poshNames
 }{}
 
 \subsection{Village Events}
@@ -133,6 +135,10 @@ Roll $3D6$ and add all results.
 \encVillageEvent
 
 \end{multicols}
+
+\gatheringChart
+
+\larcenyChart
 
 \iftoggle{core}{
   \newpage
@@ -148,13 +154,13 @@ Roll $3D6$ and add all results.
   \noindent
   \manaCoveringChart
 
-  \larcenyChart
   \initiativechart
+
+  \hitLocation
 
   \end{multicols}
 
   \chasechart
-  \gatheringChart
 
 }{}
 
