@@ -4,40 +4,50 @@
 \index{Seasons}
 \label{encounters}
 
-You don't have to roll random encounters to be a \gls{gm}, but it helps.
-
-When the troupe move to the next town, and you don't want to `time travel', and just say `okay, next week, you arrive', but don't have anything planned, then you can throw in a random encounter or two.
-Many of these encounters won't involve any combat -- even those with an actual monster can result in seeing something strange happening, before the troupe decide to move on.
-Many encounters include weather-based events, which give a sense of time passing, and drain a couple of \glspl{fatigue} from the troupe before they move on.
-
-Below that, the random mission generator won't replace a full adventure, but it provide you with a starting-point to get a few ideas.
+\Gls{fenestra}'s institutions, structure, politics, religion, and \emph{food} all revolve around the constant problems presented by monstrous creatures wandering around the world.
+These encounters encounters do not occur every hour of every day; just as deer walk through dark forests for a lifetime, so people can also visit a nearby village without certain death.
+However, they will experience a \textit{reasonable danger} of death if they walk carefully, and worse if they wander carelessly.
 
 \section{Things on the Road}
 
 \begin{multicols}{2}
 
-\begin{encChart}{Forest}
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-  \encLine \bigBeastList \\
-\end{encChart}
+\subsection{Daily Encounters}
+
+\begin{exampletext}
+  Everyone goes out together, in heavy wagons, and bows ready for action.
+  But once you arrive back home, the traders finish and want to move on by morning, which doesn't leave much time to say `hello' to everyone.
+  So you decide to leave with the next trading caravan, but a few days later and nobody's arrived.
+  Nobody tells you to go, but when food's running low you just kinda \emph{feel} it.
+
+  The little places by the towns don't see much danger, so if you're not too far from a big place, you might just walk to the nearest road and see if you can join a caravan heading back to town.
+  Of course the bow's at the ready, and a spear if you can stand the extra weight.
+
+  When you spot a creature, you can try to stare it down.
+  If that doesn't work, give it a nasty sting and they mostly go away.
+  Gotta be careful close to the cold though -- once the beasts feel the frost coming on they get \emph{fearless}.
+
+  Once the cold settles in, the forest calms down.
+  Most of the big nasty ones sleep under the snow until it melts.
+\end{exampletext}
+
+\boxPair{
+  \begin{encChart}{Weather}
+    \Repeat{16}{
+      \encLine \bigWeatherList \\
+    }
+  \end{encChart}
+}{
+  \begin{encChart}{Forest}
+    \Repeat{16}{
+      \encLine \bigBeastList \\
+    }
+  \end{encChart}
+}
 
 \begin{itemize}
   \item
-  Each day, roll $3D6$ to check for encounters.
+  Each day, roll $3D6$ to check for encounters and the weather.
   \begin{itemize}
     \item
     Die 1 and 2 tell you the encounter.
