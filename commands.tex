@@ -401,6 +401,44 @@
   \end{boxtable}
 }
 
+
+\newcommand\stepDown[1]{
+  \ifnum\value{#1}>0
+    \ifnum\value{#1}<13
+        \arabic{#1}
+    \fi
+    \addtocounter{#1}{-1}
+  \fi
+}
+
+\newcommand\encLine{
+  \stepDown{enc} & \stepDown{diceNo} & \stepDown{diceNo2} &
+}
+
+\newenvironment{encChart}[2][c|c|c|L]%
+  {
+    \setcounter{enc}{12}
+    \setcounter{diceNo}{14}
+    \setcounter{diceNo2}{16}
+
+    \vspace{2em}
+    \centering
+    \needspace{5em}
+    \textbf{\large#2 Chart}
+    \par
+    \vspace{1em}
+    \tabularx{\linewidth}{#1}
+      \hline
+      \hline
+      \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Encounter} \\
+      \hline
+  }%
+  {
+      \hline
+    \endtabularx
+    \vspace{2em}
+  }%
+
 \newcommand\encVillageEvent{
   \begin{enumerate}
     \setcounter{enumi}{1}
