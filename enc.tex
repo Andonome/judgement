@@ -12,8 +12,6 @@ Many encounters include weather-based events, which give a sense of time passing
 
 Below that, the random mission generator won't replace a full adventure, but it provide you with a starting-point to get a few ideas.
 
-
-
 \section{Things on the Road}
 
 \begin{multicols}{2}
@@ -73,296 +71,91 @@ Below that, the random mission generator won't replace a full adventure, but it 
   \encLine Extreme cold snap \\
 \end{encChart}
 
-
+\begin{itemize}
+  \item
+  {\Large\epsdice{6} + \epsdice{3} + \epsdice[black]{4}}
+  \item
+  $5 + 3 = 8$, so $1D3$ griffins approach.
+  \item
+  The third die result is cut in half to produce a D3.
+  The result is `2', so 2 griffins approach.
+  \item
+  $3 + 4 = 7$, so a storm is brewing.
+\end{itemize}
 
 \clearpage
 
-\noindent
-When it rains, it pours; and when creatures attack, the \glspl{pc} will often find them among interesting plants, or else bandits might attack by weakening a bridge while the \glspl{pc} cross it.
-
-\paragraph{Villages}
-encounters show what happens in the safe area around towns, where sufficient traps, \glspl{guard} and surrounding walled settlements stop encroaching creatures.
-
-\paragraph{Edge}
-encounters are the most common -- these are the walled villages, the roads, and the lost taverns on them.
-
-\paragraph{Forests}
-have no bandits, because they have nobody to rob.
-In warmer seasons they have plenty of food for the picking, and plenty of monsters too.
-
-All encounters combine multiple elements together.
-
-\begin{enumerate}
-  \item
-  Start with the current Season.%
-  \footnote{For more on seasons, see \autopageref{seasons}.}
-
-  \begin{exampletext}
-    Let's assume a hot Season.
-  \end{exampletext}
-  \item
-  Select the location: villages, edge, or forest.
-
-  \begin{exampletext}
-    And assume the forest for now.
-  \end{exampletext}
-  \item
-  Roll $1D3$ to find the row, and add those three encounters.
-
-  \begin{exampletext}
-    So `2' would mean
-    \setcounter{enc}{1}%
-    \setcounter{track}{2}%
-    `\encBigList'\stepcounter{track},
-    `\encBigList'\stepcounter{track}, and
-    `\encBigList'.
-  \end{exampletext}
-
-  \item
-  Roll $1D3$ and add the remaining two encounters on that column.
-
-  \begin{exampletext}
-    Rolling `2' means adding
-    \setcounter{enc}{0}%
-    \setcounter{track}{3}%
-    that `\encBigList'\stepcounter{enc}\stepcounter{enc}, and
-    `\encBigList'
-    (we already have the result between them).
-  \end{exampletext}
-  \item
-  Roll to see what monsters and sightings the \glspl{pc} come across, and combine all five encounters into a single encounter.
-  \item
-  If you still have no idea what's happening, roll even more dice with a morale chart.
-\end{enumerate}
-
-We combine \underline{every} result into a single encounter.
-
-\begin{nametable}[l|Y||Y||Y]{Forest}
-  & \dicef[\Large]{1} & \dicef[\Large]{2}~$\Downarrow$ & \dicef[\Large]{3} \\
+\begin{encChart}{Civilized Villages}
+  \encLine Umber Hulk \\
+  \encLine Swarming stirges \\
+  \encLine Basilisk \\
+  \encLine Chitincrawler \\
+  \encLine Mouthdigger \\
+  \encLine Woodspy \\
+  \encLine $1D3$ Griffins \\
   \hline
-  \setcounter{enc}{0}
-  \setcounter{track}{2}
-  \dicef[\Large]{1} & \encBigList \stepcounter{track}  & \textbf{\encBigList} \stepcounter{track} & \encBigList \stepcounter{track} \\
+  \encLine \textit{Bandits!} \\
   \hline
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+\end{encChart}
+
+\begin{itemize}
+  \item
+  In more civilized areas, fewer creatures of the forest dare to set foot.
+  \begin{itemize}
+    \item
+    On the roll of a 9, the \glspl{pc} encounter brigands.
+    \item
+    Rolling below 9 means a harmless encounter with a trader, going the other way from the players, and happy to share news.
+    \item
+    Rolling above 9 means a normal encounter with a forest creature.
+  \end{itemize}
+\end{itemize}
+
+\columnbreak
+
+\begin{encChart}{Outer Edges}
+  \encLine Umber Hulk \\
+  \encLine Swarming stirges \\
+  \encLine Basilisk \\
+  \encLine Chitincrawler \\
+  \encLine Mouthdigger \\
+  \encLine Woodspy \\
+  \encLine $1D3$ Griffins \\
+  \encLine $1D6+6$ Wolves \\
+  \encLine Bear \\
+  \encLine Warthog \\
+  \encLine $1D6\times 20$ Aurochs \\
   \hline
-  \stepcounter{enc}
-  \setcounter{track}{2}
-  \dicef[\Large]{2}$\Rightarrow$ \Repeat{3}{& \textbf{\encBigList} \stepcounter{track} } \\
+  \encLine \textit{Bandits!} \\
   \hline
-  \hline
-  \stepcounter{enc}
-  \setcounter{track}{2}
-  \dicef[\Large]{3} & \encBigList \stepcounter{track}  & \textbf{\encBigList} \stepcounter{track} & \encBigList \stepcounter{track} \\
-\end{nametable}
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+  \encLine \arabic{diceNo} Traders caravans. \\
+\end{encChart}
 
-The combinations have no formula.
-You simply have to draw everything together, in the first way that comes to mind.
-
-\begin{speechtext}
-  The rain drizzles from every leaf in the forest, making a constant racket.
-  Pulling back your hood to look around, you see a plant with gigantic leaves -- the perfect spot to shield from the rain.
-  Unfortunately a boar seems to have taken the place already.
-  She rests, unaware that you stand only ten steps away.
-
-  What do you do?
-\end{speechtext}
-
-  \ldots\ldots
-
-\begin{speechtext}
-  You have your bow out, but before loosing it, long, dark-brown legs wrap around the tree above the boar.
-  Each leg seems longer than horse, but grips the tree silently.
-\end{speechtext}
-
-Every combination holds a lot of options.
-
-\begin{description}
-  \item[Chitincrawler + Traders]
-  might imply an empty caravan, with a chitincrawler eating one horse, while the others remain strapped to their carriage, and panicking.
-
-  The traders have fled up the road without their wares.
-  \item[Griffins + Chitincrawler]
-  \ifcase\value{season}\relax\or
-  could imply being stalked by some griffins, and soon after the \glspl{pc} spot an obvious chitincrawler web-trap above them.
-  With some cunning, they could set one danger against the other\ldots
-  \or
-  can involve one monster attacking the other.
-  In this case, a griffin, entangled in a chitincrawler web.
-
-  The party need do nothing -- encounters don't require combat.
-  Soon after, they notice a lone griffin, guarding a nest.
-  \or
-  might reference the fact that both have eggs.
-  A chitincrawler with an engorged thorax, full-to-bursting with eggs, makes for tempting prey.
-  The party observe two griffins stalking it in the distance, just as it stalks the party.
-
-  If the party simply manage to put enough distance between them and the engorged arachnid, the griffins will finish her off.
-  \else%
-  means each stalk the party.
-  They notice the griffins circling above, beyond arrow-range, waiting for the best time to attack.
-  Once the chitincrawler encounters has ended, the griffins reassess how wounded the party appear\ldots
-  \fi
-  \item[Bandits + Snow]
-  suggests a clever trap, where bandits hide in the snow with bows, waiting to fire on anyone who looks like they have something nice.
-\end{description}
-
-\end{multicols}
-
-\begin{multicols}{2}
-
-\subsection{Hot Seasons}
-
-\noindent
-Heat transforms the land around the villages.
-Without the great forest canopies, the Sun scorches the earth, providing a protective ring of open land around villages.
-Once people can see creatures coming from a long way off, archers have a much easier time.
-
-The hot seasons melt mountaintops, which floods plains and forests below.
-Swelling rivers destroy bridges and any houses built too close to the banks.
-Stone-walled cities often create miniature lakes or run-off areas for the river to expand into.
-
-\setcounter{enc}{0}
-\setcounter{track}{0}
-
-\encWarmVillages
-
-\encWarmEdge
-
-\encWarmForest
-
-\begin{multicols}{2}
-\subsubsection*{Monsters}
-
-\setcounter{enc}{4}
-\begin{dlist}
-  \Repeat{6}{
+\begin{itemize}
+  \item
+  This number is the `Bandit Line', and it decreases as characters move away from civilization.
+  \begin{itemize}
     \item
-    \encMons
-  }
-\end{dlist}
-
-\subsubsection*{Sightings}
-
-\setcounter{track}{3}
-\begin{dlist}
-  \Repeat{6}{
+    On the lonely roads to the outer walled towns, the bandit line may drop to 6, then 3, until not trace of humanity remains.
     \item
-    \encSight
-  }
-\end{dlist}
+    The lower that Line of Civilization goes, the fewer wild creatures one sees during the day.
+  \end{itemize}
+  \item
+  By night, all the beasts return, as humans cower in the dark.
+\end{itemize}
 
-\end{multicols}
-
-\subsubsection{Floods}
-
-Heat often brings flooding, especially around rivers.
-Anyone doing anything (or doing nothing) by a river must make some kind of check at \tn[8] to ensure the flood does not sweep away their plans.
-Floods can destroy bridges, roads, and even houses, although most people who live in areas prone to flooding will build their houses somewhere high, or put them on stilts.
-
-\subsubsection{Hot Spell}
-
-The forests present many dangers, but they at least provide protection against one of the most insidious.
-Heat begins by stripping people of their senses, and soon burns their skin.
-
-Mechanically, heatwaves inflict 4 \glspl{fatigue} on anyone in the area, although the right clothing and preparation (\roll{Intelligence}{Wyldcrafting}) will half the amount taken.
-
-Anyone foolish enough to wear heavy armour in a heatwave will always take the full brunt of the \glspl{fatigue}, plus one per \gls{weight} of the armour.
-
-\end{multicols}
-
-\bigLine
-
-\begin{multicols}{2}
-
-\subsection{Mild Seasons}
-
-Mild Seasons outnumber the others, but also bring heavy storms.
-During peaceful months, people wander and trade, farm and plan.
-
-When storms come, strong winds and earthquakes can tear apart bridges and houses.
-Stone castles, if properly made, can withstand earthquakes, and anyone living far enough underground often won't notice as the heavy earth around them protects.
-But anyone on the land should leave their house quickly.
-
-\encMildVillages
-
-\encMildEdge
-
-\encMildForest
-
-\begin{multicols}{2}
-\subsubsection*{Monsters}
-\label{monsterEncounters}
-
-\setcounter{enc}{3}
-\begin{dlist}
-  \Repeat{6}{
-    \item
-    \encMons
-  }
-\end{dlist}
-
-\subsubsection*{Sightings}
-
-\setcounter{track}{2}
-\begin{dlist}
-  \Repeat{6}{
-    \item
-    \encSight
-  }
-\end{dlist}
-
-\end{multicols}
-
-\subsubsection{Storms}
-Those who live in walled villages always fear a storm, because the archers cannot land their arrows on encroaching beasts until they approach close.
-Traders don't fare much better.
-
-\end{multicols}
-
-\bigLine
-\begin{multicols}{2}
-
-\subsection{Cold Seasons}
-
-Snow covers the land so deeply that people only know where the road lies by the lack of trees.
-Protective clothing becomes a necessity.
-
-Despite this, people can travel the lonely roads safer than before, as two of Fenestra's most dangerous creatures -- the chitincrawler and basilisk -- must hibernate when cold.
-
-\encColdVillages
-
-\encColdEdge
-
-\encColdForest
-
-\subsubsection*{Monsters}
-
-\begin{multicols}{2}
-\setcounter{enc}{1}
-\begin{dlist}
-  \Repeat{6}{
-    \item
-    \encMons
-  }
-\end{dlist}
-
-\subsubsection*{Sightings}
-
-\setcounter{track}{1}
-\begin{dlist}
-  \Repeat{6}{
-    \item
-    \encSight
-  }
-\end{dlist}
-
-\end{multicols}
-
-\end{multicols}
-
-\bigLine
-
-\begin{multicols}{2}
+\clearpage
 
 \subsection{Bandits \& Brigands}
 

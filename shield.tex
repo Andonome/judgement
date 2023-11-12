@@ -67,25 +67,6 @@
 
 \begin{multicols}{2}
 
-\ifcase\value{temperature}\relax% Hot Seasons
-\or
-  \encColdVillages
-  \encColdEdge
-  \encColdForest
-\or
-  \encMildVillages
-  \encMildEdge
-  \encMildForest
-\or
-  \encWarmVillages
-  \encWarmEdge
-  \encWarmForest
-\else
-  \encMildVillages
-  \encMildEdge
-  \encMildForest
-\fi
-
 \subsection*{Monsters}
 
 \setcounter{enc}{\value{temperature}}
