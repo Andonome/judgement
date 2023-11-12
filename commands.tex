@@ -193,25 +193,24 @@
   \end{boxtable}
 }
 
-
 \newcommand\stepDown[1]{
   \ifnum\value{#1}>0
+    \addtocounter{#1}{-1}
     \ifnum\value{#1}<13
         \arabic{#1}
     \fi
-    \addtocounter{#1}{-1}
   \fi
 }
 
 \newcommand\encLine{
-  \stepDown{enc} & \stepDown{diceNo} & \stepDown{diceNo2} &
+  \stepDown{diceNo} & \stepDown{diceNo2} & \stepDown{enc} & 
 }
 
 \newenvironment{encChart}[2][c|c|c|L]%
   {
-    \setcounter{enc}{12}
-    \setcounter{diceNo}{14}
-    \setcounter{diceNo2}{16}
+    \setcounter{diceNo}{13}
+    \setcounter{diceNo2}{15}
+    \setcounter{enc}{17}
 
     \vspace{2em}
     \centering
@@ -230,6 +229,47 @@
     \endtabularx
     \vspace{2em}
   }%
+
+\newcommand\bigWeatherList{
+  \ifcase\value{enc}\or%
+    Extreme cold snap
+  \or%
+    Hail
+  \or%
+    Snow
+  \or%
+    Biting winds
+  \or%
+    Mild breeze
+  \or%
+    Dead calm
+  \or%
+    Mist
+  \or%
+    Overcast
+  \or%
+    Brewing storm
+  \or%
+    Lightning
+  \or%
+    Thunder
+  \or%
+    Clear skies
+  \or%
+    Light showers
+  \or%
+    Hurricane
+  \or%
+    Heatwave
+  \or%
+    Floods
+  \else%
+    Error
+  \fi
+}
+
+
+%%%%% Full Encounters %%%%%
 
 \newcommand\encVillageEvent{
   \begin{enumerate}
