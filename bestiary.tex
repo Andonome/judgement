@@ -306,9 +306,19 @@ enough feathers, dried and ground up into a powder, grant a single \gls{boon} fo
     Getting closer, they find a griffin watching from the treetops, mimicking whatever they say.
   \fi
   \item
-  A griffin nest lies in the treetops.
-  A single egg could make a meal for three men.
-  The parent has left, so a \roll{Speed}{Athletics} roll allows a party member to get the eggs before a parent returns (\tn[9]).
+  \ifodd\value{r4}
+    A griffin nest lies in the treetops.
+    A single egg could make a meal for three men.
+    The parent has left, so a \roll{Speed}{Athletics} roll allows a party member to get the eggs before a parent returns (\tn[9]).
+  \else
+    Late at night, a voice calls out from the forest.
+    \begin{quotation}
+      Hoo-rah, up-she-rises!
+    \end{quotation}
+    It continues to sing this single verse, repeating it with exactly the same tone and pitch, then goes quiet, then starts up again.
+
+    If any response repeats twice, the griffin mimics that response, and walks closer to hear better\ldots
+  \fi
   \item
   A large griffin circles above, eyeing up the party's smallest member.
   If its Strength Bonus +2 is equal to the smallest party member's Weight Rating, it descends and picks that party member up, flying away at four times its standard running speed.
