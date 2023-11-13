@@ -206,22 +206,17 @@
   \stepDown{diceNo} & \stepDown{diceNo2} & \stepDown{enc} & 
 }
 
-\newenvironment{encChart}[2][c|c|c|L]%
+\newenvironment{encChart}[1]%
   {
     \setcounter{diceNo}{13}
     \setcounter{diceNo2}{15}
     \setcounter{enc}{17}
 
     \vspace{2em}
-    \centering
-    \needspace{5em}
-    \textbf{\large#2 Chart}
-    \par
-    \vspace{1em}
-    \tabularx{\linewidth}{#1}
+    \tabularx{\linewidth}{c|c|c|L}
       \hline
       \hline
-      \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Encounter} \\
+      \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{#1} \\
       \hline
   }%
   {
