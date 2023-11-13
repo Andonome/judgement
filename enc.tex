@@ -63,7 +63,7 @@ Past the end of the last road, the forest replaces the all traders with beasts.
 \begin{tabularx}{\linewidth}{c|L}
   \hline
   \hline
-  \textbf{Roll} & \textbf{Encounter} \\
+  \textbf{Roll} & \textbf{Inner Hamlets} \\
   \hline
   \Repeat{2}{
     \addtocounter{diceNo}{-1}
@@ -92,9 +92,9 @@ Past the end of the last road, the forest replaces the all traders with beasts.
 \begin{tabularx}{\linewidth}{c|L}
   \hline
   \hline
-  \textbf{Roll} & \textbf{Encounter} \\
+  \textbf{Roll} & \textbf{The Lonely Road} \\
   \hline
-  \Repeat{5}{
+  \Repeat{6}{
     \addtocounter{diceNo}{-1}
     \addtocounter{enc}{-1}
     \arabic{diceNo} & \bigBeastList \\
@@ -104,7 +104,7 @@ Past the end of the last road, the forest replaces the all traders with beasts.
   \addtocounter{enc}{-1}
   \arabic{diceNo} & \ifodd\value{enc}Brigands!\else Bandits\fi \\
   \hline
-  \Repeat{5}{
+  \Repeat{4}{
     \addtocounter{diceNo}{-1}
     \addtocounter{enc}{-1}
     \arabic{diceNo} & \arabic{diceNo} wagons \\
@@ -121,9 +121,9 @@ Past the end of the last road, the forest replaces the all traders with beasts.
 \begin{tabularx}{\linewidth}{c|L}
   \hline
   \hline
-  \textbf{Roll} & \textbf{Encounter} \\
+  \textbf{Roll} & \textbf{Outer Villages} \\
   \hline
-  \Repeat{8}{
+  \Repeat{9}{
     \addtocounter{diceNo}{-1}
     \addtocounter{enc}{-1}
     \arabic{diceNo} & \bigBeastList \\
@@ -133,7 +133,7 @@ Past the end of the last road, the forest replaces the all traders with beasts.
   \addtocounter{enc}{-1}
   \arabic{diceNo} & \ifodd\value{enc}Brigands!\else Bandits\fi \\
   \hline
-  \Repeat{2}{
+  \Repeat{1}{
     \addtocounter{diceNo}{-1}
     \addtocounter{enc}{-1}
     \arabic{diceNo} & \arabic{diceNo} wagons \\
@@ -144,7 +144,6 @@ Past the end of the last road, the forest replaces the all traders with beasts.
 \end{multicols}
 
 \end{figure*}
-
 
 \noindent
 Encounters adjust, depending on the season, time of day, and how far the troupe have travelled from civilization.
@@ -161,7 +160,7 @@ Encounters adjust, depending on the season, time of day, and how far the troupe 
     tell you the weather.
   \end{description}
   \item
-  Close to a town, the civilization level is high (level 8 to 12), and it slowly decreases as one travels down the roads (level 4 to 7), and into the outer forest (level 1 to 3), then beyond the \gls{edge}.
+  Close to a town, the civilization level is high (level 8 to 12), and it slowly decreases as one walks along the roads to the outer towns with only one road.
 
   Compare your encounter roll to the civilization level:
   \begin{description}
@@ -170,9 +169,17 @@ Encounters adjust, depending on the season, time of day, and how far the troupe 
     \item[Rolling below]
     means the players have spotted a caravan of travellers and traders.
     The encounter roll tells you how many wagons are together.
-    \item[Rolling a tie]
-    means bandits attack.
-    The encounter roll indicates how many there are.
+    \item[On a tie]
+    outlaws attack.
+    \begin{itemize}
+      \item
+      Odd numbers mean brigands,
+      \item
+      even numbers mean bandits.
+      (see~\autopageref{brigands})
+      \item
+      Double the number rolled shows how many are present.
+    \end{itemize}
   \end{description}
   \item
   Each night, roll again, with -1 to the encounter roll and weather rolls.
@@ -220,19 +227,6 @@ Encounters adjust, depending on the season, time of day, and how far the troupe 
   So with just 3 dice rolled, you instantly have `\bigBeastList~in the \bigWeatherList'.
 
 \end{exampletext}
-
-\subsection{Bandits \& Brigands}
-
-Once farmers cannot sustain themselves any more, many turn to banditry.
-
-When soldiers cannot or will not sustain themselves on their duties, they become brigands.
-Brigands plan better, have excellent training, and the best weapons money can buy.
-
-Roll $1D6$ to check the number and type appearing.%
-\footnote{The number appearing is equal to $1D6\times 2 + 4$.
-Rolling an odd number means brigands, rather than bandits.}
-
-\encBandits
 
 \subsection{Traders \& Nomads}
 
