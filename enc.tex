@@ -92,6 +92,7 @@ Encounters adjust, depending on the season, time of day, and how far the troupe 
   \noindent
   For example, the troupe decide to head out, so you make a roll.
 
+  \rowcolors{2}{}{}
   \begin{center}
     \begin{tabular}{cl}
     \Large\underline{\epsdice{6} \epsdice[black]{3}} & \Large\epsdice{4} \\
@@ -121,6 +122,105 @@ Encounters adjust, depending on the season, time of day, and how far the troupe 
   So with just 3 dice rolled, you instantly have `\bigBeastList~in the \bigWeatherList'.
 
 \end{exampletext}
+
+\subsection{From Town to Tree}
+
+You can think of the civilization level as a line which moves down, slowly altering the encounter tables.
+
+\end{multicols}
+
+\begin{multicols}{3}
+\small
+%%% Ex table 1
+\setcounter{enc}{15}
+\setcounter{diceNo}{13}
+\vspace{2em}
+\rowcolors{2}{}{gray!10}
+\noindent
+\begin{tabularx}{\linewidth}{c|L}
+  \hline
+  \hline
+  \textbf{Roll} & \textbf{Encounter} \\
+  \hline
+  \Repeat{2}{
+    \addtocounter{diceNo}{-1}
+    \addtocounter{enc}{-1}
+    \arabic{diceNo} & \bigBeastList \\
+  }
+  \hline
+  \addtocounter{diceNo}{-1}
+  \addtocounter{enc}{-1}
+  \arabic{diceNo} & \ifodd\value{enc}Brigands!\else Bandits\fi \\
+  \hline
+  \Repeat{8}{
+    \addtocounter{diceNo}{-1}
+    \addtocounter{enc}{-1}
+    \arabic{diceNo} & \arabic{diceNo} wagons \\
+  }
+  \hline
+\end{tabularx}
+
+%%% Ex table 2
+\setcounter{enc}{15}
+\setcounter{diceNo}{13}
+\vspace{2em}
+\rowcolors{2}{}{gray!10}
+\noindent
+\begin{tabularx}{\linewidth}{c|L}
+  \hline
+  \hline
+  \textbf{Roll} & \textbf{Encounter} \\
+  \hline
+  \Repeat{5}{
+    \addtocounter{diceNo}{-1}
+    \addtocounter{enc}{-1}
+    \arabic{diceNo} & \bigBeastList \\
+  }
+  \hline
+  \addtocounter{diceNo}{-1}
+  \addtocounter{enc}{-1}
+  \arabic{diceNo} & \ifodd\value{enc}Brigands!\else Bandits\fi \\
+  \hline
+  \Repeat{5}{
+    \addtocounter{diceNo}{-1}
+    \addtocounter{enc}{-1}
+    \arabic{diceNo} & \arabic{diceNo} wagons \\
+  }
+  \hline
+\end{tabularx}
+
+%%% Ex table 3
+\setcounter{enc}{15}
+\setcounter{diceNo}{13}
+\vspace{2em}
+\rowcolors{2}{}{gray!10}
+\noindent
+\begin{tabularx}{\linewidth}{c|L}
+  \hline
+  \hline
+  \textbf{Roll} & \textbf{Encounter} \\
+  \hline
+  \Repeat{8}{
+    \addtocounter{diceNo}{-1}
+    \addtocounter{enc}{-1}
+    \arabic{diceNo} & \bigBeastList \\
+  }
+  \hline
+  \addtocounter{diceNo}{-1}
+  \addtocounter{enc}{-1}
+  \arabic{diceNo} & \ifodd\value{enc}Brigands!\else Bandits\fi \\
+  \hline
+  \Repeat{2}{
+    \addtocounter{diceNo}{-1}
+    \addtocounter{enc}{-1}
+    \arabic{diceNo} & \arabic{diceNo} wagons \\
+  }
+  \hline
+\end{tabularx}
+
+\end{multicols}
+
+\begin{multicols}{2}
 
 \subsection{Bandits \& Brigands}
 
