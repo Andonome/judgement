@@ -9,9 +9,50 @@
 \index{Astronomy}
 \index{Time Parallel}
 
-\begin{multicols}{2}
+\boxPair{
+  \begin{tikzpicture}
+    \coordinate (S) at (0,0);
+    \coordinate (A) at (3,1);
+    \coordinate (F) at (2.3,0.3);
+    \draw[\pageSideColor] (S) -- (A) -- (F);
+    \draw[\pageSideColor] (S) circle (3.1);% Orbit
+    \draw[\pageSideColor] (A) circle (1);% Suborbit
+    \fill[\pageSideColor] (S)  circle (30pt);
+    \fill[\pageOppositeColor] (A.south)  circle (3pt);
+    \fill[\pageOppositeColor] (F.east) circle (1pt);
+    \coordinate [label={\scshape\huge \outline{Sun}}] (S.south) at (0,0);
+    \coordinate [label=\outline{\Large \glsentrytext{ainumar}}] (A) at (3,1);
+    \coordinate [label=\outline{\glsentrytext{fenestra}}] (F) at ++(2.3,0.3);
+  \end{tikzpicture}
+
+}{
+  \begin{nametable}[l|Y|c|c]{Seasons}
+
+    \textbf{Real Month} & \textbf{Far Season} & \textbf{Weather} & \textbf{Event} \\
+    \hline
+    \hline
+    \showSeasonLine{1}
+    \showSeasonLine{2}
+    \showSeasonLine{3}
+    \showSeasonLine{4}
+    \hline
+    \showSeasonLine{5}
+    \showSeasonLine{6}
+    \showSeasonLine{7}
+    \showSeasonLine{8}
+    \hline
+    \showSeasonLine{9}
+    \showSeasonLine{10}
+    \showSeasonLine{11}
+    \showSeasonLine{12}
+
+  \end{nametable}
+}
 
 \setcounter{season}{\month}
+
+\begin{multicols}{2}
+
 
 \subsection{Parallel Time}
 
@@ -23,32 +64,6 @@ Just as we have twelve months, \emph{they} have twelve seasons.
 
 After three years, all twelve seasons have passed and a new cycle begins.
 \Gls{fenestra}'s inhabitants track `cycles' more often than years, unsurprisingly.
-
-\begin{nametable}[l|Y|c|c]{Seasons}
-
-  \textbf{Real Month} & \textbf{Far Season} & \textbf{Weather} & \textbf{Event} \\
-  \hline
-  \hline
-  \showSeasonLine{1}
-  \showSeasonLine{2}
-  \showSeasonLine{3}
-  \showSeasonLine{4}
-  \hline
-  \showSeasonLine{5}
-  \showSeasonLine{6}
-  \showSeasonLine{7}
-  \showSeasonLine{8}
-  \hline
-  \showSeasonLine{9}
-  \showSeasonLine{10}
-  \showSeasonLine{11}
-  \showSeasonLine{12}
-
-\end{nametable}
-
-\end{multicols}
-
-\begin{multicols}{2}
 
 \subsection{Astronomy}
 
