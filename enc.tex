@@ -226,6 +226,22 @@ Encounters adjust, depending on the season, time of day, and how far the troupe 
 
 \begin{multicols}{2}
 
+\begin{tikzpicture}[thick]
+
+\node (A) at (0,0){\dicef{4}};
+
+\node (B) at (4,0){\dicef{3}};
+
+\node (C) at (2,2.5){\dicef{1}};
+
+\draw (A) to[bend left] node[left]{5}(C) ;
+
+\draw (C) to[bend left] node[right]{4}(B);
+
+\draw (B) to[bend left]node[below]{7} (A);
+
+\end{tikzpicture}
+
 \begin{exampletext}
   \noindent
   For example, the troupe decide to head out, so you make a roll.
