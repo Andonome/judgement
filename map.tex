@@ -2,8 +2,6 @@
 
 \section{Your Map}
 
-\thispagestyle{empty}
-
 \begin{multicols}{2}
 
 \begin{figure*}[t!]
@@ -60,16 +58,30 @@ know that they cover everything.
 
 Leave room to describe up to 12 points somewhere on your page.
 
-\mapentry{Towns \& Rivers}
+\mapentry{Rivers}
 
-Your map has tiny human settlements, huddling in the little pockets of civilization they can create.
-Much of the travel takes place along rivers, which let people travel faster than any other mode of transport.
+Rivers lay the foundations of civilization.
+They race from mountains to the sea, joining together with other rivers and becoming stronger as more join together.
+
+Roll $4D6$, and draw a river flowing through each of those numbers, from the mountains to the water.
+Ignore repeats.
+
+\begin{itemize}
+  \item
+  Try starting with two or three rivers close together, then joining them before reaching their numbered location.
+  \item
+  Rivers going to different locations should always begin fairly far apart.
+  \item
+  Rivers never split apart, they only join.
+  \item
+  If the mountains received a river, place a lake there, then let it run towards the sea as usual.
+\end{itemize}
+
+\mapentry{Towns}
 
 \begin{enumerate}
-\item
-  Roll $4D6$ and add one town to every point which comes up on the dice.
-  Ignore repeats.
-
+  \item
+  Place a town on each point which has a river running through it.
   \begin{itemize}
   \item
     Draw a circle inside a circle to indicate the town.
@@ -77,16 +89,8 @@ Much of the travel takes place along rivers, which let people travel faster than
     Towns on mountains indicate dwarves, in which case, place their symbol by the town: `\Dw'.
   \end{itemize}
   \item
-  For each town, draw a river directly from the mountains (or the closest body of water).
-  \begin{itemize}
-  \item
-    Each river starts as far away from the others as they can.
-  \item
-    Rivers often join, but never split.
-    Try starting with two or three rivers close together, then joining them before reaching the town.
-  \end{itemize}
-  \item
-  Extend each river from towns to the water, weaving through every numbered point they happen to pass.
+  Draw a wavy flat-land area around each town.
+  This indicates a civilized area, with guard towers and traps, where humans can walk outside their walls safely.
   \item
   For each town, add $1D6 \times 2$ walled villages around it.
   \begin{itemize}
@@ -105,9 +109,10 @@ Much of the travel takes place along rivers, which let people travel faster than
   \end{itemize}
 \end{enumerate}
 
-\mapentry[mapCharacter]{Town Character}
+\paragraph{Town Character}
+\label{mapCharacter}
 
-For each town, roll $1D6$, and add a number equal to the total walled villages surrounding it.
+To discover a town's most famous feature, roll $1D6$, and add a number equal to the total walled villages surrounding it.
 For example, if it has 4 walled villages, roll $1D6+4$.
 
 \begin{multicols}{2}
@@ -115,7 +120,7 @@ For example, if it has 4 walled villages, roll $1D6+4$.
 \begin{enumerate}
 \setcounter{enumi}{2}
   \item
-  Fresh town -- every day, stone and wood comes in to build a little more each day.
+  Newly built -- every day, stone and wood comes in to build a little more each day.
   Occasionally, parts of the wall collapse and archers flock to protect it.
   \item
   Trackers
@@ -163,7 +168,7 @@ For example, if it has 4 walled villages, roll $1D6+4$.
 
 \end{multicols}
 
-\mapentry{They call it\ldots{}}
+\paragraph{They call it\ldots{}}
 
 Select a name by combining what everyone knows it for, with the type of
 land.
@@ -174,22 +179,22 @@ Write the town's name next to it, and underline it.
   People know a town in the hills for its library. That's why they call
   it `Page Valley'.
   \item
+  A town by the sea, famed for Witchery.
+  They call it `Hexwave'.
+  \item
   `Bards' + `Islands' = `Lyrisles'
   \item
   \ifodd\value{r4}
     `Metallurgists' + `forest' = `Iron Basin' (perhaps a dried-up lake sits nearby)
   \else
-    `Wood-carvers' + `forest' = `Taming Woods'
+    `Wood-carvers' + `forest' = `Taming Woods'%
   \fi
-  \item
-  A town by the sea, famed for Witchery.
-  They call it `Hexwave'.%
   \footnote{If you think these names sound stupid, you should look up the meaning of your hometown's name.}
 \end{itemize}
 
 Try some word-association with the town's theme or location.
 
-\mapentry{It is Ruled by\ldots{}}
+\paragraph{It is Ruled by\ldots{}}
 
 For each town, roll $1D6$ to determine its ruler.
 Write down the information on a key, referencing each point by its number.
@@ -198,22 +203,22 @@ Write down the information on a key, referencing each point by its number.
   \item
   Multiple \underline{warring factions} -- roll twice more, with +1 to the second roll.
   \item
-  \underline{Warlord}, amassing an army to expand their power.
+  A \underline{Warlord}, amassing an army to expand their power.
   Shipments of weapons come from the road to other lands.
   \item
-  \underline{Opulent noble}, who demands 20\% tithes from all who enter.
+  An \underline{Opulent noble}, who demands 20\% tithes from all who enter.
   The local oddities annoy and fascinate them equally (from step \ref{mapOddities}).
   \item
-  \underline{Sorcerer king} with no experience or business ruling.
+  A new \underline{Sorcerer king} with no experience or business ruling.
   He once killed a fiend, how hard could balls and arranged marriages be?
   (roll $1D6$ to find which type of fiend, on step \ref{fiendTypes})
   \item
-  \underline{Spoilt noble} who has never seen a peasant.
+  A \underline{Spoilt noble} who has never seen a peasant.
   \item
-  \underline{A servant of the next fiend} you roll (see step \ref{fiendTypes}).
-  All who oppose them die on the road.
+  The \underline{servant of the next fiend} you roll (see step \ref{fiendTypes}).
+  All who oppose them disappear on the road.
   \item
-  \underline{A crime-lord}, with a history of theft, now risen to fortune\ldots but not nobility.
+  A \underline{Crime-Lord}, with a history of theft, now risen to fortune\ldots but not nobility.
 
 \end{dlist}
 
@@ -222,7 +227,7 @@ Write down the information on a key, referencing each point by its number.
 
 \begin{enumerate}
   \item
-  At each town, draw a road to every other town.
+  Draw a road from every town, to every other town.
   These roads wind through any villages along the way, but never through the outer points (1--6).
   \begin{itemize}
     \item
@@ -231,13 +236,8 @@ Write down the information on a key, referencing each point by its number.
     If the route enters water, draw a walled village port at the border.
   \end{itemize}
   \item
-  If you have 4 towns, go half-way along each road, and connect to half-way along the opposite road.
-  \item
-  Find the longest road with the biggest populations around it, and place a Lonely Tavern in the middle of the road (see \autopageref{lonelyTaverns}).
+  On your last road place a Lonely Tavern in the middle (see \autopageref{lonelyTaverns}).
   Mark it as point `7'.
-  \item
-  Find a free space for the scale, and draw a line which says `10 miles'.
-  This line should be as long as the distance from an outer point, to the centre point.
 \end{enumerate}
 
 \mapentry{Oddities}
@@ -247,7 +247,7 @@ Write down the information on a key, referencing each point by its number.
   \item
   Mark the centre of your map as point `8'.
   \item
-  At every unoccupied point, place a hidden element (roll $1D6$ below).
+  At every point without a town or Tavern, place a hidden element (roll $1D6$ below).
 \end{enumerate}
 
 \begin{multicols}{2}
@@ -290,7 +290,8 @@ Dangerous people, and stranger creatures, live in the forests, controlling large
   ability.
 \end{enumerate}
 
-\mapentry[fiendTypes]{Who are They?}
+\paragraph{Who are They?}
+\label{fiendTypes}
 
 Roll $1D6$ to identify the fiend, then add this number to the fiend's next two rolls.
 
@@ -299,13 +300,13 @@ Roll $1D6$ to identify the fiend, then add this number to the fiend's next two r
 \item
   Bandit troupe
 \item
-  Ogre king
+  Lich
 \item
   Dragon
 \item
   Dryad
 \item
-  Lich
+  Ogre king
 \item
   Hag
 \end{dlist}
@@ -313,7 +314,7 @@ Roll $1D6$ to identify the fiend, then add this number to the fiend's next two r
 
 Write the fiend's name on the map, and underline it.
 
-\mapentry{The Fiend Has}
+\paragraph{The Fiend Has}
 
 ($1D6$ plus fiend's number)
 
@@ -351,7 +352,8 @@ Write the fiend's name on the map, and underline it.
   a garden which grows all manner of magical and deadly plants.
 \end{enumerate}
 
-\mapentry[fiendDesires]{The Fiend Wants}
+\paragraph{The Fiend Wants}
+\label{fiendDesires}
 
 (1D6 plus fiend's number)
 
@@ -371,11 +373,11 @@ Write the fiend's name on the map, and underline it.
   standard supplies from villages. It's so hard to find someone who
   delivers!
 \item
-  a massive pot, three bags of thyme, a gnomish cook, and four fresh men.
+  to destroy the nearby oddities (descend numbers until reaching an oddity from step \ref{mapOddities}).
 \item
   to acquire magical ingredients.
 \item
-  to destroy the nearby oddities (descend numbers until reaching an oddity from step \ref{mapOddities}).
+  a massive pot, three bags of thyme, a gnomish cook, and four fresh men.
 \item
   to watch birds in peace (do not make noise on the road).
 \item
@@ -400,7 +402,7 @@ Write the fiend's name on the map, and underline it.
   \item
   Roll $2D6$; each point you roll has a route leading off the map, to lands uncharted.
   Draw the routes with a dotted line.
-
+  If they do not lead towards human settlements, no problem.
 \end{enumerate}
 
 \mapentry{Depth}
@@ -414,13 +416,12 @@ Your map has everything it needs, but you could always add more.
 
   Draw sea-routes to anywhere people might easily sail.
   \item
+  Find a free space for the scale, and draw a line which says `10 miles'.
+  This line should be as long as the distance from an outer point, to the centre point.
+  \item
   Draw contour-lines around any lakes or sea.
   \item
   Think about what the local populations say about the local oddities from step \ref{mapOddities} -- do they know what lives there?
-  \item
-  Where do the routes off the map lead?
-  Can people access them?
-  Or has the area been cut off from other lands entirely?
   \item
   What gossip would travellers hear on the road about local fiends and oddities?
   \item
@@ -487,7 +488,6 @@ Your chart might look something like this:
   \item
   And so on\ldots
 \end{enumerate}
-
 
 \end{multicols}
 
