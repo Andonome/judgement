@@ -65,6 +65,29 @@
 
 % This is an array of encounters.
 
+\newcommand\encSummary{
+
+  \begin{tikzpicture}[thick]
+
+  \node (A) at (0,0){\Large\dicef{6}};
+
+  \node (B) at (4,0){\Large\dicef{1}};
+
+  \node (C) at (2,2.5){\Large\dicef{3}};
+
+  \draw[\pageSideColor] (A) to[bend left] node[right]{\large\outline{= 9}}(C);
+
+  \draw[\pageSideColor] (C) to[bend left] node[right,align=center]{\large\outline{= 4}}(B);
+
+  %\draw (B) to[bend left]node[below]{\outline{7}} (A);
+
+  \draw (A)+(0,-2em) node[below,text width=6em]{Time to next encounter};
+
+  \draw (B.east)+(0,-2em) node[below,text width=6em]{Number \\ appearing};
+
+  \end{tikzpicture}
+
+}
 
 \newcommand\showBandits{
   \item
