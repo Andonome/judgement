@@ -1,3 +1,30 @@
+\newlength{\mapcircle}
+
+\setlength{\mapcircle}{.32\textwidth}
+
+\newcommand\solarSystem{
+
+  \centering
+
+  \vspace{1\mapcircle}
+
+  \begin{tikzpicture}[thick,remember picture,overlay]
+
+    \draw[\pageSideColor,opacity=0.4] (0,0) circle(\mapcircle);
+
+    \setcounter{track}{0}
+    \foreach \x in {0,60,120,-60,-120,180} {
+      \stepcounter{track}
+      \path[fill,draw] (\x:\mapcircle) circle(0.5pt) {};
+      \draw[\pageSideColor] (0,0) node{8};
+      \draw[\pageSideColor] (\x:\mapcircle+2em) node{\Large\arabic{track}};
+              }
+  \end{tikzpicture}
+
+  \vspace{\mapcircle}
+
+}
+
 \newcommand\encRef[1]{%
   \nameref{#1} (\autopageref{#1})%
 }
