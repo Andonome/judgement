@@ -69,33 +69,28 @@
 
 \subsection*{Monsters}
 
-\setcounter{enc}{\value{temperature}}
-\stepcounter{enc}
-\ifnum\value{temperature}=1
-  \stepcounter{enc}
+\ifnum\value{temperature}=3
+  \setcounter{temperature}{1}
 \fi
+\multiply\value{temperature} by 2
+\addtocounter{temperature}{0}
 
-\begin{dlist}
-  \Repeat{6}{
-    \item
-    \encMons
+\setcounter{enc}{\value{temperature}}
+\addtocounter{enc}{13}
+\setcounter{diceNo}{13}
+\rowcolors{2}{}{gray!10}
+\noindent
+\begin{tabularx}{\linewidth}{c|LL}
+  \hline
+  \hline
+  \textbf{Roll} & \textbf{Forests} & \textbf{Weather} \\
+  \hline
+  \Repeat{12}{
+    \addtocounter{diceNo}{-1}
+    \addtocounter{enc}{-1}
+    \arabic{diceNo} & \bigBeastList & \bigWeatherList \\
   }
-\end{dlist}
-
-\subsection*{Sightings}
-
-\setcounter{track}{\value{temperature}}
-\stepcounter{track}
-\begin{dlist}
-  \Repeat{6}{
-    \item
-    \encSight
-  }
-\end{dlist}
-
-\subsection*{Bandits}
-
-\encBandits
+\end{tabularx}
 
 \moralechart
 
