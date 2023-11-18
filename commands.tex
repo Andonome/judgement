@@ -166,32 +166,6 @@
   \end{multicols}
 }
 
-\newcommand\encMons{
-  \ifcase\value{enc}\relax%
-  \or%
-    \encRef{ghast}
-  \or%
-    \encRef{wolf}
-  \or%
-    \encRef{dryad}
-  \or%
-    \encRef{griffin}
-  \or%
-    \encRef{mouthdigger}
-  \or%
-    \encRef{woodspy}
-  \or%
-    \encRef{bear}
-  \or%
-    \encRef{chitincrawler}
-  \or%
-    \encRef{basilisk}
-  \else%
-    \encRef{umber_hulk}
-  \fi%
-  \stepcounter{enc}%
-}
-
 \newcommand\encSight{%
   \ifcase\value{track}\relax%
   \or%
