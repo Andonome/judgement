@@ -24,46 +24,16 @@
 
 \input{config/GS.tex}
 
-\newpage
+\cleardoublepage
 
 \setcounter{track}{\month}
 \section*{~\showSeason~\hint{\showTemperature}}
 
+\begin{figure*}[b!]
+  \stackingDamageChart
+\end{figure*}
+
 {\flushleft\Huge\showAstroEvents}
-
-\begin{multicols}{2}
-
-%\humansoldier[\npc{\T[8]\Hu}{Bandits}]
-
-\ifcase\value{temperature}
-  % Temperature 0 (cold)
-  \ghast
-  \wolf
-\or\or\or
-  % Temperature 3 (hot)
-  \basilisk
-\fi
-
-\mouthdigger
-
-\ifnum\value{temperature}>0
-  \chitincrawler
-\fi
-
-\griffin
-
-\ifnum\value{temperature}>0
-  \bear
-  \ifnum\value{temperature}<3
-    \dryad
-  \fi
-\fi
-
-\woodspy
-
-\end{multicols}
-
-\pagebreak
 
 \ifnum\value{temperature}=3
   \setcounter{temperature}{1}
@@ -93,11 +63,25 @@
 
 \moralechart
 
-\subsection*{Traders}
+\textbf{Mana Regeneration}
+
+\noindent
+\manaRegenChart
+
+\noindent
+\manaCoveringChart
+
+\paragraph*{Traders}
 
 Roll $3D6$ and add all results.
 
 \encTraders
+
+\iftoggle{core}{
+  \initiativechart
+
+  \hitLocation
+}{}
 
 \iftoggle{stories}{
   \namesOfHumans
@@ -105,38 +89,51 @@ Roll $3D6$ and add all results.
   \poshNames
 }{}
 
+
+
 \subsection{Village Events}
 
 \encVillageEvent
 
-\end{multicols}
-
-\gatheringChart
-
-\larcenyChart
-
 \iftoggle{core}{
-  \newpage
-  \stackingDamageChart
-
-  \begin{multicols}{2}
-
-  \textbf{Mana Regeneration}
-
-  \noindent
-  \manaRegenChart
-
-  \noindent
-  \manaCoveringChart
-
-  \initiativechart
-
-  \hitLocation
-
-  \end{multicols}
 
   \chasechart
 
+  \gatheringChart
+
+  \larcenyChart
+
 }{}
+
+%%%%% Creatures %%%%%
+%\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+
+\ifcase\value{temperature}
+  % Temperature 0 (cold)
+  \ghast
+  \wolf
+\or\or\or
+  % Temperature 3 (hot)
+  \basilisk
+\fi
+
+\mouthdigger
+
+\ifnum\value{temperature}>0
+  \chitincrawler
+\fi
+
+\griffin
+
+\ifnum\value{temperature}>0
+  \bear
+  \ifnum\value{temperature}<3
+    \dryad
+  \fi
+\fi
+
+\woodspy
+
+\end{multicols}
 
 \end{document}
