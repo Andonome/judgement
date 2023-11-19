@@ -45,7 +45,7 @@ Anyone sufficiently small (\gls{weight} 5 or less) can rest on them overnight an
   %
   {\roll{Intelligence}{Medicine}}%
   {12}%
-  {No effect.}%
+  {only the penalty applies.}%
 
 \subsubsection{Dreameater Moss}
 \label{dreameater_moss}
@@ -71,18 +71,30 @@ The stench is really hard to wash off, and anyone who comes in contact with this
    These subterranean fungi give off a soft, faint light, but only in complete darkness.
    Dwarves sometimes use them instead of torches, even though the light is dimmer.
 
+   Ingesting these plants can be deadly.
+   While completely healthy to eat, once they mix with stomach acids, they begin to glow.
+   This can turn someone into a sudden target in the dark, as their stomach begins to shine.
+
    Proper preparation of a full patch of these mushrooms will yield \pgls{boon} of the Fire Sphere.
     }
   {\roll{Intelligence}{Medicine}}%
   {12}%
-  {All fires in the \gls{area} snuff out.}%
+  {all fires in the \gls{area} snuff out.}%
 
-\subsubsection{Mage Oak}
-\label{mage_oak}
+\funkyPlant{Mage Oak}%
+  {mage_oak}%
+  {
+    Roots of this tree tap into a mana lake deep underground.
+    It restores 3 \glsentrylongpl{mp} for every \gls{interval} spent near it.
+    The tree will also repeat every spell cast near it, with random targets.
 
-Roots of this tree tap into a mana lake deep underground.
-It restores 3 \glsentrylongpl{mp} for every \gls{interval} spent near it.
-The tree will also repeat every spell cast near it, with random targets.
+    Proper preparation makes a dust which provides 3 \glspl{mp} to \emph{everyone} across \pgls{area}.
+  }%
+  {\roll{Charisma}{Medicine}}%
+  {13}%
+  {the dust produced halts regeneration of all Mana.
+  Afflicted targets can roll \roll{Charisma}{Empathy} (\tn[10]) each day to request the world listen to them again.}
+
 
 \funkyPlant{Marching Mushroom}%
   {marching_mushroom}%
@@ -117,12 +129,11 @@ The tree will also repeat every spell cast near it, with random targets.
   The moss then feeds off the blood of any victims.
   Nobles love to encourage screeching moss to grow around their estates, to protect against unwanted intruders.
 
-  Properly prepared, the moss can provide \pgls{boon} for Air spells.
+  Properly prepared, the moss provides \pgls{boon} for Air spells.
     }
   {\roll{Intelligence}{Medicine}}%
   {12}%
   {The air turns foul, everyone in the \gls{area} loses \pgls{fatigue}.}%
-
 
 \funkyPlant{Seekers}%
   {seekers}%
@@ -132,10 +143,12 @@ The tree will also repeat every spell cast near it, with random targets.
   One the carrier comes within range - poof!
   The dust spreads everywhere, and the seeds have been properly joined.
   The dust causes nausea, and sometimes hallucinations.
+
+  If properly prepared, they become a wicked poison, which inflicts the disease: Guardbane (see \autopageref{Guardbane}).
     }
-{\roll{Intelligence}{Medicine}}%
-{12}%
-{No effect.}%
+  {\roll{Intelligence}{Medicine}}%
+  {12}%
+  {the nasty potion explodes, inflicting Guardbane on all in the \gls{area}.}%
 
 \subsubsection{Thorny Thickets}
 \label{thorny_thickets}
@@ -180,9 +193,10 @@ Wearing sufficiently full armour makes one immune to the cuts, but will not stop
   \label{#2}
   #3
 
-  \textbf{Cured with}
-  #4
-  (#1, \tn[#5])
+  \begin{description}
+    \item[\flwr~\Glspl{ingredient}] #4
+    \item[Roll] #1 (#5)
+  \end{description}
 }
 
 \begin{multicols}{2}
@@ -200,7 +214,7 @@ If the preparation goes awry, new \glspl{ingredient} must be procured for a cure
     One affected can never have less than 1 \gls{fatigue}.
     Every \gls{interval} this effect increases by 1.
   }%
-  {an Air \gls{ingredient}}%
+  {Air}%
   {10}
 
 \disease{Corpse Hands}%
@@ -210,7 +224,7 @@ If the preparation goes awry, new \glspl{ingredient} must be procured for a cure
     Gain -1 penalty to Dexterity.
     Every 3 \glspl{interval}, the effect increases by 1.
   }%
-  {a Water \gls{ingredient}}%
+  {Water}%
   {7}
 
 \disease{Mindflash Syndrome}%
@@ -222,7 +236,7 @@ If the preparation goes awry, new \glspl{ingredient} must be procured for a cure
     \exRef{stories}{Stories}{racial_limits}
     Paranoia and hallucinations are not uncommon after a while.
   }%
-  {one Water and one Fate \gls{ingredient}}%
+  {Water and Fate}%
   {8}
 
 \disease{Guardbane}%
@@ -233,45 +247,20 @@ Every \gls{interval}, the higher of the two gains an additional -1 penalty, and 
 
   If either penalty reaches -5, the character dies.
   }%
-{an Earth \gls{ingredient}}%
-{5}
+  {Earth}%
+  {5}
 
 \disease{Spychoke}%
   {Your throat feels so tight that you can only whisper.
   Talking loudly inflicts so much pain, that you suffer +1 \gls{fatigue}.
   }%
-{a Fate \gls{ingredient}}%
+{Fate}%
 {9}
 
 \disease{Torpid Flesh}%
   {Whenever you spend more than 3 \glspl{ap} in a single round, gain \pgls{fatigue}.
   }%
-  {a Fire \gls{ingredient}}%
+  {Fire}%
   {9}
-
-\end{multicols}
-
-\section{Poisons}
-
-\begin{multicols}{2}
-
-Poisons available for crafting and purchase.
-
-\subsubsection{Downroot Poison}
-
--1 to all attributes for one day.
-Extracted from Downroot.
-
-\subsubsection{Magebane}
-
-One afflicted with it can't regenerate MP at the end of this \gls{interval}.
-+1 difficulty to cast all spells.
-Extracted from Mage Oak.
-
-\subsubsection{Assasin's Mark}
-
-Whenever you're in dark, you start to faintly glow.
-If you spend most of the \gls{interval} like this, gain 1 \gls{fatigue}.
-Assassins extract the substance from Glowshroom and use it to mark their prey, so they can find them easily.
 
 \end{multicols}
