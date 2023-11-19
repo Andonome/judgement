@@ -33,7 +33,7 @@
   \stackingDamageChart
 \end{figure*}
 
-{\flushleft\Huge\showAstroEvents}
+{\ifStrSame{\showAstroEvents}{}{}{\large\sffamily Event: \showAstroEvents}}
 
 \ifnum\value{temperature}=3
   \setcounter{temperature}{1}
