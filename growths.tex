@@ -180,43 +180,80 @@ Wearing sufficiently full armour makes one immune to the cuts, but will not stop
   \label{#1}
 }
 
+\newcommand\disease[5][\roll{Intelligence}{Medicine}]{
+  \subsubsection{#2}
+  \index{#2 (Disease)}
+  \label{#2}
+  #3
+
+  \textbf{Cured with}
+  #4
+  (#1, \tn[#5])
+}
+
 \begin{multicols}{2}
 
-Fenestra's illneses, and cures for them.
+\noindent
+\Gls{fenestra} does not have many illnesses.
+Those few which exist have a little magic to them, and so the cure often demands magical \glspl{ingredient}, such as those used to make \pgls{boon}.
 
-\newDisease{Breathrot}
+For example, `Breathrot' demands an Air \gls{ingredient} for a cure, properly prepared.
+If the preparation goes awry, new \glspl{ingredient} must be procured for a cure.
 
-One's breath becomes foul, as their lungs slowly fill with stagnant air.
-One affected can never have less than 1 \gls{fatigue}.
-Every \gls{interval} this effect increases by 1.
+\disease{Breathrot}%
+  {
+    One's breath becomes foul, as their lungs slowly fill with stagnant air.
+    One affected can never have less than 1 \gls{fatigue}.
+    Every \gls{interval} this effect increases by 1.
+  }%
+  {an Air \gls{ingredient}}%
+  {10}
 
-\newDisease{Corpse Hands}
+\disease{Corpse Hands}%
+  {
+    Those unfortunate to ail from this will see first their fingertips, then their hands, and finally whole arms, dry up and become stiff.
 
-Those unfortunate to ail from this will see first their fingertips, then their hands, and finally whole arms, dry up and become stiff.
-Gain -1 penalty to Dexterity.
-Every 3 \glspl{interval} effect increases by 1.
+    Gain -1 penalty to Dexterity.
+    Every 3 \glspl{interval}, the effect increases by 1.
+  }%
+  {a Water \gls{ingredient}}%
+  {7}
 
-\newDisease{Mindflash Syndrome}
+\disease{Mindflash Syndrome}%
+  {
+    The sufferer's mind becomes restless, keeping constant watch but with clouding judgement.
 
-Sufferer's mind becomes restless, keeping constant watch and clouding judgement.
--1 Intelligence, but +1 Wits, no sleep is possible.
-Every \gls{interval} Intelligence worsens by 1, and every 2 \glspl{interval} Wits increases by 1.
-Paranoia and hallucinations are not uncommon after a while.
+    -1 Intelligence, but +1 Wits; no sleep is possible.
+    Every \gls{interval} Intelligence worsens by 1, and every 2 \glspl{interval} Wits increases by 1, up to their racial maximums.%
+    \exRef{stories}{Stories}{racial_limits}
+    Paranoia and hallucinations are not uncommon after a while.
+  }%
+  {one Water and one Fate \gls{ingredient}}%
+  {8}
 
-\newDisease{Guardbane}
+\disease{Guardbane}%
+  {Your legs and arms feel too heavy to move.
 
-Your legs and arms feel too heavy to move.
 -1 Strength and Speed.
-Every \gls{interval}, the higher of the two gains additional -1 penalty, and if they are equal, Strength penalty increases by 1.
+Every \gls{interval}, the higher of the two gains an additional -1 penalty, and if they are equal, the Strength penalty increases by 1.
 
-\newDisease{Spychoke}
+  If either penalty reaches -5, the character dies.
+  }%
+{an Earth \gls{ingredient}}%
+{5}
 
-Your throat feels so tight that you can only whisper. Talking loudly inflicts so much pain, that you suffer +1 \gls{fatigue}.
+\disease{Spychoke}%
+  {Your throat feels so tight that you can only whisper.
+  Talking loudly inflicts so much pain, that you suffer +1 \gls{fatigue}.
+  }%
+{a Fate \gls{ingredient}}%
+{9}
 
-\newDisease{Torpid Flesh}
-
-If you spend more than 3 AP in a turn, gain 1 \gls{fatigue}.
-Same if you perform any Strength or Speed check.
+\disease{Torpid Flesh}%
+  {Whenever you spend more than 3 \glspl{ap} in a single round, gain \pgls{fatigue}.
+  }%
+  {a Fire \gls{ingredient}}%
+  {9}
 
 \end{multicols}
 
