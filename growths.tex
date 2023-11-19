@@ -8,55 +8,74 @@
 \noindent
 \Gls{fenestra}'s plants hold a thousand uses and dangers.
 
-\subsubsection{Arch Weed}
-\label{arch_weed}
+\newcommand\funkyPlant[6]{
+  \subsubsection[#1]{\MakeUppercase#1}
+  \label{#2}
+  \index{#1 \floweroneright}
 
-Two puffs helps the tired sleep, and the awake think sharper and better.
-But it makes the wounded itch and itch.
-Set fire to a whole bunch and hope the wind doesn't change direction - then it's a real weapon of war.
+  #3
+
+\begin{description}
+  \item[\flwr~Preparation:]
+  #4 (\tn[#5])
+  \item[\failStar~On failure:] #6
+\end{description}
+}
 
 \subsubsection{Bedleaves}
 \label{bedleaves}
-
 These massive plants appear a little like gunnera, but larger.
-Anyone sufficiently small can rest on them overnight and heal an additional \gls{fatigue}.
+Anyone sufficiently small (\gls{weight} 5 or less) can rest on them overnight and heal an additional \gls{fatigue}.
 
-\subsubsection{Bloodwood}
-\label{bloodwood}
+\funkyPlant{Bloodwood}%
+  {bloodwood}%
+  {Just the scent of sap extracted from the Bloodwood tree makes your blood rush.
+  Refined, this sap is considered a potent aphrodisiac, and many a noble past their prime is willing to pay well for it.
+  Unfortunately, the sap is secreted only during the harshest winters, 
+  and tends to attract and irritate local wildlife, making procuring it a risky endeavour.
+  }
+  {\roll{Intelligence}{Medicine}}%
+  {10}%
+  {If allowed to rot, it makes the imbiber blind for $1D6^2$ days.}
 
-Just the scent of sap extracted from the Bloodwood tree makes your blood rush. Refined, this sap is considered a potent aphrodisiac, 
-and many a noble past their prime is willing to pay well for it. Unfortunately, the sap is secreted only during the harshest winters, 
-and tends to attract and irritate local wildlife, making procuring it a risky endeavour.
-
-\subsubsection{Downroot}
-\label{downroot}
-
-Eating the root gives +2 \glspl{hp} after a night's rest, and -1 to all Attributes for the next three days.
+\funkyPlant{Downroot}%
+  {downroot}%
+  {Eating the root gives +2 \glspl{hp} after a night's rest, and -1 to all Attributes for the next three days.
+  }
+  %
+  {\roll{Intelligence}{Medicine}}%
+  {12}%
+  {No effect.}%
 
 \subsubsection{Dreameater Moss}
 \label{dreameater_moss}
-
-Created by a sorcerer, this moss joins the dreams of anyone who sleeps on it.
+Created by some forgotten witch, this moss joins the dreams of anyone who sleeps on it.
 The sorcerer still lives in those dreams, and wanders through them, eating the minds of anyone they find.
 It provides a powerful but dangerous way to communicate across long distances.
 
 \subsubsection{Dryad's Kiss}
 \label{dryads_kiss}
 
-Although edible, this mushroom makes you very gullible. Gain -2 penalty to all Deceit and Empathy checks
+Although edible, this mushroom makes you very gullible.
+Gain a -2 penalty to all Deceit and Empathy checks
 
 \subsubsection{Fly Flowers}
 \label{fly_flowers}
 
-Named after swarms of flies that surround them at all times, these vibrant flowers secrete sticky, pungent mucus that attracts swarms 
-of insects. The stench is really hard to wash off, and anyone who comes in contact with this mucus will attract large numbers of 
-insects at least for the rest of the day.
+Named after swarms of flies that surround them at all times, these vibrant flowers secrete sticky, pungent mucus that attracts swarms of insects.
+The stench is really hard to wash off, and anyone who comes in contact with this mucus will attract large numbers of insects at least for the rest of the day.
 
-\subsubsection{Glowshroom}
-\label{glowshroom}
+\funkyPlant{Glowshroom}%
+  {glowshroom}%
+  {
+   These subterranean fungi give off a soft, faint light, but only in complete darkness.
+   Dwarves sometimes use them instead of torches, even though the light is dimmer.
 
-These subterranean fungi give off a soft, faint light, but only in complete darkness. Dwarves sometimes use them instead of torches, 
-even though the light is dimmer.
+   Proper preparation of a full patch of these mushrooms will yield \pgls{boon} of the Fire Sphere.
+    }
+  {\roll{Intelligence}{Medicine}}%
+  {12}%
+  {All fires in the \gls{area} snuff out.}%
 
 \subsubsection{Mage Oak}
 \label{mage_oak}
@@ -65,55 +84,89 @@ Roots of this tree tap into a mana lake deep underground.
 It restores 3 \glsentrylongpl{mp} for every \gls{interval} spent near it.
 The tree will also repeat every spell cast near it, with random targets.
 
-\subsubsection{Marching Mushroom}
-\label{marching_mushroom}
+\funkyPlant{Marching Mushroom}%
+  {marching_mushroom}%
+  {
+  Chewing on this tough mushroom relieves one of fatigue, but slows both their body and mind.
+    Ignore \gls{fatigue} penalties for a day, but with -1 penalty to Dexterity, Speed, Intelligence and Wits.
 
-Chewing on this tough mushroom relieves one of fatigue, but slows both their body and mind.
-Ignore \gls{fatigue} penalties for a day, but 
-with -1 penalty to Dexterity, Speed, Intelligence and Wits.
+    Those with the right workshop, ingredients, patience and timing, can turn this into \pgls{boon} for the Fate Sphere.
+    }
+{\roll{Intelligence}{Medicine}}%
+{16}%
+{Everyone in the area becomes immune to \gls{fatigue} for \pgls{interval}.}%
 
-\subsubsection{Screeching Moss}
-\label{screeching_moss}
+\funkyPlant{liskshine}%
+  {molted_basilisk}%
+  {
+  Type of lichen that grows on the backs of basilisks, it also absorbs and retains the beast's overwhelming stench.
+  When it grows large enough, small clumps of it fall off.
+  A rare find, and also a warning that a basilisk is nearby.
 
-It squeaks when stepped on.
-They tend to form a symbiotic relationship with predators, who always respond to the squeaks by investigating the source, or laying traps around the thickets.
-The moss then feeds off the blood of any victims.
-Nobles love to encourage screeching moss to grow around their estates, to protect against unwanted intruders.
+  Once spread thin, and left in the snow for a week, the resulting dust becomes a powerful Earth \gls{boon}.
+    }
+{\roll{Dexterity}{Medicine}}%
+{14}%
+{No effect.}%
 
-\subsubsection{Seekers}
-\label{seekers}
+\funkyPlant{Screeching Moss}%
+  {screeching_moss}%
+  {
+  It squeaks when stepped on.
+  They tend to form a symbiotic relationship with predators, who always respond to the squeaks by investigating the source, or laying traps around the thickets.
+  The moss then feeds off the blood of any victims.
+  Nobles love to encourage screeching moss to grow around their estates, to protect against unwanted intruders.
 
-Seekers sit passively, filling up with dust, waiting for a seed.
-The seeds are sticky, and float on the wind until they latch onto an animal (or traveller).
-One the carrier comes within range - poof!
-The dust spreads everywhere, and the seeds have been properly joined.
-The dust causes nausea, and sometimes hallucinations.
+  Properly prepared, the moss can provide \pgls{boon} for Air spells.
+    }
+  {\roll{Intelligence}{Medicine}}%
+  {12}%
+  {The air turns foul, everyone in the \gls{area} loses \pgls{fatigue}.}%
+
+
+\funkyPlant{Seekers}%
+  {seekers}%
+  {
+  Seekers sit passively, filling up with dust, waiting for a seed.
+  The seeds are sticky, and float on the wind until they latch onto an animal (or traveller).
+  One the carrier comes within range - poof!
+  The dust spreads everywhere, and the seeds have been properly joined.
+  The dust causes nausea, and sometimes hallucinations.
+    }
+{\roll{Intelligence}{Medicine}}%
+{12}%
+{No effect.}%
 
 \subsubsection{Thorny Thickets}
 \label{thorny_thickets}
 
-Just regular thorny bushes, but with combat conditions.
-Moving through thickets is an absolute nightmare.
+Regular thorny bushes create serious complications for anyone moving through them.
+They reduce running speed by 5 \glspl{step} per round, and moving through them requires a \roll{Dexterity}{Wyldcrafting} \gls{quickaction} (\tn[10]), or the would-be runner receives \pgls{fatigue} and loses all momentum, as dozens of tiny spikes scratch and pierce them.
 
-\subsubsection{Uproot}
-\label{uproot}
+Wearing sufficiently full armour makes one immune to the cuts, but will not stop the movement problems.
 
-Eating the root (after preparation) gives you +1 Strength for \pgls{interval}.
-Each \gls{interval} thereafter, the player rolls $1D3$.
-On a `1', the effect stops, on any other number the character loses 1 \gls{hp}, and the effect continues.
+\funkyPlant{Uproot}%
+  {uproot}%
+  {
+  Eating the root (after preparation) gives you +1 Strength for \pgls{interval}.
+  Each \gls{interval} thereafter, the player rolls $1D3$.
+  On a `1', the effect stops, on any other number the character loses 1 \gls{hp}, and the effect continues.
+    }
+{\roll{Intelligence}{Medicine}}%
+{14}%
+{No Strength Bonus.}%
 
-\subsubsection{Molted Basilisk}
-\label{molted_basilisk}
+\funkyPlant{Whistling Cane}%
+  {whistlingCane}%
+  {
+  These swamp plants play an eerie tune on windy days.
+  Inexperienced travellers might stray from their path, into the dangerous bog, looking for the source of the sound.
 
-Type of lichen that grows on the backs of basilisks, it also absorbs and retains the beasts overwhelming stench. When it grows large 
-enough, small clumps of it fall off. A rare find, and also a warning that a basilisk is nearby.
-
-\subsubsection{Whistling Cane}
-\label{whistlingCane}
-
-These swamp plants play an eerie tune on windy days. Inexperienced travellers might stray from their path, into the dangerous bog, 
-looking for the source of the sound. They can be crafted into musical instruments, but they're never popular, since their sound is 
-always sorrowful.
+  They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.
+  }
+{\roll{Intelligence}{Crafts}}%
+{14}%
+{Screechy music}%
 
 \end{multicols}
 
