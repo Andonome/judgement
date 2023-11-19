@@ -387,7 +387,7 @@ A litter consists of $2D6$ sprogs.
 \begin{boxtext}
 
   A tiny scratching sound is heard -- only a little louder than the crackling fire.
-  Thomas' Rucksage is wandering away into the distance, and as the fire flares up you see the face of a wolf in the shadows, dragging his baggage away.
+  Rucksage is wandering away into the distance, and as the fire flares up you see the face of a wolf in the shadows, dragging his baggage away.
   A dozen wolves gather and tear the bag open, pulling the food out.
 
 \end{boxtext}
@@ -424,9 +424,7 @@ Woodspies are like a type of camouflaging octopus, adapted to exist solely on la
 
 \paragraph{Natural Abilities:} Woodspies are too soft to hurt creatures through punching -- they must first grapple and then start sticking their beak, held underneath the main body, into the target.
 However, their many limbs allow them to grapple creatures without becoming vulnerable.%
-\iftoggle{core}{%
-  \footnote{See grappling rules, page \pageref{grappling}.}
-}{}
+\exRef{core}{the Core rules}{grappling}
 
 Noticing a woodspy while camouflaged requires a \roll{Wits}{Vigilance} action, \tn[14]; bonuses can be assigned for sunny or particularly open areas.
 
@@ -449,9 +447,8 @@ They will use every part of their environment and the party's exact situation to
 
 They know their prey well, and tend not to attack when they feel endangered.
 If something looks to dangerous to subdue, woodspies often follow their prey for some time.
-If the prey enters the territory of another woodspy, they often meet and attempt to work together.
 
-While woodspies generally hunt alone, a lone woodspy encounter can lead to another, as they follow their prey, hoping to find others in nearby territories to join the hunt.
+Every woodspy which has seen an archer will recognize the bow, and understand how to hide behind cover.
 
 \begin{itemize}
 
@@ -463,10 +460,6 @@ While woodspies generally hunt alone, a lone woodspy encounter can lead to anoth
   In the distance, the party notice a massive woodspy slowly descending a tree.
   It waves its tentacle around a bush, slowly.
   A mouthdigger rushes up to bite the tentacle, but the woodspy quickly grabs it, then pulls it up into the trees.
-  \item
-  The troupe make a \roll{Wits}{Vigilance} roll (\tn[10]) to notice a woodspy following them along the road from a great distance.
-  By nightfall, they have entered the territory of a second woodspy, who goes to silently alert others.
-  Before morning, enough will arrive to pose a serious danger to the party.
   \ifodd\value{temperature}=1
     \item
     The party approach a river with a strong current.
@@ -480,6 +473,10 @@ While woodspies generally hunt alone, a lone woodspy encounter can lead to anoth
     If they let the creature go, the next day it returns and takes a less well-armoured victim by surprise.
     \item
     Deep in the forest, a woodspy has drifted into a deep sleep, and as it dreams unknowable dreams, it flickers through rainbow colours, and changes its skin-texture.
+  \fi
+  \ifnum\value{temperature}>1
+    \item
+    The troupe discover a deer-corpse, writhing with little woodspy babies, each the size of a hand.
   \fi
 
 \end{itemize}
