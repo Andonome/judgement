@@ -112,9 +112,8 @@ The long-term always consists of armies of ghouls `on-ice', and never placed far
 
 \showStdSpells
 
+\needspace{4em}
 \paragraph{Encounters:}
-
-
 \begin{itemize}
   \item
   A trader delivers a letter, which contains very old grammar but very modern words.
@@ -269,6 +268,116 @@ This has provided a lot of false hope to those trying to negotiate with them.
 \dragon
 
 \showStdSpells
+
+\end{multicols}
+
+\section[Ogre]{Ogres}
+\label{ogres}
+
+\begin{multicols}{2}
+
+\boxPair[t]{
+  \goblin[\npc{\T\N}{Goblins}]
+}{
+  \setcounter{enc}{15}
+  \setcounter{diceNo}{13}
+  \vspace{2em}
+  \rowcolors{2}{}{gray!10}
+  \noindent
+  \begin{tabularx}{\linewidth}{c|L}
+    \hline
+    \hline
+    \textbf{Roll} & \textbf{Inner Hamlets} \\
+    \hline
+    \Repeat{5}{
+      \addtocounter{diceNo}{-1}
+      \addtocounter{enc}{-1}
+      \arabic{diceNo} & \bigBeastList \\
+    }
+    \hline
+    \addtocounter{diceNo}{-1}
+    \addtocounter{enc}{-1}
+    \arabic{diceNo} & \ifodd\value{enc}Brigands!\else Bandits\fi \\
+    \hline
+    \Repeat{3}{
+      \addtocounter{diceNo}{-1}
+      \addtocounter{enc}{-1}
+      \arabic{diceNo} & \arabic{diceNo} wagons \\
+    }
+    \hline
+    \Repeat{3}{
+      \addtocounter{diceNo}{-1}
+      \addtocounter{enc}{-1}
+      \arabic{diceNo} & \multiply\value{diceNo} by 4 \arabic{diceNo} goblins! \\
+    }
+    \hline
+  \end{tabularx}
+}
+
+
+\noindent
+The standard solution for goblins is warriors in full plate armour.
+And the standard solution for warriors in full plate armour is hitting them with a tree.
+
+Goblinoid creatures don't have legal agreements, but they do have certain laws of nature, and one of those is the law of the ogre king.
+Ogres take charge because they're large.
+
+In many ways, ogres seem like more natural inhabitants of \gls{fenestra} than humans.
+They can lounge outdoors comfortably, occasionally clubbing a chitincrawler to death, or trying to chase down deer.
+The only thing stopping a peaceful life of free-range fruit and arachnid salads is their stomachs, which need constant maintenance.
+Their appetites outstrip even goblins.
+
+If a horde of goblins, lead by an ogre, becomes hungry, they all start to think the same thing: they must find food soon, or one will eat the other.
+This unspoken knowledge pushes any goblinoid horde to constant raids on any nearby farms.
+
+Ogres are not born, but created by a `stuffing'.
+This is when one goblin stuffs himself full, then keeps on eating.
+Eventually, this larger goblin grows broad shoulders, and a belly, and grow as tall as a human.
+
+\ogre[\npc{\N}{Ogre King}]
+
+\paragraph{Encounters:}
+
+Goblin hordes work a little differently from other fiends.
+They eat standard encounters from the bottom-up.
+
+Any area with a band of goblins will have a `Goblin Rating'.
+If the Goblin Rating ever equals or beats a random encounter roll,%
+\footnote{See \autopageref{encounters}.}
+the encounter is replaced with a number of goblins equal to four times the encounter roll.
+
+\begin{exampletext}
+  The troupe journeys down the road where traders reported goblin raids occurring with increasing frequency.
+  The Civilization Rating is `7', and the current Goblin Rating is `4'.
+  If the \gls{gm} rolls `3', 12 goblins have arrived to eye-up the troupe.
+\end{exampletext}
+
+As the Goblin Rating increases, they devour the people in the area bit by bit, and anyone on the outskirts of civilization will neither find boars, nor traders on the road.
+Instead, they find goblins, hungry for more.
+
+
+\begin{itemize}
+  \item
+  The troupe spot a group of goblins, sitting in the forest, eating a spear-peppered chitincrawler.
+  They turn from their meal, then jeer at the troupe.
+
+  ``Back on the road, and bolt!''
+
+  The goblins finish their meal and follow on that night.
+  \item
+  The troupe find a bothy, torn apart for food, then torn apart more just out of spite.
+  The door and two shutters have been cracked open (and the top of the chimney stuffed with debris).
+
+  Goblin footprints leave no mystery about the situation.
+  \item
+  A massive troupe of goblins follow the troupe, waiting for them to sleep.
+  They dare one of their number to scout ahead and follow the party, so the \glspl{pc} may spot the scout, but that won't help them find the rest.
+  If they kill the scout, the other goblins will follow the screams, and bully another member into following the troupe.
+
+  Over the night, they try to steal food, frighten horses, throw rocks, cut ropes, and shout insults.
+  They will not attack unless the right moment strikes.
+  If they become too bored, they run ahead on the road -- roll the next encounter immediately, and think about what would happen if a horde of goblins found it instead.
+\end{itemize}
 
 \end{multicols}
 
