@@ -81,6 +81,19 @@ The stench is really hard to wash off, and anyone who comes in contact with this
   {12}%
   {all fires in the \gls{area} snuff out.}%
 
+\funkyPlant{liskshine}%
+  {molted_basilisk}%
+  {
+  Type of lichen that grows on the backs of basilisks, it also absorbs and retains the beast's overwhelming stench.
+  When it grows large enough, small clumps of it fall off.
+  A rare find, and also a warning that a basilisk is nearby.
+
+  Once spread thin, and left in the snow for a week, the resulting dust becomes a powerful Earth \gls{boon}.
+    }
+{\roll{Dexterity}{Medicine}}%
+{14}%
+{No effect.}%
+
 \funkyPlant{Mage Oak}%
   {mage_oak}%
   {
@@ -106,20 +119,7 @@ The stench is really hard to wash off, and anyone who comes in contact with this
     }
 {\roll{Intelligence}{Medicine}}%
 {16}%
-{Everyone in the area becomes immune to \gls{fatigue} for \pgls{interval}.}%
-
-\funkyPlant{liskshine}%
-  {molted_basilisk}%
-  {
-  Type of lichen that grows on the backs of basilisks, it also absorbs and retains the beast's overwhelming stench.
-  When it grows large enough, small clumps of it fall off.
-  A rare find, and also a warning that a basilisk is nearby.
-
-  Once spread thin, and left in the snow for a week, the resulting dust becomes a powerful Earth \gls{boon}.
-    }
-{\roll{Dexterity}{Medicine}}%
-{14}%
-{No effect.}%
+{Ingesting the fungus inflicts the penalties, but no benefits.}%
 
 \funkyPlant{Screeching Moss}%
   {screeching_moss}%
@@ -192,10 +192,10 @@ Wearing sufficiently full armour makes one immune to the cuts, but will not stop
   \index{#2 (Disease)}
   \label{#2}
   #3
-
+  \needspace{2em}
   \begin{description}
     \item[\flwr~\Glspl{ingredient}] #4
-    \item[Roll] #1 (#5)
+    \item[Roll] #1 (\tn[#5])
   \end{description}
 }
 
@@ -245,8 +245,7 @@ If the preparation goes awry, new \glspl{ingredient} must be procured for a cure
 -1 Strength and Speed.
 Every \gls{interval}, the higher of the two gains an additional -1 penalty, and if they are equal, the Strength penalty increases by 1.
 
-  If either penalty reaches -5, the character dies.
-  }%
+  If either penalty reaches -5, the character dies.}%
   {Earth}%
   {5}
 
