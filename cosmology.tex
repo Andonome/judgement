@@ -397,7 +397,12 @@ Add +1 for shoddy evidence, and +2 if the accuser insults the warden.
   \item
   The accused becomes the jester (the jester was getting old anyway).
   \item
-  The accused becomes the executioner -- the job is `for life!' (and apparently the crowd find this hilarious).
+  \ifodd\value{r3}
+    The accused becomes the executioner -- the job is `for life!' (and apparently the crowd find this hilarious).
+  \else
+    The Jester demands the accused become a `basilisk bather', and wash the stench off a basilisk as penance for their filthy deeds.
+    So everyone's shock, the warden agrees!
+  \fi
   \item
   Boring!
   We're here for justice, not a lecture.
@@ -407,7 +412,7 @@ Add +1 for shoddy evidence, and +2 if the accuser insults the warden.
 
   Trial!
 
-  by!
+  ~by!
 
   BEAST!
 
