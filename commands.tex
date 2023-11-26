@@ -114,6 +114,25 @@
 
 }
 
+\newcommand\cityRelations{
+
+  \begin{tikzpicture}[thick]
+
+  \node (A) at (0,0){\Large Oozes};
+
+  \node (B) at (4,0){\Large Crazed Witches};
+
+  \node (C) at (2,2.5){\Large Dragon};
+
+  \draw[\pageSideColor] (A) to[bend left] node[left]{\large Ignore}(C);
+
+  \draw[\pageSideColor] (C) to[bend left] node[right]{\large Fight}(B);
+
+  \draw[\pageSideColor] (B) to[bend left] node[below]{Kill for \Glspl{ingredient}} (A);
+
+  \end{tikzpicture}
+}
+
 \newcommand\showBandits{
   \item
   \setcounter{gold}{\value{diceNo}}
