@@ -9,17 +9,18 @@
 \Gls{fenestra}'s plants hold a thousand uses and dangers.
 
 \newcommand\funkyPlant[6]{
-  \subsubsection[#1]{\MakeUppercase#1}
+  \renewcommand\npcsymbol{\glsentrytext{plant}}
+  \subsubsection{#1}
   \label{#2}
   \index{#1 \glsentrytext{plant}}
 
   #3
 
-\begin{description}
-  \item[\flwr~Preparation:]
-  #4 (\tn[#5])
-  \item[\failStar~On failure:] #6
-\end{description}
+  \begin{description}
+    \item[\flwr~Preparation:]
+    #4 (\tn[#5])
+    \item[\failStar~On failure:] #6
+  \end{description}
 }
 
 \subsubsection{Bedleaves}
@@ -57,7 +58,7 @@ It provides a powerful but dangerous way to communicate across long distances.
 \label{dryads_kiss}
 
 Although edible, this mushroom makes you very gullible.
-Gain a -2 penalty to all Deceit and Empathy checks
+Take a -2 penalty to all Deceit and Empathy checks for a day.
 
 \subsubsection{Fly Flowers}
 \label{fly_flowers}
@@ -81,7 +82,7 @@ The stench is really hard to wash off, and anyone who comes in contact with this
   {12}%
   {all fires in the \gls{area} snuff out.}%
 
-\funkyPlant{liskshine}%
+\funkyPlant{Liskshine}%
   {molted_basilisk}%
   {
   Type of lichen that grows on the backs of basilisks, it also absorbs and retains the beast's overwhelming stench.
