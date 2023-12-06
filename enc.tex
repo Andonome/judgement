@@ -45,13 +45,7 @@ However, they will experience a \textit{reasonable danger} of death if they walk
   \end{encChart}
 }
 
-\begin{figure*}[b]
-
-\bigLine
-
-\index{Civilization Rating}
-You can think of the Civilization Rating as a line which moves down, slowly altering the encounter tables.
-Past the end of the last road, the forest replaces the all traders with beasts.
+\begin{figure*}[b!]
 
 \begin{multicols}{3}
 \small
@@ -146,36 +140,6 @@ Past the end of the last road, the forest replaces the all traders with beasts.
 
 \end{figure*}
 
-\begin{figure*}[t]
-\setcounter{diceNo}{13}
-\setcounter{diceNo2}{15}
-\setcounter{enc}{17}
-
-\begin{boxtable}[c|c|c|LLL]
-  \hline
-  \hline
-  \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Forest} & \textbf{Lakeside} & \textbf{Mountains} \\
-  \hline
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \encLine \bigBeastList & \encLakeside & \encMountains \\
-  \hline
-\end{boxtable}
-\end{figure*}
-
 \noindent
 Encounters adjust, depending on the season, time of day, and how far the troupe have travelled from civilization.
 
@@ -264,6 +228,10 @@ Encounters adjust, depending on the season, time of day, and how far the troupe 
 
 \end{exampletext}
 
+\index{Civilization Rating}
+You can think of the Civilization Rating as a line which moves down, slowly altering the encounter tables.
+Past the end of the last road, the forest replaces the all traders with beasts.
+
 \subsection{Traders \& Nomads}
 
 While moving, everyone meets other travellers head-on, moving in the opposite direction from them.
@@ -276,6 +244,34 @@ Each of your encounter dice also represent an interesting item the traders have.
 For example, rolling \dicef{8}\dicef{3} would indicate that the \glspl{pc} can buy some rope and pitch.
 
 \end{multicols}
+
+\setcounter{diceNo}{13}
+\setcounter{diceNo2}{15}
+\setcounter{enc}{17}
+
+\begin{wideTable}[c|c|c|LLL]{Encounters Across Biomes}
+  \hline
+  \hline
+  \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Forest} & \textbf{Lakeside} & \textbf{Mountains} \\
+  \hline
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \encLine \bigBeastList & \encLakeside & \encMountains \\
+  \hline
+\end{wideTable}
 
 \section{Morale}
 \label{morale}
@@ -338,6 +334,8 @@ Usually a good time is when all the \gls{fp} have run out.
 
 \section{Happenings \& Situations}
 
+\encTownEvents
+
 \begin{multicols}{2}
 
 \subsubsection{Village Features}
@@ -351,8 +349,6 @@ Usually a good time is when all the \gls{fp} have run out.
 \encVillageEvent
 
 \end{multicols}
-
-\encTownEvents
 
 \section{Missions}
 \index{Adventure Generator}
