@@ -44,6 +44,6 @@ To make the document,
 1. type `make`.
 2. Take the pdfs to your local, friendly, printing store.
 
-[core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/core.pdf?job=build
-[download]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/judgement.pdf?job=build
-[shield]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/shield.pdf?job=build
+[core download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/core.pdf?job=build
+[download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/judgement.pdf?job=build
+[shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build
