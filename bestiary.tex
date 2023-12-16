@@ -502,7 +502,6 @@ If something looks to dangerous to subdue, woodspies often follow their prey for
 Every woodspy which has seen an archer will recognize the bow, and understand how to hide behind cover.
 
 \begin{itemize}
-
   \item
   A single tentacle reaches down, grabs the smallest troupe member, and lifts them up into a tall tree.
   The woodspy then focusses only on climbing the massive tree.
@@ -511,25 +510,26 @@ Every woodspy which has seen an archer will recognize the bow, and understand ho
   In the distance, the troupe notice a massive woodspy slowly descending a tree.
   It waves its tentacle around a bush, slowly.
   A mouthdigger rushes up to bite the tentacle, but the woodspy quickly grabs it, then pulls it up into the trees.
-  \ifodd\value{temperature}=1
+  \ifnum\value{temperature}=1
     \item
     The troupe approach a river with a strong current.
     Have them roll, \roll{Wits}{Vigilance}, \tn[9].
     Success means they have spotted a woodspy upstream, plopping into the water in order to lay an ambush.
     Even knowing that the ambush exists will not guarantee safety, since the troupe cannot move easily in the water.
     If they wander downstream, the woodspy follows.
+    \item
+    A woodspy picks up a bush, then waves it around, provoking a fight with the \glspl{pc}.
+    If they approach the bush, it uses the diversion to grab any bags they leave on the ground.
+    The creature then climbs a tree, and tears open the bag, rummaging around it for any food, while throwing the rest on the ground.
   \else
     \item
     As the troupe approach a village, a nearby bush reveals itself to be a smaller woodspy, and flees.
     If they let the creature go, the next day it returns and takes a less well-armoured victim by surprise.
     \item
     Deep in the forest, a woodspy has drifted into a deep sleep, and as it dreams unknowable dreams, it flickers through rainbow colours, and changes its skin-texture.
-  \fi
-  \ifnum\value{temperature}>1
     \item
     The troupe discover a deer-corpse, writhing with little woodspy babies, each the size of a hand.
   \fi
-
 \end{itemize}
 
 \end{multicols}
