@@ -34,7 +34,6 @@ The dependencies are
 
 - `texlive-full`
 - `git`
-- `qrencode`
 - `git-lfs`
 - `inkscape`
 - `make`
