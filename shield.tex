@@ -33,11 +33,8 @@
   \stackingDamageChart
 \end{figure*}
 
-{\ifStrSame{\showAstroEvents}{}{}{\large\sffamily Event: \showAstroEvents}}
+{\ifStrSame{\showAstroEvents}{}{}{\large\scshape Event: \sffamily\showAstroEvents}}
 
-\ifnum\value{temperature}=3
-  \setcounter{temperature}{1}
-\fi
 \multiply\value{temperature} by 2
 \addtocounter{temperature}{0}
 
@@ -49,12 +46,12 @@
 \begin{boxtable}[c|LLL|L]
   \hline
   \hline
-  \textbf{Cold} & \textbf{Forest} & \textbf{Lakeside} & \textbf{Mountains} & \textbf{Weather} \\
+  \textbf{Roll} & \textbf{Forest} & \textbf{Lakeside} & \textbf{Mountains} & \textbf{Weather} \\
   \hline
   \Repeat{12}{
   \addtocounter{diceNo}{-1}
   \addtocounter{enc}{-1}
-  \arabic{enc} & \bigBeastList & \encLakeside & \encMountains & \bigWeatherList \\
+  \arabic{diceNo} & \bigBeastList & \encLakeside & \encMountains & \bigWeatherList \\
   }
   \hline
 \end{boxtable}
