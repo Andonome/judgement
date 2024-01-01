@@ -9,7 +9,7 @@ qr.tex:
 	@echo "\qrcode[height=.7\textwidth]{$(QR_TARGET)}" > qr.tex
 svg-inkscape: | config/bind.sty qr.tex
 	@pdflatex -shell-escape -jobname $(BOOK) main.tex
-$(BOOK).pdf: $(wildcard *.tex) $(wildcard config/*.sty)
+$(BOOK).pdf: svg-inkscape $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
 
 shield.pdf: shield.tex commands.tex $(BOOK).sls
