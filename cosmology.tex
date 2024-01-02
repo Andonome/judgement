@@ -181,6 +181,8 @@ Once more falls, they would only cover 4 miles.
 
 \section{Guilded Temples}
 
+\newcommand\guildRank[1]{\item[#1]\index{#1 (Rank)}}
+
 \begin{multicols}{2}
 
 \label{godsOfDeath}
@@ -274,21 +276,21 @@ are quick to note that nobody with an official \gls{wheatGuild} cook has ever su
 \subsubsection{Structure}
 
 \begin{description}
-  \item[Bakers]
+  \guildRank{Bakers}
   come from the streets, and generally return after a few months.
   The working hours and heat in the kitchens tire even the fittest of humans.
-  \item[Tenders]
+  \guildRank{Tenders}
   tend the bars, if they can curry enough favour to move away from baking.
-  \item[Cooks]
+  \guildRank{Cooks}
   require a good nose, fast hands, and enough savings to bribe their way into the position.
-  \item[Keepers]
+  \guildRank{Keepers}
   need fast eyes to read and tabulate books.
   They test every bottle, and remember the daily-changing price of every drink.
   They also test or switch their bottles to make sure they don't leave any shoes for someone else to step into, as nobody from the streets can imagine a better position than being a keeper.
-  \item[Landlords]
+  \guildRank{Landlords}
   renounce any official status as wardens, buy a property, and join the guild near its top rank.
   They purchase supplies, barter with traders for wholesale prices, and keep in contact with the cooks who work with wardens.
-  \item[Cooks]
+  \guildRank{Cooks}
   know all the guild's best recipes, both for food and poison.
   Besides their special recipes, they do not in fact cook very much, as they too come from warden families, and have better things to do.
 \end{description}
@@ -361,11 +363,11 @@ When one casts a soothsaying spell, she tells others.
 And almost nobody can really track how effective a blessing has been, but eventually, everyone needs some safety from \hphantom{Nulla}, in one way or another.
 
 \begin{description}
-  \item[Apprentices]
+  \guildRank{Apprentices}
   serve for as long as it takes to pick up the basics -- sometimes until their mentor has died (which means they get to keep the house).
-  \item[Doula]
+  \guildRank{Doula}
   care for the young, assist with births, and wish people well on new ventures; and whether or not their blessings truly change people's fate; or their predictions really see the future, nobody can tell.
-  \item[Wayfinders]
+  \guildRank{Wayfinders}
   have sufficient magical abilities that they walk fearlessly through even the deepest parts of the forest.
   \Glspl{warden} pay them handsomely (but rarely in direct coinage) to seek out areas in the forest fit to built a \gls{village}.
 
@@ -432,11 +434,11 @@ The figures they keep clearly show that they avoid more deaths than any other te
   \item[\glsfmtplural{sunGuard}]
   work in towns and cities.
   Anyone sufficiently fit, overbearing, and loyal to the wardens can become a member.
-  \item[Prefects]
+  \guildRank{Prefects}
   administer the guards in a station, and travel along roads when needed to protect the \gls{warden}.
-  \item[Captains]
+  \guildRank{Captains}
   administer a whole city.
-  \item[Seneschals]
+  \guildRank{Seneschals}
   keep track of a lord's resources, take tax money, record legal rulings, and keep the treasure safe.
   Every \gls{warden} needs a trusted seneschal to operate, and in many ways the seneschal holds a more important position than any \gls{warden}, in terms of stability of the land.
   \item[Village \Glspl{warden}]
@@ -632,17 +634,15 @@ Almost every beast in the forests will stop attacking once it has a body to feed
 \subsubsection{Structure}
 
 \begin{description}
-  \item[Fodder]
+  \guildRank{Fodder}
   \label{fodder}%
-  \index{Fodder (rank)}%
   do as anyone tells them, until the forest eats them, or they gain proper rank.
   None may enter a settlement of any kind.
   They sleep outside, at the foot of remote towers.
 
   \textbf{Pay:} Why bother?
 
-  \item[Grave Diggers]
-  \index{Grave Diggers (rank)}%
+  \guildRank{Grave Diggers}
   \index{Diggers (rank)}%
   have joined a group past the \gls{edge} and survived.
   This encourages others to treat them like real people, but does not earn them the right to return to civilization without special permission.
@@ -650,8 +650,7 @@ Almost every beast in the forests will stop attacking once it has a body to feed
   \textbf{Pay:} 5 \glspl{cp} per week, donated to a temple of their choice.%
   \footnote{`No, you don't get it yourself, don't be selfish'.}
 
-  \item[Archers]
-  \index{Archers (rank)}%
+  \guildRank{Archers}
   make a kill which was witnessed by someone of higher rank than them.
   They may enter any settlement if they have a solid reason.
 
@@ -660,8 +659,7 @@ Almost every beast in the forests will stop attacking once it has a body to feed
   \textbf{Pay:} 10 \glspl{cp} per week, which they may donate to family or a temple, or have someone purchase equipment on their behalf.
   They may not keep the money.
 
-  \item[Cutters]
-  \index{Cutters (rank)}%
+  \guildRank{Cutters}
   have journeyed past the \gls{edge} and returned with a trophy of some kind.
 
   They build new settlements, protect caravans, and occasionally try to sneak off to relax in a town somewhere, without anyone noticing.
@@ -670,8 +668,7 @@ Almost every beast in the forests will stop attacking once it has a body to feed
   \footnote{Paying the \gls{guard} leads to terrible deflation problems, as every death means some more coinage goes missing.
   Of course, people frown upon the practice, but still understand that it's a necessary evil.}
 
-  \item[Riders]
-  \index{Riders (rank)}%
+  \guildRank{Riders}
   \index{Night Riders (rank)}%
   (`Night Riders')
   have at least three heads from the forest -- beasts preferred, but bandits will do.
@@ -679,7 +676,7 @@ Almost every beast in the forests will stop attacking once it has a body to feed
 
   \textbf{Pay:} 1 \gls{sp} per week, which allows them to save up for weapons and armour.
 
-  \item[Jotters]
+  \item[\glsfmtplural{jotter}]
   \index{Jotters (rank)}%
   \label{jotter}%
   need only show their literacy, and some basic organizational skills.
@@ -687,22 +684,19 @@ Almost every beast in the forests will stop attacking once it has a body to feed
 
   \textbf{Pay:} 2 \gls{sp} per week.
 
-  \item[Rangers]
-  \index{Rangers (rank)}%
+  \guildRank{Rangers}
   \label{ranger}
   must return with captured beasts (although their young, or even eggs, will suffice) in order to gain this rank.
   They track down deserters, burn nests, shoot sleeping creatures in the dark, and often travel through the forest with such stealth and foresight that can move alone.
   
   \textbf{Pay:} 3~\gls{sp} per week, which nobody wants to give them, but they go through armour and arrows so quickly that nobody can argue.
 
-  \item[Builders]
-  \index{Builders (rank)}%
+  \guildRank{Builders}
   organize men to build walls in new settlements, or strengthen existing walls.
 
   \textbf{Pay:} 4 \gls{sp} per week.
 
-  \item[Overseers]
-  \index{Overseers (rank)}%
+  \guildRank{Overseers}
   plan new settlements, organize funds, ensure new recruits have weapons (or don't, if weapons become too expensive), and otherwise do as they please.
 
   \textbf{Pay:} Nothing.
@@ -760,12 +754,12 @@ Those few with the grit to stay become master craftsmen.
 The Temple of Hate have distinct hierarchies for their guild and temple faces.
 
 \begin{description}
-  \item[Apprentices]
+  \guildRank{Apprentices}
   work, work, work, and work some more.
-  \item[Crafters]
+  \guildRank{Crafters}
   form the entire guild.
   Masters produce good quality armour, and sell it for a high price, but even the least skilled among the armourers earn well enough.
-  \item[Negotiators]
+  \guildRank{Negotiators}
   usually serve for a season or two, before returning to proper work.
   It doesn't pay well (or at all, sometimes), but at least the guild can continue selling while both sides live.
 
@@ -827,19 +821,17 @@ But the scribes, like the helpers, cannot help themselves, and too many end up i
 \subsubsection{Structure}
 
 \begin{description}
-  \item[Chandlers]
+  \guildRank{Chandlers}
   make candles, in a hot, humid, basement.
   Everyone in the \gls{paperGuild} must begin here, in order to understand the effort light demands.
-  \item[Apprentices]
+  \guildRank{Scribblers}
   copy books.
-  Anyone can begin as an apprentice, if they answer a riddle (and everyone may receive only one riddle per year, to be answered on the spot or never).%
+  Anyone can begin as a scribbler, if they answer a riddle (and everyone may receive only one riddle per year, to be answered on the spot or never).%
   \footnote{This system is rigged. The real test is whether someone can cheat tactfully.}
-  \item[Scribes]
-  \index{Scribe (rank)}%
+  \guildRank{Scribes}
   have copied over 100 books, and most simply continue.
-  \item[Wanderers]
+  \guildRank{Wanderers}
   \label{knowledgeWanderer}%
-  \index{Wanderer (rank)}%
   begin by identifying the rank of other guild members in the area.
   With no uniforms, and a very indoor-based set of interests, many have to resort to very clever letters.
   Before setting out, they must display optimized route planning, and encryption skills.
