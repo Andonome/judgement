@@ -103,8 +103,6 @@ For example, `poisonous meats' might suggest `Rotwall', while `doula's house', c
 
 \iftoggle{core}{
 
-  \chasechart
-
   \gatheringChart
 
   \larcenyChart
@@ -113,6 +111,12 @@ For example, `poisonous meats' might suggest `Rotwall', while `doula's house', c
 
 \end{multicols}
 
+\iftoggle{core}{
+
+  \chasechart
+
+}{}
+
 \encTownEvents
 
 \clearpage
@@ -120,29 +124,24 @@ For example, `poisonous meats' might suggest `Rotwall', while `doula's house', c
 \begin{multicols}{2}
 
 %%%%% Creatures %%%%%
-%\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+\humansoldier[\npc{\T[8]\Hu}{Bandits}]
 
-\ifcase\value{temperature}
+\ifnum\value{temperature}=0
   % Temperature 0 (cold)
   \ghast
   \wolf
-\or
+\else
   \basilisk
+  \chitincrawler
+  \bear
 \fi
 
 \mouthdigger
 
-\ifnum\value{temperature}>0
-  \chitincrawler
-\fi
-
 \griffin
 
-\ifnum\value{temperature}>0
-  \bear
-  \ifnum\value{temperature}<3
-    \dryad
-  \fi
+\ifnum\value{temperature}<3
+  \dryad
 \fi
 
 \woodspy
