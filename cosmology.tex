@@ -27,18 +27,9 @@
   \end{tikzpicture}
 
 }{
-  \index{Qualmea}
-  \index{Atya}
-  \index{Alassea}
-  \index{Cantea}
-  \index{Calea}
-  \index{Verea}
-  \index{Otsea}
-  \index{Toldea}
-  \index{Laiquea}
-  \index{Quainea}
-  \index{Minquesta}
-  \index{Ohta}
+  \foreach \s in {Qualmea,Atya,Alassea,Cantea,Calea,Verea,Otsea,Toldea,Laiquea,Quainea,Minquesta,Ohta}%
+    {\index{\s~(season)}}
+
   \begin{nametable}[l|Y|c|Y]{Seasons}
 
     \textbf{Real Month} & \textbf{Far Season} & \textbf{Climate} & \textbf{Event} \\
@@ -181,7 +172,7 @@ Once more falls, they would only cover 4 miles.
 
 \section{Guilded Temples}
 
-\newcommand\guildRank[1]{\item[#1]\index{#1 (Rank)}}
+\newcommand\guildRank[1]{\item[#1]\index{#1 (rank)}}
 
 \begin{multicols}{2}
 
@@ -206,7 +197,7 @@ The Temple of Hate encourages reconciliations, the Temple of Frost offers warmth
   \noindent
   \begin{minipage}{\linewidth}
   \subsection[The Temple of #3]{#2~#1~#2 \\ \& \\ The Temple of #3}
-  \index{#3 (God)}
+  \index{#3 (god)}
   \index{Gods}
   \label{god:#3}
 
