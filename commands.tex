@@ -810,6 +810,12 @@
   \end{enumerate}
 }
 
+\newcommand\newBeast[4][\A]{
+  \subsubsection[#2 (#1): #4.]{#1~#2}
+  \label{#3}
+  \index{#2 (#1)}
+}
+
 \newcommand\hitLocation{
   \begin{boxtable}[XXXX]
     \textbf{Damage} & \textbf{Location} & \textbf{Slash} & \textbf{Bash} \\

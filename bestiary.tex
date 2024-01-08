@@ -32,8 +32,9 @@ Some prefer to sleep without a fire, and simply huddle together in the darkness,
 Each creature presented -- whether predator or prey -- fits into a larger world, so each has notes on its \textbf{ecology}.
 Many can be used as \glspl{ingredient} for magical \glspl{boon}, which are listed next to the creature.
 
-\best{Aurochs}
-\label{auroch}
+\newBeast{Auroch}% Name
+  {auroch}% label
+  {wild cows that create terrifying stampedes}% description
 
 The wilder regions of \gls{fenestra} still see herds of the primitive cow: the auroch.
 They have massive horns and tend to be more aggressive then the farm animals.
@@ -69,8 +70,9 @@ auroch hooves, crushed into a fine powder, provide Earth Sphere \glspl{boon}.
 
 \end{itemize}
 
-\best{Basilisks}
-\label{basilisk}
+\newBeast{Basilisks}% Name
+  {basilisk}% label
+  {many-limbed lizards, the size of a \glsentrytext{warden}'s entourage, with the stench of rotten eggs}% description
 
 Basilisks are massive, terrifying lizards.
 They have a deathly odour which can paralyse anyone who smells it.
@@ -136,8 +138,9 @@ The herbalist rolls \roll{Dexterity}{Medicine} (\tn[10]) to mix the potions righ
   The trader begs the \glspl{pc} to stay and fight while he runs - if the clothes infuse with the basilisk's smell, they will be ruined forever.
 \end{itemize}
 
-\best{Bears}
-\label{bear}
+\newBeast{Bears}% Name
+  {bear}% label
+  {known for stalking, and theft, and sometimes aggression}% description
 
 Bears can be found over all of Fenestra, including populated areas.
 However, they are typically not dangerous if left alone.
@@ -161,8 +164,10 @@ However, when the world lies under snow, bears grow hungry, then reckless.
   A single bear stands in a river, washing off webbing from a chitincrawler's web.
 \end{itemize}
 
-\best{Boars}
-\label{boar}
+\newBeast{Boars}% Name
+  {boar}% label
+  {famously bad-tempered and highly defensive, but also good eating}% description
+
 
 Boars tend to inhabit the deeper forests, and pick up a number of scars from fighting with the terrifying creatures who live there.
 They have to be active all year round to survive, and like most forest creatures get braver as Winter approaches.
@@ -191,8 +196,9 @@ Pulling the heart out in time requires a \roll{Dexterity}{Medicine} roll at \tn[
 
 \widePic[t]{Studio_DA/chitincrawler}
 
-\best{Chitincrawlers}
-\label{chitincrawler}
+\newBeast{Chitincrawlers}% Name
+  {chitincrawler}% label
+  {arachnid the size of a horse, with wolf-like jaws and knife-like hands}% description
 
 Chitincrawlers are large, armoured, spider-like creatures.
 They have eight appendages, each ending with four-pronged knife-like `hands'.
@@ -267,8 +273,9 @@ The sticky substance must be spun on a loom (with \roll{Dexterity}{Crafts}, \tn[
   A chitincrawler waking from hibernation typically kills everything in its path in order to get enough energy to hibernate again, so they must be careful.
 \end{itemize}
 
-\best{Griffins}
-\label{griffin}
+\newBeast{Griffins}% Name
+  {griffin}% label
+  {beak-wielding mammal, with bat-like wings. They hunt in packs}% description
 
 The favoured mount of elves, griffins nest in treetops using large branches and leaves.
 They hunt deer, badgers, aurochs and anything else they can get their claws into.
@@ -353,8 +360,9 @@ enough feathers, dried and ground up into a powder, grant a single \gls{boon} fo
 
 \end{itemize}
 
-\best{Mouthdiggers}
-\label{mouthdigger}
+\newBeast{Mouthdiggers}% Name
+  {mouthdigger}% label
+  {ambush predator which digs like a mole.  The size of a dog, but jaws expand to three times a reasonable size}% description
 
 Imagine a very large mole, opening its mouth impossibly wide, showing more rows of teeth than a shark.
 These furry creatures could almost appear as a large dog if seen outside of the ground, but most people (and deer) usually only see its tonsils exploding from underneath.
@@ -399,8 +407,9 @@ A litter consists of $2D6$ sprogs.
 
 \mouthdigger
 
-\best{Stirges}
-\label{stirge}
+\newBeast{Stirges}% Name
+  {stirge}% label
+  {insects with size of a fist, with a blood-draining stinger}% description
 
 These blood-sucking insects, the size of a fist, can prove a real nuisance once they become angry.
 Their wicked-sharp sucker can nip and slice into any exposed skin they can find, draining life slowly.
@@ -440,8 +449,9 @@ The \gls{boon} requires a little drying (\tn[5] to prepare properly), but only p
 
 \stirgeSwarm
 
-\best{Wolves}
-\label{wolf}
+\newBeast{Wolves}% Name
+  {wolf}% label
+  {opportunistic food-thieves, who also drain an area of deer}% description
 
 \paragraph{Ecology:} Wolves live everywhere except islands.  In the Winter, many die, and they become rarer, but in Summer they breed and run quickly.  While farmers know them as thieves, the majority of the time, wolves hunt wild animals, like boar or deer.
 
@@ -469,11 +479,15 @@ When food becomes leaner, they become braver.
   Two wolves have been caught in a chitincrawler's web, and the rest of the pack cannot free them, so they just cry and bay loudly.
 \end{itemize}
 
-\best[\E]{Woodspies}
-\label{woodspy}
+\newBeast[\E]{Woodspies}% Name
+  {woodspy}% label
+  {land-octopus, able to camouflage itself by changing texture and colour, and change size}% description
+
 \widePic{Studio_DA/woodspy}
 
-Woodspies are like a type of camouflaging octopus, adapted to exist solely on land.  They have three to six tentacles and transform their shape in the manner of a hand making a shadow puppet and then adjust their skin-texture to match.  They grapple with opponents and then start gnawing into prey with a powerful beak, located underneath the main body.
+Woodspies are like a type of camouflaging octopus, adapted to exist solely on land.
+They have three to eight tentacles and transform their shape in the manner of a hand making a shadow puppet and then adjust their skin-texture to match.
+They grapple with opponents and then start gnawing into prey with a powerful beak, located underneath the main body.
 
 \begin{boxtext}
 
@@ -574,8 +588,10 @@ Of course, fire is an option, but it produces its own complications.
 Far below the frigid labyrinth, the air becomes warm again.
 People don't go beyond this point and return.
 
-\best{Acidic Oozes}
-\label{ooze}
+\newBeast{Acidic Oozes}% Name
+  {ooze}% label
+  {uniform gastropod, with just enough mind to move towards movement and digest it}% description
+
 \widePic{Studio_DA/jelly}
 
 Oozes are mobile, gelatinous, blobs with about the same level of intelligence as a quick-thinking bush -- sometimes they ooze along the underground caverns, sometimes they crawl into rooms to digest their latest victim and appear as a little pool of water hidden away in a small pit.
@@ -633,8 +649,9 @@ How much depends on how much of the body one can capture, but it could produce a
 
 \jelly
 
-\best{Umber Hulks}
-\label{umber_hulk}
+\newBeast{Umber Hulks}% Name
+  {umber_hulk}% label
+  {beetle-like creatures, the size of a wagon}% description
 
 Umber hulks are massive insect-like creatures with gnashing mandibles.
 They mostly eat mushrooms and acidic, underground oozes, but devour absolutely anything if it happens to be near.
@@ -693,8 +710,9 @@ The result is $2D6-5$ Fire \glspl{boon} (if the number is less than 1, the brood
 
 \umberhulk
 
-\best{Watchers}
-\label{watcher}
+\newBeast{Watchers}% Name
+  {watcher}% label
+  {half-animal, half-plant. They release hallucinogenic toxins when stepped on}% description
 
 Somewhere between an very sentient plant and a very slow creature, watchers simply wait where they are, tentacles outstretched like scrawny roots across some tens or hundreds of feet.
 

@@ -39,13 +39,18 @@ They might even be stuck into an adventure as part of another culture as some fe
 
 \end{boxtext}
 
-\best[\M\Dw]{Trader}\label{dwarven_trader}
+\newBeast[\M\Dw]{Trader}% Name
+  {dwarven_trader}% label
+  {known for stable prices}% description
+
 
 Your standard dwarvish citizen is a gruff male who works with his hands.
 
 \dwarventrader
 
-\best[\M\Dw]{Soldier}\label{dwarven_soldier}
+\newBeast[\Dw]{Soldier}% Name
+  {dwarven_soldier}% label
+  {short and deadly as a dagger}% description
 
 Dwarvish soldiers sport proud suits of plate armour, making them nearly impenetrable to normal weapons.
 
@@ -53,8 +58,10 @@ Dwarvish soldiers sport proud suits of plate armour, making them nearly impenetr
 
 \paragraph{Tactics:} Dwarven  warriors typically \textit{charge} and trust to their plate armour to keep them safe in battle.%
 
-\best[\F\M]{Runemaster}
-\label{dwarven_runemaster}
+
+\newBeast[\M\Dw]{Runemaster}% Name
+  {dwarven_runemaster}% label
+  {their spells lay the foundation of dwarvish cities and towns}% description
 
 Every dwarven citadel hosts at least one rune master, who uses their spells to give blessings, and keep the edges of stronghold free from enemies.
 The greatest of runemasters can protect entire settlements with their wide-ranging spells, and advise the matriarchs.
@@ -90,8 +97,10 @@ Many take to the human roads to wander the earth, trying to bring back the wisdo
 
 \end{boxtext}
 
-\best[\F\M]{Wanderers}
-\label{elf}
+
+\newBeast[\El]{Wanderers}% Name
+  {elf}% label
+  {always running about on `quests' which never go anywhere}% description
 
 Given their long lives, most elves do surprisingly little.
 Nevertheless, after enough decades, almost all pick up a few crafts, or at least learn some social graces.
@@ -110,8 +119,10 @@ While elvish blades are sharp, they do not have the strength to damage people we
 
 \elf[\npc{\E\El}{Wanderer}]
 
-\best[\F\M]{Enchanter}
-\label{elven_enchanter}
+
+\newBeast[\El]{Enchanter}% Name
+  {elven_enchanter}% label
+  {if they see you, they own you}% description
 
 Elven enchanters have hundreds of years to perfect not only their natural magics but also outside magic Paths -- often the Path of Song.
 
@@ -122,8 +133,10 @@ Elven enchanters have hundreds of years to perfect not only their natural magics
 \index{Gnolls}
 \label{best_gnolls}
 
-\best[\E\Nl]{Hunter}
-\label{gnoll_hunter}
+
+\newBeast[\Nl]{Hunter}% Name
+  {gnoll_hunter}% label
+  {known everywhere for selling fresh meats, and giving free advice}% description
 
 \gnollhunter[\npc{\M\E\Nl}{Gnoll Hunter}]
 
@@ -144,8 +157,9 @@ If the territory is disputed, the gnolls are dangerous, and eternally prepared f
 
 \end{boxtext}
 
-\best[\E\Nl]{Druid \& Witches}
-\label{gnoll_shaman}
+\newBeast[\Nl]{Druids \& Witches}% Name
+  {gnoll_shaman}% label
+  {fast casters, who use practical magic to hunt and make homes}% description
 
 In gnoll societies, spellcasters feel less `distance' than in other societies.
 Their peers expect them to hunt (even if they have odd methods), marry, and celebrate normally.
@@ -178,15 +192,17 @@ Many gnomes few have taken to thievery in human towns where they can dress as ch
 
 \end{boxtext}
 
-\best[\E\Gn]{Gnome}
-\label{gnomish_citizen}
+\newBeast[\Gn]{Gnome}% Name
+  {gnomish_citizen}% label
+  {small creatures, with a nasty habit of writing books inside footnotes, and leaving the remainder of the book as some kind of patchwork reference document}% description
 
 A majority of gnomes are farmers, often with a light interest in alchemy and academic literature in general.  Some adventurous (or simply poor) gnomes end up as thieves in large-scale cities.
 
 \gnome[\npc{\E\Gn}{Gnome}]
 
-\best[\Gn\E]{Gnomish Illusionist}\index{Illusionist}
-\label{gnomish_illusionist}
+\newBeast[\Gn]{Gnomish Illusionist}% Name
+  {gnomish_illusionist}% label
+  {a type of bush, of no concern to anyone, unlike the thing staring at you from outside the window}% description
 
 Most communities of gnomes hold at least one specialised illusionist.  When not studying they farm, bore people with philosophical questions and smoke extraordinarily long pipes.  On occasion, some will specialise in the invocation sphere in order to hunt animals.
 
@@ -212,8 +228,9 @@ They always want more company, as it keeps them safe, and sometimes pay the \gls
 
 Bandits, on the other hand, will only present themselves if they think they can win a fight.
 
-\best[\Hu\E]{Human Trader}
-\label{human_trader}
+\newBeast[\Hu]{Human Trader}% Name
+  {human_trader}% label
+  {some say the bravest of humans, they wander outside civilization with only their wits and a longbow}% description
 
 At least half the humans in any given area are farmers.
 Most organised militia are comprised of ex farmers who expect to return to farms, either to their own after sufficient payment or to new farms in conquered territory.
@@ -221,20 +238,11 @@ Humans may not have the greatest empathy with animals, but farmers certainly spe
 
 \humantrader[\npc{\E\Hu}{Trader}]
 
-\best[\Hu\E]{Priest}\label{human_priest}
+\newBeast[\Hu]{\Glsfmttext{guard}}% Name
+  {human_soldier}% label
+  {the extremities of humanity, sent to die heroically}% description
 
-Human priests might follow any one of the gods.
-For simplicity's sake, a priest of V\'{e}r\"{e} is presented below.
-
-\humanpriest[\npc{\E\Hu}{Priest}]
-
-Often a priest will accompany bands of warriors, weather they are going to war or simply moving in to defend a village against a recent threat.
-Any such warriors accompanied by a priest will have a full allotment of \glspl{fp}.
-
-\best[\T\Hu\E]{\Glsfmttext{guard}}
-\label{human_soldier}
-
-The \gls{guard} -- civilization's last hope (at least according to the captains) -- exist in every corner of Fenestra.
+The \gls{guard} -- civilization's last hope (at least according to the builders) -- exist in every corner of \gls{fenestra}.
 Many consider them a menace, as the requirements to join don't include table-manners, common courtesy, or cleanliness.
 
 \humansoldier[\npc{\E\Hu}{\Glsfmttext{guard}}]
