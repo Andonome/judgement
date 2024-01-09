@@ -816,6 +816,43 @@
   \index{#2 (#1)}
 }
 
+\newcommand\exampleGoblinEnc{
+  \setcounter{enc}{15}
+  \setcounter{diceNo}{13}
+  \vspace{2em}
+  \rowcolors{2}{}{gray!10}
+  \noindent
+  \begin{boxtable}[c|L]
+    \hline
+    \hline
+    \textbf{Roll} & \textbf{Inner Hamlets} \\
+    \hline
+    \Repeat{5}{
+      \addtocounter{diceNo}{-1}
+      \addtocounter{enc}{-1}
+      \arabic{diceNo} & \bigBeastList \\
+    }
+    \hline
+    \addtocounter{diceNo}{-1}
+    \addtocounter{enc}{-1}
+    \arabic{diceNo} & \ifodd\value{enc}Brigands!\else Bandits\fi \\
+    \hline
+    \Repeat{3}{
+      \addtocounter{diceNo}{-1}
+      \addtocounter{enc}{-1}
+      \arabic{diceNo} & \arabic{diceNo} wagons \\
+    }
+    \hline
+    \Repeat{3}{
+      \addtocounter{diceNo}{-1}
+      \addtocounter{enc}{-1}
+      \arabic{diceNo} & \multiply\value{diceNo} by 4 \arabic{diceNo} goblins! \\
+    }
+    \hline
+  \end{boxtable}
+  \armouredOgre[\npc{\N\M}{Ogre King}]
+}
+
 \newcommand\hitLocation{
   \begin{boxtable}[XXXX]
     \textbf{Damage} & \textbf{Location} & \textbf{Slash} & \textbf{Bash} \\

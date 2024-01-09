@@ -106,11 +106,11 @@ Despite the stale mana in caves, liches can gather enough to cast a few \textit{
 Many start to amass their power as information brokers.
 \Glspl{seeker} who pull at a source of information too much can find themselves face-to-face with a corpse which speaks directly into their minds.
 
+\lich
+
 Once they have a cool, dry place to store their bodies, they begin to amass short and long term armies.
 The short-term armies consist of any powerful creatures in the area (gnomish alchemists, \gls{guard} leaders, dwarven merchants).
 The long-term always consists of armies of ghouls `on-ice', and never placed far from the lich's body.
-
-\lich
 
 \showStdSpells
 
@@ -281,48 +281,10 @@ Some few can be bargained with, but it's famously difficult to bargain with crea
 
 \end{multicols}
 
+\needspace{19em}
 \section[Ogre]{Ogres}
 \label{ogre}
 \index{Ogres}
-
-\boxPair[t]{
-  \pic{Studio_DA/ogre}
-}{
-  \setcounter{enc}{15}
-  \setcounter{diceNo}{13}
-  \vspace{2em}
-  \rowcolors{2}{}{gray!10}
-  \noindent
-  \begin{boxtable}[c|L]
-    \hline
-    \hline
-    \textbf{Roll} & \textbf{Inner Hamlets} \\
-    \hline
-    \Repeat{5}{
-      \addtocounter{diceNo}{-1}
-      \addtocounter{enc}{-1}
-      \arabic{diceNo} & \bigBeastList \\
-    }
-    \hline
-    \addtocounter{diceNo}{-1}
-    \addtocounter{enc}{-1}
-    \arabic{diceNo} & \ifodd\value{enc}Brigands!\else Bandits\fi \\
-    \hline
-    \Repeat{3}{
-      \addtocounter{diceNo}{-1}
-      \addtocounter{enc}{-1}
-      \arabic{diceNo} & \arabic{diceNo} wagons \\
-    }
-    \hline
-    \Repeat{3}{
-      \addtocounter{diceNo}{-1}
-      \addtocounter{enc}{-1}
-      \arabic{diceNo} & \multiply\value{diceNo} by 4 \arabic{diceNo} goblins! \\
-    }
-    \hline
-  \end{boxtable}
-  \armouredOgre[\npc{\N\M}{Ogre King}]
-}
 
 \begin{multicols}{2}
 
@@ -339,6 +301,8 @@ And the standard solution for warriors in full plate armour is an ogre hitting t
 
 If a horde of goblins, lead by an ogre, becomes hungry, they all start to think the same thing: they must find food soon, or one will eat the other.
 This unspoken knowledge pushes any goblinoid horde to constant raids on any nearby farms.
+
+\pic{Studio_DA/ogre}
 
 Ogres are not born, but created by a `stuffing'.
 This is when one goblin stuffs himself full, then keeps on eating.
@@ -387,6 +351,8 @@ the encounter is replaced with a number of goblins equal to four times the encou
 
 As the Goblin Rating increases, they devour the people in the area bit by bit, and anyone on the outskirts of civilization will neither find boars, nor traders on the road.
 Instead, they find goblins, hungry for more.
+
+\exampleGoblinEnc
 
 \paragraph{Encounters:}
 
