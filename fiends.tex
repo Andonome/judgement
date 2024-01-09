@@ -431,6 +431,10 @@ They often collect these animals as `pets', but never spend enough time procurin
 After they've finished creating torments for the local population, they like to sit down and have a cup of tea and cake.
 After all, `hag' is just a nasty word for a person, and people like cakes.
 
+\hag
+
+\showStdSpells
+
 \paragraph{Encounters:}
 
 \begin{itemize}
@@ -457,10 +461,17 @@ After all, `hag' is just a nasty word for a person, and people like cakes.
   The warden has placed a high reward on their return, but they stand little chance running around the forest alone in a deer-like shape, with no voice.
 \end{itemize}
 
-\hag
+\subsubsection{Pets}
 
-\showStdSpells
+Hags often `bless' their pets with size, strength, and hunger.
+The spell is easy, but reversing the spell means starving the pet for a while, which never goes down well.
 
-\vfill\null
+\ifodd\value{r2}
+  \morphcat[\npc{\N\A\M}{Grebo}]
+\else
+  \morphspider[\npc{\N\A\M}{Mr Stickilegs}]
+\fi
+
+Such monstrous pets may become so transformed that the original form is obscured.
 
 \end{multicols}
