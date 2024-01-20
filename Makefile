@@ -19,7 +19,10 @@ all: $(BOOK).pdf shield.pdf
 	latexmk -jobname=$(BOOK) -shell-escape -pdf main.tex
 
 clean:
-	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.out *.idx *.ist \
+	rm -fr *.aux *.sls \
+	*.slo \
+	*.slg \
+	*.toc *.acn *.log *.out *.idx *.ist \
 	*glo \
 	*glg \
 	*gls \
