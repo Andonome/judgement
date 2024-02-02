@@ -24,30 +24,25 @@
 
 \mainmatter
 
+\include{gm}
+
 \include{cosmology}
 
 \include{map}
 
 \include{enc}
 
-%\iftoggle{stories}{}%
-%  {\include{humanoids}}
+\include{bestiary}
+
+\include{growths}
 
 \include{fiends}
 
 \include{undead}
 
-\include{bestiary}
-
-\include{growths}
-
-\include{gm}
-
-\cleardoublepage
-
 \startappendix
 
-\include{history}
+\input{history.tex}
 
 \printindex[mana]
 \label{manaIndex}
@@ -59,6 +54,8 @@
 \end{center}
 
 \cleardoublepage
+
+\pagestyle{empty}
 
 \null
 \vspace{26em}
