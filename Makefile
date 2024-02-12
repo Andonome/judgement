@@ -6,7 +6,7 @@ output: $(BOOK).pdf
 config/bind.sty:
 	@git submodule update --init
 qr.tex:
-	@echo '\qrcode[height=.7\textwidth]{$(QR_TARGET)}' > qr.tex
+	@echo '\qrcode[height=.7\\textwidth]{$(QR_TARGET)}' > qr.tex
 svg-inkscape:| config/bind.sty qr.tex
 	@pdflatex -shell-escape -jobname $(BOOK) main.tex
 $(BOOK).pdf: svg-inkscape $(wildcard *.tex) $(wildcard config/*.sty)
