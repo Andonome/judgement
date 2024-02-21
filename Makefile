@@ -14,6 +14,7 @@ $(BOOK).pdf: svg-inkscape $(wildcard *.tex) $(wildcard config/*.sty)
 
 shield.pdf:| shield.tex commands.tex $(BOOK).pdf
 	pdflatex shield.tex
+	pdflatex shield.tex
 
 all: $(BOOK).pdf shield.pdf
 	latexmk -jobname=$(BOOK) -shell-escape -pdf main.tex
