@@ -159,6 +159,7 @@
 }
 
 \newcommand\encTraders{
+  \label{traderWares}
   \begin{multicols}{2}
   \begin{dlist}
     \item
@@ -477,23 +478,51 @@
   \index{Events!\Glspl{broch}}
   \begin{dlist}
   \item
+  Help!
+  I can't nail this yurt down properly.
+  If it's not secured, something might eat the horses (they can't go inside).
+  \item
+  The \gls{broch}'s \gls{jotter} has some emergency-tasks, but the \gls{broch} has a dozen \gls{guard} archers, so we'll manage.
+
+  Roll for two missions (\vpageref{ngMissions}); if any \gls{pc} has a higher rank than `Archer', then they can select which mission to take, and which to give to the Archers.
+  Otherwise, the \glspl{pc} receive the mission with the highest number.
+  \item
+  A dozen \glspl{guard} archers sleep here alread, with \pgls{jotter} upstairs.
+  \item
+  Two griffins rest on top of the \gls{broch}, and nobody inside knows what to do about them.
+  They're out of line of site, and very high up, so arrows won't hit anything.
+  \item
+  Dreameater moss covers the \gls{broch}'s sides, and someone's already had a nightmare.
+  Nobody wants to sleep in this place, but nobody wants to scrape moss from the tall walls either.
+  \item
+  The \gls{broch} needs bricks (large creatures and storms dislodged a few).
+  Deliveries should arrive soon, but in the meantime, someone needs to keep an eye on the roof, and make sure nothing crawls inside.
+  \end{dlist}
+}
+
+\newcommand\bothyEvents{
+  \index{Events!\Glspl{bothy}}
+  \begin{dlist}
+  \item
   All full!
   Seriously, we have a dozen horses and two dozen people in here.
   You're the \gls{guard} -- sleep outside!
   \item
-  Nice and comfy \gls{broch}, with two piles of logs.
+  Nice and comfy \gls{bothy}, with two piles of logs.
   Only one of them is a woodspy\ldots
   \item
-  A dozen \glspl{guard} sleep here, with \pgls{jotter} upstairs.
+  Two \gls{guard} deserters have camped here the last week, begging food from passing traders.
+  They have ignored the last orders received from \pgls{jotter} (roll \vpageref{ngMissions}) and will soon turn to banditry.
+  Both have the rank of `Fodder', and will lie about their situation, saying \pgls{jotter} asked them to guard the \gls{bothy}.
   \item
-  This \gls{broch} lies empty.
+  This \gls{bothy} lies empty.
   The roof could do with some repairs, and the door's seen better days.
   \item
   The last group never left any fire wood.
-  They took the axe as well.
+  They took the firewood axe as well.
   \item
   A few traders have settled in.
-  They will happily sell to the troupe.
+  They will spend the night trying to sell their wares to the troupe (find their wares \vpageref{traderWares}).
   \end{dlist}
 }
 
@@ -564,9 +593,9 @@
     Tiny wire fences surround every field around the outskirts.
     The bells and chimes make a gentle sound in the wind, and a far louder noise is anything mounts those fences.
     \item
-    Free meats, on a stick, stand in the middle of the fields, each in a wooden cage.
-    The meats contain patches of poison, which inflicts 8 \glspl{fatigue} on anyone eating it.
-    Dead rats litter the area, indicating that the plan has some problems.
+    The fields are covered in meat-on-sticks, and the meats are covered in poison.
+    Eating the poison should inflict 8 \glspl{fatigue} to local predators.
+    Dead rats and foxes litter the area, indicating that the plan has some problems.
     \item
     Bear traps surround the perimeter, hidden by grass, bush, and cabbages.
     The locals know where every single one lies.
@@ -584,6 +613,7 @@
 }
 
 \newcommand\ngMissions{
+  \label{ngMissions}
   \begin{enumerate}
     \item
     The Jotter says to
@@ -773,6 +803,7 @@
 }
 
 \newcommand\missionComplications{
+  \label{missionComplications}
   \begin{enumerate}
     \item
     The Jotter has assigned a Cutter to stand watch over everything you do.
