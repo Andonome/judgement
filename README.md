@@ -1,6 +1,26 @@
 - [Download PDF][download]
 - [Shield][shield]
 
+*The Book of Judgement* lays out the world of the BIND RPG, through procedures and bullet-points.
+It lays out creating your own map, step by step, then describes dangerous vegetation, how to harvest basilisk gizzards to create alchemical concoctions, and what scares liches.
+
+# Getting the Book
+
+Download it from the [link][download], then take it to your local, friendly, print-shop.
+Everything in the book has been optimized for reading on paper.
+Reading two-columns of blinding-white PDF on a monitor will only give you a headache.
+
+## Compiling the Book Yourself
+
+1. Clone this repo.
+1. Install the required packages:
+    * For Debian/ Mint/ Ubuntu: `inkscape`, `make`, `texlive-full`, `git-lfs`, and `latexmk`.
+    * For Arch Linux: `inkscape`, `make`, `texlive-most`, `git-lfs`, and `texlive-binextra`.
+    * For Void Linux: `inkscape`, `make`, `texlive-full`, `git-lfs`, and `texlive-latexmk`.
+1. Enter the repo, and do `make all`.
+
+For full setup instructions, see the [wiki](https://gitlab.com/bindrpg/core/-/wikis/dev/startup).
+
 # Setting
 
 *Judgement* focusses on the kinds of events you would see in a world of 'wandering monsters'.
