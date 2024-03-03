@@ -68,22 +68,24 @@
 \noindent
 \manaCoveringChart
 
+\columnbreak
+
 \paragraph*{Traders}
 
 Roll $3D6$ and add all results.
 
 \encTraders
 
-\iftoggle{core}{
-  \initiativechart
-
-  \hitLocation
-}{}
-
 \iftoggle{stories}{
   \namesOfHumans
 
   \poshNames
+}{}
+
+\iftoggle{core}{
+  \initiativechart
+
+  \hitLocation
 }{}
 
 \subsection*{Session Start}
