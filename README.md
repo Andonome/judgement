@@ -66,3 +66,4 @@ To make the document,
 [core download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/core.pdf?job=build
 [download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/judgement.pdf?job=build
 [shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build
+[issues email]: contact-project+bindrpg-judgement-47918887-issue-@incoming.gitlab.com
