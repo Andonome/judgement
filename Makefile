@@ -1,13 +1,16 @@
 BOOK = $(shell basename "$$(pwd)")
-QR_TARGET = $(shell grep 'shield\.pdf' README.md | cut -d' ' -f2)
+SHIELD_TARGET = $(shell grep 'shield\.pdf' README.md | cut -d' ' -f2)
+QR_TARGET = $(shell grep 'mailto' README.md | cut -d' ' -f3)
 
 output: $(BOOK).pdf
 
+qr.tex: README.md
+	@echo '\qrcode[height=.2\\textwidth]{$(QR_TARGET)}' > qr.tex
 config/bind.sty:
 	@git submodule update --init
-qr.tex:
-	@echo '\qrcode[height=.7\\textwidth]{$(QR_TARGET)}' > qr.tex
-svg-inkscape:| config/bind.sty qr.tex
+shield_qr.tex:
+	@echo '\qrcode[height=.7\\textwidth]{$(SHIELD_TARGET)}' > shield_qr.tex
+svg-inkscape:| config/bind.sty shield_qr.tex qr.tex
 	@pdflatex -shell-escape -jobname $(BOOK) main.tex
 $(BOOK).pdf: svg-inkscape $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
@@ -35,6 +38,8 @@ clean:
 	*.png \
 	*.ilg \
 	*.ing \
+	*.ind \
+	shield_qr.tex \
 	qr.tex \
 	*.fls
 
