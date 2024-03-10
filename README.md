@@ -1,5 +1,9 @@
-- [Download PDF][download]
-- [Shield][shield]
+|             Downloads                |         Resources             |
+|:-------------------------------------|:------------------------------|
+| [Download][download]                 | [Wiki][wiki]                  | 
+| [Judge Shield][shield]               | [World Wiki][fenwiki]         |
+| [Condensed Rules][rules summary]     | [Email an idea][issues email] |
+| [Introduction Module][intro module]  | [Issues Board][board]         |
 
 *The Book of Judgement* lays out the world of the BIND RPG, through procedures and bullet-points.
 It lays out creating your own map, step by step, then describes dangerous vegetation, how to harvest basilisk gizzards to create alchemical concoctions, and what scares liches.
@@ -44,7 +48,7 @@ We finish with a few 'GM tips' just for running campaigns in Fenestra, with a tr
 
 ## Related Books
 
-- For a short introduction module, grab a copy of [Escape from the Horde][intro module], and the pre-gen [character handouts][intro handouts].
+- For a short introduction module, grab a copy of [Escape from the Horde][intro module].
 - The complete [core rules][core download] are structured mostly as a reference, rather than required reading.
 - For a more detailed look at the sentient creatures of Fenestra, print a copy of the [players' guide][stories].
 
@@ -65,5 +69,6 @@ To make the document,
 
 [core download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/core.pdf?job=build
 [download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/judgement.pdf?job=build
-[shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build
 [issues email]: mailto:contact-project+bindrpg-judgement-47918887-issue-@incoming.gitlab.com
+[board]: https://gitlab.com/bindrpg/judgement/-/issues
+[shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build
