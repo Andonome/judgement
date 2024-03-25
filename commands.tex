@@ -8,17 +8,42 @@
 
   \vspace{1\mapcircle}
 
-  \begin{tikzpicture}[thick,remember picture,overlay]
+  \begin{tikzpicture}
+    \Large
+    \node[draw, color = \pageSideColor, minimum size = .9\linewidth, regular polygon, regular polygon sides = 5] (a) {};
+    \foreach \x in {1,2,...,5} 
+        \fill (a.corner \x) circle [radius=2pt];
+    \draw (a.corner 1) node[above] {1};
+    \draw (a.corner 2) node[left] {5};
+    \draw (a.corner 3) node[below] {4};
+    \draw (a.corner 4) node[below] {3};
+    \draw (a.corner 5) node[right] {2};
+    \draw [color = \pageSideColor, name path = seg1] (a.corner 1)--(a.corner 3);
+    \draw [color = \pageSideColor, name path = seg2] (a.corner 3)--(a.corner 5);
+    \draw [color = \pageSideColor, name path = seg3] (a.corner 5)--(a.corner 2);
+    \draw [color = \pageSideColor, name path = seg4] (a.corner 2)--(a.corner 4);
+    \draw [color = \pageSideColor, name path = seg5] (a.corner 4)--(a.corner 1);
 
-    \draw[\pageSideColor,dotted,opacity=0.2] (0,0) circle(\mapcircle);
+    \path [name intersections = {of = seg1 and seg3, by = inter1}];
+    \fill (inter1) circle [radius = 2pt];
+    \draw (inter1) node[below] {6};
 
-    \setcounter{track}{0}
-    \foreach \x in {0,60,120,-60,-120,180} {
-      \stepcounter{track}
-      \path[fill,draw] (\x:\mapcircle) circle(0.5pt) {};
-      \draw[\pageSideColor] (0,0) node{\Large 8};
-      \draw[\pageSideColor] (\x:\mapcircle+2em) node{\Large\arabic{track}};
-              }
+    \path [name intersections = {of = seg3 and seg5, by = inter2}];
+    \fill (inter2) circle [radius = 2pt];
+    \draw (inter2) node[below] {7};
+
+    \path [name intersections = {of = seg2 and seg5, by = inter3}];
+    \fill (inter3) circle [radius = 2pt];
+    \draw (inter3) node[left] {8};
+
+    \path [name intersections = {of = seg2 and seg4, by = inter4}];
+    \fill (inter4) circle [radius = 2pt];
+    \draw (inter4) node[below] {9};
+
+    \path [name intersections = {of = seg1 and seg4, by = inter5}];
+    \fill (inter5) circle [radius = 2pt];
+    \draw (inter5) node[right] {10};
+
   \end{tikzpicture}
 
   \vspace{\mapcircle}
