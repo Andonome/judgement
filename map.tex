@@ -1,6 +1,9 @@
 \chapter[The Cartographers]{Cartography}
 \label{civilization}
 
+Welcome to \gls{fenestra}.
+Let's look around.
+
 Fantasy stories have two special characters -- magic, and the landscape.
 The audience discover both, just as they learn about the other characters.
 
@@ -10,110 +13,132 @@ As \pgls{gm}, your character is the landscape, and making a map is your characte
 \section{Your Map}
 \label{yourMap}
 
-Welcome to \gls{fenestra}.
-Let's look around.
+\begin{multicols}{2}
+
+\mapentry{The Pentacle}
+
+Tear out an example map on the left for the basic map.
+You'll need a pencil and dice.
+
+Each dot has four neighbours.
+The highest neighbour is the neighbour with the highest number, and the lowest neighbour, is the neighbour with the lowest number.
+
+At each point, roll $1D6$ and add the number at the point, then add the entry to the map.
 
 \begin{multicols}{2}
 
-\mapentry{Features of the Land}
-
-Take a pencil, a blank sheet of paper, and four dice.
-
 \begin{enumerate}
-\item
-  Imagine a circle spanning your page.
-\item
-  Draw 6 points along the circle, evenly spaced.
-\item
-  Label each point with numbers 1-6.
-  All points go in a circular order, so after 6 comes 1 (until you roll a higher number).
-\item
-  Roll $1D6$ and draw mountains around the point with the number you rolled.
-\item
-  Draw hills outside of the mountains, stretching to the nearest two points.
-\item
-  Take the opposite point -- there lies the water.
-  Roll $1D6$ to find out the type of watery area:
-  \begin{dlist}
   \item
-    Swamp.
+  Dragon
   \item
-    Lake.
+  Bandits
   \item
-    Large lake, which also covers the centre of the map.
-    Add $1D3$ islands.
+  Gnomes
   \item
-    Sea, extending to the edge of the map.
-    Add $1D6-1$ islands.
+  Humans
   \item
-    Sea, which extends to the centre of the map, then out to the edge of the map.
-    Add $1D6$ islands.
+  Humans
   \item
-    Vast sea. It stretches from this point, to the next numbered-point, and then out to the edge of the map.
-    Add $1D6+1$ islands to your water.
-  \end{dlist}
+  Humans
+  \item
+  Humans
+  \item
+  Humans
+  \item
+  Dwarves
+  \item
+  Elves
+  \item
+  Dryad
+  \item
+  Ogre
+  \item
+  Hag
+  \item
+  Lich
+  \item
+  Gnolls
 \end{enumerate}
 
-\noindent
-Forests cover all lands beyond the mountain, but do not draw them. Just
-know that they cover everything.
+\end{multicols}
 
-Leave room to describe up to 12 points somewhere on your page.
+\subsubsection{Rivers}
 
-\mapentry{Rivers}
+\paragraph{If your map has dwarves,}
+then they live in mountains.
 
-Rivers lay the foundations of civilization.
-They race from mountains to the sea, joining together with other rivers and becoming stronger as more join together.
+\begin{enumerate}
+  \item
+  Draw a mountain range around the point with the dwarves and then draw a river from the mountains to each of this point's four neighbours.
 
-Roll $4D6$, and draw a river flowing through each of those numbers, from the mountains to the water.
-Ignore repeats.
+  River always begin from separate locations.
+  They might later join together, but rivers never split apart.
+  \item
+  At each point with a river, extend the river to the lowest neighbour.
+  \item
+  Rivers begin as a single line, but when they join, they flow faster and wider -- draw them with two parallel lines.
+  \item
+  If three or more rivers join together, they form a lake, which exits towards the lowest neighbour.
+  It still has the strength of many rivers, so continue the exit river with two lines.
+\end{enumerate}
+
+\paragraph{If your map has no dwarves,}
+then it has no mountains.
+
+\begin{enumerate}
+  \item
+  Points 1 and 2 become islands in a sea.
+  \item
+  The coast covers points 5, 6, and 7, then wanders off the map.
+  \item
+  Some well-springs open up on point 10, then join together to form a river.
+  The river goes down through points 4, and 3, then goes towards point 2 and enters the sea.
+\end{enumerate}
+
+\paragraph{If your map has any points without water,}
+then the highest point becomes a swamp.
+
+\subsubsection{Roads}
+
+\begin{enumerate}
+  \item
+  Each human settlement has a road its two nearest neighbours (ties are broken by going to the highest point).
+  Draw the roads with dotted lines, and avoid passing through any other points along with way.
+  \item
+  If a road crosses a small river, draw a small bridge.
+  If it crosses a larger river, drawn with two lines, draw a larger bridge.
+  \item
+  If a human settlement has dwarvish neighbours, connect them with a road.
+  \item
+  The road between points take a long time to walk.
+  Put \pgls{bothy} on the road for travellers to rest, and then another for each point the road passes.
+\end{enumerate}
+
+Label a few roads with the miles in length.
 
 \begin{itemize}
   \item
-  Try starting with two or three rivers close together, then joining them before reaching their numbered location.
+  The short distance between points 6 and 7 is about 20 miles.
   \item
-  Rivers going to different locations should always begin far apart.
+  The medium distance between points 1 and 6 is about 30 miles.
   \item
-  Rivers never split apart, they only join.
-  \item
-  If the mountains received a river, place a lake there, then let it run towards the sea as usual.
+  The long distance between points 1 and 2 is about 50 miles.
 \end{itemize}
 
-\mapentry{Towns}
-\index{Towns}
+\paragraph{The Name}
 
-\begin{enumerate}
-  \item
-  Place a town on each point which has a river running through it.
-  \begin{itemize}
-  \item
-    Draw a circle inside a circle to indicate the town.
-  \item
-    Towns on mountains indicate dwarves, in which case, place their symbol by the town: `\Dw'.
-  \end{itemize}
-  \item
-  Draw a wavy flat-land area around each town.
-  This indicates a civilized area, with guard towers and traps, where humans can walk outside their walls safely.
-  \item
-  For each town, add $1D6 \times 2$ \glspl{village} around it.
-  \begin{itemize}
-    \item
-    Draw each one as a small circle.
-    \item
-    Most \glspl{village} sit next to water or rivers.
-    \item
-    \Glspl{village} love sitting on islands.
-  \end{itemize}
-  \item
-  Draw a dotted-line road from each \gls{village} to a nearby \gls{village} its town.
-  \begin{itemize}
-    \item
-    Where the roads cross water, draw a small bridge.
-  \end{itemize}
-\end{enumerate}
+Name the entire area.
+A good starting point is the most prolific feature of the map.
+For example, a map with a swamp and three elvish settlements ranges might receive the name `Faebog'.
 
-Leave the \glspl{village} alone for now.
-Once the troupe enter one, you can discover its features in `\nameref{villageFeatures}' (\autopageref{villageFeatures}).
+You have completed your general map, but each point can receive a lot more detail.
+You should select a few connected points you might use, and fully detail just those point.
+
+\end{multicols}
+
+\section{Zooming In}
+
+\begin{multicols}{2}
 
 \paragraph{Town Character}
 \label{mapCharacter}
