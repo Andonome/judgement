@@ -111,6 +111,10 @@ then the highest point becomes a swamp.
   If a road crosses a small river, draw a small bridge.
   If it crosses a larger river, drawn with two lines, draw a larger bridge.
   \item
+  The human settlement with the highest number has a road leading out of the map, towards the closest border.
+  This road stays as far away as it can from other settlements.
+  \label{roadOut}
+  \item
   If a human settlement has dwarvish neighbours, connect them with a road.
   \item
   The road between points take a long time to walk.
@@ -144,11 +148,67 @@ You should select a few connected points you might use, and fully detail just th
 
 \begin{multicols}{2}
 
+Each point on the map needs more detail, but they don't need more time yet.
+Decide where the \glspl{pc} will begin (perhaps the lowest \gls{village}?) ten add some detail to that point, and perhaps a few neighbouring points.
+
+Whenever the \glspl{pc} approach a new area, you can roll a few dice to find out what stays there.
+
 \subsection{Human Settlements}
 \index{Towns}
 
-To discover a town's most famous feature, roll $1D6$, and add a number equal to the total \glspl{village} surrounding it.
-For example, if it has 4 \glspl{village}, roll $1D6+4$.
+
+\begin{enumerate}
+  \item
+  Start with $1D6$ to determine the size of the settlement.
+  \begin{dlist}
+    \item
+    2 \glspl{village} and \pgls{broch} forming a triangle.
+    The \gls{broch} stands away from the road, protecting the \glspl{village} from whatever might emerge from the \gls{edge}.
+
+    (civilization rating: 10)
+    \item
+    4 \glspl{village} with 2 \glspl{broch}.
+    (civilization rating: 12)
+    \item
+    6 \glspl{village} form a circle around a small town.
+    3~\glspl{broch} sit opposite the road, to protect the \glspl{village} from the \gls{edge}.
+
+    One of the \glspl{village} began as \pgls{broch} and still has that tall tower.
+    \Pgls{warden} stays there, ruling over this tiny kingdom.
+
+    (civilization rating: 14)
+    \item
+    8 \glspl{village} surround a town, with room to safely grow crops and raise cattle outside its walls.
+    4~\glspl{broch} help to harden the outer barrier of settlements which protects the town.
+
+    The local \gls{warden} has plenty of profits coming in, and can afford his own \glspl{sunGuard}, to ensure everyone pays their taxes, so that the \gls{warden} can pay for the \gls{guard}.
+   
+   (civilization rating: 16)
+    \item
+    10 \glspl{village} and 5~\glspl{broch} keep the town safe.
+    A healthy flow of traders ensures the \glspl{village} by the roads stay relatively clear -- anything which wants to attack will try to stalk those traders before attacking the outer \glspl{village}.
+
+    A couple of the outer \glspl{village} have their own \glspl{warden}.
+
+    (civilization rating: 18)
+    \item
+    12 \glspl{village} and 6~\glspl{broch} surround a massive town.
+    Various hamlets allow farmers to raise beasts in peace.
+    The network of roads has plenty of hand-crafted signs, telling people how to get to various areas.
+
+    The town supports a minor army of \glspl{sunGuard}, and the area exports plenty of food.
+    Each \gls{village} has \pgls{warden} associated with it, though the \glspl{warden} stay in the inner hamlets.
+
+    (civilization rating: 20)
+  \end{dlist}
+  \item
+  Each \gls{village} and \gls{broch} has a small radius of flattened land, without trees, stretching up to a mile from its walls.
+  \item
+  Once you have some \glspl{village} and \glspl{broch} down, draw roads between them all.
+\end{enumerate}
+
+To discover a settlement's most famous feature, take the number of \glspl{village} and add $1D6$.
+For example, if a settlement has 4~\glspl{village}, roll $1D6+4$.
 
 \begin{enumerate}
 \setcounter{enumi}{2}
@@ -160,7 +220,8 @@ For example, if it has 4 \glspl{village}, roll $1D6+4$.
   \item
   Deadly and magical plants
   \item
-  Ale, and the Guild has tight control over the area (\autopageref{god:Poison})
+  Ale.
+  The \gls{templeOfPoison} has tight control over the area (\autopageref{god:Poison})
   \item
   White rock (actually limestone)
   \item
@@ -174,7 +235,7 @@ For example, if it has 4 \glspl{village}, roll $1D6+4$.
   \item
   Madness (neighbouring witches are to blame)
   \item
-  Witchcraft
+  \Glspl{doula}
   \item
   \ifodd\value{r4}
   Friendly with the next town -- the locals go back and forth all the
@@ -183,27 +244,26 @@ For example, if it has 4 \glspl{village}, roll $1D6+4$.
     Cartographers
   \fi
   \item
-  Statues of heroes and gods litter the roads around.
+  Statues of heroes litter the roads around.
   \item
-  A grand \gls{court} where the \gls{warden} finds beasts guilty, and has them fight for entertainment.
+  A grand \gls{court} where the town \gls{warden} finds beasts guilty, and has them fight for entertainment.
   \item
   Bath houses
   \item
-  War brews with the next town.
-  Soldiers will march soon\ldots
-
-  Each one has 1D3 military outposts guarding against the other.
-  \item
   `Demi-human suburbs', where all manner of other races live.
+  \item
+  A fight about marriages and road taxes has caused an argument between the town \gls{warden} and the nearest settlement.
+  The \gls{sunGuard} will march to war soon\ldots
   \item
   The grandest library in the land.
 \end{enumerate}
 
 \paragraph{They call it\ldots{}}
 
-Select a name by combining what everyone knows it for, with the type of
-land.
-Write the town's name next to it, and underline it.
+Select a name for the settlement by combining what everyone knows it for, with the type of land.
+Write the settlement's name next to it, and underline it.
+
+Any towns might receive the same name, or something related.
 
 \begin{itemize}
   \item
@@ -236,57 +296,25 @@ Write down the information on a key, referencing each point by its number.
   Multiple \underline{warring factions} -- roll twice more, with +1 to the second roll.
   \item
   A \underline{Warlord}, amassing an army to expand their power.
-  Shipments of weapons come from the road to other lands.
+  Shipments of weapons come from the road to other lands
+  (see \vref{roadOut}).
   \item
   An \underline{Opulent noble}, who demands 20\% tithes from all who enter.
-  The local oddities annoy and fascinate them equally (from step \ref{mapOddities}).
+  Any neighbouring fiends annoy and fascinate them equally.
   \item
   A new \underline{Sorcerer king} with no experience or business ruling.
-  He once killed a fiend, how hard could balls and arranged marriages be?
-  (roll $1D6$ to find which type of fiend, on step \ref{fiendTypes})
+  He once killed a fiend, how hard could ruling \pgls{court} and arranged marriages be?
+
+  The sorcerer has killed the same type of fiend as the fiend with the highest number on the map.
   \item
-  A \underline{Spoilt noble} who has never seen a peasant.
+  A \underline{Spoilt noble} who has never seen a farmer in their life.
   \item
-  The \underline{servant of the next fiend} you roll (see step \ref{fiendTypes}).
+  The \underline{servant of the next fiend} on the map (counted by point number).
   All who oppose them disappear on the road.
   \item
   A \underline{Crime-Lord}, with a history of theft, now risen to fortune\ldots but not nobility.
 
 \end{dlist}
-
-\mapentry{Oddities}
-\label{mapOddities}
-\index{Oddities}
-
-\begin{enumerate}
-  \item
-  Mark the centre of your map as point `8'.
-  \item
-  At every point without a town or Tavern, place a hidden element (roll $1D6$ below).
-\end{enumerate}
-
-\begin{multicols}{2}
-\begin{dlist}\raggedright
-\item
-  1D3 Elven glades, nestled close (\El)
-\item
-  Goblin warren in an abandoned mine. (\N)
-
-  Draw a road leading half-way to it, from the nearest road.
-  This road now lies abandoned, as the forest slowly eats it.
-\item
-  $1D6$ Gnomish warrens, arranged in a perfect geometric alignment (\Gn)
-  \columnbreak
-\item
-  \Gls{doula} coven (\Hu)
-\item
-  $1D6$ Gnoll tribes (\Nl)
-\item
-  Lost city (\D) (\autopageref{lostCities})
-
-  If you roll a lost city somewhere without water, draw a new river coming from outside the map, going through the lost city, then meeting with the closest water as it winds downhill.
-\end{dlist}
-\end{multicols}
 
 \paragraph{The Fiend Has}
 
