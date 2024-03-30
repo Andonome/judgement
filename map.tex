@@ -26,16 +26,18 @@ The highest neighbour is the neighbour with the highest number, and the lowest n
 At each point, roll $1D6$ and add the number at the point, then add the entry to the map.
 
 \begin{multicols}{2}
-\index{Fiends}
 
 \begin{enumerate}
   \setcounter{enumi}{1}
   \item
   Humans
+  (\vpageref{humanPoint})
   \item
   Bandits
+  (\vpageref{banditsPoint})
   \item
   Dragon
+  (\vpageref{dragonPoint})
   \item
   Humans
   \item
@@ -44,20 +46,28 @@ At each point, roll $1D6$ and add the number at the point, then add the entry to
   Humans
   \item
   Elves
+  (\vpageref{elvesPoint})
   \item
   Dwarves
+  (\vpageref{dwarvesPoint})
   \item
   Gnomes
+  (\vpageref{gnomePoint})
   \item
   Dryad
+  (\vpageref{dryadPoint})
   \item
   Ogre
+  (\vpageref{ogrePoint})
   \item
   Gnolls
+  (\vpageref{gnollPoint})
   \item
   Hag
+  (\vpageref{hagPoint})
   \item
   Lich
+  (\vpageref{lichPoint})
   \item
   Humans
 \end{enumerate}
@@ -157,12 +167,33 @@ You might fill in a neighbouring point, if you think the \glspl{pc} could journe
 
 Whenever you find out a new location's details, note them down as a key to the main map, and check if you can add any features to the main map.
 
-\subsection{Dwarven Settlements}
-\label{dwarvenPoint}
+\subsection{Civilization}
 
-A population of 100 dwarves lives here, with a mushroom garden.
-Roll $2D6$ to find their special features.
-Whenever you roll 8 or more, add 100 dwarves to the population and roll again.
+The civilized lands are lands with people of all type.
+Elves, humans, gnolls, dwarves, or gnomes -- places with a population that either sustains itself, or trades with others.
+
+\subsubsection{Dwarven Settlements}
+\label{dwarvesPoint}
+
+A population of 100 dwarves lives here, with a mushroom garden sustaining them.
+
+Roll $3D6$, then combine each pair of 2 dice to find each unique feature of the local elven territory.
+Whenever you roll 8 or more, add 100 dwarves to the population.
+
+\begin{exampletext}
+  For example, on the roll `\dicef{2} \dicef{4} \dicef{2}', you would use the results for:
+
+  \begin{itemize}
+    \item
+    $2+4 = 6$
+    \item
+    $4+2 = 6$
+    \item
+    $2+2 = 4$
+  \end{itemize}
+
+  The unique results are `6', and `4'.
+\end{exampletext}
 
 \begin{enumerate}
   \stepcounter{enumi}
@@ -207,26 +238,12 @@ Whenever you roll 8 or more, add 100 dwarves to the population and roll again.
   Half way up the mountain, shepherds take sheep and goats on long walks, then put them safely away at night, to sleep in stone rooms.
 \end{enumerate}
 
-\subsection{Elven Grounds}
+\subsubsection{Elven Grounds}
+\label{elvesPoint}
 
 A group of $2D6 \times 10$ elves lives here.
 
 Roll $3D6$, then combine each pair of 2 dice to find each unique feature of the local elven territory.
-
-\begin{exampletext}
-  For example, on the roll `\dicef{2} \dicef{4} \dicef{2}', you would use the results for:
-
-  \begin{itemize}
-    \item
-    $2+4 = 6$
-    \item
-    $4+2 = 6$
-    \item
-    $2+2 = 4$
-  \end{itemize}
-
-  The unique results are `6', and `4'.
-\end{exampletext}
 
 \begin{enumerate}
   \stepcounter{enumi}
@@ -284,7 +301,8 @@ Roll $3D6$, then combine each pair of 2 dice to find each unique feature of the 
   They will kill anyone who enters on sight, and everyone in the land knows it.
 \end{enumerate}
 
-\subsection{Gnoll Grounds}
+\subsubsection{Gnoll Grounds}
+\label{gnollPoint}
 
 Gnolls typically wander back and forth around a territory.
 They will use roads when they see them, but never like to rely on them.
@@ -330,7 +348,8 @@ Roll $2D6$ twice to find a couple of characteristics for the gnolls who wander t
   (see \autopageref{Torpid Flesh}).
 \end{enumerate}
 
-\subsection{Gnomish Warrens}
+\subsubsection{Gnomish Warrens}
+\label{gnomePoint}
 
 Gnomish warrens interact in subtle ways with every point around them.
 To find out about a gnomish warren, you should finish every point around it first.
@@ -338,7 +357,7 @@ Every point which might benefit the gnomes results in another warren, with some 
 
 When multiple warrens exist on a single point, they each connect to a nexus cavern below, which allows the gnomes to trade.
 
-\begin{enumerate}
+\begin{itemize}
   \item
   If they have gnomish or dwarvish neighbours, they enlarge the natural tunnels beneath them to make an underground road. The ups and downs mean the path is twice as long below ground as above.  It is also not without danger, but underground roads have far fewer creatures than above-ground. (add another warren)
   \item
@@ -360,9 +379,9 @@ When multiple warrens exist on a single point, they each connect to a nexus cave
 
   The gnomes also add a road between them and the elves.
   Elves don't appreciate roads, but the road serves as a useful warning that if anyone attacks the gnomes, the elves may fall soon after.
-\end{enumerate}
+\end{itemize}
 
-\subsubsection{Politics in the Warrens}
+\paragraph{Politics in the Warrens}
 
 Each warren governs itself a little differently.
 
@@ -384,7 +403,7 @@ The first die indicates the political structure this warren has adopted.
   Indirect democracy (people vote once a week, documentation is crucial)
 \end{dlist}
 
-\subsection{Human Settlements}
+\subsubsection{Human Settlements}
 \label{humanPoint}
 \index{Towns}
 
@@ -462,31 +481,26 @@ For example, if a settlement has 4~\glspl{village}, roll $1D6+4$.
     Metallurgists
   \fi
   \item
- Bards
+  Bards
   \item
   Madness (neighbouring witches are to blame)
   \item
   \Glspl{doula}
   \item
-  \ifodd\value{r4}
-  Friendly with the next town -- the locals go back and forth all the
-    time.
-  \else
-    Cartographers
-  \fi
+  Cartographers
   \item
   Statues of heroes litter the roads around.
   \item
   A grand \gls{court} where the town \gls{warden} finds beasts guilty, and has them fight for entertainment.
   \item
-  Bath houses
+  Bath houses.
   \item
   `Demi-human suburbs', where all manner of other races live.
   \item
-  A fight about marriages and road taxes has caused an argument between the town \gls{warden} and the nearest settlement.
+  A fight about marriages and road taxes has caused an argument between the town \gls{warden} and the highest neighbour.
   The \gls{sunGuard} will march to war soon\ldots
   \item
-  The grandest library in the land.
+  The \gls{templeOfCuriosity} in the land.
 \end{enumerate}
 
 \paragraph{They call it\ldots{}}
@@ -519,36 +533,38 @@ Try some word-association with the town's theme or location.
 \paragraph{It is Ruled by\ldots{}}
 \index{Towns!Rulers}
 
-If the area has a town, roll $1D6$ to determine its ruler.
+If this point has a town, roll $1D6$ to determine its ruler.
 Write down the information on a key, referencing each point by its number.
 
 \begin{dlist}
   \item
   Multiple \underline{warring factions} -- roll twice more, with +1 to the second roll.
   \item
-  A \underline{Warlord}, amassing an army to expand their power.
+  A \underline{Warlord}, recently out of the \gls{guard}, amassing an army to expand their power.
   Shipments of weapons come from the road to other lands
   (see \vref{roadOut}).
   \item
-  An \underline{Opulent noble}, who demands 20\% tithes from all who enter.
+  A \underline{greedy \gls{warden}}, who demands 10\% tithes from all who enter.
   Any neighbouring fiends annoy and fascinate them equally.
   \item
   A new \underline{Sorcerer king} with no experience or business ruling.
   He once killed a fiend, how hard could ruling \pgls{court} and arranged marriages be?
 
-  The sorcerer has killed the same type of fiend as the fiend with the highest number on the map.
+  The sorcerer has killed the same type of fiend as the highest fiend on the map.
   \item
   A \underline{Spoilt noble} who has never seen a farmer in their life.
   \item
-  The \underline{servant of the next fiend} on the map (counted by point number).
-  All who oppose them disappear on the road.
+  A \underline{servant of the next fiend} on the map (counted by point number).
+  All who oppose this \gls{warden} disappear on the road.
   \item
   A \underline{Crime-Lord}, with a history of theft, now risen to fortune\ldots but not nobility.
 \end{dlist}
 
 \subsection{Fiends}
+\index{Fiends}
 
 \subsubsection{Bandits}
+\label{banditsPoint}
 
 An independent \gls{village} has broken away from the rest, and sustain themselves by robbing others on the road.
 
@@ -573,6 +589,7 @@ A total of 200 villagers live in the commune, but only 50 regularly exit to perf
   They hold an old \gls{broch}, abandoned by the \gls{guard}.
   It watches the private bandit road, and always has $1D6$ bandits watching, with crossbows.
   \item
+  \Pgls{doula} leads the bandits from the rear, arming them with \glspl{talisman} and information.
 \end{dlist}
 
 \subsubsection{Dragon Coves}
@@ -599,6 +616,7 @@ A total of 200 villagers live in the commune, but only 50 regularly exit to perf
 \end{dlist}
 
 \subsubsection{Dryad}
+\label{dryadPoint}
 
 Dryads concern themselves with plants and animals more than people\ldots but they also consider most people to be animals.
 
@@ -624,6 +642,7 @@ Roll $3D6$, and apply every result.
 \end{dlist}
 
 \subsubsection{Hag Cottage}
+\label{hagPoint}
 
 Here, an old lady lives alone in a hut.
 Of course, in \gls{fenestra}, only one type of old lady lives alone.
@@ -656,6 +675,7 @@ Roll $3D6$, and apply every result.
 \end{dlist}
 
 \subsubsection{Ogre}
+\label{ogrePoint}
 
 The ogre has $2D6 \times 5$ goblins, ready to raid all the local \glspl{village}.
 
@@ -685,7 +705,6 @@ Roll $3D6$, and apply every result.
   It changes a little each season, so the route out changes with it.
   And every cold season, the hedge maze vanishes, to reveal a horde of starving goblins.
 \end{dlist}
-
 
 \subsubsection{Lich}
 \label{lichPoint}
