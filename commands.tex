@@ -139,21 +139,28 @@
 
 }
 
-\newcommand\cityRelations{
+\newcommand\diceTrio[6]{
 
+  \vspace{1em}
+  \setcounter{age}{#1}
+  \setcounter{enc}{#2}
+  \setcounter{gold}{#3}
+  \addtocounter{age}{#2}
+  \addtocounter{enc}{#3}
+  \addtocounter{gold}{#1}
   \begin{tikzpicture}[thick]
 
-  \node (A) at (0,0){\Large Oozes};
+  \node (A) at (0,0){(\arabic{age}) \Large #6};
 
-  \node (B) at (4,0){\Large Crazed Witches};
+  \node (B) at (4,0){(\arabic{enc}) \Large #5};
 
-  \node (C) at (2,2.5){\Large Dragon};
+  \node (C) at (2,2.5){(\arabic{gold}) \Large #4};
 
-  \draw[\pageSideColor] (A) to[bend left] node[left]{\large Ignore}(C);
+  \draw[\pageSideColor] (A) to[bend left] node[left]{\large \dicef{#1}}(C);
 
-  \draw[\pageSideColor] (C) to[bend left] node[right]{\large Fight}(B);
+  \draw[\pageSideColor] (C) to[bend left] node[right]{\large \dicef{#2}}(B);
 
-  \draw[\pageSideColor] (B) to[bend left] node[below]{Kill for \Glspl{ingredient}} (A);
+  \draw[\pageSideColor] (B) to[bend left] node[below]{\large \dicef{#3}} (A);
 
   \end{tikzpicture}
 }
