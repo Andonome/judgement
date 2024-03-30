@@ -599,6 +599,10 @@ A total of 200 villagers live in the commune, but only 50 regularly exit to perf
 \subsubsection{Dragon Coves}
 \label{dragonPoint}
 
+Dragons may live in deep caverns, shallow caverns, or sometimes just lay about in a Sunny patch of forest, without any roof.
+Their destructive habits and association with the sky make people think they are divine.
+Of course, in \gls{fenestra}, this is not a good thing.
+
 \begin{dlist}
   \item
   An abandoned dwarvish settlement.
@@ -837,7 +841,7 @@ law, as these places often make their own laws. Barkeeps punish any
 robbery close to the tavern harshly, but don't often care about what
 people do around the towns.
 
-\mapentry{The Barkeep}
+\subsubsection{The Barkeep}
 
 Roll $1D6$ to find this season's barkeep (they change all the time):
 
@@ -862,7 +866,7 @@ Roll $1D6$ to find this season's barkeep (they change all the time):
   The patrons say he works as a spy for someone, but they disagree about whom.
 \end{dlist}
 
-\mapentry{The Menu}
+\subsubsection{The Menu}
 \index{Menu}
 
 Roll $3D6$ -- the \glspl{pc} can order any of these meals.
@@ -916,43 +920,71 @@ Roll $3D6$ -- the \glspl{pc} can order any of these meals.
 
 \widePic[t]{Nelness/city}
 
-When calamities destroy a city, some leave quickly, and beasts eat the rest.
-The beasts often remain long-term, even for generations, which creates a tantalizing trap for the greedy and curious.
-Some treasures always remain in lost cities -- coinage, statues, weapons, and secrets.
-Every city has secrets.
+People call them `\gls{yonder}'s house', as a reminder that most people who enter never return, but remain with \gls{yonder}.
+People also call them `land \glspl{deep}', because these spaces act according to their own rules; they do not have the usual wandering monsters, but some predators always take residence in them, along with the fiend who ruined the city.
 
-People call them \gls{yonder}'s house, as a reminder that most people who enter never return, but remain with \gls{yonder}.
-People call them `land \glspl{deep}', to remind the young how deadly an apparently empty city becomes.
-Strange creatures always take residence in them.
+Before the \glspl{pc} enter, you should make some rolls to find out the nature of the town.
+What creatures live there?
+Which towers are still standing?
+Dice to find out which tall towers still stand in the city, in steps \vrefrange{lostDwellers}{lostTowers}.
 
-Before the \glspl{pc} enter, roll dice to make the town with steps \vrefrange{lostCataclysm}{lostTowers}.
-Once the \glspl{pc} enter, two rolls occur each \gls{interval}.
+Once the \glspl{pc} enter, they can attempt to look for valuables, quietly, in steps \vrefrange{lostWhispers}{lostForaging}.
 
-\begin{enumerate}
-  \item
-  You roll to see when dweller interactions occur next.
-  During this time, the \glspl{pc} can sneak about more easily.
-  (\nameref{lostCries})
-  \item
-  The \glspl{pc} then try to move quietly through the city, without drawing the attention of those who dwell there.
-  (\nameref{lostWhispers})
-  \begin{itemize}
-    \item
-    If the \glspl{pc} fail to sneak, the chase is on!
-    (\nameref{lostChase})
-    \item
-    If the \glspl{pc} go unnoticed, they can attempt to forage.
-    (\nameref{lostForaging})
-  \end{itemize}
-  Most \glspl{pc} will struggle with foraging, but they can get better at it by climbing the towers from step \ref{lostTowers}, or splitting up and making individual rolls.
-\end{enumerate}
+\begin{exampletext}
+  The \gls{gm} knows the troupe are headed to the lost city, where an ogre stays with his goblin horde.
+
+  First, she rolls up the inhabitants -- `\dicef{3} \dicef{3} \dicef{6}' indicates two city-dwellers: chitincrawlers and a coven of $1D3+1$ demiliches.
+  One more roll shows that means a coven of 3 demiliches have made a little secluded spot for themselves in the lost city, unbothered by the goblins.
+  Perhaps they use the chitincrawlers as a source of \glspl{ingredient}?
+
+  Next, she rolls $4D6$ to find the towers, and finds `\dicef{2} \dicef{2} \dicef{6} \dicef{4}' -- that means that this lost city still has 3 tall towers standing.
+
+  As the troupe enter, she describes the scene to the players.
+
+  \begin{boxtext}
+    The city seemed massive before, but here at the rotten gate, you can only see doorways and windows, mostly lying open, like black eyes.
+    Thorny bushes with little multicoloured berries grow all down the street ahead, where the Sunlight strikes brightest.
+    Dropping around them suggest deer frequently come here to feed.
+  \end{boxtext}
+
+  The troupe moves quietly towards the location their map claims the old guild halls once stood, by the market.
+  But before hunting for loot, they roll \roll{Dexterity}{Stealth} (\tn[8]) to stay silent.
+  The group roll succeeds, so they move quietly, then roll \roll{Intelligence}{Vigilance} (with a +3 Bonus for the map) at \tn[12].
+
+  The first roll fails, so the \gls{gm} mentions that they can cover more ground by splitting up if they want.
+  But \pgls{interval} has already passed while they hunted, and the Sun is beginning to set.
+
+  The troupe is now fairly deep into the lost city, so they can wait in the dark, or navigate back out again, replacing the usual city encounters with the wandering monsters outside.
+  They decide to stop foraging, and hide in an abandoned house, then wait to see what morning brings.
+
+  During the night, the \gls{gm} must keep track of what the dwellers in the lost city get up to, so she describes the sounds of demiliches casting Death magic on chitincrawlers, so they can use their bodies to make \glspl{boon}.
+
+\end{exampletext}
+
+\mapentry{Finding the City}
+
+It may seem difficult to lose a city, but when grass grows over the roads, and the wooden \glspl{village} crumble, cities can become almost invisible.
+If the troupe only know about a city's location through legend, they will have to roll \roll{Intelligence}{Wyldcrafting} at \tn[14] to locate the city.
+
+Cities which have fallen more recently often still have a visible road, and will not require any roll to find.
 
 \mapentry{Wandering Dwellers}
+\label{lostDwellers}
+
+Each city has some population of the servants of the local fiend.
+If a lich lives in the city, it has a lot of ghouls; if an ogre king lives here, it has goblins.
+
+Additionally, lost cities attract a few other creatures which end up taking residence.
 
 Roll $3D6$ -- each number which comes up determines one type of city-dweller.
 Ignore any repeats.
 
 \begin{dlist}
+  \item
+  \textbf{\Pgls{seeker} of the \gls{templeOfCuriosity}} has enlisted $1D6+4$ fully armoured \glspl{sunGuard} as part of a reconnaissance mission for \pgls{warden}.
+  A camp sits nearby, with two more \glspl{sunGuard}, six donkeys, and 20 days' rations.
+
+  The \gls{seeker} won't like anyone interfering with his business, so if he encounters the troupe, roll a morale check; on a pass, he tries to kill them.
   \item\label{lostOoze}
   \textbf{Oozes} of all types slide across the streets, which seem strangely clean, and free of debris or foliage.
   \item
@@ -964,16 +996,11 @@ Ignore any repeats.
   \textbf{Griffins} look down from every tower.
   The high towers make perfect perches to surveille the area, and the degrading wood helps to make nests.
 
-  $1D6+4$ live here in total.
+  Each tower has 2 griffins.
   \item
   \textbf{Woodspies} have not only made this place their home, they have taken to imitating the items in the area, such as stools, piles of books, or chests.
 
   $1D6+4$ live here in total.
-  \item
-  \Pgls{seeker} of the \gls{templeOfCuriosity} has enlisted $1D6+4$ fully armoured \glspl{sunGuard} as part of a reconnaissance mission for \pgls{warden}.
-  A camp sits nearby, with two more \glspl{sunGuard}, six donkeys, and 20 days' rations.
-
-  The \gls{seeker} won't like anyone interfering with his business, so if he encounters the troupe, roll a morale check; on a pass, he tries to kill them.
   \item\label{lostDemilich}
   \textbf{Demilich} covens help these undead sorcerers study with their own kind.
   However, their lack of basic empathy makes them dangerous to each other -- none of them really trust the others, so they share information slowly, always hinting that they have more to teach while masking their true abilities.
@@ -990,73 +1017,78 @@ Some walls collapse, opening new passages, while trees grow and thorny bushes gr
 A twisted, mossy, labyrinth forms.
 
 Despite the rot and chaos, some buildings still stand tall.
-Climbing these buildings gifts a wide perspective of the city, which grants a bonus to the \glspl{pc} foraging rolls.
+Once \pgls{pc} climbs to the top of a tower, two things happen:
 
-Roll $4D6$: one for each tower.
+
+\begin{itemize}
+  \item
+  The excellent perspective from the tower grants a +2 Bonus to foraging, as they spot good places to investigate (such as places which look like guild houses, or less-damaged areas of the city).
+
+  This only works while the character can see, so it probably only works during daylight.
+  \item
+  Any undead in the city can clearly see the character, and will begin moving towards them.
+  \item
+  There is a 1-in-6 chance of seeing the dwellers of the city interact with each other (start lowest to highest).
+
+  If the city has a curious \gls{seeker} and some acidic oozes, then the character may see the \gls{seeker} running away from the oozes.
+  Or if the city has chitincrawlers and griffins, they may see a griffin caught in a web.
+\end{itemize}
+
+Climbing these buildings gifts a wide perspective of the city, which grants a +2~Bonus to the \glspl{pc}' foraging rolls.
+
+Roll $4D6$ -- each number which comes up indicates a tower in the lost city.
 
 \begin{dlist}
   \item
-  This tower has fallen to the ground, leaving nothing worth climbing.
+  This old \gls{templeOfPoison} had lavish beds up at the top, though the only current inhabitants are dead spiders and rat-droppings.
+
+  The kitchen has a basement, filled with sealed clay pots.
+  The wooden ladder has rotted, and will break once anyone of \gls{weight} 6 or more steps onto it.
+
+  Anyone investigating the basement should make an \roll{Intelligence}{Vigilance} roll (\tn[10]).
+  Success means they have found a secret stash of 20~\glspl{sp}, hidden in a honey pot.
+  Failure means that a clay pot has gone rotten, and explodes; the character has contracted Corpse Hands (\vpageref{Corpse Hands}), and they will start to feel the effects after 2~\glspl{interval}.
   \item
   This tower has one wall remaining -- a \roll{Speed}{Athletics} check (\tn[8]) allows the climber to see a little in all four directions.
-  \begin{itemize}
-    \item
-    During daylight, the perspective adds +1 to all foraging rolls.
-  \end{itemize}
   \item
-  This tower has a single candle, and the light shines brightly at night.
-  If anyone enters, any sentient city-dwellers in the area will see them blocking the light when they enter the room, and investigate.
-  (If there are many, pick the lowest numbered dweller)
-  \begin{itemize}
-    \item
-    If no sentient life exists in the area, the candle has been left by a traveller who has left a note stating which creatures he has seen.
-    \item
-    All further towers on the roll of a \arabic{dlist} create an encounter with the dwellers with the lowest number.
-    \item
-    During daylight, the perspective adds +1 to all foraging rolls.
-  \end{itemize}
+  This tower once held the \gls{sunGuard}, but now has a single servant of the local fiend (usually goblins or ghouls).
+  If the \glspl{pc} do not take it by surprise, it will shout for aid (the undead can shout to other undead silently).
   \item
   This tower stands tall enough to see all around.
   The bones of dead humans fill the stairway.
 
   Any movement which disturbs the bones will send them falling down the stairs with a clank and a thud.
   \Glspl{pc} must roll \roll{Dexterity}{Stealth} (\tn[11]) to move past the bones without issue, or else waste \pgls{interval} moving everything down by hand (in this case they roll \roll{Dexterity}{Crafts}, \tn[7]).
-  \begin{itemize}
-    \item
-    During daylight, the perspective adds +2 to all foraging rolls.
-  \end{itemize}
   \item
-  The tallest of towers allow anyone inside to see all around.
-  They can receive a complete list of towers in the area.
-  \begin{itemize}
+  The old citadel still stands\ldots mostly.
+  Parts of the original \gls{warden}'s home have rotten flooring, so moving through it requires a \roll{Wits}{Crafts} roll (\tn[8]) to notice weak areas of flooring, and the best way to walk.
+  Failure indicate that the character falls two~\glspl{step}%
+  \exRef{core}{Core Rules}{falling}
+  and makes an awful sound.
+  \begin{enumerate}
     \item
-    During daylight, the perspective adds +2 to all foraging rolls.
+    On the second story, characters will encounter the city dweller with the lowest number.
     \item
-    The first time \pgls{pc} climbs to this height, they see two dwellers interacting.
-  \end{itemize}
+    If anyone gets to third story (which requires three rolls), then they will find a cupboard with \lootBig.
+  \end{enumerate}
   \item
-  The tallest towers often have the least stability.
-  The \gls{pc} who climbs this far will receive the same benefits as above, but if their \gls{weight} is above 5, the structure begins collapsing.
+  This tower holds an empty library, once part of \pgls{templeOfCuriosity}.
+  It has no books, and little stability left.
 
-  They can run down (\roll{Speed}{Athletics}, \tn[9]), but failure indicates the building has collapsed upon them, inflicting $4D6$ Damage.
+  Upon entering, \glspl{pc} can make a \roll{Wits}{Crafts} roll to understand if this tower will hold their own weight (the rolls tells the \gls{pc} nothing about others).
+  Anyone with \pgls{weight} above 5 prompts the structure to collapse, but only once they have reached the top.
+
+  If the tower begins to collapse, anyone inside can run down (\roll{Speed}{Athletics}, \tn[9]), but failure indicates the building has collapsed upon them, inflicting $4D6$ Damage.
 
   Or the \gls{pc} can elect to jump, and try to grab something nearby (\roll{Speed}{Athletics}, \tn[12]), but failure indicates that they will suffer a nasty fall of $2D6$ Damage.
 \end{dlist}
 
 \bigLine
 
-\subsubsection{Cries in the Night}
-\label{lostCries}
-
-When dwellers interact, they often make noise.
-Witches casting spells upon local oozes, or dragons ordering minions about can't be done quietly; although the \glspl{pc} will probably not understand what the noises mean.
-
-Every $1D6$ \glspl{interval}, the \glspl{pc} hear an interaction.
-
-\subsubsection{Whispers in the Cold Labyrinth}
+\mapentry{Creeping in the Cold Labyrinth}
 \label{lostWhispers}
 
-When the \glspl{pc} want to move through a lost city, they test \roll{Dexterity}{Stealth} to remain quiet.
+When the \glspl{pc} want to move through a lost city, they roll \roll{Dexterity}{Stealth} to remain quiet.
 The \gls{tn} is normally 8, but often easier.
 
 \begin{itemize}
@@ -1074,24 +1106,36 @@ The \gls{tn} is normally 8, but often easier.
   +5 if lighting a fire.
 \end{itemize}
 
-\subsubsection{The Chase}
+The undead are a separate matter.
+Even if the troupe move around silently, any active undead will spot them, unless they have some way of hiding from the sight of the dead.%
+\footnote{See \autopageref{undead_senses}.}
+
+\paragraph{When the roll fails,}
 \label{lostChase}
 
-Any time the \glspl{pc} accidentally make a noise, they can try to gingerly run and hide.
+Then they have an immediate encounter, in this order:
 
-\begin{itemize}
+\begin{enumerate}
   \item
-  They can try to escape without making more noise with another \roll{Speed}{Stealth} check, this time at \tn[10].
-  \item
-  The dweller with the lowest number arrives the first time the \glspl{pc} fail a check, then the next dweller on the list, and so on.
-  \item
-  Once all dwellers have been alerted, the first two arrive to investigate the noise at the same time.
-  From then on, all dwellers come to investigate at every noise.
-  \item
-  Up to $1D3$ dwellers emerge at a time.
-\end{itemize}
+  The dwellers with the lowest number.
 
-\subsubsection{Foraging Quietly}
+  \textit{For example, a city with oozes and griffins would mean that if the \glspl{pc} make a noise, then an acidic ooze wanders out of a house, and heads towards them.
+  Then on the next failed check to creep around, a griffin would attack.}
+  \item
+  $2D6 + 8$ of the fiend's servants encounter them, and attack.
+
+  \textit{Usually this means a lot of goblins, or a lot of ghouls.}
+  \item
+  The fiend itself has awakened, and begins planning an assault.
+  They will probably not approach the \glspl{pc}, but will find a vantage point to see the \glspl{pc} from, and co\"ordinate attacks.
+\end{enumerate}
+
+\paragraph{Running away,}
+requires a \roll{Speed}{Stealth} roll, at a \gls{tn} equal to the enemy's \roll{Speed}{Vigilance}.
+
+Of course, characters may not want to run away, but fighting prompts noise, which means another encounter, and so on, until the city's fiend awakens.
+
+\mapentry{Foraging Quietly}
 \label{lostForaging}
 
 Each time the \glspl{pc} forage, they roll \roll{Intelligence}{Vigilance} (\tn[12]) to figure out where the best loot lies.
