@@ -141,48 +141,30 @@ However, they will experience a \textit{reasonable danger} of death if they walk
 \noindent
 Encounters adjust, depending on the season, time of day, and how far the troupe have travelled from civilization.
 
-\begin{itemize}
+\begin{description}
   \item
-  Roll $3D6$ to check for encounters and the weather.
+  Roll 3 dice read the next encounter.
   \begin{description}
     \item[Die 1]
-    shows how many \glspl{interval} until the next encounter.
-    \item[Die 1 + die 2]
-    tell you the encounter.
-    \item[Die 3]
-    may tell you the number appearing.
+    shows how many \glspl{interval} until the encounter.
     \item[Die 2 + die 3]
     tell you the weather.
+    \item[Die 1 + die 2]
+    tell you what creature emerges.
+    \item[Die 3]
+    may tell you the number of creatures appearing.
   \end{description}
-  \item
-  Close to a town, the Civilization Rating is high (level 8 to 12), and it slowly decreases as one walks (7,~6,~5,~\ldots) to the outer roads (4,~3, 2,~\ldots).
-  \label{civilizationRating}
+  \item[During the day]
+  staying close to settlements means a low encounter roll replaces the normal predators with traders.
 
-  Compare your encounter roll to the Civilization Rating:
-  \begin{description}
-    \item[Rolling above]
-    means the beast listed below has taken an interest in the troupe.
-    \item[Rolling below]
-    means the players have spotted a caravan of travellers and traders.
-    The encounter roll tells you how many wagons are together.
-    \item[On a tie]
-    outlaws attack.
-    \begin{itemize}
-      \item
-      Odd numbers mean brigands,
-      \item
-      even numbers mean bandits.
-      (see~\autopageref{brigand})
-      \item
-      Double the number rolled shows how many are present.
-    \end{itemize}
-  \end{description}
-  \item
-  At night, roll, with -1 to the encounter roll and weather rolls.
-  Discard any encounters with traders -- they do not travel at night.
-  \item
-  Once you roll an encounter, mark it off -- do not repeat it for the rest of the session.
-\end{itemize}
+  However, it can also mean a greater chance of bandits.
+
+  \item[At night]
+  roll as normal, with -1 to the encounter roll and weather rolls.
+  The troupe will never find traders -- they do not travel at night.
+  \item[In the deep forest]
+  Every noise prompts a chance for an encounter.
+\end{description}
 
 \end{multicols}
 
@@ -190,52 +172,32 @@ Encounters adjust, depending on the season, time of day, and how far the troupe 
 
 \begin{multicols}{2}
 
-\setcounter{enc}{9}
-
 \begin{exampletext}
-  For example, the troupe decide to head out, so you make a roll.
+  For example, the \gls{gm} rolls `\dicef{6} \dicef{3} \dicef{4}'.
 
-  \rowcolors{2}{}{}
-  \begin{center}
-    \begin{tabular}{cl}
-    \Large\underline{\epsdice{6} \epsdice[black]{3}} & \Large\epsdice{4} \\
-    9 & 4 \\
-    \end{tabular}
-  \end{center}
+  On the first reading, this says `after 6~\glspl{interval}, a storm is brewing'.
+  (\dicef{6}~:~\underline{\dicef{3} + \dicef{4}})
 
-  The first two total 9,
-  so the result is
-  `\bigBeastList'.
-  Use the final die for the number appearing.
-  If the roll calls for a `D3', just cut the D6 in half.%
+  On the second reading, wolves arrive, numbering 12.
+  (\underline{\dicef{6} + \dicef{3}}~:~\dicef{4})
 
-  You can see the weather in the last two dice:
-
-  \begin{center}
-    \begin{tabular}{rc}
-    \Large\epsdice{6} & \underline{\Large\epsdice[black]{3} \epsdice{4}} \\
-    & 7 \\
-    \end{tabular}
-  \end{center}
-
-  That totals 7, meaning `\bigWeatherList'.
-  The next encounter occurs 6 \glspl{interval} later.
-  Since this encounter came during the day, the next will come tomorrow, at night.
-
-  With 3 dice rolled, you instantly have `\bigBeastList~in the \bigWeatherList'.
+\diceTrio{6}{3}{4}{}{12 Wolves}{Brewing storm}
 
 \end{exampletext}
 
+\subsubsection{The Civilization Rating}
+\label{civilizationRating}
 \index{Civilization Rating}
+Around the large towns, almost nothing gets through the protective layers of \glspl{broch} and outer \glspl{village}.
+Of course, any person can get through, but wild predators just move towards the first noises they hear, and then receive a nasty sting from archers.
+After enough predators die or leave an area, it becomes more reliably safe, at least during the daylight.
+
+The `Civilization Rating' equals the number of \glspl{village} within a few miles.
+So on the roads near a small settlement with 2~\glspl{village}, the civilization rating is `2', which means you should replace any encounters with a roll of 2 or less with traders.
+Larger settlements, with 10~\glspl{village} in the area, mean you can replace any encounter~roll of `10' or less with traders.
+
 You can think of the Civilization Rating as a line which moves down, slowly altering the encounter tables.
 Past the end of the last road, the forest replaces the all traders with beasts.
-
-\subsubsection{Things in the Forest}
-In the dark forests, where towering trees dampen the Sunlight, any out-of-place noise, light, or smell, can excite and draw in the predators which live there.
-Whenever the troupe draw attention to themselves, roll $1D6$.
-On the roll of a `1', roll for a random encounter.
-
-You can pull this off quickly with $3D6$, where only the first die indicates the encounter, where the others indicate \emph{which} (if any).
 
 \subsection{Traders \& Nomads}
 
@@ -246,6 +208,14 @@ They briefly swap news of the road behind, occasionally make a trade, then move 
 
 Each of your encounter dice also represent an interesting item the traders have.
 For example, rolling \dicef{8}\dicef{3} would indicate that the \glspl{pc} can buy some rope and pitch.
+
+\subsubsection{Noises in the Forest}
+
+In the dark forests, where towering trees dampen the Sunlight, any out-of-place noise, light, or smell, can excite and draw in the predators which live there.
+Whenever the troupe draw attention to themselves, roll $1D6$.
+On the roll of a `1', roll for a random encounter.
+
+You can pull this off quickly with $3D6$, where only the first die indicates the encounter, where the others indicate \emph{which} (if any).
 
 \subsection{Weather}
 \label{weather}

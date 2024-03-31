@@ -142,25 +142,25 @@
 \newcommand\diceTrio[6]{
 
   \vspace{1em}
-  \setcounter{age}{#1}
-  \setcounter{enc}{#2}
-  \setcounter{gold}{#3}
-  \addtocounter{age}{#2}
-  \addtocounter{enc}{#3}
-  \addtocounter{gold}{#1}
+  \setcounter{diceNo}{#1}
+  \addtocounter{diceNo}{#2}
+  \setcounter{diceNo2}{#2}
+  \setcounter{age}{#3}
+  \addtocounter{diceNo2}{#3}
+  \addtocounter{age}{#1}
   \begin{tikzpicture}[thick]
 
-  \node (A) at (0,0){(\arabic{age}) \Large #6};
+  \node (Left) at (2,2.5){(\arabic{age}) \Large #4};
 
-  \node (B) at (4,0){(\arabic{enc}) \Large #5};
+  \node (Right) at (4,0){(\arabic{diceNo2}) \Large #5};
 
-  \node (C) at (2,2.5){(\arabic{gold}) \Large #4};
+  \node (Top) at (0,0){(\arabic{diceNo}) \Large #6};
 
-  \draw[\pageSideColor] (A) to[bend left] node[left]{\large \dicef{#1}}(C);
+  \draw[\pageSideColor] (Top) to[bend left] node[left]{\large \dicef{#1}}(Left);
 
-  \draw[\pageSideColor] (C) to[bend left] node[right]{\large \dicef{#2}}(B);
+  \draw[\pageSideColor] (Left) to[bend left] node[right]{\large \dicef{#3}}(Right);
 
-  \draw[\pageSideColor] (B) to[bend left] node[below]{\large \dicef{#3}} (A);
+  \draw[\pageSideColor] (Right) to[bend left] node[below]{\large \dicef{#2}} (Top);
 
   \end{tikzpicture}
 }
