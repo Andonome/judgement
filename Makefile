@@ -17,6 +17,7 @@ $(BOOK).pdf: $(wildcard *.tex) $(wildcard config/*.sty) | qr.tex shield_qr.tex
 shield.pdf:| shield.tex commands.tex $(BOOK).pdf
 	$(RUN) shield.tex
 	$(RUN) shield.tex
+	mv $(DROSS)/shield.pdf .
 
 .PHONY: all
 all: $(BOOK).pdf shield.pdf
