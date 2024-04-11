@@ -662,16 +662,21 @@
     Tiny wire fences surround every field around the outskirts.
     The bells and chimes make a gentle sound in the wind, and a far louder noise is anything mounts those fences.
     \item
+    A watermill sits just outside of the \gls{village}, at the edge of the farmland (or windmill, if the \gls{village} does not have a river).
+    The miller lives inside, and the ground floor is made from stone.
+    \item
     The fields are covered in meat-on-sticks, and the meats are covered in poison.
     Eating the poison should inflict 8 \glspl{ep} to local predators.
     Dead rats and foxes litter the area, indicating that the plan has some problems.
     \item
-    Bear traps surround the perimeter, hidden by grass, bush, and cabbages.
-    The locals know where every single one lies.
-    Spot them with \roll{Wits}{Vigilance} (\tn[10]), with $1D6$ Damage for failure.
-    \item
-    $1D3$ tripple-bows sit along the wall (giant crossbows on wheels).
-    They inflict $3D6$ Damage, but inflict a -2 penalty to aim.
+    \ifodd\value{r4}
+      Bear traps surround the perimeter, hidden by grass, bush, and cabbages.
+      The locals know where every single one lies.
+      Spot them with \roll{Wits}{Vigilance} (\tn[10]), with $1D6$ Damage for failure.
+    \else
+      $1D3$ tripple-bows sit along the wall (giant crossbows on wheels).
+      They inflict $3D6$ Damage, but inflict a -2 penalty to aim.
+    \fi
     \item
     A large motte shows \pgls{warden} lives here.
     \item
