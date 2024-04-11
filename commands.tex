@@ -139,8 +139,7 @@
 
 }
 
-\newcommand\diceTrio[6]{
-
+\newcommand\labelledDiceTrio[6]{
   \vspace{1em}
   \setcounter{diceNo}{#1}
   \addtocounter{diceNo}{#2}
@@ -155,6 +154,28 @@
   \node (Right) at (4,0){(\arabic{diceNo2}) \Large #5};
 
   \node (Top) at (0,0){(\arabic{diceNo}) \Large #6};
+
+  \draw[\pageSideColor] (Top) to[bend left] node[left]{\large \dicef{#1}}(Left);
+
+  \draw[\pageSideColor] (Left) to[bend left] node[right]{\large \dicef{#3}}(Right);
+
+  \draw[\pageSideColor] (Right) to[bend left] node[below]{\large \dicef{#2}} (Top);
+
+  \end{tikzpicture}
+}
+
+\newcommand\diceTrio[6]{
+  \vspace{1em}
+  \setcounter{diceNo}{#1}
+  \setcounter{diceNo2}{#2}
+  \setcounter{age}{#3}
+  \begin{tikzpicture}[thick]
+
+  \node (Left) at (2,2.5){\Large #4};
+
+  \node (Right) at (4,0){\Large #5};
+
+  \node (Top) at (0,0){\Large #6};
 
   \draw[\pageSideColor] (Top) to[bend left] node[left]{\large \dicef{#1}}(Left);
 
