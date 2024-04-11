@@ -208,11 +208,7 @@
   \setcounter{gold}{\value{diceNo}}
   \multiply\value{gold} by 2
   \addtocounter{gold}{4}
-  \arabic{gold} \ifodd\value{diceNo}
-    Brigands
-  \else
-    Bandits
-  \fi
+  \arabic{gold} Bandits
 }
 
 \newcommand\encBandits{
@@ -734,8 +730,8 @@
         They have \pgls{weight} of 10 each, so you can take this old donkey and cart to help.
       \fi
       \item
-      to defeat the local brigands.
-      If the brigands find out about the \glspl{pc}, they will simply leave for a season.
+      to defeat the local bandits.
+      If the bandits find out about the \glspl{pc}, they will simply leave for a season.
     \end{dlist}
     \item
     Help transport a
@@ -946,7 +942,7 @@
     \hline
     \addtocounter{diceNo}{-1}
     \addtocounter{enc}{-1}
-    \arabic{diceNo} & \ifodd\value{enc}Brigands!\else Bandits\fi \\
+    \arabic{diceNo} & Bandits \\
     \hline
     \Repeat{3}{
       \addtocounter{diceNo}{-1}
