@@ -134,17 +134,22 @@ then the highest of them becomes a swamp.
 \mapentry{Roads}
 \index{Roads}
 
+Human settlements has long roads, sometimes going beyond their neighbouring points, and straight through other points, cutting across the map.
+These long roads always stay between other points, always trying to avoid them.
+
+At each human settlement, do the following:
+
 \begin{enumerate}
   \item
-  Each human settlement has a road its two nearest human neighbours (break ties by going to the highest point).
-  Draw the roads with dotted lines, and avoid passing through any other points along with way.
+  Take the point's number, and count up until you reach another human settlement, then connect them by the most direct road possible, while avoiding other points.
   \item
   If a road crosses a small river, draw a small bridge.
   If it crosses a larger river, drawn with two lines, draw a larger bridge.
   If a canyon blocks a road, then the road must go around instead.
   \item
   The human settlement with the highest number has a road leading out of the map, towards the closest border.
-  This road stays as far away as it can from other settlements.
+  \item
+  Take any human settlements with only one road, and draw a road to the human settlement with the highest number (if they are not already connected).
   \label{roadOut}
   \item
   If a human settlement has dwarvish neighbours, draw a road to the dwarvish neighbour with the highest number.
