@@ -11,7 +11,7 @@ config/vars:
 shield_qr.tex:
 	@printf '\qrcode[height=.7\\textwidth]{$(SHIELD_TARGET)}' > shield_qr.tex
 
-$(BOOK).pdf: $(wildcard *.tex) $(wildcard config/*.sty) | qr.tex shield_qr.tex
+$(BOOK).pdf: $(DEPS) | qr.tex shield_qr.tex
 	@$(COMPILER) main.tex
 
 shield.pdf:| shield.tex commands.tex $(BOOK).pdf
