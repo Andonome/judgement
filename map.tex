@@ -35,11 +35,11 @@ The map can hold all the information you will roll, as long as you have very fin
   Humans
   (\vpageref{humanPoint})
   \item
+  Dragon!
+  (\vpageref{dragonPoint})
+  \item
   Bandits
   (\vpageref{banditsPoint})
-  \item
-  Dragon
-  (\vpageref{dragonPoint})
   \item
   Humans
   \item
@@ -88,20 +88,22 @@ The highest neighbour is the neighbour with the highest number, and the lowest n
 \mapentry{Rivers}
 
 \paragraph{If your map has dwarves or a dragon,}
-then they live in mountains
+then it has mountains.
 (otherwise, see below).
 
 \begin{enumerate}
   \item
-  Draw a mountain range around the point with the dwarves.
+  Draw a mountain range around each point which has dwarves or a dragon.
   \item
   If two mountains share a neighbour, then that point must be a valley.
   Draw a few hills along the valley.
   \item
   At each mountain, draw a river to each of the four neighbours, unless that neighbour has a mountain.
 
-  River always begin from separate mountain-locations.
+  Rivers always begin from separate mountain-locations.
   They might later join together, but rivers never split apart.
+
+  Draw your rivers with wavy, lazy, lines.
   \item
   Each river flows down hill, towards the lowest neighbour.
   They avoid mountains and avoid doubling-back to a point they've already been at.
@@ -695,6 +697,8 @@ Roll $3D6$, and apply every result.
 \label{dragonPoint}
 
 Dragons may live in deep caverns, shallow caverns, or sometimes just lay about in a Sunny patch of forest, without any roof.
+In any case, they like to live close to mountains -- surrounding trees can make flight difficult, while having a tall crag to leap from helps them take flight.
+
 Their destructive habits and association with the sky make people think they are divine.
 Of course, in \gls{fenestra}, this is not a good thing.
 
