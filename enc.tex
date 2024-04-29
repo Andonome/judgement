@@ -327,56 +327,49 @@ Once more falls, they would only cover 4 miles.
 \index{Morale}
 \begin{multicols}{2}
 
-\begin{itemize}
-  \item
-  At the start of combat, roll an enemy's Morale, with \roll{Charisma}{Combat} (or Brawl, or any Martial Skill)
-  \item
-  The basic \gls{tn} is 7.
-  \begin{itemize}
-    \item
-    +2 for the side with double numbers.
-    \item
-    +2 for the side with the top Strength Bonus.
-    \item
-    +2 when starving and desperate.
-    \item
-    -1 when witnessing magical abilities.
-    \item
-    -2 when wounded.
-  \end{itemize}
-  \item
-  Keep the dice result for the full combat.
-  \item
-  On a tie, the enemy `squares up', then re-rolls.
-\end{itemize}
+\noindent
+When combat seems likely, roll $2D6$ and leave the result on the table.
+If the creature has more \glspl{hp} than the roll, it attacks; otherwise, it flees.
 
-When a fight starts, roll to see an opponent's initial reaction.
-They use whatever Martial Skill they intend to use in the fight.
-If a dumb beast fails a morale check, it thinks better of attacking and walks away, or simply stares from a safe distance, and waits for the situation to change.
-Predators, as a rule, don't like fair fights.
-They want to pounce, subdue, and \emph{feed}.
-Most predators will back off once hurt, and much of the time, they won't approach in the first place.
-Since they have no Charisma Attribute, their reactions tend to be more predictable than sentient creatures.
+\sidebox{
+  \begin{boxtable}
+    \textbf{Roll} & \textbf{\glsfmtlongpl{hp}} \\
+    \hline
+    \twoDice{5} & 10 (\textit{ATTACK!}) \\
+    \twoDice{5} &  8 (\textit{ATTACK!}) \\
+    \twoDice{5} &  5 (\textit{wait\ldots}) \\
+    \twoDice{8} &  4 (\textit{RUN!}) \\
+    \twoDice{8} &  2 (\textit{RUN!}) \\
+  \end{boxtable}
+}
 
-On a tie, some reassessment occurs.
-A single chitincrawler eyeing up a party might display its claws, then observe their reactions; if the troupe do nothing to change the situation (such as casting a spell) then the creature rolls again.
-While fighting with a group, a tie would normally indicate that whoever wants to fight looks about to check if the others are still fighting, and copies their actions.
+Chitincrawlers often have 10~\glspl{hp}, so they often attack people the moment they spot them.
+Griffins have fewer \glspl{hp} than chitincrawlers, so they attack less often.
+And goblins might have only 5 or 6~\glspl{hp} -- they know how small they are, and prefer to spend time laying traps, or stealing equipment, rather than engaging directly.
+Every \gls{hp} a creature loses could prompt it to turn and flee, so sometimes only wounded creatures will flee, while others keep fighting.
 
-When people fail a morale check, they may back off, or simply act friendly, despite bad intentions.
+On a tie, the creature pauses to reassess the situation.
+A single chitincrawler eyeing up a party might display its claws, then observe their reactions; if the troupe do nothing to change the situation (such as casting a spell, or making a loud noise) then the creature rolls again.
 
-Once one side or the other has decided to attack, the same roll remains throughout the combat.
+\subsubsection{Decisions before Dice}
 
-\begin{exampletext}
-  The Witch coven approach, shouting their demands arrogantly.
-  The \gls{gm} has rolled only `6' for their Morale check, but most of the witches present have at least one magical sphere at +2 (a Martial Skill), so they have a total of `8', and think they can take the troupe on in a fight.
+The dice only exist to provide a neutral result, not a sensible result.
+Creatures always fight when backed into a corner, or starving.
+Creatures never fight when they will probably die.%
+\footnote{Exceptions include particularly dim creatures, who don't know what's good for them.
+See chitincrawlers, \vpageref{chitin:tactics}.}
 
-  Unfortunately, a few of the apprentices' highest sphere is only at level 1, meaning they rolled a `7' -- a tie.
-  And if those apprentices receive a single point of Damage, the wound will reduce them to a score of `5', and they will run, which will mean the troupe outnumber the witches, and the rest will flee on the next round.
-\end{exampletext}
+Use your best judgement about whether or not something, or someone, attacks the troupe, before rolling.
+A trio of griffins will not attack a loud group of one hundred humanoids, all moving together, but will definitely swoop for a small child who has wandered away from the group.
 
-The players do not take Morale checks -- they decide when it's time to run away by the look of the situation.
+\Glspl{npc} work exactly the same as \gls{fenestra}'s predators, but display their reactions differently.
+\Glspl{npc} who fail a Morale check may act friendly and harmless, if they think the \glspl{pc} will not attack them.
+
+\Glspl{pc} do not take Morale checks -- the players decide when it's time to run away by the look of the situation.
 Usually a good time is when all the \glspl{fp} have run out.
-\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}
+\index{Henchmen}%
+However, \gls{npc} travelling with the \glspl{pc} still take morale checks as usual.%
+\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}%
 
 \end{multicols}
 
