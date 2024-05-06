@@ -169,19 +169,8 @@ Wearing sufficiently full armour makes one immune to the cuts, but will not stop
 \label{diseases}
 \index{Diseases}
 
-\newcommand\disease[5][\roll{Intelligence}{Medicine}]{
-  \subsubsection{#2}
-  \index{#2 \glsentrytext{sickness}}
-  \label{#2}
-  #3
-  \needspace{2em}
-  \begin{description}
-    \item[\flwr~\Glspl{ingredient}] #4
-    \item[Roll] #1 (\tn[#5])
-  \end{description}
-}
-
 \begin{multicols}{2}
+\renewcommand\npcsymbol{\glsentrytext{abderian}}
 
 \noindent
 \Gls{fenestra} does not have many illnesses.
