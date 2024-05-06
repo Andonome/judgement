@@ -980,15 +980,12 @@
   \textbf{\Gls{ingredient}}: #1}%
 }
 
-\newcommand\disease[5][\roll{Intelligence}{Medicine}]{
+\newcommand\disease[5][]{
   \subsubsection{#2}
   \index{#2 \glsentrytext{sickness}}
   \label{#2}
   #3
-  \needspace{2em}
-  \begin{description}
-    \item[\flwr~\Glspl{ingredient}] #4
-    \item[Roll] #1 (\tn[#5])
-  \end{description}
+  \par
+  \textbf{Cure}: #4 (\tn[#5])
 }
 
