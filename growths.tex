@@ -10,10 +10,10 @@
 \noindent
 \Gls{fenestra}'s plants hold a thousand uses and dangers.
 
-\subsubsection{Bedleaves}
-\label{bedleaves}
-These massive plants appear a little like gunnera, but larger.
-Anyone sufficiently small (\gls{weight} 5 or less) can rest on them overnight and heal an additional \gls{ep}.
+\funkyPlant{Bedleaves}%
+  {bedleaves}%
+  {These massive plants appear a little like gunnera, but larger.
+  Anyone sufficiently small (\gls{weight} 5 or less) can rest on them overnight and heal an additional \gls{ep}.}%
 
 \funkyPlant{Bloodwood}%
   {bloodwood}%
@@ -44,22 +44,19 @@ Anyone sufficiently small (\gls{weight} 5 or less) can rest on them overnight an
     If bad, the \gls{tn} increases.
   }
 
-\subsubsection{Dryad's Kiss}
-\label{dryads_kiss}
+\funkyPlant{Dryad's Kiss}%
+  {dryads_kiss}%
+  {Although edible, this mushroom makes you very gullible.
+  Take a -2 penalty to all Deceit and Empathy checks for a day.}%
 
-Although edible, this mushroom makes you very gullible.
-Take a -2 penalty to all Deceit and Empathy checks for a day.
-
-\subsubsection{Fly Flowers}
-\label{fly_flowers}
-
-Named after swarms of flies that surround them at all times, these vibrant flowers secrete sticky, pungent mucus that attracts swarms of insects.
-The stench is really hard to wash off, and anyone who comes in contact with this mucus will attract large numbers of insects at least for the rest of the day.
+\funkyPlant{Fly Flowers}%
+  {fly_flowers}%
+  {Named after swarms of flies that surround them at all times, these vibrant flowers secrete sticky, pungent mucus that attracts swarms of insects.
+  The stench is really hard to wash off, and anyone who comes in contact with this mucus will attract large numbers of insects at least for the rest of the day.}%
 
 \funkyPlant[Fire]{Glowshroom}%
   {glowshroom}%
-  {
-   These subterranean fungi give off a soft, faint light, but only in complete darkness.
+  {These subterranean fungi give off a soft, faint light, but only in complete darkness.
    Dwarves sometimes use them instead of torches, even though the light is dimmer.
 
    Ingesting these plants can be deadly.
@@ -117,19 +114,18 @@ The stench is really hard to wash off, and anyone who comes in contact with this
   Preparation requires an \roll{Intelligence}{Medicine} roll (\tn[12]).
     }
 
-\subsubsection{Dirge Fruit}
-\label{dirgeFruit}
-\index{Dirge Fruit\gls{plant}}
 
-This long vine produces tasty tomato-like plants.
-After $1D6$~\glspl{interval}, the eater starts to hear a screeching sound, similar to tinnitus.
-The sound grows louder and louder (though nobody else can hear it), and adds a -1 Penalty to rolls to hear things.
+\funkyPlant{Dirge Fruit}%
+  {dirgeFruit}%
+  {This long vine produces tasty tomato-like plants.
+    After $1D6$~\glspl{interval}, the eater starts to hear a screeching sound, similar to tinnitus.
+    The sound grows louder and louder (though nobody else can hear it), and adds a -1 Penalty to rolls to hear things.
 
-Every \gls{interval} the `noise' becomes louder and the Penalty increases by 1 step.
-At -3, the target cannot sleep any more.
-At -6, the target becomes effectively deaf, as they can hear nothing else.
+    Every \gls{interval} the `noise' becomes louder and the Penalty increases by 1 step.
+    At -3, the target cannot sleep any more.
+    At -6, the target becomes effectively deaf, as they can hear nothing else.
 
-A cure requires an Air \gls{ingredient}, mixed with hard food and crushed violently (\roll{Strength}{Medicine}, \tn[10]).
+    A cure requires an Air \gls{ingredient}, mixed with hard food and crushed violently (\roll{Strength}{Medicine}, \tn[10]).}%
 
 \funkyPlant{Slowburn Ivy}%
   {slowburnIvy}%
@@ -138,30 +134,25 @@ A cure requires an Air \gls{ingredient}, mixed with hard food and crushed violen
   The slow release always makes the cause difficult to track down.
     }
 
-\subsubsection{Thorny Thickets}
-\label{thorny_thickets}
+\funkyPlant{Thorny Thickets}%
+  {thorny_thickets}%
+  {Regular thorny bushes create serious complications for anyone moving through them.
+    They reduce running speed by 2~\glspl{step} per \gls{ap} spent, and moving through them requires a \roll{Dexterity}{Wyldcrafting} \gls{quickaction} (\tn[10]), or the would-be runner receives \pgls{ep} and loses all momentum, as dozens of tiny spikes scratch and pierce them.
 
-Regular thorny bushes create serious complications for anyone moving through them.
-They reduce running speed by 5 \glspl{step} per round, and moving through them requires a \roll{Dexterity}{Wyldcrafting} \gls{quickaction} (\tn[10]), or the would-be runner receives \pgls{ep} and loses all momentum, as dozens of tiny spikes scratch and pierce them.
-
-Wearing sufficiently full armour makes one immune to the cuts, but will not stop the movement problems.
+    Wearing full armour makes one immune to the cuts, but will not stop the movement problems.}%
 
 \funkyPlant{Uproot}%
   {uproot}%
-  {
-  Eating the root (after preparation) gives you +1 Strength for \pgls{interval}.
+  {Eating the root (after preparation) gives you +1 Strength for \pgls{interval}.
   Each \gls{interval} thereafter, the player rolls $1D3$.
-  On a `1', the effect stops, on any other number the character loses 1 \gls{hp}, and the effect continues.
-    }
+  On a `1', the effect stops, on any other number the character loses 1 \gls{hp}, and the effect continues.}
 
 \funkyPlant{Whistling Cane}%
   {whistlingCane}%
-  {
-  These swamp plants play an eerie tune on windy days.
+  {These swamp plants play an eerie tune on windy days.
   Inexperienced travellers might stray from their path, into the dangerous bog, looking for the source of the sound.
 
-  They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.
-  }
+  They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.}
 
 \end{multicols}
 
@@ -170,7 +161,7 @@ Wearing sufficiently full armour makes one immune to the cuts, but will not stop
 \index{Diseases}
 
 \begin{multicols}{2}
-\renewcommand\npcsymbol{\glsentrytext{abderian}}
+\renewcommand\npcsymbol{\glsentrytext{sickness}}
 
 \noindent
 \Gls{fenestra} does not have many illnesses.
