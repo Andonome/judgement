@@ -5,6 +5,7 @@
 \label{plants}
 
 \begin{multicols}{2}
+\renewcommand\npcsymbol{\glsentrytext{plant}}
 
 \noindent
 \Gls{fenestra}'s plants hold a thousand uses and dangers.
@@ -21,18 +22,11 @@ Anyone sufficiently small (\gls{weight} 5 or less) can rest on them overnight an
   Unfortunately, the sap is secreted only during the harshest cold snaps, 
   and tends to attract and irritate local wildlife, making procuring it a risky endeavour.
   }
-  {\roll{Intelligence}{Medicine}}%
-  {10}%
-  {If allowed to rot, it makes the imbiber blind for $1D6^2$ days.}
 
 \funkyPlant{Downroot}%
   {downroot}%
   {Eating the root gives +2 \glspl{hp} after a night's rest, and -1 to all Attributes for the next three days.
   }
-  %
-  {\roll{Intelligence}{Medicine}}%
-  {12}%
-  {only the penalty applies.}%
 
 \funkyPlant{Dreameater Moss}%
   {dreameater_moss}%
@@ -49,10 +43,6 @@ Anyone sufficiently small (\gls{weight} 5 or less) can rest on them overnight an
     If these are good memories, the \gls{tn} decreases by 1.
     If bad, the \gls{tn} increases.
   }
-  %
-  {None}%
-  {varies}%
-  {sleep until a slow death}%
 
 \subsubsection{Dryad's Kiss}
 \label{dryads_kiss}
@@ -66,7 +56,7 @@ Take a -2 penalty to all Deceit and Empathy checks for a day.
 Named after swarms of flies that surround them at all times, these vibrant flowers secrete sticky, pungent mucus that attracts swarms of insects.
 The stench is really hard to wash off, and anyone who comes in contact with this mucus will attract large numbers of insects at least for the rest of the day.
 
-\funkyPlant{Glowshroom}%
+\funkyPlant[Fire]{Glowshroom}%
   {glowshroom}%
   {
    These subterranean fungi give off a soft, faint light, but only in complete darkness.
@@ -77,25 +67,14 @@ The stench is really hard to wash off, and anyone who comes in contact with this
    This can turn someone into a sudden target in the dark, as their stomach shines faintly.
 
    Proper preparation of a full patch of these mushrooms will yield \pgls{boon} of the Fire Sphere.
-  \index[mana]{Fire!Glowshroom}
     }
-  {\roll{Intelligence}{Medicine}}%
-  {12}%
-  {all fires in the \gls{area} snuff out.}%
 
-\funkyPlant{Liskshine}%
-  {molted_basilisk}%
-  {
-  Type of lichen that grows on the backs of basilisks, it also absorbs and retains the beast's overwhelming stench.
+\funkyPlant[Earth]{Liskshine}%
+  {liskShine}%
+  {Type of lichen that grows on the backs of basilisks, it also absorbs and retains the beast's overwhelming stench.
   When it grows large enough, small clumps of it fall off.
   A rare find, and also a warning that a basilisk is nearby.
-
-  Once spread thin, and left in the snow for a week, the resulting dust becomes a powerful Earth \gls{boon}.
-  \index[mana]{Earth!Liskshine}
     }
-{\roll{Dexterity}{Medicine}}%
-{14}%
-{No effect.}%
 
 \funkyPlant{Mage Oak}%
   {mage_oak}%
@@ -104,58 +83,39 @@ The stench is really hard to wash off, and anyone who comes in contact with this
     It restores 3 \glsentrylongpl{mp} for every \gls{interval} spent near it.
     The tree will also repeat every spell cast near it, with random targets.
 
-    Proper preparation of a single branch makes a dust which provides 3 \glspl{mp} to \emph{everyone} across \pgls{area}.
+    Proper preparation of a single branch makes a dust which provides 3~\glspl{mp} to \emph{everyone} across \pgls{area}.
     However, the tree can die easily.
     Each harvesting has a 1 in 6 chance of killing the tree, at which point it leeches all mana in the \gls{area}.
   }%
-  {\roll{Charisma}{Medicine}}%
-  {13}%
-  {the dust produced halts regeneration of all Mana.
-  Afflicted targets can roll \roll{Charisma}{Empathy} (\tn[10]) each day to request the world listen to them again.}
 
 
-\funkyPlant{Marching Mushroom}%
+\funkyPlant[Fate]{Marching Mushroom}%
   {marching_mushroom}%
   {
   Chewing on this tough mushroom relieves tiredness, but slows both the body and mind.
     Ignore \gls{ep} penalties for 6 \glspl{interval}, but with -1 penalty to Dexterity, Speed, Intelligence and Wits.
-
-    Those with the right equipment, herbs, patience and timing, can turn this into \pgls{boon} for the Fate Sphere.
-  \index[mana]{Fate!Marching Mushroom}
     }
-{\roll{Intelligence}{Medicine}}%
-{16}%
-{Ingesting the fungus inflicts the penalties, but no benefits.}%
 
-\funkyPlant{Screechmoss}%
-  {screeching_moss}%
+\funkyPlant[Air]{Screechmoss}%
+  {screechMoss}%
   {
-  It squeaks when stepped on.
+  Give a screech like a starving cat when stepped on.
   They tend to form a symbiotic relationship with predators, who always respond to the squeaks by investigating the source, or laying traps around the thickets.
   The moss then feeds off the blood of any victims.
   Nobles love to encourage screeching moss to grow around their estates, to protect against unwanted intruders.
-
-  Properly prepared, the moss provides \pgls{boon} for Air spells.
-  \index[mana]{Air!Screechmoss}
     }
-  {\roll{Intelligence}{Medicine}}%
-  {12}%
-  {The air turns foul, everyone in the \gls{area} gains \pgls{ep}.}%
 
-\funkyPlant{Seekmist}%
+\funkyPlant[Air]{Seekmist}%
   {seekmist}%
-  {
-  Seekmists sit passively, filling up with dust, waiting for a seed.
+  {Seekmists sit passively, filling up with dust, waiting for a seed.
   The seeds are sticky, and float on the wind until they latch onto an animal (or traveller).
   One the carrier comes within range -- poof!
   The dust spreads everywhere, and the seeds have been properly joined.
   The dust causes nausea, and sometimes hallucinations.
 
-  If properly prepared, they become a wicked poison, which inflicts the disease: Guardbane (see \autopageref{Guardbane}).
+  If properly prepared, they become a wicked poison, which inflicts the disease Guardbane (see \autopageref{Guardbane}).
+  Preparation requires an \roll{Intelligence}{Medicine} roll (\tn[12]).
     }
-  {\roll{Intelligence}{Medicine}}%
-  {12}%
-  {the nasty potion explodes, inflicting Guardbane on all in the \gls{area}.}%
 
 \subsubsection{Dirge Fruit}
 \label{dirgeFruit}
@@ -173,13 +133,10 @@ A cure requires an Air \gls{ingredient}, mixed with hard food and crushed violen
 
 \funkyPlant{Slowburn Ivy}%
   {slowburnIvy}%
-  {
+  {does nothing for most of the year, but over the warm seasons, it spreads its seed by dumping large amounts in rivers.
+  Anyone eating water contaminated with this ivy's seeds gains $1D6$ \glspl{ep}, but only after $1D6$~\glspl{interval}.
+  The slow release always makes the cause difficult to track down.
     }
-  {\roll{Intelligence}{Medicine}}%
-  {8}%
-  {the nasty potion explodes, inflicting Guardbane on all in the \gls{area}.}%
-
-Slowburn ivy: after $1D6$ \glspl{interval}, gain \pgls{ep} each \gls{interval} until you find a cure (Intelligence + Medicine, \tn[8]). \\
 
 \subsubsection{Thorny Thickets}
 \label{thorny_thickets}
@@ -196,9 +153,6 @@ Wearing sufficiently full armour makes one immune to the cuts, but will not stop
   Each \gls{interval} thereafter, the player rolls $1D3$.
   On a `1', the effect stops, on any other number the character loses 1 \gls{hp}, and the effect continues.
     }
-{\roll{Intelligence}{Medicine}}%
-{14}%
-{No Strength Bonus.}%
 
 \funkyPlant{Whistling Cane}%
   {whistlingCane}%
@@ -208,9 +162,6 @@ Wearing sufficiently full armour makes one immune to the cuts, but will not stop
 
   They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.
   }
-{\roll{Intelligence}{Crafts}}%
-{14}%
-{Screechy music}%
 
 \end{multicols}
 

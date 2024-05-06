@@ -969,18 +969,14 @@
   \end{center}
 }
 
-\newcommand\funkyPlant[6]{
-  \renewcommand\npcsymbol{\glsentrytext{plant}}
-  \subsubsection{#1}
-  \label{#2}
-  \index{#1 \glsentrytext{plant}}
-
-  #3
-
-  \begin{description}
-    \item[\flwr~Preparation:]
-    #4 (\tn[#5])
-    \item[\failStar~On failure:] #6
-  \end{description}
+\newcommand\funkyPlant[4][]{
+  \subsubsection{#2}
+  \index{#2~\glsentrytext{plant}}
+  \label{#3}
+  #4
+  \ifstrempty{#1}{}{%
+  \index[mana]{#1!#2~\glsentrytext{plant}}
+  \par
+  \textbf{\Gls{ingredient}}: #1}%
 }
 
