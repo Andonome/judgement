@@ -968,3 +968,19 @@
   \gls{#1}\qquad\textbf{Encounters}\qquad\gls{#1}
   \end{center}
 }
+
+\newcommand\funkyPlant[6]{
+  \renewcommand\npcsymbol{\glsentrytext{plant}}
+  \subsubsection{#1}
+  \label{#2}
+  \index{#1 \glsentrytext{plant}}
+
+  #3
+
+  \begin{description}
+    \item[\flwr~Preparation:]
+    #4 (\tn[#5])
+    \item[\failStar~On failure:] #6
+  \end{description}
+}
+
