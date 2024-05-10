@@ -148,11 +148,11 @@
   \setcounter{age}{#3}
   \begin{tikzpicture}[thick]
 
-  \node (Left) at (2,2.5){\Large #4};
+  \node (Left) at (2,2.5){\Large\sffamily #4};
 
-  \node (Right) at (4,0){\Large #5};
+  \node (Right) at (4,0){\Large\sffamily #5};
 
-  \node (Top) at (0,0){\Large #6};
+  \node (Top) at (0,0){\Large\sffamily #6};
 
   \draw[\pageSideColor] (Top) to[bend left] node[left]{\large \dicef{#1}}(Left);
 
