@@ -599,15 +599,15 @@
       The villagers hold a funeral for a fallen soldier. Everyone is drunk.
     \fi
     \item
+    A few mouthdiggers have burrowed under the \gls{village}.
+    You can hear them at night.
+    The villagers discuss plans to root them out, but nobody has anything solid.
+    \item
     \ifodd\value{r3}
       Villagers are constructing a wooden cage to safely take water from the river, so woodspies do not drown them, and eat them.
     \else
       Villagers gather to burn away or cut down all the foliage and trees they can, making space for their archers to see.
     \fi
-    \item
-    A few mouthdiggers have burrowed under the \gls{village}.
-    You can hear them at night.
-    The villagers discuss plans to root them out, but nobody has anything solid.
     \item
     Rumours about the strange things happening on the highest neighbour (cannibalism, incest, and eating dwarven beards).
     \item
@@ -628,10 +628,7 @@
 \newcommand\encVillageFeatures{
   \begin{dlistDouble}
     \item
-    Verdant \nameref{screeching_moss} grows along the old, outer walls (find it \vpageref{screeching_moss}).
-    \item
-    Four long, wooden entrances sit around the perimeter.
-    Each one ends in a metal gate, showing people inside, and each stretch of wood is littered with murder-holes, ready for archers and spearmen to slay anything which approaches the gate.
+    Verdant \nameref{screechMoss} grows along the old, outer walls (find it \vpageref{screechMoss}).
     \item
     A massive moat, wider than anyone could hope to jump, flows round the outskirts. 
     \item
@@ -642,7 +639,10 @@
     The bells and chimes make a gentle sound in the wind, and a far louder noise is anything mounts those fences.
     \item
     A watermill sits just outside of the \gls{village}, at the edge of the farmland (or windmill, if the \gls{village} does not have a river).
-    The miller lives inside, and the ground floor is made from stone.
+    The miller lives inside, and the first story is made from stone.
+    \item
+    \Pgls{broch} sits at the outer wall.
+    The \gls{guard} are expected to enter there, rather than the \gls{village} proper.
     \item
     \ifnum\value{temperature}=0
       Bear traps surround the perimeter, hidden by grass, bush, and cabbages.
@@ -660,11 +660,12 @@
       Nobody would be stupid enough to approach the perimeter and eat them, unless starving.
     \fi
     \item
-    A large motte shows \pgls{warden} lives here.
+    A little house outside the wall, built into the ground, suggests \pgls{doula} lives here.
     \item
-    A little house, built into the ground, suggests a doula lives here.
+    Four long, wooden entrances sit around the perimeter.
+    Each one ends in a metal gate, showing people inside, and each stretch of wood is littered with murder-holes, ready for archers and spearmen to slay anything which approaches the gate.
     \item
-    A patch of \nameref{uproot} grows just beyond the treeline (\autopageref{uproot}).
+    A tall, central house shows \pgls{warden} lives here.
   \end{dlistDouble}
 }
 
