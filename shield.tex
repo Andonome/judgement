@@ -58,12 +58,6 @@
 
 \begin{multicols}{2}
 
-\textbf{Mana Regeneration}
-
-\manaRegenChart
-
-\columnbreak
-
 \paragraph*{Traders}
 
 Roll $3D6$ and add all results.
@@ -77,14 +71,16 @@ Roll $3D6$ and add all results.
 }{}
 
 \iftoggle{core}{
-  \initiativechart
-
   \hitLocation
   \gatheringChart
 
   \larcenyChart
 
 }{}
+
+\textbf{Mana Regeneration}
+
+\manaRegenChart
 
 \subsection*{Session Start}
 
@@ -142,6 +138,10 @@ For example, `poisonous meats' might suggest `Rotwall', while `doula's house', c
 
 \ifnum\value{temperature}<3
   \dryad
+\else
+  \umberhulk
+
+  \stirgeSwarm
 \fi
 
 \woodspy
