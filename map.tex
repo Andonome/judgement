@@ -17,9 +17,9 @@ Magic typically remains a mysterious character, but the landscape should always 
 As \pgls{gm}, your character is the landscape, and making a map is your character creation.
 
 \mapentry{The Pentacle}
-
-Tear out an example map on the left for the basic map.
-You need a pencil and dice.
+provides the map's layout.
+You need a pencil, blade, and dice.
+Remove the example map on the left to start.
 
 Roll $1D6$ for each of the 10 points, and add the point's number to the dice roll to find the entry for that point on your map.
 
@@ -34,13 +34,13 @@ The map can hold all the information you will roll, as long as you have very fin
   \setcounter{enumi}{1}
   \item
   (\Hu)~Humans
-  (\vpageref{humanPoint})
+  (\autopageref{humanPoint})
   \item
   (D)~Dragon!
-  (\vpageref{dragonPoint})
+  (\autopageref{dragonPoint})
   \item
   (B\Hu)~Bandits
-  (\vpageref{banditsPoint})
+  (\autopageref{banditsPoint})
   \item
   (\Hu)~Humans
   \item
@@ -49,28 +49,28 @@ The map can hold all the information you will roll, as long as you have very fin
   (\Hu)~Humans
   \item
   (\El)~Elves
-  (\vpageref{elvesPoint})
+  (\autopageref{elvesPoint})
   \item
   (\Dw)~Dwarves
-  (\vpageref{dwarvenPoint})
+  (\autopageref{dwarvenPoint})
   \item
   (\Gn)~Gnomes
-  (\vpageref{gnomePoint})
+  (\autopageref{gnomePoint})
   \item
   (D\El)~Dryad
-  (\vpageref{dryadPoint})
+  (\autopageref{dryadPoint})
   \item
   (\N)~Ogre
-  (\vpageref{ogrePoint})
+  (\autopageref{ogrePoint})
   \item
   (\Nl)~Gnolls
-  (\vpageref{gnollPoint})
+  (\autopageref{gnollPoint})
   \item
   (H)~Hag
-  (\vpageref{hagPoint})
+  (\autopageref{hagPoint})
   \item
   (\D)~Lich
-  (\vpageref{lichPoint})
+  (\autopageref{lichPoint})
   \item
   (\Hu)~Humans
 \end{enumerate}
@@ -87,10 +87,12 @@ Each dot has four neighbours.
 The highest neighbour is the neighbour with the highest number, and the lowest neighbour, is the neighbour with the lowest number.
 
 \mapentry{Rivers}
+come from mountains, then flow to the sea.
+If your map has dwarves or a dragon, then it has mountains.
+Use the steps below to make rivers.
 
-\paragraph{If your map has dwarves or a dragon,}
-then it has mountains.
-(otherwise, see below).
+If the map has no dragons nor dwarves, then it has no mountains.
+Use the steps \vpageref{mapSea}.
 
 \begin{enumerate}
   \item
@@ -109,15 +111,20 @@ then it has mountains.
   Each river flows down hill, towards the lowest neighbour.
   They avoid mountains and avoid doubling-back to a point they've already been at.
   \item
-  Rivers begin as a single line, but when two rivers join, they flow faster and wider -- draw them with a \emph{thick} line.
+  Rivers begin as a single line, but when two rivers join, they flow faster and wider.
+
+  Draw the wide river with a \emph{thick} line.
   \item
   If three or more rivers join together, they form a canyon which floods over the stormy seasons, and recedes during the cold seasons.
+
+  Draw the canyon with a parallel~line.
   \item
-  If three or more rivers join together, they form a lake, which exits towards the lowest neighbour as another thick line (and counts as two rivers).
+  If four or more rivers join together, they form a lake, which exits towards the lowest neighbour as another thick line (and counts as two rivers).
 \end{enumerate}
 
-\paragraph{If your map has no dwarves nor dragon,}
-then it has no mountains.
+\paragraph{Without mountains,}
+\label{mapSea}
+small rivers make their way to the sea.
 
 \begin{enumerate}
   \item
@@ -177,7 +184,7 @@ At each human settlement, do the following:
 \paragraph{Do not draw trees on the map,}
 just know that they cover everything.
 Drawing a few trees or a little forest suggests that everywhere else has open plains, but open areas are rare in \gls{fenestra}.
-A twilight of towering covers almost everything which people have not cut down.
+A twilight of towering trees covers almost everything which people have not cut down.
 
 \paragraph{The map's name}
 should come from a distinctive feature.
@@ -882,7 +889,7 @@ Roll $1D6$ to find this season's barkeep (they change all the time):
   An outlander from a land so far away, nobody has ever heard of it.
   Every story she tells sounds made-up, but the strange accent shows she really does come from somewhere distant.
   \item
-  A powerful mage who swore an oath never to use magic again.
+  A powerful \gls{witch} who swore an oath never to use magic again.
   He won't say why.
   \item
   A collective -- you stay as long as you like, earn your keep, then go
