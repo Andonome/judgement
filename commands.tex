@@ -733,7 +733,7 @@
       \item
       wounded ranger
       \item
-      magical item
+      \gls{talisman}
       \item
       secret document
     \end{dlist}
@@ -784,7 +784,7 @@
         The tradesman has just what it wants.
         She can pay a total of 60~\glspl{sp}.
 
-        Nevermind `why', \gls{yonder} take ye!
+        \textit{Nevermind `why', \gls{yonder} take ye!}
         \item
         break a friend out of jail in a nearby town.
         He had no idea those items were stolen!
@@ -965,10 +965,11 @@
   \end{boxtable}
   }
 
-\newcommand\showEnc[1][beasts]{%
-  \needspace{3em}
-  \begin{center}
-  \gls{#1}\qquad\textbf{Encounters}\qquad\gls{#1}
+\newcommand\showEnc[1][A]{%
+  \renewcommand\npcsymbol{\glsentrytext{#1}}%
+  \needspace{3em}%
+  \begin{center}%
+  \textcolor{\pageSideColor}{\gls{beasts}}\qquad\textbf{Encounters}\qquad\textcolor{\pageSideColor}{\glsentrytext{#1}}
   \end{center}
 }
 
