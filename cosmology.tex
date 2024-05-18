@@ -158,38 +158,37 @@ The temples are guilds with a divinely mandated monopoly.
 Even a `guild hall' which is nothing more than an old lady's house still offers divine guidance (or rather, guidance on avoiding divine interference).
 The \gls{templeOfHate} encourages reconciliations, the \gls{templeOfFrost} offers warmth, and the \gls{guard} work for the \gls{templeOfBeasts}, where they kill the \gls{sylf}'s children.
 
-\newcommand\guild[8]{
-  \renewcommand\npcsymbol{#2}
+\newcommand\guild[7]{
+  \renewcommand\npcsymbol{\glssymbol{#1}}
   \vspace{2em}
   \needspace{16em}
-  \subsection[The Temple of #3]{#2~#1~#2 \\ \& \\ the Temple of #3}
+  \subsection[The Temple of #2]{\glssymbol{#1}~\gls{#1}~\glssymbol{#1} \\ \& \\ the Temple of #2}
   \index{Gods}
-  \label{god:#3}
+  \label{god:#2}
 
   \begin{exampletext}
   \noindent
-  #4
+  #3
   \end{exampletext}
 
   \noindent
   \begin{minipage}{\linewidth}
   \begin{description}
-  \item[Domain:] #5
+  \item[Domain:] #4
 
-  \item[Defence:] #6
+  \item[Defence:] #5
 
-  \item[Members:] #7
+  \item[Members:] #6
 
-  \item[Activities:] #8
+  \item[Activities:] #7
 
   \end{description}
   \end{minipage}
 
-  \subsubsection{#7}
+  \subsubsection{#6}
 }
 
-\guild{\Glsfmttext{abderian}}% Name
-  {\gls{poison}}% Symbol
+\guild{abderian}% Name
   {Poison}% Death
   {
     Led doors, covered in ivy, open to usher in \pgls{warden}, still dressed in the finery he wore for feasts in life.
@@ -254,8 +253,7 @@ But the \gls{wheatGuild} are quick to note that nobody with an official \gls{whe
 are temples, which purify food with heat, and water with fermentation.
 Not every tavern holds membership, but the bigger the town, the more keen the \gls{wheatGuild} will feel on establishing themselves in the area.
 
-\guild{Eldren}% Name
-  {\gls{sickness}}% Symbol
+\guild{eldren}% Name
   {Sickness}% Death
   {
     Approaching the doors, the sick may find a woman with her left arm and leg missing, and an older man with downs syndrome, ushering them into large, open halls, full of beds where people chat.
@@ -291,8 +289,7 @@ As a result, this temple may have more wealth than all the others, or may not.
 They don't keep open books, but rumours abound of hidden, underground vaults, which store rubies the size of a fist, elven necklaces with magical abilities, and orbs which summon a thousand dragons to serve the user.
 The least likely element in these stories is the \gls{healersGuild} building somewhere with a lot of stairs.
 
-\guild{\hphantom{Nulla}}% Name
-  {\gls{misgen}}% Symbol
+\guild{nulla}% Name
   {Misgenesis}% Death
   {
   \ifnum\value{temperature}=0\index{Nulla}\fi
@@ -341,8 +338,7 @@ But even without evidence, everyone needs safety from \hphantom{Nulla}, every \g
 The \gls{doula} tend to live away from others, in case of mishaps with their \gls{witchcraft}.
 They have no grand halls, just shoddy old houses, or occasionally a potion shop in a large city.
 
-\guild{\Glsfmttext{paik}}% Name
-  {\gls{justice}}% Symbol
+\guild{paik}% Name
   {Justice}% Death
   {
     As you enter the pit, the executioner leans in to whisper, ``just don't make a fuss, give them a good show, okay?''.
@@ -542,8 +538,7 @@ Jesters often enjoy parading about the streets in their ridiculous get-up.
 They may look like ridiculous little people, with the bells and red hat, but nobody would dare make fun of a jester.
 Anyone who laughs at him in the wrong way, or fails to laugh in the right way, may see him again from below one day, in the pit.
 
-\guild{\Glsfmttext{sable}}% Name
-  {\gls{frost}}% Symbol
+\guild{sable}% Name
   {Frost}% Death
   {
     He lies comfortably naked with white, glistening snow, pulled over his pale chest like a blanket.
@@ -576,8 +571,7 @@ Others rest their fingers, while townsfolk drop off a log of wood in return for 
 
 \widePic[t]{Irina/forest}
 
-\guild{\Glsfmttext{sylf}}% Name
-  {\gls{beasts}}% Symbol
+\guild{sylf}% Name
   {Beasts}% Death
   {%
     A painfully pregnant belly, and a thorax bloated with eggs; the mother of \gls{fenestra}'s predators overflows with life.
@@ -732,8 +726,7 @@ When building \pgls{broch}, one should start with a quarry, a stream, and a view
 dot the road, every five to ten miles.
 Without \pgls{broch} nearby to summon the beasts of the forest, these long roads crawl with predators; so without the \glspl{bothy}, nobody could move between settlements safely.
 
-\guild{\Glsfmttext{wrecan}}% Name
-  {\gls{hate}}% Symbol
+\guild{wrecan}% Name
   {Hate}% Death
   {When men fight, when hunger threatens and temper flairs, she comes for souls.
   Within her realm, everyone must pick a side, and every side gains new enemies.
@@ -787,8 +780,7 @@ The temple of hate allows people to practice inner calm, but never hands out pea
 
 \widePic[t]{Irina/curiosity}
 
-\guild{\Glsfmttext{yonder}}% Name
-  {\gls{curiosity}}% Symbol
+\guild{yonder}% Name
   {Curiosity}% Death
   {
     A feint bell rings in the distance.
