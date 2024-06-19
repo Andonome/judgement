@@ -9,11 +9,19 @@
 \index{Astronomy}
 \index{Time Parallel}
 
+\newcounter{ainumarPosition}
+\setcounter{ainumarPosition}{360}
+\newcounter{fenestraPosition}
+\setcounter{fenestraPosition}{90}
+
 \boxPair{
+  Season: \arabic{season}
+  \divide\value{ainumarPosition} by \value{season}
+  \multiply\value{ainumarPosition} by 3
   \begin{tikzpicture}
     \coordinate (S) at (0,0);
-    \coordinate (A) at (3,1);
-    \coordinate (F) at (2.3,0.3);
+    \coordinate (A) at (\arabic{ainumarPosition}:3);
+	\path (A) +(\arabic{fenestraPosition}:1) coordinate (F);
     \draw[\pageSideColor] (S) -- (A) -- (F);
     \draw[\pageSideColor] (S) circle (3.1);% Orbit
     \draw[\pageSideColor] (A) circle (1);% Suborbit
@@ -21,8 +29,8 @@
     \fill[\pageOppositeColor] (A.south)  circle (3pt);
     \fill[\pageOppositeColor] (F.east) circle (1pt);
     \coordinate [label={\scshape\huge \outline{Sun}}] (S.south) at (0,0);
-    \coordinate [label=\outline{\Large \glsentrytext{ainumar}}] (A) at (3,1);
-    \coordinate [label=\outline{\glsentrytext{fenestra}}] (F) at ++(2.3,0.3);
+    \coordinate [label=\outline{\Large \glsentrytext{ainumar}}] (AN) at (A)+(3,1);
+    \coordinate [label=\outline{\glsentrytext{fenestra}}] (FN) at (F)+(2.3,0.3);
   \end{tikzpicture}
 
 }{
