@@ -9,19 +9,24 @@
 \index{Astronomy}
 \index{Time Parallel}
 
+\setcounter{season}{7}
+%\setcounter{diceNo}{\day}
+\setcounter{diceNo}{22}
+
 \newcounter{ainumarPosition}
-\setcounter{ainumarPosition}{360}
+\setcounter{ainumarPosition}{30}
 \newcounter{fenestraPosition}
-\setcounter{fenestraPosition}{90}
+\setcounter{fenestraPosition}{12}
+\multiply\value{ainumarPosition} by \value{season}
+\multiply\value{fenestraPosition} by \value{diceNo}
+\addtocounter{diceNo}{0}
+\addtocounter{ainumarPosition}{0}
 
 \boxPair{
-  Season: \arabic{season}
-  \divide\value{ainumarPosition} by \value{season}
-  \multiply\value{ainumarPosition} by 3
   \begin{tikzpicture}
     \coordinate (S) at (0,0);
     \coordinate (A) at (\arabic{ainumarPosition}:3);
-	\path (A) +(\arabic{fenestraPosition}:1) coordinate (F);
+    \path (A) +(\arabic{fenestraPosition}:1) coordinate (F);
     \draw[\pageSideColor] (S) -- (A) -- (F);
     \draw[\pageSideColor] (S) circle (3.1);% Orbit
     \draw[\pageSideColor] (A) circle (1);% Suborbit
