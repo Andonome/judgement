@@ -4,7 +4,7 @@
 Welcome to \gls{fenestra}.
 Let's look around.
 
-\section{Your Map}
+\section{Rivers \& Roads}
 \label{yourMap}
 
 \begin{multicols}{2}
@@ -136,31 +136,34 @@ small rivers make their way to the sea.
   The river goes down through points 4, and 3, then goes towards point 2 and enters the sea.
 \end{enumerate}
 
-\paragraph{If your map has any points without water,}
-then the highest of them becomes a swamp.
+\paragraph{If the highest point has no water,}
+it becomes a swamp.
 
 \mapentry{Roads}
 \index{Roads}
 
-Human settlements has long roads, sometimes going beyond their neighbouring points, and straight through other points, cutting across the map.
-These long roads always stay between other points, always trying to avoid them.
-
-At each human settlement, do the following:
+At each human settlement, draw $1D6$ \glspl{broch}.
+They form a protective barrier around rivers, so that \glspl{village} can sit between them.
+They sit around 3 to 10 miles apart, and tend to form defensive triangles.
 
 \begin{enumerate}
   \item
-  Take the point's number, and count up until you reach another human settlement, then connect them by the most direct road possible, while avoiding other points.
+  If a settlement has 3 or more \glspl{broch}, place a town between them, on a river.
   \item
-  If a road crosses a small river, draw a small bridge.
-  If it crosses a larger river, drawn with two lines, draw a larger bridge.
-  If a canyon blocks a road, then the road must go around instead.
+  Draw a road from each \gls{broch} to the nearest river.
+  \item
+  Connect each human settlement to \textit{every} other settlement by a long road.
+  \begin{itemize}
+  	\item
+    If a road crosses a small river, draw a small bridge.
+    If it crosses a larger river, drawn with two lines, draw a larger bridge.
+    If a canyon blocks a road, then the road must go around instead.
+  \end{itemize}
   \item
   The human settlement with the highest number has a road leading out of the map, towards the closest border.
-  \item
-  Take any human settlements with only one road, and draw a road to the human settlement with the highest number (if they are not already connected).
   \label{roadOut}
   \item
-  If a human settlement has dwarvish neighbours, draw a road to the dwarvish neighbour with the highest number.
+  If a human settlement has dwarvish neighbours, extend an existing road to the dwarvish neighbour with the highest number.
   \item
   Label some roads with their length in miles.
   \begin{itemize}
@@ -191,13 +194,6 @@ should come from a distinctive feature.
 A good starting point is the most prolific feature of the map.
 For example, a map with a swamp and three elvish settlements ranges might receive the name `Faebog', or one with two dragons and a lot of lakes might receive `Lochscale'.
 
-\paragraph{One or two details}
-should be added to the map.
-Pick where the \glspl{pc} should start, and add put in some detail on that area, and perhaps another -- each type of inhabitant has a system to add details below.
-
-A map doesn't need every area filled with perfect detail from the start, so you can leave more distant regions until you think the \glspl{pc} might head there.
-And if the troupe lunge to the far end of the map, you can take a quick break, and roll up the details for point they arrive at.
-
 \end{multicols}
 
 \section{Zooming In}
@@ -206,11 +202,14 @@ And if the troupe lunge to the far end of the map, you can take a quick break, a
 \begin{multicols}{2}
 
 \noindent
-Each point on the map needs more detail once the \glspl{pc} arrive.
-Select your campaign's starting point (almost certainly a human settlement) and find out the details.
-You might fill in a neighbouring point, if you think the \glspl{pc} could journey there within the first session.
+Each point on the map needs more detail -- but only once the \glspl{pc} arrive.
+The \gls{campaign} begins on the lowest human settlement.%
+\footnote{If there are no human settlements on your map, you have found a rare place in \glsentrytext{fenestra}.
+The troupe are likely lost, and will need to return to civilization, or significantly adjust their career expectations!}
+Create a few details with the random lists \vpageref{humanPoint}.
 
 Whenever you find out a new location's details, note them down as a key to the main map, and check if you can add any features to the main map.
+Alternatively, you can start a smaller map of this area, to give yourself more space.
 
 \subsection{Civilization}
 
@@ -509,7 +508,7 @@ have a load of \glspl{village}, often surrounding a central town.
 
 \begin{enumerate}
   \item
-  Start with $1D6$ to determine the size of the settlement.
+  Place two \glspl{village} by each \gls{broch}.
   \begin{dlist}
     \item
     2 \glspl{village} and \pgls{broch} forming a triangle.
