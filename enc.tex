@@ -184,13 +184,49 @@ Encounters adjust, depending on the season, time of day, and how far the troupe 
 
 \end{exampletext}
 
-\subsubsection{The Civilization Rating}
+\subsubsection{Morale Checks}
+\label{morale}
+\index{Morale}
+
+Give the \gls{gm} an impartial way to rule when antagonists flee from combat.
+At the start of an encounter, roll $2D6$ and leave the result on the table.
+If the creature has more \glspl{hp} than the roll, it attacks; otherwise, watches the troupe.
+
+\sidebox{
+  \begin{boxtable}
+    \textbf{Roll} & \textbf{\glsfmtlongpl{hp}} \\
+    \hline
+    \twoDice{5} & 10 (\textit{ATTACK!}) \\
+    \twoDice{5} &  8 (\textit{ATTACK!}) \\
+    \twoDice{5} &  5 (\textit{wait\ldots}) \\
+    \twoDice{8} &  4 (\textit{RUN!}) \\
+    \twoDice{8} &  2 (\textit{RUN!}) \\
+  \end{boxtable}
+}
+
+Chitincrawlers often have 10~\glspl{hp}, so they often attack people the moment they spot them.
+Griffins have fewer \glspl{hp} than chitincrawlers, so they are more likely to stalk the party, or simply leave.
+And goblins might have only 5 or 6~\glspl{hp} -- they know how small they are, and prefer to spend time laying traps, or stealing equipment, rather than engaging directly.
+Every \gls{hp} a creature loses could prompt it to turn and flee, so sometimes only wounded creatures will flee, while others keep fighting.
+
+On a tie, the creature pauses to reassess the situation.
+A single chitincrawler eyeing up a party might display its claws, then observe their reactions; if the troupe do nothing to change the situation (such as casting a spell, or making a loud noise) then the creature rolls again.
+
+\Glspl{pc} do not take Morale checks -- the players decide when it's time to run away by the look of the situation.
+Usually a good time is when all the \glspl{fp} have run out.
+\index{Henchmen}%
+However, \gls{npc} travelling with the \glspl{pc} still take morale checks as usual.%
+\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}%
+
+
+\subsection{The Civilization Rating}
 \label{civilizationRating}
 \index{Civilization Rating}
-represents how the roads become safer near \pgls{broch}, and safer still closer to a town.
+
+Roads become safer near \pgls{broch}, and safer still closer to a town.
 At the outer \glspl{village}, the only safety comes from \pgls{broch} which blasts noise to summon beasts, so archers can sting them.
 \Glspl{broch} can summon a few beasts every week like this, and either kill them, or give them enough of a nasty shock that they leave the area.
-Of course, their children won't remember the lesson, so the solution will not work for long.
+Of course, their children won't remember the lesson, so the remedy must be readministered endlessly.
 
 By the time one sees a town's walls, everything is safe during the day.
 Along the road between settlements, a few beasts wander through at night, making these areas always a little dangerous.
@@ -202,7 +238,8 @@ After enough predators die or leave an area, it becomes more reliably safe, at l
 You can think of the Civilization Rating as a line which moves down, slowly altering the encounter tables.
 Past the end of the last road, the forest replaces the all traders with beasts.
 
-\subsection{Traders \& Nomads}
+\subsubsection{Travelling Traders}
+\label{traders}
 
 While moving, everyone meets other travellers head-on, moving in the opposite direction from them.
 They briefly swap news of the road behind, occasionally make a trade, then move on.
@@ -212,7 +249,7 @@ They briefly swap news of the road behind, occasionally make a trade, then move 
 Each of your encounter dice also represent an interesting item the traders have.
 For example, rolling \dicef{8}\dicef{3} would indicate that the \glspl{pc} can buy some rope and pitch.
 
-\subsubsection{Noises in the Forest}
+\subsection{Noises in the Forest}
 
 In the dark forests, where towering trees dampen the Sunlight, any out-of-place noise, light, or smell, can excite and draw in the predators which live there.
 Whenever the troupe draw attention to themselves, roll $1D6$.
@@ -318,57 +355,6 @@ With enough foot-fall, the penalty reduces to nothing, as others stamp the snow 
 \end{wideTable}
 
 
-\section{Morale}
-\label{morale}
-\index{Morale}
-\begin{multicols}{2}
-
-\noindent
-When combat seems likely, roll $2D6$ and leave the result on the table.
-If the creature has more \glspl{hp} than the roll, it attacks; otherwise, it flees.
-
-\sidebox{
-  \begin{boxtable}
-    \textbf{Roll} & \textbf{\glsfmtlongpl{hp}} \\
-    \hline
-    \twoDice{5} & 10 (\textit{ATTACK!}) \\
-    \twoDice{5} &  8 (\textit{ATTACK!}) \\
-    \twoDice{5} &  5 (\textit{wait\ldots}) \\
-    \twoDice{8} &  4 (\textit{RUN!}) \\
-    \twoDice{8} &  2 (\textit{RUN!}) \\
-  \end{boxtable}
-}
-
-Chitincrawlers often have 10~\glspl{hp}, so they often attack people the moment they spot them.
-Griffins have fewer \glspl{hp} than chitincrawlers, so they attack less often.
-And goblins might have only 5 or 6~\glspl{hp} -- they know how small they are, and prefer to spend time laying traps, or stealing equipment, rather than engaging directly.
-Every \gls{hp} a creature loses could prompt it to turn and flee, so sometimes only wounded creatures will flee, while others keep fighting.
-
-On a tie, the creature pauses to reassess the situation.
-A single chitincrawler eyeing up a party might display its claws, then observe their reactions; if the troupe do nothing to change the situation (such as casting a spell, or making a loud noise) then the creature rolls again.
-
-\subsubsection{Decisions before Dice}
-
-The dice only exist to provide a neutral result, not a sensible result.
-Creatures always fight when backed into a corner, or starving.
-Creatures never fight when they will probably die.%
-\footnote{Exceptions include particularly dim creatures, who don't know what's good for them.
-See chitincrawlers, \vpageref{chitin:tactics}.}
-
-Use your best judgement about whether or not something, or someone, attacks the troupe, before rolling.
-A trio of griffins will not attack a loud group of one hundred humanoids, all moving together, but will definitely swoop for a small child who has wandered away from the group.
-
-\Glspl{npc} work exactly the same as \gls{fenestra}'s predators, but display their reactions differently.
-\Glspl{npc} who fail a Morale check may act friendly and harmless, if they think the \glspl{pc} will not attack them.
-
-\Glspl{pc} do not take Morale checks -- the players decide when it's time to run away by the look of the situation.
-Usually a good time is when all the \glspl{fp} have run out.
-\index{Henchmen}%
-However, \gls{npc} travelling with the \glspl{pc} still take morale checks as usual.%
-\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}%
-
-\end{multicols}
-
 \section{Emergent Situations}
 \label{roadEncounters}
 
@@ -438,41 +424,6 @@ can be re-rolled each time the troupe approach.
 Encounter rolls continue, as usual; \glspl{village} regularly have to deal with predator attacks.
 
 \encVillageEvent
-
-\subsection{Towns}
-\index{Towns!Rulers}
-
-Officially, the \gls{guard} should not enter towns.
-No taverns, nor markets.
-But they always find an excuse, or unguarded entrance, when they need something.
-
-\paragraph{The Town \gls{warden}}
-\label{encTownWarden}
-can have a major impact on any location.
-
-\begin{dlist}
-  \item
-  Multiple \underline{warring factions} -- roll twice more, with +1 to the second roll.
-  \item
-  A \underline{Warlord}, recently out of the \gls{guard}, amassing an army to expand their power.
-  Shipments of weapons come from the road to other lands
-  (see \vref{roadOut}).
-  \item
-  A \underline{greedy \gls{warden}}, who demands 10\% tithes from all who enter.
-  Any neighbouring fiends annoy and fascinate them equally.
-  \item
-  A \gls{witch} with no experience or business ruling has managed to muscle their way into the \gls{templeOfJustice}.
-  They once killed a fiend, and feel this has prepared them to manage \pgls{court} and arranged marriages.
-
-  The \gls{witch} has killed the same type of fiend as the highest fiend on the map (if none, it was a dragon).
-  \item
-  A \underline{Spoilt noble} who has never seen a farmer in their life.
-  \item
-  A \underline{servant of the next fiend} on the map (counted by point number).
-  All who oppose this \gls{warden} disappear on the road.
-  \item
-  A \underline{Crime-Lord}, with a history of theft, now risen to fortune\ldots but not nobility.
-\end{dlist}
 
 \end{multicols}
 
