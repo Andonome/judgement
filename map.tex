@@ -196,20 +196,19 @@ small rivers make their way to the sea.
 \paragraph{If the highest point has no water,}
 it becomes a swamp.
 
-\mapentry{Roads}
+\mapentry{\Glsfmtplural{lonelyRoad}}
 \index{Roads}
+\label{drawRoads}
 
-At each human settlement, draw $1D6$ \glspl{broch}.
-They form a protective barrier around rivers, so that \glspl{village} can sit between them.
-They sit around 3 to 10 miles apart, and tend to form defensive triangles.
+You can add human \glspl{village} and their inner roads later, in \autoref{mapCharacter}.
+For now, the map only needs the long roads which connect two points, from \pgls{broch} to \pgls{broch}.
 
 \begin{enumerate}
   \item
-  If a settlement has 3 or more \glspl{broch}, place a town between them, on a river.
+  At each human settlement, draw $1D6$ \glspl{broch}.
+  They sit around 2 to 4 miles apart, guarding the \glspl{village} between them.
   \item
-  Draw a road from each \gls{broch} to the nearest river.
-  \item
-  Connect each human settlement to \textit{every} other settlement by a long road.
+  Connect each human settlement to every other settlement with \pgls{lonelyRoad} connecting two distant \glspl{broch}.
   \begin{itemize}
     \item
     If a road crosses a small river, draw a small bridge.
@@ -232,7 +231,7 @@ They sit around 3 to 10 miles apart, and tend to form defensive triangles.
     The long distance between points 1 and 2 is about 50 miles.
   \end{itemize}
   \item
-  If any road stretches for 50 miles or more, place a Lonely Tavern half-way along that road (details \vpageref{lonelyTaverns}).
+  If any road stretches for 50 miles or more, place \gls{lonelyTavern} half-way along that road (details \vpageref{lonelyTaverns}).
   \item
   The road between points takes a long time to walk.
   Put \pgls{bothy} on the road for every 20 miles of distance.
@@ -563,121 +562,29 @@ The first die indicates the political structure this warren has adopted.
 \subsubsection[Human Settlements]{\Hu\ Human Settlements}
 \label{humanPoint}
 \index{Towns}
-have a load of \glspl{village}, often surrounding a central town.
+begin with \pgls{broch}, which protects two \glspl{village}.
+If the farmers manage to survive long enough, the \gls{guard} will build another \gls{broch} within a few miles, which give a protective area for a couple more \glspl{village} between the two guardian towers.
+A third \gls{broch} completes a triangle, which means the settlement has a safe space in the centre for a town.
+
+You have already placed $1D6$ \glspl{broch} here, in step \vref{drawRoads}.
 
 \begin{enumerate}
   \item
-  Place two \glspl{village} by each \gls{broch}.
-  \begin{dlist}
+  For each \gls{broch}, place 2~\glspl{village}.
+  \begin{itemize}
     \item
-    2 \glspl{village} and \pgls{broch} forming a triangle.
-    The \gls{broch} stands away from the road, protecting the \glspl{village} from whatever might emerge from the \gls{edge}.
-
-    (civilization rating: 2)
+    Most \glspl{village} stay between \glspl{broch}, and all of them must be within 5 miles.
     \item
-    4 \glspl{village} with 2 \glspl{broch}.
-    (civilization rating: 4)
+    All \glspl{village} must be within 5~miles of \pgls{broch}.
     \item
-    6 \glspl{village} form a circle around a small town.
-    3~\glspl{broch} sit opposite the road, to protect the \glspl{village} from the \gls{edge}.
-
-    One of the \glspl{village} began as \pgls{broch} and still has that tall tower.
-    \Pgls{warden} stays there, ruling over this tiny kingdom.
-
-    (civilization rating: 6)
-    \item
-    8 \glspl{village} surround a town, with room to safely grow crops and raise cattle outside its walls.
-    4~\glspl{broch} help to harden the outer barrier of settlements which protects the town.
-
-    The local \gls{warden} has plenty of profits coming in, and can afford his own \glspl{sunGuard}, to ensure everyone pays their taxes, so that the \gls{warden} can pay for the \gls{guard}.
-   
-   (civilization rating: 8)
-    \item
-    10 \glspl{village} and 5~\glspl{broch} keep the town safe.
-    A healthy flow of traders ensures the \glspl{village} by the roads stay relatively clear -- anything which wants to attack will try to stalk those traders before attacking the outer \glspl{village}.
-
-    A couple of the outer \glspl{village} have their own \glspl{warden}.
-
-    (civilization rating: 10)
-    \item
-    12 \glspl{village} and 6~\glspl{broch} surround a massive town.
-    Inner hamlets allow farmers to raise beasts in peace.
-    The network of roads has plenty of hand-crafted signs, directing travellers to wherever they want to go.
-
-    The town supports a minor army of \glspl{sunGuard}, and the area exports plenty of food.
-    Each \gls{village} has \pgls{warden} associated with it, though the \glspl{warden} stay in the inner hamlets.
-
-    (civilization rating: 12)
-  \end{dlist}
+    \Glspl{village} prefer to sit beside a river, but avoid the first few miles downriver of another \gls{village} (otherwise they risk drinking waste-water).
+  \end{itemize}
   \item
-  Each \gls{village} and \gls{broch} has a small radius of flattened land, without trees, stretching around a hundred \glspl{step} from the wall.
+  If the settlement has more than 2~\glspl{broch}, place a town in the centre.
+  You can fill in the town's details when needed (\vpageref{mapTown}).
   \item
-  Once you have some \glspl{village} and \glspl{broch} down, draw roads between them all.
-  \item
-  If the \glspl{pc} approach \pgls{village}, check its features on \vpageref{villageFeatures}.
+  Connect each town \gls{broch} and \gls{village} by plotting roads between.
 \end{enumerate}
-
-\paragraph{To discover a settlement's most famous feature,}
-take the number of \glspl{village} and add $1D6$.
-For example, if a settlement has 4~\glspl{village}, roll $1D6+4$.
-
-\begin{enumerate}
-\setcounter{enumi}{2}
-  \item
-  Ale.
-  The \gls{templeOfPoison} has tight control over the area (\autopageref{god:Poison})
-  \item
-  White rock (actually limestone)
-  \item
-  Statues of heroes litter the roads around.
-  \item
-  A local \gls{templeOfPoison} think the \gls{warden} has become too big for her boots and needs to die.
-  They begin by ingratiating themselves with the \gls{warden}'s children, then start planting clues about one of the \gls{warden}'s other enemies making a grab for power.
-  \item
-  A grand \gls{court} where the town \gls{warden} finds beasts guilty, and has them fight for entertainment.
-  \item
-  Bath houses.
-  \item
-  `Demi-human suburbs', where all manner of other races live.
-  \item
-  A fight about marriages and road taxes has caused an argument between the town \gls{warden} and the next point with a human settlement (if there are no human settlements with a higher number, the next is on the next map).
-  The \gls{sunGuard} will march to war within three months\ldots
-  \item
-  The grandest \gls{templeOfCuriosity} known, with books (and soaps) of every size and type.
-  \item
-  The \gls{warden} has an alliance with the next fiend on the map.
-  \item
-  The \gls{warden} is \pgls{witch}, and does not feel shy about using their skills.
-\end{enumerate}
-
-\paragraph{They call it\ldots{}}
-
-Select a name for the settlement by combining what everyone knows it for, with the type of land.
-Write the settlement's name next to it, and underline it.
-
-Any towns might receive the same name, or something related.
-
-\begin{itemize}
-  \item
-  People know a town in the hills for its library. That's why they call
-  it `Page Valley'.
-  \item
-  A town by the sea, famed for Witchery.
-  They call it `Hexwave'.
-  \item
-  `Bards' + `Islands' = `Lyrisles'
-  \item
-  \ifodd\value{r4}
-    `Metallurgists' + `forest' = `Iron Basin' (perhaps a dried-up lake sits nearby)
-  \else
-    `Wood-carvers' + `forest' = `Taming Woods'%
-  \fi
-  \footnote{If you think these names sound stupid, you should look up the meaning of your hometown's name.}
-\end{itemize}
-
-Try some word-association with the town's theme or location.
-
-There are more random tables for towns \vpageref{encTownWarden}, for when the troupe try to enter.
 
 \subsection{Fiends}
 \label{mapFiends}
@@ -895,10 +802,55 @@ Roll $3D6$, and apply every result.
 
 \end{multicols}
 
-\section{Strange Places}
+\section{Stone Walls}
 \label{mapStrangePlaces}
 
 \begin{multicols}{2}
+
+\subsubsection{Towns \& Cities}
+\label{mapTown}
+depend on the surrounding hamlets to feed them, and those hamlets depend on the surrounding \glspl{village} and \glspl{broch}.
+
+To explore the town, roll $1D6$ plus the number of \glspl{village} around it three times, and accept each result once.
+For example, if a human settlement with 2~\glspl{broch} will have 4~\glspl{village}, so a roll of \dicef{4} \dicef{4} \dicef{5} would mean accepting results \textbf{8} and \textbf{9}.
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+  \item
+  Ale.
+  The \gls{templeOfPoison} has tight control over the area (\autopageref{god:Poison})
+  \item
+  White rock (actually limestone)
+  \item
+  Statues of heroes litter the roads around.
+  \item
+  A local \gls{templeOfPoison} think the \gls{warden} has become too big for her boots and needs to die.
+  They begin by ingratiating themselves with the \gls{warden}'s children, then start planting clues about one of the \gls{warden}'s other enemies making a grab for power.
+  \item
+  A grand \gls{court} where the town \gls{warden} finds beasts guilty, and has them fight for entertainment.
+  \item
+  Bath houses.
+  \item
+  `Demi-human suburbs', where various non-humans live.
+  \item
+  A fight about marriages and road taxes has caused an argument between the town \gls{warden} and the next point with a human settlement (if there are no human settlements with a higher number, the next is on the next map).
+  The \gls{sunGuard} will march to war within three months\ldots
+  \item
+  The grandest \gls{templeOfCuriosity} known, with books (and soaps) of every size and type.
+  \item
+  The \gls{warden} has a secret alliance with the next fiend on the map.
+  \item
+  The \gls{warden} is \pgls{witch}, and does not feel shy about using their skills.
+\end{enumerate}
+
+\paragraph{Name the settlement}
+something which fits the entire area.
+If it has half a dozen \glspl{village} with mills and a swamp, you might call it `Millrot'.
+If the local town's ruler practices open \gls{witchcraft}, it might be `Hexward'.
+Settlements often receive the same name as their town, if they have one.
+
+Try some word-association with the town's theme or location.
+Write the settlement's name next to it, and underline it.
 
 \subsection{Lonely Taverns}
 \label{lonelyTaverns}
