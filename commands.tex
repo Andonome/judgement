@@ -471,6 +471,44 @@
   \fi%
 }
 
+\newcommand\encSwamp{
+  \ifcase\value{enc}\or%
+    Ghast%
+  \or%
+    $1D6$ Submerged Ghouls
+  \or%
+    \nameref{bloodwood} (\autopageref{bloodwood})%
+  \or%
+    Dryad
+  \or%
+    $1D6\times 2$ Elves gathering information for their quest%
+  \or%
+    \relax
+  \or%
+    \relax
+  \or%
+    \nameref{dreameater_moss} (\autopageref{dreameater_moss})%
+  \or%
+    \nameref{dirgeFruit} (\autopageref{dirgeFruit})%
+  \or%
+    $1D6$ Griffins (beaks are filthy, attacks inflict \nameref{Guardbane}, \autopageref{Guardbane})%
+  \or%
+    Woodspy
+  \or%
+    Mouthdigger
+  \or%
+    \relax
+  \or%
+    \Gls{basilisk}
+  \or%
+    Swarming stirges
+  \or%
+    \relax
+  \else%
+    Error! \LaTeX\ has broken, the beasts are loose!
+  \fi%
+}
+
 
 %%%%% Full Encounters %%%%%
 
