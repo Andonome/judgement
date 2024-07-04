@@ -75,14 +75,12 @@ You can use this gentle hum of chaos to generate a flurry of fast-paced problems
 
 \mapentry{The Pentacle}
 provides the map's layout.
-You need a pencil, blade, and dice.
-Remove the example map on the left to start.
+Take a pencil, blade, and dice, then cut out the example map on the left.
 
-Roll $1D6$ for each of the 10 points, and add the point's number to the dice roll to find the entry for that point on your map.
-
-This should feel a little sloppy.
+Go along each point, from 1 to 10.
+At each point, roll $1D6$ and add that point's number to find out what's on that point on the map.
 You might just roll $10D6$ all at once, and then pick them in left-to-right order.
-The map can hold all the information you will roll, as long as you have very fine handwriting -- otherwise, a space at the bottom of the page, or a new page to keep track of each point might work better.
+This process should feel a little sloppy.
 
 \begin{multicols}{2}
 
@@ -111,7 +109,7 @@ The map can hold all the information you will roll, as long as you have very fin
   (B\Hu)~Bandits
   (\autopageref{banditsPoint})
   \item
-  (\Gn)~Gnomes
+  (\Gn)~Gnomes on hills
   (\autopageref{gnomePoint})
   \item
   (\Nl)~Gnolls
@@ -143,29 +141,34 @@ The map can hold all the information you will roll, as long as you have very fin
 Each dot has four neighbours.
 The highest neighbour is the neighbour with the highest number, and the lowest neighbour, is the neighbour with the lowest number.
 
-\mapentry{Rivers}
-come from mountains, then flow to the sea.
-If your map has dwarves or a dragon, then it has mountains.
-Use the steps below to make rivers.
+\mapentry{Mountains \& Coasts}
+go onto the map first.
+Mountains usually form in a line.
 
-If the map has no dragons nor dwarves, then it has no mountains.
-Use the steps \vpageref{mapSea}.
+\begin{itemize}
+  \item
+  If only one point has a mountain, extend it with a long line of mountains, without touching any other point.
+  \item
+  If you have more points with mountains, connect them with a complete mountain range, going through them.
+  \item
+  If the mountain range cuts through other points, then those points sit in a valley.
+  Give them some hills.
+\end{itemize}
+
+\mapentry{Rivers}
+\label{mapRivers}
+come from mountains, then flow to the sea.
 
 \begin{enumerate}
   \item
-  Draw a mountain range around each point which has dwarves or a dragon.
-  \item
-  If two mountains share a neighbour, then that point must be a valley.
-  Draw a few hills along the valley.
-  \item
-  At each mountain, draw a river to each of the four neighbours, unless that neighbour has a mountain.
+  At each mountain, draw a river to every neighbour without a mountain.
 
   Rivers always begin from separate mountain-locations.
   They might later join together, but rivers never split apart.
 
   Draw your rivers with wavy, lazy, lines.
   \item
-  Each river flows down hill, towards the lowest neighbour.
+  Each river flows down hill, towards the highest neighbour.
   They avoid mountains and avoid doubling-back to a point they've already been at.
   \item
   Rivers begin as a single line, but when two rivers join, they flow faster and wider.
@@ -179,18 +182,17 @@ Use the steps \vpageref{mapSea}.
   If four or more rivers join together, they form a lake, which exits towards the lowest neighbour as another thick line (and counts as two rivers).
 \end{enumerate}
 
-\paragraph{Without mountains,}
-\label{mapSea}
-small rivers make their way to the sea.
+\mapentry{Hills \& Swamps}
+provide water to any point without a river, or a coast.
+If you don't have any points without a river or coast, just skip this step.
 
 \begin{enumerate}
   \item
-  Points 1 and 2 become islands in a sea.
+  The highest point without water becomes a bog.
   \item
-  The coast covers points 5, 6, and 7, then wanders off the map.
+  All other points without water receive some small hills.
   \item
-  Some well-springs open up on point 10, then join together to form a river.
-  The river goes down through points 4, and 3, then goes towards point 2 and enters the sea.
+  The hills provide small streams, which journey to the highest point without water, as per step \ref{mapRivers}, above.
 \end{enumerate}
 
 \paragraph{If the highest point has no water,}
