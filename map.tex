@@ -143,16 +143,16 @@ The highest neighbour is the neighbour with the highest number, and the lowest n
 
 \mapentry{Mountains \& Coasts}
 go onto the map first.
-Mountains usually form in a line.
+They always form a line where the earth has cracked.
 
 \begin{itemize}
   \item
-  If only one point has a mountain, extend it with a long line of mountains, without touching any other point.
+  If only one point has a mountain, extend it with a long line of mountains, staying outside of the other points.
   \item
-  If you have more points with mountains, connect them with a complete mountain range, going through them.
+  If you have more than one point with a mountain, connect them all with a mountain-range.
+  This range should avoid going through all other points, but might cut across the centre of the map.
   \item
-  If the mountain range cuts through other points, then those points sit in a valley.
-  Give them some hills.
+  Place a valley of hills in the centre of the mountain range.
 \end{itemize}
 
 \mapentry{Rivers}
@@ -161,7 +161,7 @@ come from mountains, then flow to the sea.
 
 \begin{enumerate}
   \item
-  At each mountain, draw a river to every neighbour without a mountain.
+  At each point with a mountain, draw a river to every neighbour without a mountain.
 
   Rivers always begin from separate mountain-locations.
   They might later join together, but rivers never split apart.
@@ -180,9 +180,11 @@ come from mountains, then flow to the sea.
   Draw the canyon with a parallel~line.
   \item
   If four or more rivers join together, they form a lake, which exits towards the lowest neighbour as another thick line (and counts as two rivers).
+  \item
+  Rivers flow off the map once they have nowhere else to go.
 \end{enumerate}
 
-\mapentry{Hills \& Swamps}
+\mapentry{Hills \& Bogs}
 provide water to any point without a river, or a coast.
 If you don't have any points without a river or coast, just skip this step.
 
@@ -195,9 +197,6 @@ If you don't have any points without a river or coast, just skip this step.
   The hills provide small streams, which journey to the highest point without water, as per step \ref{mapRivers}, above.
 \end{enumerate}
 
-\paragraph{If the highest point has no water,}
-it becomes a swamp.
-
 \mapentry{\Glsfmtplural{lonelyRoad}}
 \index{Roads}
 \label{drawRoads}
@@ -206,10 +205,12 @@ Humans always litter the land with roads, and roads out always begin with \glspl
 
 \begin{enumerate}
   \item
+  At each point on the coast, add $1D6-1$ islands.
+  \item
   At each human settlement, draw $1D6$ \glspl{broch}.
   They sit around 2 to 4 miles apart, guarding the \glspl{village} between them.
   \item
-  Connect each human settlement to every other settlement with \pgls{lonelyRoad}.
+  Connect each human settlement to every other settlement with \pgls{lonelyRoad} or (if available) sea route.
   \begin{itemize}
     \item
     If a road crosses a small river, draw a small bridge.
@@ -220,7 +221,7 @@ Humans always litter the land with roads, and roads out always begin with \glspl
   The human settlement with the highest number has a road leading out of the map, towards the closest border.
   \label{roadOut}
   \item
-  If a human settlement has dwarvish neighbours, extend an existing road to the dwarvish neighbour with the highest number.
+  If a dwarvish settlement has human neighbours, it connects with another road.
   \item
   Label some roads with their length in miles.
   \begin{itemize}
@@ -232,11 +233,10 @@ Humans always litter the land with roads, and roads out always begin with \glspl
     The long distance between points 1 and 2 is about 25 miles.
   \end{itemize}
   \item
-  Long roads have \glspl{bothy} placed along them for travellers to rest.
-  For every road over 10 miles long, place \pgls{bothy} $1D6+6$ miles from the lowest point.
-  Put \pgls{bothy} on the road for every 10 miles of distance.
-  \item
   If any road stretches for 40 miles or more, place \gls{lonelyTavern} half-way along that road (details \vpageref{lonelyTaverns}).
+  \item
+  Long roads have \glspl{bothy} placed along them for travellers to rest.
+  For every road over 10 miles long, place \pgls{bothy} every $1D6+6$ miles from the lowest point.
 \end{enumerate}
 
 \bigLine
