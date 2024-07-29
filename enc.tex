@@ -116,7 +116,7 @@ In this case, you might roll two dice at each \gls{broch} to see what's missing,
   \hline
   \textbf{Roll} & \textbf{Inner Hamlets} \\
   \hline
-  \Repeat{2}{
+  \Repeat{3}{
     \addtocounter{diceNo}{-1}
     \addtocounter{enc}{-1}
     \arabic{diceNo} & \bigBeastList \\
@@ -126,7 +126,7 @@ In this case, you might roll two dice at each \gls{broch} to see what's missing,
   \addtocounter{enc}{-1}
   \arabic{diceNo} & Bandits! \\
   \hline
-  \Repeat{8}{
+  \Repeat{7}{
     \addtocounter{diceNo}{-1}
     \addtocounter{enc}{-1}
     \arabic{diceNo} & \arabic{diceNo} wagons \\
@@ -275,31 +275,68 @@ Usually a good time is when all the \glspl{fp} have run out.
 However, \gls{npc} travelling with the \glspl{pc} still take morale checks as usual.%
 \footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}%
 
-
 \subsection{The Civilization Rating}
 \label{civilizationRating}
 \index{Civilization Rating}
 
-Roads become safer near \pgls{broch}, and safer still closer to a town.
-At the outer \glspl{village}, the only safety comes from \pgls{broch} which blasts noise to summon beasts, so archers can sting them.
-\Glspl{broch} can summon a few beasts every week like this, and either kill them, or give them enough of a nasty shock that they leave the area.
-Of course, their children won't remember the lesson, so the remedy must be readministered endlessly.
+\Glspl{monster} don't generally attack towns.
+It's not that they understand the risks, they just find something else to attack before getting their.
+This ring of protection -- tasty and dangerous -- keeps people in the inner circle relatively safe.
 
-By the time one sees a town's walls, everything is safe during the day.
-Along the road between settlements, a few beasts wander through at night, making these areas always a little dangerous.
+When travelling closer to a town, you keep rolling $2D6$ for encounters, but replace the lower results with traders.
 
-Almost nothing gets through the protective layers of \glspl{broch} and outer \glspl{village} which surround towns.
-Wild predators could move between the \glspl{village} if they wanted, but they don't have the brains -- most just move towards the first noises they hear, and then receive a nasty sting from archers.
-After enough predators die or leave an area, it becomes more reliably safe, at least during the daylight.
+\paragraph{Inner hamlets}
+enjoy a much more quiet life than anywhere else in \gls{fenestra}.
 
-You can think of the Civilization Rating as a line which moves down, slowly altering the encounter tables.
-Past the end of the last road, the forest replaces the all traders with beasts.
+\begin{description}
+  \item[Rolling over 9]
+  means the usual encounter occurs, for whatever kind of land existed before the humans.
+  Usually, this means forests.
+
+  People who live in little unwalled farmhouses never see bears or auroch herds.
+  Only rare \glspl{basilisk} and \glspl{crawler} have the speed and stupidity to strike this far into a human settlement.
+  \item[Rolling 9]
+  means an encounter with 9 bandits.
+
+  Bandits only enter the inner circles when they have enough numbers to pose a serious threat to any \glspl{sunGuard} or angry farmers in the vicinity.
+  \item[Rolling below 9]
+  means that many wagons.
+
+  So on the roll of `7', the troupe have encountered seven wagons coming towards them on the road.
+\end{description}
+
+\paragraph{Along the \gls{lonelyRoad}}
+traders still travel between settlements routinely, but cannot travel with too many together -- the \glspl{bothy} will only fit so many bodies in at a time.
+
+\begin{description}
+  \item[Rolling over 6] means the standard encounters emerge.
+  \item[Hitting 6] means 6 bandits are waiting to attack, though they may not decide to attack the \glspl{pc} if the troupe looks well-armed.
+  \item[Rolling under 6]
+  means that number of trader wagons come towards the \glspl{pc}
+  on the road.
+\end{description}
+
+\paragraph{Towards dead-end \glspl{village}}
+a trader's wagon come along the road once a week, and never in great numbers.
+One or two outer \glspl{village} just don't have much goods to trade.
+Luckily, also puts a hard cap on the potential for bandits.
+
+\begin{description}
+  \item[Rolling 3]
+  means three bandits are watching the road, and may have been watching for some days.
+  \item[Rolling 2]
+  means two wagons saunter lazily down the road, likely going to \glspl{village} where they have many friends.
+\end{description}
+
+These dangling, dead-end roads work much like the forest, except for the fast and easy travel on the roads.
+
+\subsubsection{Slide the Scales}
+of the civilization up or down, depending on what looks right.
+The rating can be anywhere from `0' (meaning `past the \gls{edge}') to `13' (which usually means `in the safety of a town').
 
 \subsubsection{Travelling Traders}
 \label{traders}
-
-While moving, everyone meets other travellers head-on, moving in the opposite direction from them.
-They briefly swap news of the road behind, occasionally make a trade, then move on.
+carry all sorts of items the \glspl{pc} might want, and they will say this loudly, shouting out what they have as soon as they see anyone ahead.
 
 \encTraders
 
