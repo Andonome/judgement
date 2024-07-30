@@ -21,6 +21,13 @@ The tables should feel like a box of weird stuff you want to show the players, n
 
 \begin{multicols}{2}
 
+\begin{itemize}
+  \item
+  Roll $3D6$ to find a mission with a complication.
+  \item
+  Roll $1D6$ to find the state of the \gls{broch}.
+\end{itemize}
+
 \noindent
 \Gls{guard} recruits can expect harsh duties.
 The character with the highest rank will be asked to lead the party (ties are broken by \roll{Charisma}{Deceit}), and give a bonus to the first die-roll.
@@ -68,7 +75,106 @@ In this case, you might roll two dice at each \gls{broch} to see what's missing,
 
 \begin{multicols}{2}
 
-\subsection{Daily Encounters}
+\begin{itemize}
+  \item
+  Roll $2D6$ to find the weather, \vpageref{encWeather} (-1 at night or evening).
+  \item
+  Roll $1D6$ to see how many \glspl{interval} until the next creature encounter.
+  \item
+  Roll $2D6$ for the creature encounter, \vpageref{encFullMonsters} (-1 at night or evening).
+  \item
+  Whenever someone makes a noise, roll $1D6$: on a 1, another creature encounter occurs.
+\end{itemize}
+
+\subsection{Weather}
+\label{weather}
+Cosmological and meteorological events can boost people's abilities to cast spells -- even those who had none before.
+These bonuses stack with \glspl{boon}, so someone with the right know-how can (and do) stand under the unnatural darkness of an eclipse, holding the ground-up remains of a stirge queen, with auroch hooves boiled to melting point, at the top of a mountain,%
+\footnote{High level spells often have such a long casting range that casters must climb high to see their target.}
+screeching about opening a portal from a distant \gls{village} to an underground realm.
+
+\subsubsection{Cold Snaps}
+\index{Cold Snap \glsentrytext{R}}
+\index[mana]{Fate!Cold Snaps \glsentrytext{R}}
+drain the life from characters and wildlife in a blink.
+Until the weather warms up again, all actions outdoors inflict an additional \gls{ep} or more, depending on clothing.
+Someone journeying outdoors effectively naked will receive 3 \glspl{ep}, per \gls{interval}.
+
+The mass disturbances in the air, mixed with the darkness, creates a kind of magic in the air, which grants +1 to everyone's Fate Sphere, including those who cannot normally cast spells.
+
+\subsubsection{Earthquakes}
+\index{Earthquakes \glsentrytext{R}}
+\index{Quakes}
+\index[mana]{Earth!Quakes \glsentrytext{R}}
+can topple \gls{village} walls, houses collapse inward, and gnomish warrens have their planning tested from the foundations to the rooves.
+Despite the shaking, most structures remain standing.
+Architects in \gls{fenestra} design castles for quakes, and dwarvish settlements, down at the edge of the \gls{deep}, often feel nothing, as underground caverns don't shake during quakes as badly as the surface does.
+
+When quakes alter rock, everyone with the tiniest understanding of magic finds themselves able to speak to stone, at least a little, as rocks and ice start to wake up.
+This time grants a +1 bonus to everyone's Earth Skill, for the short duration of the quake.
+
+\subsubsection{Eclipses}
+\index{Eclipses \glsentrytext{R}}
+\index[mana]{Air!Eclipses \glsentrytext{R}}
+plunge \gls{fenestra} into sudden daytime darkness, as the \gls{ainumar} blocks the Sun.
+For this entire \gls{interval}, the winds becomes more pliable, and anyone with a voice to speak gains +1 to their Air Skill.
+
+The average person makes little use of this time -- they have more pressing concerns given the sudden lack of Sunlight.
+But casters often plan grand rituals to coincide with an eclipse, as the extra powers allow them to perform wide-ranging, potent spells.
+
+\subsubsection{Floods}
+\index{Floods \glsentrytext{R}}
+\index[mana]{Water!Floods \glsentrytext{R}}
+damage infrastructure worse than earthquakes.
+They rot food, and degrade the foundations of houses in subtle ways, which only become apparent years later.
+High fortifications remain untouched, but underground dwelling runs the risk of water pouring in from above, and driving everything inside up into the Sunlight.
+
+The predators of \gls{fenestra} seem to have an instinct for floods, and will camp outside any homely holes in their territories.
+
+Travel during a flood poses serious problems -- any affected area will half the travellers' rate of movement.
+
+While floods occur, everyone gains a +1 Bonus to their Water Skill.
+
+\subsubsection{Heatwaves}
+\index{Heatwaves}
+\index[mana]{Fire!Heatwaves \glsentrytext{R}}
+pose problems for anyone who wants to wear armour.
+All travel in direct Sunlight will have the travellers endure an additional +1 \glspl{ep} when wearing loose-fitting clothing, or +2 when wearing inappropriate clothes.
+Armour of any kind does not count as `appropriate', so a heatwave can force any warrior to remove their armour.
+
+During a heatwave, everyone gains a +1 bonus to their Fire Skill.
+
+\subsubsection{Hurricans}
+\index{Hurricans}
+\index{Marching!Hurricans}
+Make travel challenging, and reduce the standard miles travelled by 1.
+All large items -- rooves, carts, et c. -- have a 1 in 6 chance of getting pulled off and possibly thrown by the wind.
+
+\subsubsection{Snow}
+\index{Snow}
+\index{Marching!Snow}
+slows travel.
+Travelling over snow-covered lands reduces the standard travel to half.
+In the deep forests, this makes little difference, but an open road which once granted five miles of easy travel per \gls{interval} would only allow three miles once covered in frost.
+
+With enough foot-fall, the penalty reduces to nothing, as others stamp the snow down, reducing it to frosty mud.
+
+\boxPair[t]{
+  \label{encWeather}
+  \begin{encChart}{Weather}
+    \Repeat{16}{
+      \encLine \bigWeatherList \\
+    }
+  \end{encChart}
+}{
+  \begin{encChart}{Forest Encounter}
+    \Repeat{16}{
+      \encLine \bigBeastList \\
+    }
+  \end{encChart}
+}
+
+\subsection{\Glsfmtplural{monster}}
 
 \begin{speechtext}
   Everyone travels together, in heavy wagons, and bows ready for action.
@@ -86,20 +192,6 @@ In this case, you might roll two dice at each \gls{broch} to see what's missing,
   Once the cold settles in, the forest calms down.
   Most of the big nasty ones sleep under the snow until it melts.
 \end{speechtext}
-
-\boxPair[t]{
-  \begin{encChart}{Weather}
-    \Repeat{16}{
-      \encLine \bigWeatherList \\
-    }
-  \end{encChart}
-}{
-  \begin{encChart}{Forest Encounter}
-    \Repeat{16}{
-      \encLine \bigBeastList \\
-    }
-  \end{encChart}
-}
 
 \begin{figure*}[b!]
 
@@ -199,48 +291,6 @@ In this case, you might roll two dice at each \gls{broch} to see what's missing,
 \noindent
 Encounters adjust, depending on the season, time of day, and how far the troupe have travelled from civilization.
 
-\begin{description}
-  \item
-  Roll 3 dice read the next encounter.
-  \begin{description}
-    \item[Die 1]
-    shows how many \glspl{interval} until the encounter.
-    \item[Die 2 + die 3]
-    tell you the weather.
-    \item[Die 1 + die 2]
-    tell you what creature emerges.
-    \item[Die 3]
-    may tell you the number of creatures appearing.
-  \end{description}
-  \item[During the day]
-  staying close to settlements means a low encounter roll replaces the normal predators with traders.
-
-  However, it can also mean a greater chance of bandits.
-
-  \item[At night]
-  roll as normal, with -1 to the encounter roll and weather rolls.
-  The troupe will never find traders -- they do not travel at night.
-  \item[In the deep forest]
-  Every noise prompts a chance for an encounter.
-\end{description}
-
-\end{multicols}
-
-\pagebreak
-
-\begin{multicols}{2}
-
-\begin{exampletext}
-  For example, the \gls{gm} rolls `\dicef{3} \dicef{4} \dicef{1}', during a `mild' season.
-
-  On the first reading, this says `(\dicef{3}) after 3~\glspl{interval}, (\underline{\dicef{4} + \dicef{1}}) mist covers the area'.
-
-  On the second reading, (\underline{\dicef{3} + \dicef{4}}) wolves arrive, (\dicef{1}) numbering 7.
-
-\diceTrio{3}{4}{1}{}{Mist}{\dicef{1} +6 Wolves}
-
-\end{exampletext}
-
 \subsubsection{Morale Checks}
 \label{morale}
 \index{Morale}
@@ -321,14 +371,14 @@ a trader's wagon come along the road once a week, and never in great numbers.
 One or two outer \glspl{village} just don't have much goods to trade.
 Luckily, also puts a hard cap on the potential for bandits.
 
+These dangling, dead-end roads work much like the forest, except for the fast and easy travel on the roads.
+
 \begin{description}
   \item[Rolling 3]
   means three bandits are watching the road, and may have been watching for some days.
   \item[Rolling 2]
   means two wagons saunter lazily down the road, likely going to \glspl{village} where they have many friends.
 \end{description}
-
-These dangling, dead-end roads work much like the forest, except for the fast and easy travel on the roads.
 
 \subsubsection{Slide the Scales}
 of the civilization up or down, depending on what looks right.
@@ -349,80 +399,46 @@ In the dark forests, where towering trees dampen the Sunlight, any out-of-place 
 Whenever the troupe draw attention to themselves, roll $1D6$.
 On the roll of a `1', roll for a random encounter.
 
-You can pull this off quickly with $3D6$, where only the first die indicates the encounter, where the others indicate \emph{which} (if any).
+\subsection{Fast Rolls}
 
-\subsection{Weather}
-\label{weather}
-Cosmological and meteorological events can boost people's abilities to cast spells -- even those who had none before.
-These bonuses stack with \glspl{boon}, so someone with the right know-how can (and do) stand under the unnatural darkness of an eclipse, holding the ground-up remains of a stirge queen, with auroch hooves boiled to melting point, at the top of a mountain,%
-\footnote{High level spells often have such a long casting range that casters must climb high to see their target.}
-screeching about opening a portal from a distant \gls{village} to an underground realm.
+Nobody likes holding up a session while the \gls{gm} makes multiple dice rolls.
+You can combine all the regular encounters on the road into a single roll of $3D6$ to get an instant result.
 
-\subsubsection{Cold Snaps}
-\index{Cold Snap \glsentrytext{R}}
-\index[mana]{Fate!Cold Snaps \glsentrytext{R}}
-drain the life from characters and wildlife in a blink.
-Until the weather warms up again, all actions outdoors inflict an additional \gls{ep} or more, depending on clothing.
-Someone journeying outdoors effectively naked will receive 3 \glspl{ep}, per \gls{interval}.
+\begin{description}
+  \item
+  Roll 3 dice read the next encounter.
+  \begin{description}
+    \item[Die 1]
+    shows how many \glspl{interval} until the encounter.
+    \item[Die 2 + die 3]
+    tell you the weather.
+    \item[Die 1 + die 2]
+    tell you what creature emerges.
+    \item[Die 3]
+    may tell you the number of creatures appearing.
+  \end{description}
+  \item[During the day]
+  staying close to settlements means a low encounter roll replaces the normal predators with traders.
 
-The mass disturbances in the air, mixed with the darkness, creates a kind of magic in the air, which grants +1 to everyone's Fate Sphere, including those who cannot normally cast spells.
+  However, it can also mean a greater chance of bandits.
 
-\subsubsection{Earthquakes}
-\index{Earthquakes \glsentrytext{R}}
-\index{Quakes}
-\index[mana]{Earth!Quakes \glsentrytext{R}}
-can topple \gls{village} walls, houses collapse inward, and gnomish warrens have their planning tested from the foundations to the rooves.
-Despite the shaking, most structures remain standing.
-Architects in \gls{fenestra} design castles for quakes, and dwarvish settlements, down at the edge of the \gls{deep}, often feel nothing, as underground caverns don't shake during quakes as badly as the surface does.
+  \item[At night]
+  roll as normal, with -1 to the encounter roll and weather rolls.
+  The troupe will never find traders -- they do not travel at night.
+  \item[In the deep forest]
+  Every noise prompts a chance for an encounter.
+\end{description}
 
-When quakes alter rock, everyone with the tiniest understanding of magic finds themselves able to speak to stone, at least a little, as rocks and ice start to wake up.
-This time grants a +1 bonus to everyone's Earth Skill, for the short duration of the quake.
+\begin{exampletext}
+  For example, the \gls{gm} rolls `\dicef{3} \dicef{4} \dicef{1}', during a `mild' season.
 
-\subsubsection{Eclipses}
-\index{Eclipses \glsentrytext{R}}
-\index[mana]{Air!Eclipses \glsentrytext{R}}
-plunge \gls{fenestra} into sudden daytime darkness, as the \gls{ainumar} blocks the Sun.
-For this entire \gls{interval}, the winds becomes more pliable, and anyone with a voice to speak gains +1 to their Air Skill.
+  On the first reading, this says `(\dicef{3}) after 3~\glspl{interval}, (\underline{\dicef{4} + \dicef{1}}) mist covers the area'.
 
-The average person makes little use of this time -- they have more pressing concerns given the sudden lack of Sunlight.
-But casters often plan grand rituals to coincide with an eclipse, as the extra powers allow them to perform wide-ranging, potent spells.
+  On the second reading, (\underline{\dicef{3} + \dicef{4}}) wolves arrive, (\dicef{1}) numbering 7.
 
-\subsubsection{Floods}
-\index{Floods \glsentrytext{R}}
-\index[mana]{Water!Floods \glsentrytext{R}}
-damage infrastructure worse than earthquakes.
-They rot food, and degrade the foundations of houses in subtle ways, which only become apparent years later.
-High fortifications remain untouched, but underground dwelling runs the risk of water pouring in from above, and driving everything inside up into the Sunlight.
+\diceTrio{3}{4}{1}{}{Mist}{\dicef{1} +6 Wolves}
 
-The predators of \gls{fenestra} seem to have an instinct for floods, and will camp outside any homely holes in their territories.
-
-Travel during a flood poses serious problems -- any affected area will half the travellers' rate of movement.
-
-While floods occur, everyone gains a +1 Bonus to their Water Skill.
-
-\subsubsection{Heatwaves}
-\index{Heatwaves}
-\index[mana]{Fire!Heatwaves \glsentrytext{R}}
-pose problems for anyone who wants to wear armour.
-All travel in direct Sunlight will have the travellers endure an additional +1 \glspl{ep} when wearing loose-fitting clothing, or +2 when wearing inappropriate clothes.
-Armour of any kind does not count as `appropriate', so a heatwave can force any warrior to remove their armour.
-
-During a heatwave, everyone gains a +1 bonus to their Fire Skill.
-
-\subsubsection{Hurricans}
-\index{Hurricans}
-\index{Marching!Hurricans}
-Make travel challenging, and reduce the standard miles travelled by 1.
-All large items -- rooves, carts, et c. -- have a 1 in 6 chance of getting pulled off and possibly thrown by the wind.
-
-\subsubsection{Snow}
-\index{Snow}
-\index{Marching!Snow}
-slows travel.
-Travelling over snow-covered lands reduces the standard travel to half.
-In the deep forests, this makes little difference, but an open road which once granted five miles of easy travel per \gls{interval} would only allow three miles once covered in frost.
-
-With enough foot-fall, the penalty reduces to nothing, as others stamp the snow down, reducing it to frosty mud.
+\end{exampletext}
 
 \end{multicols}
 
@@ -435,6 +451,7 @@ With enough foot-fall, the penalty reduces to nothing, as others stamp the snow 
   \hline
   \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Forest} & \textbf{Lochside} & \textbf{Mountains} & \textbf{Swamp} \\
   \hline
+  \label{encFullMonsters}
   \encLine \bigBeastList & \encLochside & \encMountains & \encSwamp \\
   \encLine \bigBeastList & \encLochside & \encMountains & \encSwamp \\
   \encLine \bigBeastList & \encLochside & \encMountains & \encSwamp \\
@@ -454,19 +471,29 @@ With enough foot-fall, the penalty reduces to nothing, as others stamp the snow 
   \hline
 \end{wideTable}
 
-
 \section{Emergent Situations}
 \label{roadEncounters}
 
-
 \begin{multicols}{2}
-
-\subsection{On the Road}
 
 The \glspl{pc} will find more trouble than monsters as they travel.
 Whenever a journey ends, a situation begins.
 
+\begin{itemize}
+  \item
+  \Glspl{bothy}: \vpageref{bothyEvents}.
+  \item
+  \Glspl{village}: \vpageref{villageEvents}.
+  \item
+  \Glspl{lonelyTavern}: \vpageref{lonelyTaverns}.
+  \item
+  Town: \vpageref{townEvents}.
+  \item
+  \Glspl{court}: \vpageref{courtVerdicts}.
+\end{itemize}
+
 \subsubsection{\Glsfmtplural{bothy}}
+\label{bothyEvents}
 \glsdesc{bothy}.
 
 Each \gls{bothy} begins when someone dies on the road, and others leave rocks there to pay their respect.
@@ -576,7 +603,7 @@ Roll $3D6$ -- the \glspl{pc} can order any of these meals.
 \end{dlist}
 
 \subsubsection{The Patrons}
-start with $2D6$ \gls{guard} \gls{fodder}.
+start with $2D6$ \gls{guard} \gls{gDigger}.
 Roll $3D6$ for the rest, and accept every unique result.
 
 \begin{dlist}
@@ -593,13 +620,6 @@ Roll $3D6$ for the rest, and accept every unique result.
   \item
   \Pgls{seeker}, here to collect information.
 \end{dlist}
-
-\end{multicols}
-
-\pagebreak[4]
-\section{Towns}
-
-\begin{multicols}{2}
 
 \subsection{Trouble at the \Glsfmttext{court}}
 \label{courtVerdicts}
