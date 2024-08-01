@@ -605,6 +605,25 @@ I meant `run'.
 We should run.
 The trolls will arrive soon, and we know what happens if they find us\ldots
 
+\subsubsection{Creature \Glsfmtlongpl{cr}}
+have been loosely approximated with a formula.
+If you want to provide \pgls{cr} for your own creatures, I recommend just eyeballing its stats.
+Nevertheless, here is that formula:
+
+\begin{align*}
+\frac{Att \times Dam \times \glsentrytext{ap}}{50}
+-
+heft
++
+\frac{\glsentrytext{hp} \times \glsentrytext{dr}}{10}
++
+\frac{\glsentrytext{mp}}{2}
+\end{align*}
+
+\noindent
+Here `heft' means the \glspl{ap} cost to wield a weapon.
+Beasts all spend 1~\gls{ap} to attack, while people with larger weapons often spend more.
+
 \subsection{Damage, Death \& Dismemberment}
 
 \subsubsection{Damage}
