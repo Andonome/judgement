@@ -42,22 +42,46 @@ It'll help cut down on wear to the character sheet, and lets you see how much Da
 
 \subsubsection{The \Glsfmttext{gm} Sheet}
 is on \vpageref{gmSheet}.
-The right-hand side has \pgls{ap} tracker, just like the players' character sheet.
-
-In the centre, you have a horrifying problem -- you can either write down the currently active \glspl{pc}, and hope to note them separately after each session, so you can comfortably update this space; or you can try to write in delicate mouse-letters, in order to fit everyone in the section.
+In the centre, you have a horrifying problem -- you can either write down the currently active \glspl{pc}, and hope to note them elsewhere after each session, so you can comfortably update this space; or you can try to write in delicate mouse-letters, in order to fit every \gls{pc} who ever joins in the section.
 
 \vspace{\baselineskip}
 
-\begin{tabular}{lccccl}
-  \hiderowcolors
-  & \showInterval{0} & \showInterval{1} & \showInterval{2} & \showInterval{3} & \\
-  & \Square & \Square & \Square & \Square & \\
-  & \rotatebox{-60}{\it Basilisk/ storm} & & \rotatebox{-60}{\it 12 bandits/ snow} & \rotatebox{-60}{\it Sexy goblin?} & \\
+\begin{tabular}{lccl}
+  \hiderowcolors%
+  \setcounter{enc}{0}%
+  \outline{\large\arabic{enc}}%
+  & \Square%
+  \stepcounter{enc}%
+  & \showInterval{0} &
+  \gls{basilisk} + storm \\
+  \outline{\large\arabic{enc}}
+  & \Square%
+  \stepcounter{enc}
+  & \showInterval{1} &
+  \\
+  \outline{\large\arabic{enc}}
+  & \Square%
+  \stepcounter{enc}
+  & \showInterval{2} &
+  12 bandits/ flood \\
+  \outline{\large\arabic{enc}}
+  & \Square%
+  \stepcounter{enc}
+  & \showInterval{3} &
+  \\
+  \outline{\large\arabic{enc}}
+  & \Square%
+  \stepcounter{enc}
+  & \showInterval{0} &
+  Sexy goblin? \\
 \end{tabular}%
 
 \vspace{\baselineskip}
 
-Finally, you have \pgls{interval}-tracker, so you can note down upcoming encounters, disease effects that will take place later, and any other slow-burn effects.
+\noindent
+The number-line at the far left functions as \pgls{ap}-tracker, just like the player's sheet.
+
+Next to it, the \gls{interval}-tracker lets you keep a quick track of upcoming encounters, and other events.
 The tracker only has three days, so if you need more --
 
 \subsubsection{Plan to Improvise}
