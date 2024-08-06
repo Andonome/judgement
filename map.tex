@@ -375,8 +375,8 @@ Take the highest roll, and multiply it by 5 to find the population.
   (Name fragment: `\textit{pilin}')
   \item
   An elder, focussed on the Life Sphere, often casts spells around the perimeter to make anything there shrink.
-  Replace the first two standard encounters with a miniaturized version (e.g. miniaturized \glspl{crawler} or bears).
-  Elves know how to avoid the effects, and never suffer from them.
+  Replace every second encounter with a miniaturized version (e.g. miniaturized \glspl{crawler} or bears).
+  The spell does not affect elves or gnomes.
 
   (Name fragment: `\textit{pitya}')
   \item
@@ -385,14 +385,23 @@ Take the highest roll, and multiply it by 5 to find the population.
 
   (Name fragment: `\textit{pirne}')
   \item
-  An elder with the Life Sphere creates enchanted gardens around the area, but always puts them in a new location each time (so the soil never becomes depleted).
+  The elves mostly live underground.
+  Many of the elves are proficient in the Earth \gls{sphere}, and use it to make rocks or slate partially transparent.
+  The glass rooves allow them to live underground, with Sunlight gently dabbing the dwellings.
 
-  This elder has taken to shape-shifting, and will soon leave the other elves (or the elves will leave them), to wander free as \pgls{dryad}.
+  (Name fragment: `\textit{cal--}')
+  \ifodd\value{r3}
+    \item
+    An elder with the Life Sphere creates enchanted gardens around the area, but always puts them in a new location each time (so the soil never becomes depleted).
 
-  (Name fragment: `\textit{lelya}')
-  \item
-  A wide loch spans the area, providing fish.
-  (Name fragment: `\textit{ailin}')
+    This elder has taken to shape-shifting, and will soon leave the other elves (or the elves will leave them), to wander free as \pgls{dryad}.
+
+    (Name fragment: `\textit{lelya}')
+  \else
+    \item
+    A wide loch spans the area, providing fish.
+    (Name fragment: `\textit{ailin}')
+  \fi
   \item
   Useful plants grow all over the region.
   Each of the three dice you have rolled indicates one common plant in the area:
