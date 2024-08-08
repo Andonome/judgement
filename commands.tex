@@ -206,15 +206,19 @@
   \begin{multicols}{2}
   \begin{dlist}
     \item
-    Fresh fruits (\arabic{r2}0~\glspl{cp} per day's worth, but they go rotten after 2 days)
-    \randomdozen
+    \ifnum\value{temperature}>0
+      Fresh fruits (\arabic{r2}0~\glspl{cp} per day's worth, but they go rotten after 2 days)%
+    \else
+      Smoked meats (\arabic{r4}0~\glspl{cp} per day's worth)%
+    \fi
+    \randomize
     \item
     Bows (\arabic{r12}~\glspl{sp})
     and arrows (\arabic{r12}0~\glspl{cp})
-    \randomdozen
+    \randomize
     \item
     Torches (\arabic{r12}~\glspl{cp})
-    \randomdozen
+    \randomize
     \columnbreak
     \item
     Salted meats (\arabic{r12}~\glspl{cp} per day's worth)
