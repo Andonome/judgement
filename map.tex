@@ -35,7 +35,7 @@ it might go something like this:
     Your first mission is cleaning the \gls{broch}.
     These small tasks are simply flavour, or an excuse to show new players how to roll for an action, so you jump to the second day, and roll another mission.
     \item
-    The second mission looks more promising: the troupe will need to investigate an area with \pgls{ogre}, some days' march away.
+    The second mission looks more promising: the troupe will need to investigate an area with \pgls{ogre}, some days' \gls{journey} away.
 
     The journey will take them to \pgls{village}, then \pgls{bothy}, where they will have to leave the road, and venture past the \gls{edge}.
   \end{itemize}
@@ -164,7 +164,7 @@ come from mountains, then flow to the sea.
   At each point with a mountain, draw a river to every neighbour without a mountain.
   Draw your rivers with wavy, lazy, lines.
   \item
-  Each river flows down hill, towards the highest neighbour.
+  Each river flows down-hill, towards the highest neighbour.
   They avoid mountains and avoid doubling-back to a point they've already been at.
   \item
   Rivers begin small, but when another river joins it, they run faster and wider.
@@ -184,16 +184,17 @@ come from mountains, then flow to the sea.
 
 \mapentry{Hills \& Bogs}
 provide water to any point without a river, or a coast.
-If you don't have any points without a river or coast, just skip this step.
+If you don't have any points without a river, just skip this step.
 
 \begin{enumerate}
   \item
   The highest point without water has a bog between it and its highest neighbour.
   The bog is three miles across.
   \item
-  All points without water receive some small hills.
+  All outer points (i.e. `1 to 5') without water receive some small hills.
   \item
   The hills provide small streams, which journey to the highest point without water, as per step \ref{mapRivers}, above.
+  \textit{However}, they will avoid the bog.
 \end{enumerate}
 
 \mapentry{\Glsfmtplural{lonelyRoad}}
