@@ -14,7 +14,7 @@ shield_qr.tex:
 $(BOOK).pdf: $(DEPS) | qr.tex shield_qr.tex
 	@$(COMPILER) main.tex
 
-shield.pdf:shield.tex commands.tex $(BOOK).pdf
+shield.pdf:shield.tex commands.tex $(BOOK).pdf config/markets/
 	$(RUN) shield.tex
 	$(RUN) shield.tex
 	mv $(DROSS)/shield.pdf .
