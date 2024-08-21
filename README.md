@@ -2,7 +2,7 @@
 
 |             Downloads                |         Resources             |
 |:-------------------------------------|:------------------------------|
-| [Download][download]                 | [Wiki][wiki]                  | 
+| [Download][judgement]                | [Wiki][wiki]                  | 
 | [Judge Shield][shield]               | [World Wiki][fenwiki]         |
 | [Condensed Rules][rules summary]     | [Email an idea][issues email] |
 | [Introduction Module][intro module]  | [Issues Board][board]         |
@@ -51,7 +51,7 @@ We finish with a few 'GM tips' just for running campaigns in Fenestra, with a tr
 ## Related Books
 
 - For a short introduction module, grab a copy of [Escape from the Horde][intro module].
-- The complete [core rules][core download] are structured mostly as a reference, rather than required reading.
+- The complete [core rules][core] are structured mostly as a reference, rather than required reading.
 - For a more detailed look at the sentient creatures of Fenestra, print a copy of the [players' guide][stories].
 
 # Compiling
@@ -70,8 +70,9 @@ To make the document,
 2. Take the pdfs to your local, friendly, printing store.
 
 [compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
-[core download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/core.pdf?job=build
-[download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Judgement.pdf?job=build
 [issues email]: mailto:contact-project+bindrpg-judgement-47918887-issue-@incoming.gitlab.com
 [board]: https://gitlab.com/bindrpg/judgement/-/issues
 [shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build
+[core]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/Core_Rules.pdf?job=build
+[stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/Stories.pdf?job=build
+[judgement]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Judgement.pdf?job=build
