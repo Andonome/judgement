@@ -23,7 +23,7 @@ Reading two-columns of blinding-white PDF on a monitor will only give you a head
     * For Void Linux: `inkscape`, `make`, `texlive-full`, `git-lfs`, and `texlive-latexmk`.
 1. Enter the repo, and do `make all`.
 
-For full setup instructions, see the [wiki](https://gitlab.com/bindrpg/core/-/wikis/dev/startup).
+For full setup instructions, see the [wiki][compiling].
 
 # Setting
 
@@ -67,6 +67,7 @@ To make the document,
 1. type `make`.
 2. Take the pdfs to your local, friendly, printing store.
 
+[compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
 [core download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/core.pdf?job=build
 [download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/judgement.pdf?job=build
 [issues email]: mailto:contact-project+bindrpg-judgement-47918887-issue-@incoming.gitlab.com
