@@ -1,3 +1,5 @@
+# Judgement
+
 |             Downloads                |         Resources             |
 |:-------------------------------------|:------------------------------|
 | [Download][download]                 | [Wiki][wiki]                  | 
@@ -69,7 +71,7 @@ To make the document,
 
 [compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
 [core download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/core.pdf?job=build
-[download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/judgement.pdf?job=build
+[download]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Judgement.pdf?job=build
 [issues email]: mailto:contact-project+bindrpg-judgement-47918887-issue-@incoming.gitlab.com
 [board]: https://gitlab.com/bindrpg/judgement/-/issues
 [shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build
