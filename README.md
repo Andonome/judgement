@@ -5,7 +5,7 @@
 | [Download][judgement]                | [Wiki][wiki]                  | 
 | [Judge Shield][shield]               | [World Wiki][fenwiki]         |
 | [Condensed Rules][rules summary]     | [Email an idea][issues email] |
-| [Introduction Module][intro module]  | [Issues Board][board]         |
+| [Introduction Module][goblin hole]  | [Issues Board][board]         |
 
 *The Book of Judgement* lays out the world of the BIND RPG, through procedures and bullet-points.
 It lays out creating your own map, step by step, then describes dangerous vegetation, how to harvest basilisk gizzards to create alchemical concoctions, and what scares liches.
@@ -50,7 +50,7 @@ We finish with a few 'GM tips' just for running campaigns in Fenestra, with a tr
 
 ## Related Books
 
-- For a short introduction module, grab a copy of [Escape from the Horde][intro module].
+- For a short introduction module, grab a copy of [the Goblin Hole][goblin hole].
 - The complete [core rules][core] are structured mostly as a reference, rather than required reading.
 - For a more detailed look at the sentient creatures of Fenestra, print a copy of the [players' guide][stories].
 
@@ -73,6 +73,8 @@ To make the document,
 [issues email]: mailto:contact-project+bindrpg-judgement-47918887-issue-@incoming.gitlab.com
 [board]: https://gitlab.com/bindrpg/judgement/-/issues
 [shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build
-[core]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/Core_Rules.pdf?job=build
-[stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/Stories.pdf?job=build
+[core]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Core_Rules.pdf?job=build
+[stories]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Stories.pdf?job=build
 [judgement]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Judgement.pdf?job=build
+[goblin hole]: https://gitlab.com/bindrpg/aif/-/jobs/artifacts/master/raw/The_Goblin_Hole.pdf?job=build
+[shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build
