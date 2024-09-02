@@ -26,14 +26,13 @@
 
 \cleardoublepage
 
-\setcounter{track}{\month}
-\section*{~\showSeason~\hint{\showTemperature}}
+\section*{~\showCycle~\hint{\showTemperature}}
 
 \begin{figure*}[b!]
   \stackingDamageChart
 \end{figure*}
 
-{\ifStrSame{\showAstroEvents}{}{}{\large\scshape Event: \sffamily\showAstroEvents}}
+\showCycle~\cycleDesc
 
 \multiply\value{temperature} by 2
 \addtocounter{temperature}{0}
