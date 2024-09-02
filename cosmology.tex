@@ -39,28 +39,85 @@
   \end{tikzpicture}
 
 }{
-
+  \randomize
   \setcounter{track}{\month}
-  \setcounter{gold}{1}
-  \begin{nametable}[l|Y|c]{Seasons}
+  \setcounter{gold}{\day}
+  \begin{nametable}[X|Y|c]{Seasons}
 
     \textbf{Games Night} & \textbf{\Glsentrytext{cycle}} & \textbf{Climate} \\
     \hline
     \hline
-    \Repeat{12}{
-      \addtocounter{gold}{7}%
-      \ifnum\value{gold}>28%
-        \addtocounter{gold}{-28}%
-        \addtocounter{track}{1}%
-      \fi%
-      \trackMonth~\arabic{gold} &
-      \setCycle{\value{track}}{\value{gold}}%
-      \setTemperature%
-      \showCycle, 
-      days \ifodd\value{gold} 1 to 30\else 30 to 60\fi %
-      & \showTemperature
-      \\
-    }
+    \trackMonth~week 1 &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 2 &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 3 &
+    \setcounter{cycle}{1}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 4 &
+    \setcounter{cycle}{1}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \stepcounter{track}
+    \trackMonth~week 1 &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 2 &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 3 &
+    \setcounter{cycle}{3}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 4 &
+    \setcounter{cycle}{3}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \stepcounter{track}
+    \trackMonth~week 1 &
+    \setcounter{cycle}{4}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \hline
+    \trackMonth~week 3 &
+    \setcounter{cycle}{5}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \hline
+    \stepcounter{track}
+    \trackMonth~week 1 &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
   \end{nametable}
 }
 
