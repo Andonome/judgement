@@ -86,7 +86,7 @@ In both cases, aim to resolve random encounters quickly.
   \item
   Roll $1D6$ to see how many \glspl{interval} until the next creature encounter.
   \item
-  Roll $2D6$ to find the weather, \vpageref{encWeather} (-1 at night or evening).
+  Roll $2D6$ to find the weather, \vpageref{encWeather}.
   \item
   Roll $2D6$ for the creature encounter, \vpageref{encFullMonsters} (-1 at night or evening).
   \begin{description}
@@ -95,68 +95,55 @@ In both cases, aim to resolve random encounters quickly.
   \end{description}
 \end{enumerate}
 
-\subsection{Cosmological Perils}
+\subsection{Weather}
 \label{weather}
 Cosmological and meteorological events can boost people's abilities to cast spells -- even those who had none before.
 These bonuses stack with \glspl{boon}, so someone with the right know-how can (and do) stand under the unnatural darkness of an eclipse, holding the ground-up remains of a stirge queen, with auroch hooves boiled to melting point, at the top of a mountain,%
 \footnote{High level spells often have such a long casting range that casters must climb high to see their target.}
 screeching about opening a portal from a distant \gls{village} to an underground realm.
 
+\weatherChart
+
 \subsubsection{\Glsfmtplural{coldSnap}}
 \index{Cold Snap \glsentrytext{R}}
 \index[mana]{Fate!Cold Snaps \glsentrytext{R}}
-\glsdesc{coldSnap}, including those who cannot normally cast spells.
+\glsentrydesc{coldSnap}, including those who cannot normally cast spells.
 
 \subsubsection{\Glsfmtplural{earthquake}}
 \index{Earthquakes \glsentrytext{R}}
 \index{Quakes}
 \index[mana]{Earth!Quakes \glsentrytext{R}}
-\glsdesc{earthquake}.
+\glsentrydesc{earthquake}.
 
 \subsubsection{\Glsfmtplural{eclipse}}
 \index{Eclipses \glsentrytext{R}}
 \index[mana]{Air!Eclipses \glsentrytext{R}}
-\glsdesc{eclipse}.
+\glsentrydesc{eclipse}.
 
 While the average person makes little use of this time -- they have more pressing concerns given the sudden lack of Sunlight -- \glspl{witch} often plan grand rituals to coincide with \pgls{eclipse}, as the extra powers allow them to perform wide-ranging, potent \glspl{invocation}.
 
 \subsubsection{\Glsfmtplural{flood}}
 \index[mana]{Water!Floods \glsentrytext{R}}
-\glsdesc{flood}.
+\glsentrydesc{flood}.
 
 \subsubsection{\Glsfmtplural{heatwave}}
 \index[mana]{Fire!Heatwaves \glsentrytext{R}}
-\glsdesc{heatwave}.
+\glsentrydesc{heatwave}.
 
 \subsubsection{\Glsfmtplural{hurricane}}
 \index{Hurricanes}
 \index{Marching!Hurricanes}
-\glsdesc{hurricane}.
+\glsentrydesc{hurricane}.
 
 \subsubsection{\Glsfmtplural{landslide}}
-\glsdesc{landslide}.
+\glsentrydesc{landslide}.
 
 \subsubsection{\Glsfmttext{snow}}
 \index{Snow}
-\glsdesc{snow}.
+\glsentrydesc{snow}.
 In the deep forests, this makes little difference, but an open road which once granted five miles of easy travel per \gls{interval} would only allow three miles once covered in frost.
 
 With enough foot-fall, the penalty reduces to nothing, as others stamp the snow down, reducing it to frosty mud.
-
-\boxPair[t]{
-  \label{encWeather}
-  \begin{encChart}{Weather}
-    \Repeat{16}{
-      \encLine \bigWeatherList \\
-    }
-  \end{encChart}
-}{
-  \begin{encChart}{Forest Encounter}
-    \Repeat{16}{
-      \encLine \bigBeastList \\
-    }
-  \end{encChart}
-}
 
 \subsection{\Glsfmtplural{monster}}
 
@@ -263,6 +250,8 @@ Once the encounter ends, roll again.
 \Glspl{basilisk} hibernate in the cold seasons, while warmer seasons have nights so warm that \glspl{basilisk} remain active.
 Check the current season in \gls{fenestra} \vpageref{seasons}, then roll $2D6$ on the column matching the current season's temperature.
 During warm seasons, a roll of \dicef{3} \dicef{4} means \pgls{woodspy}, but during cold \gls{Alassea} and \gls{Minquesta}, it means a warthog, as they become more aggressive when food becomes scarce.
+
+\forestEncChart
 
 \makeAutoRule{morale}{Morale Checks}{When a creature's \glsfmtlongpl{hp} fall below $2D6$, it flees}
 \index{Morale}
@@ -470,7 +459,7 @@ Whenever a journey ends, a situation begins.
 
 \subsubsection{\Glsfmtplural{bothy}}
 \label{bothyEvents}
-\glsdesc{bothy}.
+\glsentrydesc{bothy}.
 
 Each \gls{bothy} begins when someone dies on the road, and others leave rocks there to pay their respect.
 If enough people gather rocks, it becomes a cenotaph, and takes the name of the fallen.

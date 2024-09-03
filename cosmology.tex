@@ -9,119 +9,144 @@
 \index{Astronomy}
 \index{Time Parallel}
 
+\newcounter{ainumarPosition}
+\setcounter{ainumarPosition}{\month}
+\multiply\value{ainumarPosition}by 30
+\newcounter{fenestraPosition}
+\setcounter{fenestraPosition}{\value{ainumarPosition}}
+\setcounter{enc}{\value{temperature}}
+\multiply\value{enc}by 60
+\addtocounter{fenestraPosition}{\value{enc}}
+
 \boxPair{
   \begin{tikzpicture}
     \coordinate (S) at (0,0);
-    \coordinate (A) at (3,1);
-    \coordinate (F) at (2.3,0.3);
+    \coordinate (A) at (\arabic{ainumarPosition}:3);
+    \path (A) +(\arabic{fenestraPosition}:1) coordinate (F);
     \draw[\pageSideColor] (S) -- (A) -- (F);
     \draw[\pageSideColor] (S) circle (3.1);% Orbit
     \draw[\pageSideColor] (A) circle (1);% Suborbit
     \fill[\pageSideColor] (S)  circle (30pt);
-    \fill[\pageOppositeColor] (A.south)  circle (3pt);
-    \fill[\pageOppositeColor] (F.east) circle (1pt);
+    \fill[\pageSideColor] (A.south)  circle (3pt);
+    \fill[\pageSideColor] (F.east) circle (1pt);
     \coordinate [label={\scshape\huge \outline{Sun}}] (S.south) at (0,0);
-    \coordinate [label=\outline{\Large \glsentrytext{ainumar}}] (A) at (3,1);
-    \coordinate [label=\outline{\glsentrytext{fenestra}}] (F) at ++(2.3,0.3);
+    \coordinate [label=\outline{\Large \glsentrytext{ainumar}}] (AN) at (A)+(3,1);
+    \coordinate [label=\outline{\glsentrytext{fenestra}}] (FN) at (F)+(2.3,0.3);
   \end{tikzpicture}
 
 }{
+  \randomize
+  \setcounter{track}{\month}
+  \setcounter{gold}{\day}
+  \begin{nametable}[X|Y|c]{Seasons}
 
-  \begin{nametable}[l|Y|c|Y]{Seasons}
-
-    \textbf{Real Month} & \textbf{Far Season} & \textbf{Climate} & \textbf{Event} \\
+    \textbf{Games Night} & \textbf{\Glsentrytext{cycle}} & \textbf{Climate} \\
     \hline
     \hline
-    \showSeasonLine{1}
-    \showSeasonLine{2}
-    \showSeasonLine{3}
-    \showSeasonLine{4}
+    \trackMonth~week 1 &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 2 &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 3 &
+    \setcounter{cycle}{1}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 4 &
+    \setcounter{cycle}{1}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \stepcounter{track}
+    \trackMonth~week 1 &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 2 &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 3 &
+    \setcounter{cycle}{3}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \trackMonth~week 4 &
+    \setcounter{cycle}{3}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \stepcounter{track}
+    \trackMonth~week 1 &
+    \setcounter{cycle}{4}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
     \hline
-    \showSeasonLine{5}
-    \showSeasonLine{6}
-    \showSeasonLine{7}
-    \showSeasonLine{8}
+    \trackMonth~week 3 &
+    \setcounter{cycle}{5}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
     \hline
-    \showSeasonLine{9}
-    \showSeasonLine{10}
-    \showSeasonLine{11}
-    \showSeasonLine{12}
-
+    \stepcounter{track}
+    \trackMonth~week 1 &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
   \end{nametable}
 }
-
-\setcounter{season}{\month}
-\setTemperature
 
 \begin{multicols}{2}
 
 \subsection{Astronomy}
 
-\subsubsection{The \Glsfmttext{ainumar}}
-shines bright in the night sky, and appears a little larger than our moon does to us.
-A raging storm moves across its face, which people can see about half of the \gls{cycle}.
+The \gls{ainumar} shines bright in the night sky, and appears a little larger than our moon does to us.
+A raging storm moves across its face, which people can see about half of the year.
 They believe that the gods live there, inside the moving eye of the storm.
 
-Three moons circle the planet.
-One shines yellow, another grey, and the third is green \gls{fenestra}.
-
-\subsubsection{\Glsfmttext{fenestra}}
+\Gls{fenestra} swings around the \gls{ainumar}, coming so close in that it could almost kiss the gods, and then hurtles back to sit in empty space, far away from the Sun.
 \index{Seasons}
-swings wildly around \gls{ainumar}, coming so close in that it could almost kiss the gods, and then hurtles back to sit in empty space, far away from the Sun.
 
-Every trip around \gls{ainumar} lasts around a year.
-After three years, \gls{ainumar} completes \pgls{cycle}, and the twelve seasons begin again.
+\subsection{The \Glsfmtplural{cycle}}
 
-The first season is called `\gls{Qualmea}'.
-It is full of brutal storms and earthquakes, active volcanoes explode, trees and buildings topple, then at its height, a planetary eclipse emerges, called `the shadow of the gods', and the world goes black in the middle of the day.
+Every sixty days \gls{fenestra} completes \pgls{cycle} around the \gls{ainumar}, before \pgls{storm} descends, bringing earthquakes, lightning, and tidal waves.
+The \glspl{storm} last around a day, and mark a change in weather.
+\index{Weather}
 
-After this comes `\gls{Atya}' -- a milder season -- then a deep cold season known as `\gls{Alassea}', when people cheer themselves up by playing pranks, telling jokes and drinking or smoking to excess; at night, both \gls{ainumar} and the Sun become a little smaller.
-Things settle down again for \gls{Cantea}, the fourth season, though \gls{ainumar} remains distant as the first \gls{cycle} ends.
+Each year has six \glspl{cycle}.
 
-The second part of each \gls{cycle} begins with a warm, Summery season called \gls{Calea}; during the night \gls{fenestra}, spins round to view a dazzling \gls{ainumar}.
-The world's shadow races across the face of the home of the gods, creating a `dark eye'.
-All the ice in the planet recedes to nothing, and soon it becomes so warm that people hide under the shade.
-Nobody travels with armour during this time -- full body-coverings in the scorching heat would mean death by heatstroke.
+\Gls{cOne} \glsentrydesc{cOne}.
 
-On and on it spins, and only the creatures underground live with any kind of consistency.
+\Gls{cTwo} \glsentrydesc{cTwo}.
 
-During the more aggressive weather events, magical Spheres become enhanced.
-Cold enhances the Fate sphere, and earthquake enhances Earth.
-Even those without any Spheres gain a Bonus, and everyone must become careful with their words or they can adjust the elements around them.
-For a full list of the events, check \vpageref{weather}.
+\Gls{cThree} \glsentrydesc{cThree}.
 
-\subsection{\Glsfmttext{fenestra}'s Crawling Face}
+\Gls{cFour} \glsentrydesc{cFour}.
 
-\Gls{fenestra} looks like Earth from afar, but the proportions differ.
+\Gls{cFive} \glsentrydesc{cFive}.
 
-The world's body is just a touch smaller than Earth's.
-People can jump a touch higher, and suffer just a little less from falling.
-This also helps dragons and griffins take off from the ground, despite their heavy bodies.
-
-\Gls{fenestra}'s air is a little richer than ours, with more oxygen; this allows for larger creatures than Earth currently has.
-The rich air encourages tall trees.
-Even when people cut down the forest to make way for the widest road they can possibly maintain, the trees cover the roads in shadow.
-
-This world swarms with monsters, above and below.
-This land belongs to them.
-Sentient little creatures inhabit little pockets, like rabbits living inside a fox's hunting ground.
-They travel together and tramp down roads, just as herds of sheep leave paths through dense forests.
-But no matter how wide they make their roads, the tall trees leave them in shadow.
-
-The forest's predators eat deer, aurochs, boar, and other prey animals.
-They don't need humanity to survive, they simply don't care if their food can think or sing, they only care that it wriggles and squeals.
-They wander the dark forests, bored and lonely, listening intently for anything interesting.
-Any new loud noises, whether wandering feet, hooves, or fire, make them excited, and hungry.
-They don't have any instincts about avoiding humans, or even \glspl{village}.
-A tall wall, hiding noise and light, sounds like fun!
-
-Once \pgls{village} hurts them enough, with arrows and rocks, a predator usually leaves that spot alone for a week or so.
-Or perhaps next time, they will remember to approach from the other side.
-No \gls{village} in \gls{fenestra} will ever clear all the predators in an area, any more than rabbits can kill all the foxes.
-The land belongs to them.
-
-Gnomes, dwarves, and badgers hide underground.
-Birds, humans and beavers sneak across the land, building little houses to keep themselves safe at night, then emerge to forage in the Sunlight.
+\Gls{cSix} \glsentrydesc{cSix}.
 
 \subsection{Parallel Time}
 \index{Parallel Time}
@@ -129,7 +154,7 @@ Birds, humans and beavers sneak across the land, building little houses to keep 
 \Gls{fenestra}'s time keeps moving, just as ours does, but faster.
 For every week which passes in our world, three weeks pass over there, so after a single month here, \gls{fenestra} experiences a full season.
 
-While we have \trackMonth, \gls{fenestra} has `\showSeason' -- a \showTemperature\ season.
+While we have \trackMonth, \gls{fenestra} has `\showCycle' -- a \showTemperature\ season.
 Just as we have twelve months, \emph{they} have twelve seasons.
 
 After three years, all twelve seasons have passed and a new cycle begins.
@@ -731,7 +756,7 @@ But the scribes, like the helpers, cannot help themselves, and too many end up i
   \glsdesc{librarian}.
   \item[\Glspl{philosopher}]
   \glsdesc{philosopher}.
-  \ifnum\value{season}=10
+  \ifnum\value{cycle}=2
   \item[The Last Librarian]
   sits in \gls{secretLibrary}.
   Others may enter to work, but they have no idea about the significance of the institution.
