@@ -406,17 +406,19 @@ You can combine all the regular encounters on the road into a single roll of $3D
 
 \end{multicols}
 
-\setcounter{diceNo}{13}
-\setcounter{diceNo2}{15}
-\setcounter{enc}{17}
+\setcounter{track}{13}
+\setcounter{diceNo}{15}
+\setcounter{diceNo2}{17}
+\setcounter{encnum}{19}
+\setcounter{enc}{21}% Encounter charts display creatures based entirely off this counter.
 
 \label{encFullMonsters}
-\begin{wideTable}[c|c|c|LLLL]{Encounters Across Biomes}
+\begin{wideTable}[c|c|c|c|c|LLLL]{Encounters Across Biomes}
   \hline
   \hline
-  \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Forest} & \textbf{Lochside} & \textbf{Mountains} & \textbf{Swamp} \\
+  \textbf{Hot} & \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Frigid} &  \textbf{Forest} & \textbf{Lochside} & \textbf{Mountains} & \textbf{Swamp} \\
   \hline
-  \Repeat{16}{
+  \Repeat{19}{
     \encLine \bigBeastList & \encLochside & \encMountains & \encSwamp \\
   }
   \hline

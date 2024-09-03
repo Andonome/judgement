@@ -233,7 +233,7 @@
 }
 
 \newcommand\stepDown[1]{
-  \ifnum\value{#1}>1
+  \ifnum\value{#1}>2
     \addtocounter{#1}{-1}
     \ifnum\value{#1}<13
         \arabic{#1}
@@ -242,21 +242,23 @@
 }
 
 \newcommand\encLine{
-  \stepDown{diceNo} & \stepDown{diceNo2} & \stepDown{enc} & 
+  \stepDown{track} & \stepDown{diceNo} & \stepDown{diceNo2} &  \stepDown{encnum} & \stepDown{enc} &
 }
 
 \newenvironment{encChart}[1]%
   {
-    \setcounter{diceNo}{13}
-    \setcounter{diceNo2}{15}
-    \setcounter{enc}{17}
+    \setcounter{track}{13}
+    \setcounter{diceNo}{15}
+    \setcounter{diceNo2}{17}
+    \setcounter{encnum}{19}
+    \setcounter{enc}{21}% Encounter charts display creatures based entirely off this counter.
 
     \rowcolors{2}{}{gray!10}
     \vspace{2em}
-    \tabularx{\linewidth}{c|c|c|L}
+    \tabularx{\linewidth}{c|c|c|c|c|L}
       \hline
       \hline
-      \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{#1} \\
+      \textbf{Hot} & \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Frigid} & \textbf{#1} \\
       \hline
   }%
   {
@@ -308,11 +310,19 @@
 
 \newcommand\bigBeastList{
   \ifcase\value{enc}\or%
+    ---
+  \or%
+    ---
+  \or%
+    ---
+  \or%
     Roaming Ghast
+  \or%
+    ---
   \or%
     $1D6$ Wandering Ghouls
   \or%
-    Dryad
+    ---
   \or%
     ---
   \or%
@@ -348,9 +358,17 @@
   \ifcase\value{enc}\or%
     Roaming Ghast
   \or%
+    ---
+  \or%
+    ---
+  \or%
+    ---
+  \or%
+    ---
+  \or%
     $1D6$ Wandering Ghouls
   \or%
-    Dryad
+    ---
   \or%
     ---
   \or%
@@ -388,7 +406,15 @@
   \or%
     ---
   \or%
-    Dryad
+    ---
+  \or%
+    ---
+  \or%
+    ---
+  \or%
+    ---
+  \or%
+    ---
   \or%
     ---
   \or%
@@ -422,25 +448,33 @@
 
 \newcommand\encSwamp{
   \ifcase\value{enc}\or%
-    Ghast%
+    ---
+  \or%
+    ---
+  \or%
+    ---
+  \or%
+    ---
+  \or%
+    Roaming Ghast%
   \or%
     $1D6$ Submerged Ghouls
   \or%
     \nameref{bloodwood} (\autopageref{bloodwood})%
   \or%
-    Dryad
-  \or%
     ---
   \or%
     ---
   \or%
     ---
   \or%
-    \nameref{dreameater_moss} (\autopageref{dreameater_moss})%
+    ---
   \or%
-    \nameref{dirgeFruit} (\autopageref{dirgeFruit})%
+    \nameref{dreameater_moss}%
   \or%
-    $1D6$ Griffins (beaks are filthy, attacks inflict \nameref{Guardbane}, \autopageref{Guardbane})%
+    \nameref{dirgeFruit}%
+  \or%
+    $1D6$ Griffins%
   \or%
     Woodspy
   \or%
