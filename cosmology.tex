@@ -11,10 +11,15 @@
 
 \setcounter{diceNo}{22}
 
+\setcounter{temperature}{0}
 \newcounter{ainumarPosition}
-\setcounter{ainumarPosition}{30}
+\setcounter{ainumarPosition}{\month}
+\multiply\value{ainumarPosition}by 30
 \newcounter{fenestraPosition}
-\setcounter{fenestraPosition}{12}
+\setcounter{fenestraPosition}{\value{ainumarPosition}}
+\setcounter{enc}{\value{temperature}}
+\multiply\value{enc}by 60
+\addtocounter{fenestraPosition}{\value{enc}}
 
 \boxPair{
   \begin{tikzpicture}
