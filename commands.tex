@@ -232,48 +232,6 @@
   \end{multicols}
 }
 
-\newcommand\encSight{%
-  \ifcase\value{track}\relax%
-  \or%
-    Hibernating \encRef{chitincrawler}
-  \or%
-    Deer
-  \or%
-    \encRef{auroch}
-  \or%
-    \encRef{boar}
-  \or%
-    \encRef{mage_oak}
-  \or%
-    \encRef{uproot}
-  \or%
-    \encRef{bedleaves}
-  \or%
-    \encRef{marching_mushroom}
-  \else%
-    \encRef{seekmist}
-  \fi%
-  \stepcounter{track}%
-}
-
-\newcommand\encMonsters{
-  \setcounter{enc}{1}
-  \begin{boxtable}[cccL]
-    \textbf{Cold} & \textbf{Mild} & \textbf{Hot}  & \textbf{Encounter} \\
-    \hline
-    \dicef{1} &           &           & \encMons                       \\
-    \dicef{2} &           &           & \encMons                       \\
-    \dicef{3} & \dicef{1} &           & \encMons                       \\
-    \dicef{4} & \dicef{2} & \dicef{1} & \encMons                       \\
-    \dicef{5} & \dicef{3} & \dicef{2} & \encMons                       \\
-    \dicef{6} & \dicef{4} & \dicef{3} & \encMons                       \\
-              & \dicef{5} & \dicef{4} & \encMons                       \\
-              & \dicef{6} & \dicef{5} & \encMons                       \\
-              &           & \dicef{6} & \encMons                       \\
-
-  \end{boxtable}
-}
-
 \newcommand\stepDown[1]{
   \ifnum\value{#1}>1
     \addtocounter{#1}{-1}
