@@ -33,83 +33,73 @@
     \coordinate [label=\outline{\Large \glsentrytext{ainumar}}] (AN) at (A)+(3,1);
     \coordinate [label=\outline{\glsentrytext{fenestra}}] (FN) at (F)+(2.3,0.3);
   \end{tikzpicture}
-
 }{
   \randomize
+  \setcounter{r4b}{\day}
+  \divide\value{r4b} by 4
+  \stepcounter{r4b}
   \setcounter{track}{\month}
-  \setcounter{gold}{\day}
   \begin{nametable}[X|Y|c]{Seasons}
 
     \textbf{Games Night} & \textbf{\Glsentrytext{cycle}} & \textbf{Climate} \\
     \hline
     \hline
-    \trackMonth~week 1 &
+    \showRealTimeWeek &
     \setcounter{cycle}{0}
     \setTemperature
     \showCycle &
     \showTemperature
     \\
-    \trackMonth~week 2 &
+    \showRealTimeWeek &
     \setcounter{cycle}{0}
     \setTemperature
     \showCycle &
     \showTemperature
     \\
-    \trackMonth~week 3 &
+    \showRealTimeWeek &
     \setcounter{cycle}{1}
     \setTemperature
     \showCycle &
     \showTemperature
     \\
-    \trackMonth~week 4 &
+    \showRealTimeWeek &
     \setcounter{cycle}{1}
     \setTemperature
     \showCycle &
     \showTemperature
     \\
-    \stepcounter{track}
-    \trackMonth~week 1 &
+    \showRealTimeWeek &
     \setcounter{cycle}{2}
     \setTemperature
     \showCycle &
     \showTemperature
     \\
-    \trackMonth~week 2 &
+    \showRealTimeWeek &
     \setcounter{cycle}{2}
     \setTemperature
     \showCycle &
     \showTemperature
     \\
-    \trackMonth~week 3 &
-    \setcounter{cycle}{3}
-    \setTemperature
-    \showCycle &
-    \showTemperature
+    \ldots &
+    \ldots &
+    \ldots
     \\
-    \trackMonth~week 4 &
-    \setcounter{cycle}{3}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
+    \setcounter{r4b}{4}
     \stepcounter{track}
-    \trackMonth~week 1 &
-    \setcounter{cycle}{4}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \hline
-    \trackMonth~week 3 &
+    \showRealTimeWeek &
     \setcounter{cycle}{5}
     \setTemperature
     \showCycle &
     \showTemperature
     \\
-    \hline
+    \ldots &
+    \ldots &
+    \ldots
+    \\
+    \setcounter{r4b}{4}
     \stepcounter{track}
-    \trackMonth~week 1 &
-    \setcounter{cycle}{0}
+    \showRealTimeWeek &
+    \setcounter{cycle}{2}
     \setTemperature
     \showCycle &
     \showTemperature

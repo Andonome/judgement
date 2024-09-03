@@ -256,12 +256,6 @@
   \stepcounter{track}%
 }
 
-\newcommand\trackMonth[1][track]{%
-  \ifcase\value{#1}\or%
-    January\or February\or March\or April\or May\or June\or%
-    July\or August\or September\or October\or November\else December\setcounter{#1}{1}\fi%
-}
-
 \newcommand\encMonsters{
   \setcounter{enc}{1}
   \begin{boxtable}[cccL]
@@ -1091,3 +1085,17 @@
     \end{boxtable}
   }
 }
+
+\newcommand\showRealTimeWeek{%
+  \stepcounter{r4b}%
+  \ifnum\value{r4b}>4%
+    \addtocounter{r4b}{-4}%
+    \stepcounter{track}%
+  \fi%
+  \ifnum\value{track}>12%
+    \addtocounter{track}{-12}%
+  \fi%
+  \trackMonth~week \arabic{r4b}%
+}
+
+
