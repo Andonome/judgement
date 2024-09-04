@@ -95,6 +95,16 @@ In both cases, aim to resolve random encounters quickly.
   \end{description}
 \end{enumerate}
 
+\begin{figure*}[b!]
+  \setcounter{track}{13}
+  \setcounter{diceNo}{15}
+  \setcounter{diceNo2}{17}
+  \setcounter{encnum}{19}
+  \setcounter{enc}{21}% Encounter charts display creatures based entirely off this counter.
+
+  \encAcrossBiomes
+\end{figure*}
+
 \subsection{Weather}
 \label{weather}
 Cosmological and meteorological events can boost people's abilities to cast spells -- even those who had none before.
@@ -251,7 +261,7 @@ Once the encounter ends, roll again.
 Check the current season in \gls{fenestra} \vpageref{seasons}, then roll $2D6$ on the column matching the current season's temperature.
 During warm seasons, a roll of \dicef{3} \dicef{4} means \pgls{woodspy}, but during cold \gls{Alassea} and \gls{Minquesta}, it means a warthog, as they become more aggressive when food becomes scarce.
 
-\forestEncChart
+%\forestEncChart
 
 \makeAutoRule{morale}{Morale Checks}{When a creature's \glsfmtlongpl{hp} fall below $2D6$, it flees}
 \index{Morale}
@@ -405,24 +415,6 @@ You can combine all the regular encounters on the road into a single roll of $3D
 \end{exampletext}
 
 \end{multicols}
-
-\setcounter{track}{13}
-\setcounter{diceNo}{15}
-\setcounter{diceNo2}{17}
-\setcounter{encnum}{19}
-\setcounter{enc}{21}% Encounter charts display creatures based entirely off this counter.
-
-\label{encFullMonsters}
-\begin{wideTable}[c|c|c|c|c|LLLL]{Encounters Across Biomes}
-  \hline
-  \hline
-  \textbf{Hot} & \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Frigid} &  \textbf{Forest} & \textbf{Lochside} & \textbf{Mountains} & \textbf{Swamp} \\
-  \hline
-  \Repeat{19}{
-    \encLine \bigBeastList & \encLochside & \encMountains & \encSwamp \\
-  }
-  \hline
-\end{wideTable}
 
 \section{Emergent Situations}
 \label{roadEncounters}
@@ -582,6 +574,7 @@ Roll $3D6$ for the rest, and accept every unique result.
 When looking for a legal verdict, in the \gls{court} the accuser and accused make speeches, and make a resisted roll of \roll{Charisma}{Empathy}.%
 \footnote{See \autopageref{pitOfJustice} for the building's structure.}
 
+\null
 \begin{itemize}
   \item
   The accuser always gets +1.

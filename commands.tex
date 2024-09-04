@@ -312,15 +312,11 @@
   \ifcase\value{enc}\or%
     ---
   \or%
-    ---
-  \or%
-    ---
-  \or%
     Roaming Ghast
   \or%
-    ---
-  \or%
     $1D6$ Wandering Ghouls
+  \or%
+    ---
   \or%
     ---
   \or%
@@ -346,9 +342,13 @@
   \or%
     \Gls{basilisk}
   \or%
-    Swarming stirges
+    Stirges
   \or%
     Umber Hulk
+  \or%
+    \Gls{crawler} swarm%
+  \or%
+    Bluepins
   \else%
     Error! \LaTeX\ has broken, the beasts are loose!
   \fi%
@@ -374,10 +374,6 @@
   \or%
     $1D6\times 3$ Goats
   \or%
-    Landslide
-  \or%
-    ---
-  \or%
     ---
   \or%
     ---
@@ -388,13 +384,17 @@
   \or%
     ---
   \or%
+    Umber Hulk
+  \or%
     ---
   \or%
-    Umber Hulk
+    ---
+  \or%
+    ---
   \or%
     Bear
   \or%
-    Swarming stirges
+    Stirges
   \else%
     Error! \LaTeX\ has broken, the beasts are loose!
   \fi%
@@ -426,7 +426,7 @@
   \or%
     Bear
   \or%
-    $1D3$ Griffins
+    $1D6$ Griffins
   \or%
     Woodspy
   \or%
@@ -434,11 +434,11 @@
   \or%
     $1D6+6$ Wolves
   \or%
-    \gls{crawler}
+    \Gls{crawler}
   \or%
     \Gls{basilisk}
   \or%
-    Swarming stirges
+    Stirges
   \or%
     ---
   \else%
@@ -450,17 +450,21 @@
   \ifcase\value{enc}\or%
     ---
   \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
     Roaming Ghast%
   \or%
-    $1D6$ Submerged Ghouls
+    $1D6$ Ghouls
   \or%
-    \nameref{bloodwood} (\autopageref{bloodwood})%
+    ---
+  \or%
+    ---
+  \or%
+    ---
+  \or%
+    \nameref{bloodwood}%
+  \or%
+    ---
+  \or%
+    ---
   \or%
     ---
   \or%
@@ -472,19 +476,15 @@
   \or%
     \nameref{dreameater_moss}%
   \or%
+    Stirges
+  \or%
     \nameref{dirgeFruit}%
   \or%
-    $1D6$ Griffins%
+    $1D3$ Griffins%
   \or%
     Woodspy
   \or%
-    Mouthdigger
-  \or%
-    ---
-  \or%
     \Gls{basilisk}
-  \or%
-    Swarming stirges
   \or%
     ---
   \else%
@@ -510,6 +510,20 @@
       \encLine \bigBeastList \\
     }
   \end{encChart}
+}
+
+
+\newcommand\encAcrossBiomes{
+  \label{encFullMonsters}
+  \begin{boxtable}[c|c|c|c|c|XXXX]
+    \hline
+    \textbf{Hot} & \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Frigid} &  \textbf{Forest} & \textbf{Lochside} & \textbf{Mountains} & \textbf{Swamp} \\
+    \hline
+    \Repeat{19}{
+      \encLine \bigBeastList & \encLochside & \encMountains & \encSwamp \\
+    }
+    \hline
+  \end{boxtable}
 }
 
 %%%%% Full Encounters %%%%%
