@@ -290,11 +290,13 @@ If anyone shouts, makes a fire, or otherwise draws attention to themselves, roll
 Deer and auroch flee when they hear a sound, but predators will immediately hunt for the source of the sound.
 
 \setcounter{enc}{19}
-
-\begin{boxtable}
+\begin{boxtable}[rXc|L]
   \Repeat{18}{%
     \addtocounter{enc}{-1}%
-    \arabic{enc} & \bigBeastList \\
+    \arabic{enc} & \bigBeastList &
+      \randomize\showInterval{\value{encnum}} &
+    \encCivilization 
+    \\
   }
 \end{boxtable}
 

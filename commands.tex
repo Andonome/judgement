@@ -311,43 +311,74 @@
 \newcommand\bigBeastList{
   \ifcase\value{enc}\relax%
   \or%
-    Roaming Ghast
+    Hibernating creature ($1D6+7$)%
+    \setcounter{encnum}{0}%
   \or%
-    $1D6$ Wandering Ghouls
+    $1D3$ Goats%
+    \setcounter{encnum}{0}%
   \or%
-    $1D6+6$ Wolves
+    $1D6+6$ Wolves%
+    \setcounter{encnum}{2}%
   \or%
-    $1D6\times 3$ Deer
+    $1D6\times 20$ Aurochs%
+    \setcounter{encnum}{1}%
   \or%
-    $1D6\times 20$ Aurochs
+    Warthog%
+    \setcounter{encnum}{1}%
   \or%
-    $1D6$ Griffins
+    $1D6$ Griffins%
+    \setcounter{encnum}{0}%
   \or%
-    \ifnum\value{temperature}=0 Bear\else Warthog\fi
+    \Gls{woodspy}%
+    \stepcounter{r4}%
   \or%
-    Woodspy
+    \Gls{digger}%
+    \setcounter{encnum}{\value{r4}}%
   \or%
-    Mouthdigger
+    Bear%
+    \setcounter{encnum}{3}%
   \or%
     \Gls{crawler}
   \or%
     \Gls{basilisk}
+    \setcounter{encnum}{\value{temperature}}%
   \or%
     Stirges
-  \or%
-    \Gls{crawler} swarm%
+    \setcounter{encnum}{0}%
   \or%
     Bluepins
-  \or%
-    Umber Hulk
-  \or%
-    \nameref{bedleaves}
+    \setcounter{encnum}{1}%
   \or%
     \nameref{fly_flowers}
+    \setcounter{encnum}{0}%
+  \or%
+    \Gls{crawler} swarm%
+    \setcounter{encnum}{1}%
+  \or%
+    \nameref{bedleaves}
+    \setcounter{encnum}{0}%
   \or%
     \Glspl{marchingMushroom}
+    \setcounter{encnum}{0}%
+  \or%
+    Umber Hulk
+    \setcounter{encnum}{1}%
   \else%
-    Weird plant%
+    Dragons!%
+  \fi%
+}
+
+\newcommand\encCivilization{%
+  \ifnum\value{enc}<4%
+    \Glsfmttext{broch} traders%
+  \else%
+    \ifnum\value{enc}<7%
+      Outer \Glsfmttext{village} traders%
+    \else%
+      \ifnum\value{enc}<10%
+        Inner \Glsfmttext{village} traders%
+      \fi%
+    \fi%
   \fi%
 }
 
@@ -360,14 +391,6 @@
       \arabic{enc} & \bigWeatherList \\
     }
   \end{nametable}
-}
-
-\newcommand\forestEncChart{
-  \begin{encChart}{Forest Encounter}
-    \Repeat{16}{
-      \encLine \bigBeastList \\
-    }
-  \end{encChart}
 }
 
 %%%%% Full Encounters %%%%%
