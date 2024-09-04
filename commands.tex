@@ -309,30 +309,21 @@
 }
 
 \newcommand\bigBeastList{
-  \ifcase\value{enc}\or%
-    ---
+  \ifcase\value{enc}\relax%
   \or%
     Roaming Ghast
   \or%
     $1D6$ Wandering Ghouls
   \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
     $1D6+6$ Wolves
-  \or%
-    Bear
   \or%
     $1D6\times 3$ Deer
   \or%
     $1D6\times 20$ Aurochs
   \or%
-    Warthog
-  \or%
     $1D6$ Griffins
+  \or%
+    \ifnum\value{temperature}=0 Bear\else Warthog\fi
   \or%
     Woodspy
   \or%
@@ -344,154 +335,21 @@
   \or%
     Stirges
   \or%
-    Umber Hulk
-  \or%
     \Gls{crawler} swarm%
   \or%
     Bluepins
-  \else%
-    Error! \LaTeX\ has broken, the beasts are loose!
-  \fi%
-}
-
-\newcommand\encMountains{
-  \ifcase\value{enc}\or%
-    Roaming Ghast
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    $1D6$ Wandering Ghouls
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    $1D6\times 3$ Goats
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    $1D3$ Griffins
-  \or%
-    ---
-  \or%
-    ---
   \or%
     Umber Hulk
   \or%
-    ---
+    \nameref{bedleaves}
   \or%
-    ---
+    \nameref{fly_flowers}
   \or%
-    ---
-  \or%
-    Bear
-  \or%
-    Stirges
+    \Glspl{marchingMushroom}
   \else%
-    Error! \LaTeX\ has broken, the beasts are loose!
+    Weird plant%
   \fi%
 }
-
-\newcommand\encLochside{
-  \ifcase\value{enc}\or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    $1D6\times 3$ Deer
-  \or%
-    $1D6\times 20$ Aurochs
-  \or%
-    Warthog
-  \or%
-    Bear
-  \or%
-    $1D6$ Griffins
-  \or%
-    Woodspy
-  \or%
-    Bluepins
-  \or%
-    $1D6+6$ Wolves
-  \or%
-    \Gls{crawler}
-  \or%
-    \Gls{basilisk}
-  \or%
-    Stirges
-  \or%
-    ---
-  \else%
-    Error! \LaTeX\ has broken, the beasts are loose!
-  \fi%
-}
-
-\newcommand\encSwamp{
-  \ifcase\value{enc}\or%
-    ---
-  \or%
-    Roaming Ghast%
-  \or%
-    $1D6$ Ghouls
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    \nameref{bloodwood}%
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    ---
-  \or%
-    \nameref{dreameater_moss}%
-  \or%
-    Stirges
-  \or%
-    \nameref{dirgeFruit}%
-  \or%
-    $1D3$ Griffins%
-  \or%
-    Woodspy
-  \or%
-    \Gls{basilisk}
-  \or%
-    ---
-  \else%
-    Error! \LaTeX\ has broken, the beasts are loose!
-  \fi%
-}
-
 
 \newcommand\weatherChart{
   \label{encWeather}
@@ -510,20 +368,6 @@
       \encLine \bigBeastList \\
     }
   \end{encChart}
-}
-
-
-\newcommand\encAcrossBiomes{
-  \label{encFullMonsters}
-  \begin{boxtable}[c|c|c|c|c|XXXX]
-    \hline
-    \textbf{Hot} & \textbf{Warm} & \textbf{Mild} & \textbf{Cold} & \textbf{Frigid} &  \textbf{Forest} & \textbf{Lochside} & \textbf{Mountains} & \textbf{Swamp} \\
-    \hline
-    \Repeat{19}{
-      \encLine \bigBeastList & \encLochside & \encMountains & \encSwamp \\
-    }
-    \hline
-  \end{boxtable}
 }
 
 %%%%% Full Encounters %%%%%

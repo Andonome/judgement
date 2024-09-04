@@ -95,16 +95,6 @@ In both cases, aim to resolve random encounters quickly.
   \end{description}
 \end{enumerate}
 
-\begin{figure*}[b!]
-  \setcounter{track}{13}
-  \setcounter{diceNo}{15}
-  \setcounter{diceNo2}{17}
-  \setcounter{encnum}{19}
-  \setcounter{enc}{21}% Encounter charts display creatures based entirely off this counter.
-
-  \encAcrossBiomes
-\end{figure*}
-
 \subsection{Weather}
 \label{weather}
 Cosmological and meteorological events can boost people's abilities to cast spells -- even those who had none before.
@@ -261,8 +251,6 @@ Once the encounter ends, roll again.
 Check the current season in \gls{fenestra} \vpageref{seasons}, then roll $2D6$ on the column matching the current season's temperature.
 During warm seasons, a roll of \dicef{3} \dicef{4} means \pgls{woodspy}, but during \gls{cTwo}, it means a warthog, as they become more aggressive when food becomes scarce.
 
-%\forestEncChart
-
 \makeAutoRule{morale}{Morale Checks}{When a creature's \glsfmtlongpl{hp} fall below $2D6$, it flees}
 \index{Morale}
 give the \gls{gm} an impartial way to rule when antagonists flee from combat.
@@ -301,6 +289,15 @@ If anyone shouts, makes a fire, or otherwise draws attention to themselves, roll
 
 Deer and auroch flee when they hear a sound, but predators will immediately hunt for the source of the sound.
 
+\setcounter{enc}{19}
+
+\begin{boxtable}
+  \Repeat{18}{%
+    \addtocounter{enc}{-1}%
+    \arabic{enc} & \bigBeastList \\
+  }
+\end{boxtable}
+
 \subsection{The Civilization Rating}
 \label{civilizationRating}
 \index{Civilization Rating}
@@ -335,6 +332,7 @@ enjoy a much more quiet life than anywhere else in \gls{fenestra}.
 \paragraph{Along the \gls{lonelyRoad}}
 traders still travel between settlements routinely, but cannot travel with too many together -- the \glspl{bothy} will only fit so many bodies in at a time.
 
+\null
 \begin{description}
   \item[Rolling over 6] means the standard encounters emerge.
   \item[Hitting 6] means 6 bandits are waiting to attack, though they may not decide to attack the \glspl{pc} if the troupe looks well-armed.
@@ -574,7 +572,7 @@ Roll $3D6$ for the rest, and accept every unique result.
 When looking for a legal verdict, in the \gls{court} the accuser and accused make speeches, and make a resisted roll of \roll{Charisma}{Empathy}.%
 \footnote{See \autopageref{pitOfJustice} for the building's structure.}
 
-\null
+%\null
 \begin{itemize}
   \item
   The accuser always gets +1.

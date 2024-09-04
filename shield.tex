@@ -37,23 +37,23 @@
 \multiply\value{temperature} by 2
 \addtocounter{temperature}{0}
 
-\setcounter{enc}{\value{temperature}}
-\addtocounter{enc}{13}
-\setcounter{diceNo}{13}
-\rowcolors{2}{}{gray!10}
-\noindent
-\begin{boxtable}[c|LLL|L]
-  \hline
-  \hline
-  \textbf{Roll} & \textbf{Forest} & \textbf{Lochside} & \textbf{Mountains} & \textbf{Weather} \\
-  \hline
-  \Repeat{12}{
-  \addtocounter{diceNo}{-1}
-  \addtocounter{enc}{-1}
-  \arabic{diceNo} & \bigBeastList & \encLochside & \encMountains & \bigWeatherList \\
-  }
-  \hline
-\end{boxtable}
+%\setcounter{enc}{\value{temperature}}
+%\addtocounter{enc}{13}
+%\setcounter{diceNo}{13}
+%\rowcolors{2}{}{gray!10}
+%\noindent
+%\begin{boxtable}[c|LLL|L]
+%  \hline
+%  \hline
+%  \textbf{Roll} & \textbf{Forest} & \textbf{Lochside} & \textbf{Mountains} & \textbf{Weather} \\
+%  \hline
+%  \Repeat{12}{
+%  \addtocounter{diceNo}{-1}
+%  \addtocounter{enc}{-1}
+%  \arabic{diceNo} & \bigBeastList & \encLochside & \encMountains & \bigWeatherList \\
+%  }
+%  \hline
+%\end{boxtable}
 
 \begin{multicols}{2}
 
