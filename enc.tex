@@ -7,6 +7,137 @@ Then on the road, a random encounter interrupts the mission.
 
 Wherever the troupe travels, roll on the chart, and find out what problems they find.
 
+\section{The Unstoppable Stars}
+
+\label{astronomy}
+\label{seasons}
+\index{Seasons}
+\index{Astronomy}
+\index{Time Parallel}
+
+\boxPair{
+  \orrery
+}{
+  \randomize
+  \setcounter{r4b}{\day}
+  \divide\value{r4b} by 4
+  \stepcounter{r4b}
+  \setcounter{track}{\month}
+  \begin{nametable}[X|Y|c]{Seasons}
+
+    \textbf{Games Night} & \textbf{\Glsentrytext{cycle}} & \textbf{Climate} \\
+    \hline
+    \hline
+    \showRealTimeWeek &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{1}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{1}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \ldots &
+    \ldots &
+    \ldots
+    \\
+    \setcounter{r4b}{4}
+    \stepcounter{track}
+    \showRealTimeWeek &
+    \setcounter{cycle}{5}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \ldots &
+    \ldots &
+    \ldots
+    \\
+    \setcounter{r4b}{4}
+    \stepcounter{track}
+    \showRealTimeWeek &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+  \end{nametable}
+}
+
+\begin{multicols}{2}
+
+\subsection{Astronomy}
+
+The \gls{ainumar} shines bright in the night sky, and appears a little larger than our moon does to us.
+A raging storm moves across its face, which people can see about half of the year.
+They believe that the gods live there, inside the moving eye of the storm.
+
+\Gls{fenestra} swings around the \gls{ainumar}, coming so close in that it could almost kiss the gods, and then hurtles back to sit in empty space, far away from the Sun.
+\index{Seasons}
+
+\subsection{The \Glsfmtplural{cycle}}
+
+Every sixty days \gls{fenestra} completes \pgls{cycle} around the \gls{ainumar}, before \pgls{storm} descends, bringing earthquakes, lightning, and tidal waves.
+The \glspl{storm} last around a day, and mark a change in weather.
+\index{Weather}
+
+Each year has six \glspl{cycle}.
+
+\Gls{cOne} \glsentrydesc{cOne}.
+
+\Gls{cTwo} \glsentrydesc{cTwo}.
+
+\Gls{cThree} \glsentrydesc{cThree}.
+
+\Gls{cFour} \glsentrydesc{cFour}.
+
+\Gls{cFive} \glsentrydesc{cFive}.
+
+\Gls{cSix} \glsentrydesc{cSix}.
+
+\subsection{Parallel Time}
+\index{Parallel Time}
+
+\Gls{fenestra}'s time keeps moving, just as ours does, but faster.
+For every week which passes in our world, three weeks pass over there, so after a single month here, \gls{fenestra} experiences a full season.
+
+While we have \trackMonth, \gls{fenestra} has `\showCycle' -- a \showTemperature\ season.
+Just as we have twelve months, \emph{they} have twelve seasons.
+
+After three years, all twelve seasons have passed and a new cycle begins.
+\Gls{fenestra}'s inhabitants track `\glspl{cycle}' more often than years, unsurprisingly.
+
+\end{multicols}
+
+
+
 \section{Missions at the \Glsfmttext{broch}}
 \label{NGmissions}
 \index{Adventure Generator}
