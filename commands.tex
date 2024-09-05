@@ -276,37 +276,53 @@
   \or%
     Mist%
   \or%
-    \ifnum\value{temperature}=0%
-      Cold snap%
-    \else%
-      Overcast sky%
-    \fi%
+    \iftoggle{genExamples}{
+      Overcast (or cold snap during \gls{cTwo})
+    }{
+      \ifnum\value{temperature}=0%
+        Cold snap%
+      \else%
+        Overcast sky%
+      \fi%
+    }
   \or%
     Dead calm (2 \glspl{mp})%
   \or%
     Mild breeze%
   \or%
-    \ifnum\value{temperature}=3%
-      Heate wave%
-    \else%
-      Clear skies
-    \fi%
+    \iftoggle{genExamples}{
+      Clear skies (or heat wave during \gls{cFive})
+    }{
+      \ifnum\value{temperature}=3%
+        Heat wave%
+      \else%
+        Clear skies
+      \fi%
+    }
   \or%
-    Light
-    \ifnum\value{temperature}=0%
-      snow%
-    \else%
-      rain%
-    \fi%
+    \iftoggle{genExamples}{
+      Light rain (or snow over \gls{cTwo})
+    }{
+      Light
+      \ifnum\value{temperature}=0%
+        snow%
+      \else%
+        rain%
+      \fi%
+    }
   \or%
     Thunder%
   \or%
     Lightning storm (4 \glspl{mp})%
   \or%
-    \ifnum\value{temperature}=0 Heavy snow%
-    \else%
-      Torrential rain%
-    \fi%
+    \iftoggle{genExamples}{
+      Torrential rain (or heavy snow during \gls{cTwo})
+    }{
+      \ifnum\value{temperature}=0 Heavy snow%
+      \else%
+        Torrential rain%
+      \fi%
+    }
   \else%
     Error
   \fi
@@ -1001,4 +1017,78 @@
     \coordinate [label=\outline{\Large \glsentrytext{ainumar}}] (AN) at (A)+(3,1);
     \coordinate [label=\outline{\glsentrytext{fenestra}}] (FN) at (F)+(2.3,0.3);
   \end{tikzpicture}
+}
+
+\newcommand\parallelCalendar{
+  \randomize
+  \setcounter{r4b}{\day}
+  \divide\value{r4b} by 4
+  \stepcounter{r4b}
+  \setcounter{track}{\month}
+  \begin{nametable}[X|Y|c]{Seasons}
+
+    \textbf{Games Night} & \textbf{\Glsentrytext{cycle}} & \textbf{Climate} \\
+    \hline
+    \hline
+    \showRealTimeWeek &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{0}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{1}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{1}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \showRealTimeWeek &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \ldots &
+    \ldots &
+    \ldots
+    \\
+    \setcounter{r4b}{4}
+    \stepcounter{track}
+    \showRealTimeWeek &
+    \setcounter{cycle}{5}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+    \ldots &
+    \ldots &
+    \ldots
+    \\
+    \setcounter{r4b}{4}
+    \stepcounter{track}
+    \showRealTimeWeek &
+    \setcounter{cycle}{2}
+    \setTemperature
+    \showCycle &
+    \showTemperature
+    \\
+  \end{nametable}
 }

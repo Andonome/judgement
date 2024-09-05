@@ -1,13 +1,31 @@
 \chapter{The Oracles}
 \label{encounters}
 
-Wherever you go in \gls{fenestra}, some situation or catastrophe emerges.
-It starts at \pgls{broch}, where the \glspl{pc} receive a mission.
-Then on the road, a random encounter interrupts the mission.
+This chapter covers wandering \glspl{monster} -- the heart of \gls{fenestra}.
 
-Wherever the troupe travels, roll on the chart, and find out what problems they find.
+% Astronomy
+%   - Cycles
+%     * Niquis
+%     * Sables
+%       - cold snaps
+%     * Sylfs
+%       - heat waves
+%   - Weather
+%   - Wraths
+%     * Lightning
+%     * Earthquakes
+%   - Weather
+%     * Cold snaps
+%   - Realtime
+% Monsters
+%   - Morale
+% Civilization
+%   - Traders
+% Combined rolls
+% Weather
 
-\section{The Unstoppable Stars}
+
+\section{Astronomy}
 
 \label{astronomy}
 \label{seasons}
@@ -15,94 +33,21 @@ Wherever the troupe travels, roll on the chart, and find out what problems they 
 \index{Astronomy}
 \index{Time Parallel}
 
-\boxPair{
-  \orrery
-}{
-  \randomize
-  \setcounter{r4b}{\day}
-  \divide\value{r4b} by 4
-  \stepcounter{r4b}
-  \setcounter{track}{\month}
-  \begin{nametable}[X|Y|c]{Seasons}
-
-    \textbf{Games Night} & \textbf{\Glsentrytext{cycle}} & \textbf{Climate} \\
-    \hline
-    \hline
-    \showRealTimeWeek &
-    \setcounter{cycle}{0}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{0}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{1}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{1}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{2}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{2}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \ldots &
-    \ldots &
-    \ldots
-    \\
-    \setcounter{r4b}{4}
-    \stepcounter{track}
-    \showRealTimeWeek &
-    \setcounter{cycle}{5}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \ldots &
-    \ldots &
-    \ldots
-    \\
-    \setcounter{r4b}{4}
-    \stepcounter{track}
-    \showRealTimeWeek &
-    \setcounter{cycle}{2}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-  \end{nametable}
-}
-
 \begin{multicols}{2}
 
-\subsection{Astronomy}
-
-The \gls{ainumar} shines bright in the night sky, and appears a little larger than our moon does to us.
-A raging storm moves across its face, which people can see about half of the year.
-They believe that the gods live there, inside the moving eye of the storm.
-
-\Gls{fenestra} swings around the \gls{ainumar}, coming so close in that it could almost kiss the gods, and then hurtles back to sit in empty space, far away from the Sun.
-\index{Seasons}
-
 \subsection{The \Glsfmtplural{cycle}}
+
+\begin{exampletext}
+  The \gls{ainumar} shines bright in the night sky, and appears a little larger than our moon does to us.
+  A raging storm moves across its face, which people can see about half of the year.
+  They believe that the gods live there, inside the moving eye of the storm.
+
+  \Gls{fenestra} swings around the \gls{ainumar}, coming so close in that it could almost kiss the gods, and then hurtles back to sit in empty space, far away from the Sun.
+  \index{Seasons}
+\end{exampletext}
+
+\Gls{fenestra} changes constantly as it circles the \gls{ainumar}, and the \gls{ainumar} circles the Sun.
+The current season determines the events in the sky, which \glspl{monster} stalk the endless forest, and which plants are in bloom.
 
 Every sixty days \gls{fenestra} completes \pgls{cycle} around the \gls{ainumar}, before \pgls{storm} descends, bringing earthquakes, lightning, and tidal waves.
 The \glspl{storm} last around a day, and mark a change in weather.
@@ -110,32 +55,95 @@ The \glspl{storm} last around a day, and mark a change in weather.
 
 Each year has six \glspl{cycle}.
 
-\Gls{cOne} \glsentrydesc{cOne}.
+\subsubsection{\Glsfmttext{cOne}}
+\glsentrydesc{cOne}.
 
-\Gls{cTwo} \glsentrydesc{cTwo}.
+\subsubsection{\Glsfmttext{cTwo}}
+\glsentrydesc{cTwo}.
 
-\Gls{cThree} \glsentrydesc{cThree}.
+\subsubsection{\Glsfmttext{cThree}}
+\glsentrydesc{cThree}.
 
-\Gls{cFour} \glsentrydesc{cFour}.
+\subsubsection{\Glsfmttext{cFour}}
+\glsentrydesc{cFour}.
 
-\Gls{cFive} \glsentrydesc{cFive}.
+\subsubsection{\Glsfmttext{cFive}}
+\glsentrydesc{cFive}.
 
-\Gls{cSix} \glsentrydesc{cSix}.
+\subsubsection{\Glsfmttext{cSix}}
+\glsentrydesc{cSix}.
+
+\boxPair[t]{
+  \orrery
+}{
+  \parallelCalendar
+}
+
+\subsection{Cosmological Events}
+\label{weather}
+
+The changing sky brings danger, but also power, as many events boost people's spell \glspl{sphere} -- even those who had none before.
+These bonuses stack with \glspl{boon}, so someone with the right know-how can (and do) stand under the unnatural darkness of an eclipse, holding the ground-up remains of a stirge queen, with auroch hooves boiled to melting point, at the top of a mountain,%
+\footnote{High level spells often have such a long casting range that casters must climb high to see their target.}
+screeching about opening a portal from a distant \gls{village} to an underground realm.
+
+\toggletrue{genExamples}
+\weatherChart
+
+\subsubsection{\Glsfmtplural{coldSnap}}
+\index{Cold Snap \glsentrytext{R}}
+\index[mana]{Fate!Cold Snaps \glsentrytext{R}}
+\glsentrydesc{coldSnap}, including those who cannot normally cast spells.
+
+\subsubsection{\Glsfmtplural{eclipse}}
+\index{Eclipses \glsentrytext{R}}
+\index[mana]{Air!Eclipses \glsentrytext{R}}
+\glsentrydesc{eclipse}.
+
+While the average person makes little use of this time -- they have more pressing concerns given the sudden lack of Sunlight -- \glspl{witch} often plan grand rituals to coincide with \pgls{eclipse}, as the extra powers allow them to perform wide-ranging, potent \glspl{invocation}.
+
+\index[mana]{Fire!Heatwaves \glsentrytext{R}}
+\subsubsection{\Glsfmtplural{heatwave}}
+\glsentrydesc{heatwave}.
+
+\subsubsection{\Glsfmtplural{snow}}
+\glsentrydesc{snow}.
+In the deep forests, this makes little difference, but an open road which once granted five miles of easy travel per \gls{interval} would only allow three miles once covered in frost.
+
+\subsection{\Glsfmtplural{storm}}
+
+Every sixty days, \pgls{storm} comes, bringing calamity.
+
+\subsubsection{\Glsfmtplural{earthquake}}
+\index[mana]{Earth!Quakes \glsentrytext{R}}
+\glsentrydesc{earthquake}.
+
+\subsubsection{\Glsfmtplural{flood}}
+\index[mana]{Water!Floods \glsentrytext{R}}
+\glsentrydesc{flood}.
+
+\subsubsection{\Glsfmtplural{hurricane}}
+\glsentrydesc{hurricane}.
+
+\subsubsection{\Glsfmtplural{landslide}}
+\glsentrydesc{landslide}.
+
+With enough foot-fall, the penalty reduces to nothing, as others stamp the snow down, reducing it to frosty mud.
+
+%! Lightning!
 
 \subsection{Parallel Time}
 \index{Parallel Time}
 
 \Gls{fenestra}'s time keeps moving, just as ours does, but faster.
-For every week which passes in our world, three weeks pass over there, so after a single month here, \gls{fenestra} experiences a full season.
+For every week which passes in our world, thirty days pass over there.
 
+\setcounter{track}{\month}
+\setCycle{\month}{\day}
 While we have \trackMonth, \gls{fenestra} has `\showCycle' -- a \showTemperature\ season.
-Just as we have twelve months, \emph{they} have twelve seasons.
-
-After three years, all twelve seasons have passed and a new cycle begins.
-\Gls{fenestra}'s inhabitants track `\glspl{cycle}' more often than years, unsurprisingly.
+After three months, all six \glspl{cycle} have passed and a new cycle begins.
 
 \end{multicols}
-
 
 \section{Things on the Road}
 \label{randomEncounters}
@@ -159,56 +167,6 @@ In both cases, aim to resolve random encounters quickly.
     \item[Past the \glsentrytext{edge}] any noise has a 1 in 6 chance of summoning a creature.
   \end{description}
 \end{enumerate}
-
-\subsection{Weather}
-\label{weather}
-Cosmological and meteorological events can boost people's abilities to cast spells -- even those who had none before.
-These bonuses stack with \glspl{boon}, so someone with the right know-how can (and do) stand under the unnatural darkness of an eclipse, holding the ground-up remains of a stirge queen, with auroch hooves boiled to melting point, at the top of a mountain,%
-\footnote{High level spells often have such a long casting range that casters must climb high to see their target.}
-screeching about opening a portal from a distant \gls{village} to an underground realm.
-
-\weatherChart
-
-\subsubsection{\Glsfmtplural{coldSnap}}
-\index{Cold Snap \glsentrytext{R}}
-\index[mana]{Fate!Cold Snaps \glsentrytext{R}}
-\glsentrydesc{coldSnap}, including those who cannot normally cast spells.
-
-\subsubsection{\Glsfmtplural{earthquake}}
-\index{Earthquakes \glsentrytext{R}}
-\index{Quakes}
-\index[mana]{Earth!Quakes \glsentrytext{R}}
-\glsentrydesc{earthquake}.
-
-\subsubsection{\Glsfmtplural{eclipse}}
-\index{Eclipses \glsentrytext{R}}
-\index[mana]{Air!Eclipses \glsentrytext{R}}
-\glsentrydesc{eclipse}.
-
-While the average person makes little use of this time -- they have more pressing concerns given the sudden lack of Sunlight -- \glspl{witch} often plan grand rituals to coincide with \pgls{eclipse}, as the extra powers allow them to perform wide-ranging, potent \glspl{invocation}.
-
-\subsubsection{\Glsfmtplural{flood}}
-\index[mana]{Water!Floods \glsentrytext{R}}
-\glsentrydesc{flood}.
-
-\subsubsection{\Glsfmtplural{heatwave}}
-\index[mana]{Fire!Heatwaves \glsentrytext{R}}
-\glsentrydesc{heatwave}.
-
-\subsubsection{\Glsfmtplural{hurricane}}
-\index{Hurricanes}
-\index{Marching!Hurricanes}
-\glsentrydesc{hurricane}.
-
-\subsubsection{\Glsfmtplural{landslide}}
-\glsentrydesc{landslide}.
-
-\subsubsection{\Glsfmttext{snow}}
-\index{Snow}
-\glsentrydesc{snow}.
-In the deep forests, this makes little difference, but an open road which once granted five miles of easy travel per \gls{interval} would only allow three miles once covered in frost.
-
-With enough foot-fall, the penalty reduces to nothing, as others stamp the snow down, reducing it to frosty mud.
 
 \subsection{\Glsfmtplural{monster}}
 
