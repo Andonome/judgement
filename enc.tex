@@ -1,7 +1,9 @@
 \chapter{The Oracles}
 \label{encounters}
 
-This chapter covers \gls{fenestra}'s shifting \glspl{cycle}, their effects on wandering \glspl{monster}, and the intersection with civilization.
+This chapter has random encounter tables, random \glspl{village} event lists, and plenty more, for all the things that threaten to stump \pgls{gm} mid-way through a session.
+But first, we're gonna get weird.
+Please bear with me.
 
 % Astronomy
 %   - Cycles
@@ -17,9 +19,13 @@ This chapter covers \gls{fenestra}'s shifting \glspl{cycle}, their effects on wa
 %   - Weather
 %     * Cold snaps
 %   - Realtime
-% Monsters
-%   - Morale
+% Road
+%   - Monsters
+%     * Temperatures + TTE
+%     * Morale
+%     * Beyond the Edge
 % Civilization
+%   - Rating
 %   - Traders
 % Combined rolls
 % Weather
@@ -93,6 +99,8 @@ screeching about opening a portal from a distant \gls{village} to an underground
 
 Since most people don't know any spells, they have little use for the extra \gls{sphere}, but this marks a good time to learn.
 
+Since mana comes on the wind, people can regenerate more or fewer \glspl{mp} depending on the weather.
+
 \toggletrue{genExamples}
 \weatherChart
 
@@ -149,7 +157,11 @@ Every three Mundane months, \gls{fenestra} begins a new year; so on January, Apr
 Four days pass there for each of ours, so when we hit the second day of the month, \gls{fenestra} hits day 8 of \pgls{cycle}.
 Then on the 15th of each Mundane month, the \gls{cycle} hits day 60, which means \pgls{storm} descends, and a new \gls{cycle} begins.
 
-See \autopageref{realtimeScheduling} for how this helps avoiding scheduling problems.
+During a game, the \gls{gm} tracks time as usual, skipping over large chunks as they please.
+But each week should not track more than half \pgls{cycle} (i.e. thirty days in \gls{fenestra}).
+Games which begin with a new \gls{cycle} will begin with \pgls{storm}, and games which cover the full thirty days until \pgls{cycle}'s end will end with \pgls{storm}.
+
+And if your face has contorted with disapproval and you wonder about the point of this strange calendar, skip to `\nameref{realtimeScheduling}' \vpageref{realtimeScheduling}.
 
 \end{multicols}
 
@@ -158,135 +170,52 @@ See \autopageref{realtimeScheduling} for how this helps avoiding scheduling prob
 
 \begin{multicols}{2}
 
-\noindent
-Encounters on the road form the heart-beat of \gls{fenestra}, because they should be fast, and forgettable.
-Some encounters will throw a spear in the spokes of any plan; others simply remind players that they're travelling.
-In both cases, aim to resolve random encounters quickly.
+\subsection{Creatures}
 
-\begin{enumerate}
-  \item
-  Roll $1D6$ to see how many \glspl{interval} until the next creature encounter.
-  \item
-  Roll $2D6$ to find the weather, \vpageref{encWeather}.
-  \item
-  Roll $2D6$ for the creature encounter, \vpageref{encFullMonsters} (-1 at night or evening).
-  \begin{description}
-    \item[On the roads] lower encounter rolls are replaced by traders.
-    \item[Past the \glsentrytext{edge}] any noise has a 1 in 6 chance of summoning a creature.
-  \end{description}
-\end{enumerate}
+Which creatures are active depends on the \gls{cycle}'s temperature.
 
-\subsection{\Glsfmtplural{monster}}
-
-\begin{figure*}[b!]
-
-\begin{multicols}{3}
-\small
-%%% Ex table 1
-\setcounter{enc}{15}
-\setcounter{diceNo}{13}
-\vspace{2em}
-\rowcolors{2}{}{gray!10}
-\noindent
-\begin{boxtable}[c|L]
-  \hline
-  \hline
-  \textbf{Roll} & \textbf{Inner Hamlets} \\
-  \hline
-  \Repeat{3}{
-    \addtocounter{diceNo}{-1}
-    \addtocounter{enc}{-1}
-    \arabic{diceNo} & \bigBeastList \\
+\setcounter{enc}{19}
+\begin{boxtable}[rXc]
+  \Repeat{18}{%
+    \addtocounter{enc}{-1}%
+    \arabic{enc} & \bigBeastList &
+      \randomize\showInterval{\value{encnum}}
+    \\
   }
-  \hline
-  \addtocounter{diceNo}{-1}
-  \addtocounter{enc}{-1}
-  \arabic{diceNo} & Bandits! \\
-  \hline
-  \Repeat{7}{
-    \addtocounter{diceNo}{-1}
-    \addtocounter{enc}{-1}
-    \arabic{diceNo} & \arabic{diceNo} wagons \\
-  }
-  \hline
 \end{boxtable}
 
-%%% Ex table 2
-\setcounter{enc}{15}
-\setcounter{diceNo}{13}
-\vspace{2em}
-\rowcolors{2}{}{gray!10}
-\noindent
-\begin{boxtable}[c|L]
-  \hline
-  \hline
-  \textbf{Roll} & \textbf{The Lonely Road} \\
-  \hline
-  \Repeat{6}{
-    \addtocounter{diceNo}{-1}
-    \addtocounter{enc}{-1}
-    \arabic{diceNo} & \bigBeastList \\
-  }
-  \hline
-  \addtocounter{diceNo}{-1}
-  \addtocounter{enc}{-1}
-  \arabic{diceNo} & Bandits! \\
-  \hline
-  \Repeat{4}{
-    \addtocounter{diceNo}{-1}
-    \addtocounter{enc}{-1}
-    \arabic{diceNo} & \arabic{diceNo} wagons \\
-  }
-  \hline
-\end{boxtable}
+\setcounter{temperature}{0}
+\paragraph{During \showTemperature\ \gls{cTwo}}
+encounters use the first $1D6$ to find the number of days until the encounter, the second $1D6$ for the result, and the last to determine the number.
 
-%%% Ex table 3
-\setcounter{enc}{15}
-\setcounter{diceNo}{13}
-\vspace{2em}
-\rowcolors{2}{}{gray!10}
-\noindent
-\begin{boxtable}[c|L]
-  \hline
-  \hline
-  \textbf{Roll} & \textbf{Outer \Glspl{village}} \\
-  \hline
-  \Repeat{9}{
-    \addtocounter{diceNo}{-1}
-    \addtocounter{enc}{-1}
-    \arabic{diceNo} & \bigBeastList \\
-  }
-  \hline
-  \addtocounter{diceNo}{-1}
-  \addtocounter{enc}{-1}
-  \arabic{diceNo} & Bandits! \\
-  \hline
-  \Repeat{1}{
-    \addtocounter{diceNo}{-1}
-    \addtocounter{enc}{-1}
-    \arabic{diceNo} & \arabic{diceNo} wagons \\
-  }
-  \hline
-\end{boxtable}
+Rolling \dicef{4}~\dicef{2}~\dicef{1} would means `after 4 days, the \glspl{pc} encounter a goat during the morning'.
 
-\end{multicols}
+\stepcounter{temperature}
+\paragraph{The \showTemperature\ \glspl{cycle}}
+uses the lowest of the first two dice to determine how many days until the encounter occurs.
+Add the next two dice to determine the encounter.
 
-\end{figure*}
+Rolling \dicef{2}~\dicef{1}~\dicef{3}~\dicef{4} would means `after 1 day, the \glspl{pc} encounter a herd of 80 aurochs during the afternoon'.
 
-\noindent
-\Gls{fenestra} has an endless stream of creatures in her endless forest, eagerly searching for people.
-Roll $1D6$ to find out how many \glspl{interval} until the next encounter.
-Once the encounter ends, roll again.
+\stepcounter{temperature}
+\paragraph{The \showTemperature\ \glspl{cycle}}
+use use the lowest of the first three dice to determine how many days until the encounter occurs.
+Add the last three dice to determine the encounter.
 
-\Glspl{basilisk} hibernate in the cold seasons, while warmer seasons have nights so warm that \glspl{basilisk} remain active.
-Check the current season in \gls{fenestra} \vpageref{seasons}, then roll $2D6$ on the column matching the current season's temperature.
-During warm seasons, a roll of \dicef{3} \dicef{4} means \pgls{woodspy}, but during \gls{cTwo}, it means a warthog, as they become more aggressive when food becomes scarce.
+Rolling \dicef{2}~\dicef{2}~\dicef{3}~\dicef{5} would means `after 2 days, the \glspl{pc} encounter \pgls{crawler}'.
+
+\stepcounter{temperature}
+\paragraph{During \showTemperature\ \gls{cFive}}
+use use the lowest of all four dice to determine how many days until the encounter occurs, and the highest three of the four dice to find the encounter.
+The last die determines any quantities.
+
+Rolling \dicef{3}~\dicef{3}~\dicef{1}~\dicef{5} would means `after 1 day, the \glspl{pc} encounter \pgls{basilisk}..
 
 \makeAutoRule{morale}{Morale Checks}{When a creature's \glsfmtlongpl{hp} fall below $2D6$, it flees}
 \index{Morale}
 give the \gls{gm} an impartial way to rule when antagonists flee from combat.
 At the start of an encounter, roll $2D6$ and leave the result on the table.
-If the creature has more \glspl{hp} than the roll, it attacks; otherwise, watches the troupe.
+If the creature has more \glspl{hp} than the roll, it attacks; otherwise, it watches quietly.
 
 \sidebox{
   \begin{boxtable}
@@ -311,141 +240,125 @@ A single \gls{crawler} eyeing up a party might display its claws, then observe t
 \Glspl{pc} do not take Morale checks -- the players decide when it's time to run away by the look of the situation.
 Usually a good time is when all the \glspl{fp} have run out.
 \index{Henchmen}%
-However, \gls{npc} travelling with the \glspl{pc} still take morale checks as usual.%
+However, \glspl{npc} travelling with the \glspl{pc} still take morale checks as usual.%
 \footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}%
 
 \makeAutoRule{noise}{Beyond the \Glsfmttext{edge}}{Each noise or light prompts a 1 in 6 chance of an encounter roll}
 every noise or light becomes a beacon for creatures all around.
 If anyone shouts, makes a fire, or otherwise draws attention to themselves, roll $1D6$; on the roll of a `1', roll on the encounter table immediately.
 
-Deer and auroch flee when they hear a sound, but predators will immediately hunt for the source of the sound.
-
-\setcounter{enc}{19}
-\begin{boxtable}[rXc|L]
-  \Repeat{18}{%
-    \addtocounter{enc}{-1}%
-    \arabic{enc} & \bigBeastList &
-      \randomize\showInterval{\value{encnum}} &
-    \encCivilization 
-    \\
-  }
-\end{boxtable}
+Deer and auroch flee when they hear a sound, but predators will immediately hunt for the source of the sound, and arrive after \pgls{interval}.
 
 \subsection{The Civilization Rating}
 \label{civilizationRating}
 \index{Civilization Rating}
 
-\Glspl{monster} don't generally attack towns.
-It's not that they understand the risks, they just hear the sounds of \glspl{broch} and \glspl{village} which surround every town, and find food or death before going further in.
+More civilized areas have fewer creatures and more traders.
+If the first die rolled equal or below the civilization rating, replace the creature encounter with traders.
 
-When travelling closer to a town, you keep rolling $2D6$ for encounters, but replace the lower results with traders.
-
-\paragraph{Inner hamlets}
-enjoy a much more quiet life than anywhere else in \gls{fenestra}.
-
-\null
+\setcounter{encnum}{1}
 \begin{description}
-  \item[Rolling over 9]
-  means the usual encounter occurs, for whatever kind of land existed before the humans.
-  Usually, this means forests.
+  \item[\encCivilization] a roll of \dicef{\value{encnum}} indicates a caravan with \arabic{encnum} useful item.
+  \stepcounter{encnum}
 
-  People who live in little unwalled farmhouses never see bears or auroch herds.
-  Only rare \glspl{basilisk} and \glspl{crawler} have the speed and stupidity to strike this far into a human settlement.
-  \item[Rolling 9]
-  means an encounter with 9 bandits.
+  \item[\encCivilization]
+  a roll of \dicef{\value{encnum}} or less means a caravan with up to \arabic{encnum} useful items.
+  \stepcounter{encnum}
 
-  Bandits only enter the inner circles when they have enough numbers to pose a serious threat to any \glspl{sunGuard} or angry farmers in the vicinity.
-  \item[Rolling below 9]
-  means that many wagons.
+  \item[\encCivilization]
+  a roll of \dicef{\value{encnum}} or less means a caravan with up to \arabic{encnum} useful items.
+  \stepcounter{encnum}
 
-  So on the roll of `7', the troupe have encountered seven wagons coming towards them on the road.
+  \item[\encCivilization]
+  a roll of \dicef{\value{encnum}} or less means a caravan with up to \arabic{encnum} useful items.
+  \stepcounter{encnum}
+
+  \item[\encCivilization]
+  a roll of \dicef{\value{encnum}} or less means a caravan with up to \arabic{encnum} useful items.
+  \stepcounter{encnum}
 \end{description}
 
-\paragraph{Along the \gls{lonelyRoad}}
-traders still travel between settlements routinely, but cannot travel with too many together -- the \glspl{bothy} will only fit so many bodies in at a time.
+In this way, anyone approaching a town will slowly find the natural encounters being eaten away by civilization.
 
-\null
-\begin{description}
-  \item[Rolling over 6] means the standard encounters emerge.
-  \item[Hitting 6] means 6 bandits are waiting to attack, though they may not decide to attack the \glspl{pc} if the troupe looks well-armed.
-  \item[Rolling under 6]
-  means that number of trader wagons come towards the \glspl{pc}
-  on the road.
-\end{description}
-
-\paragraph{Towards dead-end \glspl{village}}
-a trader's wagon come along the road once a week, and never in great numbers.
-One or two outer \glspl{village} just don't have much goods to trade.
-Luckily, also puts a hard cap on the potential for bandits.
-
-These dangling, dead-end roads work much like the forest, except for the fast and easy travel on the roads.
-
-\begin{description}
-  \item[Rolling 3]
-  means three bandits are watching the road, and may have been watching for some days.
-  \item[Rolling 2]
-  means two wagons saunter lazily down the road, likely going to \glspl{village} where they have many friends.
-\end{description}
-
-\subsubsection{Slide the Scales}
-of the civilization up or down, depending on what looks right.
-The rating can be anywhere from `0' (meaning `past the \gls{edge}') to `13' (which usually means `in the safety of a town').
-
-\subsubsection{Travelling Traders}
+\subsubsection{Items for Sale}
 \label{traders}
-carry all sorts of items the \glspl{pc} might want, and they will say this loudly, shouting out what they have as soon as they see anyone ahead.
+use the remaining dice to determine what the traders have which might interest the \glspl{pc}.
+Traders always shout this information ahead of them, to entice people to buy their goods.
 
 \encTraders
 
 Each of your encounter dice also represent an interesting item the traders have.
-For example, rolling \dicef{8}\dicef{3} would indicate that the \glspl{pc} can buy some rope and pitch.
+For example, rolling \dicef{8}\dicef{3} would indicate that the \glspl{pc} can buy some rope and torches.
 
 \index{Selling Beasts}
 Traders also purchase live \glspl{monster} for a number of \glspl{sp} equal to their \gls{cr}, or half that number if the body is well prepared.
 
 \subsection{Fast Rolls}
 
-Nobody likes holding up a session while the \gls{gm} makes multiple dice rolls.
-You can combine all the regular encounters on the road into a single roll of $3D6$ to get an instant result.
+Nobody likes waiting while \pgls{gm} makes multiple dice rolls.
+Generate a full encounter instantly by casting four dice like a fist of rune-stones; read their left-to-right order, and interpret the last two as weather.
 
-\begin{description}
-  \item
-  Roll 3 dice read the next encounter.
-  \begin{description}
-    \item[Die 1]
-    shows how many \glspl{interval} until the encounter.
-    \item[Die 2 + die 3]
-    tell you the weather.
-    \item[Die 1 + die 2]
-    tell you what creature emerges.
-    \item[Die 3]
-    may tell you the number of creatures appearing.
-  \end{description}
-  \item[During the day]
-  staying close to settlements means a low encounter roll replaces the normal predators with traders.
+\begin{minipage}{.2\linewidth}
+  \dicef{6}
 
-  However, it can also mean a greater chance of bandits.
+  \qquad\dicef{1}
 
-  \item[At night]
-  roll as normal, with -1 to the encounter roll and weather rolls.
-  The troupe will never find traders -- they do not travel at night.
-  \item[In the deep forest]
-  Every noise prompts a chance for an encounter.
-\end{description}
+  \hspace{3pt}\dicef{2}{\par\hspace{-2em}\dicef{3}}
+\end{minipage}
+\begin{minipage}{.7\linewidth}
+  \vspace{.5em}
+  Even if the dice-roll looks like a complete mess, every roll has a visible left-to-right order.
+  Arranging this example roll, we would get \dicef{3}~\dicef{6}~\dicef{2}~\dicef{1}.
+\end{minipage}
+
+\setCycle{1}{1}
+\setcounter{enc}{19}
+\setcounter{diceNo}{7}
+\begin{boxtable}[L|r|Lc]
+  \Repeat{6}{%
+    \addtocounter{enc}{-1}%
+    \addtocounter{diceNo}{-1}
+    \dicef{\value{diceNo}}~\encCivilization[\value{diceNo}] &
+    \arabic{enc} & \bigBeastList &
+      \randomize\showInterval{\value{encnum}}
+    \\
+  }
+  \hline
+  \Repeat{11}{%
+    \addtocounter{enc}{-1}%
+    \bigWeatherList &
+    \arabic{enc} & \bigBeastList &
+      \randomize\showInterval{\value{encnum}}
+    \\
+  }
+  \hline
+  \addtocounter{enc}{-1}%
+  &
+  \arabic{enc} & \bigBeastList &
+  \randomize\showInterval{\value{encnum}}
+  \\
+\end{boxtable}
 
 \begin{exampletext}
-  For example, the \gls{gm} rolls `\dicef{3} \dicef{4} \dicef{1}', during a `mild' season.
 
-  On the first reading, this says `(\dicef{3}) after 3~\glspl{interval}, (\underline{\dicef{4} + \dicef{1}}) mist covers the area'.
+  One \showTemperature~\gls{cOne}, the \glspl{pc} emerge from \pgls{broch}, and head towards \pgls{village}.
 
-  On the second reading, (\underline{\dicef{3} + \dicef{4}}) wolves arrive, (\dicef{1}) numbering 7.
+  \dicef{1}~\dicef{4}~\dicef{2}~\dicef{5}: A mild breeze blows.
+  They meet a trader on the road, selling salted meats, but \pgls{jotter} already gave them some rations, so they continue towards the \gls{village}.
+  Work is difficult, and takes three days.
 
-\diceTrio{3}{4}{1}{}{Mist}{\dicef{1} +6 Wolves}
+  \dicef{4}~\dicef{3}~\dicef{3}~\dicef{1}: The day they head back, a thick mist rises.
+  A griffin spots them, and begins its mimicry, singing a child's song from the forest (see \vpageref{griffin} for notes on their mimicry).
+
+  Once \gls{cTwo} hits, their next mission involves going past the \gls{edge}.
+  \dicef{2}~\dicef{3}~\dicef{3}~\dicef{6}: After two days of peace, snow falls.
+  As the \glspl{pc} make camp, nine wolves take the opportunity to steal their food.
 
 \end{exampletext}
 
 \end{multicols}
 
+\setCycle{\month}{\day}
 
 \section{Missions at the \Glsfmttext{broch}}
 \label{NGmissions}
@@ -492,6 +405,7 @@ Then add a complication with the same bonus as before (\autopageref{missionCompl
 \subsubsection{Goal}
 \index{Missions}
 
+\null
 \ngMissions
 
 \subsubsection{Complications}

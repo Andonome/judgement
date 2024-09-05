@@ -270,9 +270,9 @@
 \newcommand\bigWeatherList{
   \ifcase\value{enc}\or%
   \or%
-    Hurricane (4 \glspl{mp})%
+    Hurricane (4~\glspl{mp})%
   \or%
-    Biting winds (4 \glspl{mp})%
+    Biting winds (4~\glspl{mp})%
   \or%
     Mist%
   \or%
@@ -286,7 +286,7 @@
       \fi%
     }
   \or%
-    Dead calm (2 \glspl{mp})%
+    Dead calm (2~\glspl{mp})%
   \or%
     Mild breeze%
   \or%
@@ -313,7 +313,7 @@
   \or%
     Thunder%
   \or%
-    Lightning storm (4 \glspl{mp})%
+    Lightning storm (4~\glspl{mp})%
   \or%
     \iftoggle{genExamples}{
       Torrential rain (or heavy snow during \gls{cTwo})
@@ -388,17 +388,18 @@
   \fi%
 }
 
-\newcommand\encCivilization{%
-  \ifnum\value{enc}<4%
-    \Glsfmttext{broch} traders%
+\newcommand\encCivilization[1][\value{encnum}]{%
+  \ifcase#1\relax%
+  \or%
+    On the \gls{lonelyRoad}
+  \or%
+    By \pgls{broch}%
+  \or%
+    Outer \glspl{village}%
+  \or%
+    Inner \glspl{village}%
   \else%
-    \ifnum\value{enc}<7%
-      Outer \Glsfmttext{village} traders%
-    \else%
-      \ifnum\value{enc}<10%
-        Inner \Glsfmttext{village} traders%
-      \fi%
-    \fi%
+    By a town%
   \fi%
 }
 
