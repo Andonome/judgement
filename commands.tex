@@ -270,11 +270,11 @@
 \newcommand\bigWeatherList{
   \ifcase\value{enc}\or%
   \or%
-    Hurricane (4 \glspl{mp})
+    Hurricane (4 \glspl{mp})%
   \or%
-    Biting winds (4 \glspl{mp})
+    Biting winds (4 \glspl{mp})%
   \or%
-    Mist
+    Mist%
   \or%
     \ifnum\value{temperature}=0%
       Cold snap%
@@ -282,22 +282,26 @@
       Overcast sky%
     \fi%
   \or%
-    Dead calm (2 \glspl{mp})
+    Dead calm (2 \glspl{mp})%
   \or%
-    Mild breeze
+    Mild breeze%
   \or%
-    Clear skies
+    \ifnum\value{temperature}=3%
+      Heate wave%
+    \else%
+      Clear skies
+    \fi%
   \or%
     Light
     \ifnum\value{temperature}=0%
       snow%
     \else%
-      rain
+      rain%
     \fi%
   \or%
-    Thunder
+    Thunder%
   \or%
-    Lightning storm (4 \glspl{mp})
+    Lightning storm (4 \glspl{mp})%
   \or%
     \ifnum\value{temperature}=0 Heavy snow%
     \else%
