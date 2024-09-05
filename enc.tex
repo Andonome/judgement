@@ -1,7 +1,7 @@
 \chapter{The Oracles}
 \label{encounters}
 
-This chapter covers wandering \glspl{monster} -- the heart of \gls{fenestra}.
+This chapter covers \gls{fenestra}'s shifting \glspl{cycle}, their effects on wandering \glspl{monster}, and the intersection with civilization.
 
 % Astronomy
 %   - Cycles
@@ -73,11 +73,15 @@ Each year has six \glspl{cycle}.
 \subsubsection{\Glsfmttext{cSix}}
 \glsentrydesc{cSix}.
 
+\setcounter{track}{\month}
+\setcounter{age}{1}
 \boxPair[t]{
-  \orrery
-}{
   \parallelCalendar
+}{
+  \orrery[1/1, 1/16, 2/1, 3/1, 2/16, 12/16]
 }
+
+\setCycle{\month}{\day}
 
 \subsection{Cosmological Events}
 \label{weather}
@@ -86,6 +90,8 @@ The changing sky brings danger, but also power, as many events boost people's sp
 These bonuses stack with \glspl{boon}, so someone with the right know-how can (and do) stand under the unnatural darkness of an eclipse, holding the ground-up remains of a stirge queen, with auroch hooves boiled to melting point, at the top of a mountain,%
 \footnote{High level spells often have such a long casting range that casters must climb high to see their target.}
 screeching about opening a portal from a distant \gls{village} to an underground realm.
+
+Since most people don't know any spells, they have little use for the extra \gls{sphere}, but this marks a good time to learn.
 
 \toggletrue{genExamples}
 \weatherChart
@@ -100,10 +106,8 @@ screeching about opening a portal from a distant \gls{village} to an underground
 \index[mana]{Air!Eclipses \glsentrytext{R}}
 \glsentrydesc{eclipse}.
 
-While the average person makes little use of this time -- they have more pressing concerns given the sudden lack of Sunlight -- \glspl{witch} often plan grand rituals to coincide with \pgls{eclipse}, as the extra powers allow them to perform wide-ranging, potent \glspl{invocation}.
-
-\index[mana]{Fire!Heatwaves \glsentrytext{R}}
 \subsubsection{\Glsfmtplural{heatwave}}
+\index[mana]{Fire!Heatwaves \glsentrytext{R}}
 \glsentrydesc{heatwave}.
 
 \subsubsection{\Glsfmtplural{snow}}
@@ -136,12 +140,16 @@ With enough foot-fall, the penalty reduces to nothing, as others stamp the snow 
 \index{Parallel Time}
 
 \Gls{fenestra}'s time keeps moving, just as ours does, but faster.
-For every week which passes in our world, thirty days pass over there.
-
+For every Mundane month, \gls{fenestra} experiences two sixty-day \glspl{cycle}.
 \setcounter{track}{\month}
 \setCycle{\month}{\day}
 While we have \trackMonth, \gls{fenestra} has `\showCycle' -- a \showTemperature\ season.
-After three months, all six \glspl{cycle} have passed and a new cycle begins.
+
+Every three Mundane months, \gls{fenestra} begins a new year; so on January, April, July, and October the 1st, the \gls{cycle} starts again with \gls{cOne}.
+Four days pass there for each of ours, so when we hit the second day of the month, \gls{fenestra} hits day 8 of \pgls{cycle}.
+Then on the 15th of each Mundane month, the \gls{cycle} hits day 60, which means \pgls{storm} descends, and a new \gls{cycle} begins.
+
+See \autopageref{realtimeScheduling} for how this helps avoiding scheduling problems.
 
 \end{multicols}
 

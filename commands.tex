@@ -993,75 +993,72 @@
 
 
 \newcommand\parallelCalendar{
-  \randomize
-  \setcounter{r4b}{\day}
-  \divide\value{r4b} by 4
-  \stepcounter{r4b}
   \setcounter{track}{\month}
-  \begin{nametable}[X|Y|c]{Seasons}
+  \setcounter{age}{\day}
+  \begin{boxtable}[X|Y|c]
 
     \textbf{Games Night} & \textbf{\Glsentrytext{cycle}} & \textbf{Climate} \\
     \hline
     \hline
-    \showRealTimeWeek &
-    \setcounter{cycle}{0}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{0}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{1}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{1}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{2}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-    \showRealTimeWeek &
-    \setcounter{cycle}{2}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
+    \Repeat{6}{
+      \ifnum\value{age}=1%
+        \setcounter{age}{16}%
+      \else%
+        \setcounter{age}{1}%
+        \stepcounter{track}%
+        \ifnum\value{track}>12%
+          \addtocounter{track}{-12}%
+        \fi%
+      \fi%
+      \setCycle{\value{track}}{\value{age}}
+      \trackMonth~\arabic{age} &
+      \showCycle &
+      \showTemperature
+      \\
+    }
     \ldots &
     \ldots &
     \ldots
+    \addtocounter{track}{3}
+    \setcounter{age}{2}
     \\
-    \setcounter{r4b}{4}
-    \stepcounter{track}
-    \showRealTimeWeek &
-    \setcounter{cycle}{5}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
+    \Repeat{3}{
+      \ifnum\value{age}=1%
+        \setcounter{age}{16}%
+      \else%
+        \setcounter{age}{1}%
+        \stepcounter{track}%
+        \ifnum\value{track}>12%
+          \addtocounter{track}{-12}%
+        \fi%
+      \fi%
+      \setCycle{\value{track}}{\value{age}}
+      \trackMonth~\arabic{age} &
+      \showCycle &
+      \showTemperature
+      \\
+    }
     \ldots &
     \ldots &
     \ldots
+    \addtocounter{track}{3}
+    \setcounter{age}{2}
     \\
-    \setcounter{r4b}{4}
-    \stepcounter{track}
-    \showRealTimeWeek &
-    \setcounter{cycle}{2}
-    \setTemperature
-    \showCycle &
-    \showTemperature
-    \\
-  \end{nametable}
+    \Repeat{2}{
+      \ifnum\value{age}=1%
+        \setcounter{age}{16}%
+      \else%
+        \setcounter{age}{1}%
+        \stepcounter{track}%
+        \ifnum\value{track}>12%
+          \addtocounter{track}{-12}%
+        \fi%
+      \fi%
+      \setCycle{\value{track}}{\value{age}}
+      \trackMonth~\arabic{age} &
+      \showCycle &
+      \showTemperature
+      \\
+    }
+  \end{boxtable}
 }
