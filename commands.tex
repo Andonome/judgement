@@ -988,34 +988,46 @@
   \ifnum\value{track}>12%
     \addtocounter{track}{-12}%
   \fi%
-  \trackMonth~week \arabic{r4b}%
+  \trackMonth, week~\arabic{r4b}%
 }
 
 
 \newcounter{ainumarPosition}
-\setcounter{ainumarPosition}{\month}
-\multiply\value{ainumarPosition}by 30
 \newcounter{fenestraPosition}
-\setcounter{fenestraPosition}{\value{ainumarPosition}}
-\setcounter{enc}{\value{temperature}}
-\multiply\value{enc}by 60
-\addtocounter{fenestraPosition}{\value{enc}}
 
+\newcommand\setPlanetPositions[2]{
+  \setCycle{#1}{#2}
+  \setcounter{ainumarPosition}{#1}
+  \multiply\value{ainumarPosition}by 30
+  \addtocounter{ainumarPosition}{#2}
+  \setcounter{fenestraPosition}{\value{ainumarPosition}}
+  \setcounter{enc}{\value{cycle}}
+  \addtocounter{enc}{-1}
+  \multiply\value{enc}by 60
+  \addtocounter{fenestraPosition}{\value{enc}}
+}
 
 \newcommand\orrery{
+  \setPlanetPositions{\month}{\day}
+
   \begin{tikzpicture}
     \coordinate (S) at (0,0);
-    \coordinate (A) at (\arabic{ainumarPosition}:3);
-    \path (A) +(\arabic{fenestraPosition}:1) coordinate (F);
-    \draw[\pageSideColor] (S) -- (A) -- (F);
     \draw[\pageSideColor] (S) circle (3.1);% Orbit
-    \draw[\pageSideColor] (A) circle (1);% Suborbit
     \fill[\pageSideColor] (S)  circle (30pt);
-    \fill[\pageSideColor] (A.south)  circle (3pt);
-    \fill[\pageSideColor] (F.east) circle (1pt);
-    \coordinate [label={\scshape\huge \outline{Sun}}] (S.south) at (0,0);
-    \coordinate [label=\outline{\Large \glsentrytext{ainumar}}] (AN) at (A)+(3,1);
-    \coordinate [label=\outline{\glsentrytext{fenestra}}] (FN) at (F)+(2.3,0.3);
+    \foreach \m/\d in {1/1,1/16}{
+      \setPlanetPositions{\m}{\d}
+      \coordinate (A) at (\arabic{ainumarPosition}:3);
+      \path (A) +(\arabic{fenestraPosition}:1) coordinate (F);
+      \draw[\pageSideColor] (S) -- (A) -- (F);
+      \draw[\pageSideColor] (A) circle (1);% Suborbit
+      \fill[\pageSideColor] (A.south)  circle (3pt);
+      \fill[\pageSideColor] (F.east) circle (1pt);
+      \coordinate [label=\outline{\showCycle}] (FN) at (F)+(2.3,0.3);
+    }
+    %
+    %\coordinate [label={\scshape\huge \outline{Sun}}] (S.south) at (0,0);
+    %\coordinate [label=\outline{\Large \glsentrytext{ainumar}}] (AN) at (A)+(3,1);
+    %\coordinate [label=\outline{\glsentrytext{fenestra}}] (FN) at (F)+(2.3,0.3);
   \end{tikzpicture}
 }
 
