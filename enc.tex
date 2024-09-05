@@ -657,13 +657,8 @@ Roll $3D6$ -- the \glspl{pc} can order any of these meals.
   It goes rotten quick, so get eating!
   \footnote{\Glsfmttext{crawler} `meat' (webbing as sauce!)}
   }
-    \ifnum\value{r4}<2
-      \newcommand\morningSoup{uproot}
-    \else
-      \newcommand\morningSoup{marching_mushroom}
-    \fi
     \menuItem{Sunrise Soup}{the chef found a new plant this morning, and he's already learning how to cook it!
-    \footnote{In fact this is \nameref{\morningSoup}, see \autopageref{\morningSoup}, for the effects.}
+    \footnote{In fact this is \nameref{uproot}, see \autopageref{uproot}, for the effects.}
     }
   \menuItem{Deer}{thank the man in green, sitting in the corner -- he caught it this morning.}
   \ifodd\value{r4}
