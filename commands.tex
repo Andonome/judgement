@@ -331,7 +331,13 @@
 \newcommand\bigBeastList{
   \ifcase\value{enc}\relax%
   \or%
-    Hibernating creature ($1D6+7$)%
+    Hibernating \iftoggle{genExamples}{creature ($1D6+7$)}{%
+    \ifodd\value{r3}%
+      \gls{crawler}%
+    \else%
+      \gls{woodspy}%
+    \fi%
+    }%
     \setcounter{encnum}{0}%
   \or%
     $1D3$ Goats%
@@ -349,11 +355,11 @@
     $1D6$ Griffins%
     \setcounter{encnum}{0}%
   \or%
-    \Gls{woodspy}%
-    \stepcounter{r4}%
-  \or%
     \Gls{digger}%
     \setcounter{encnum}{\value{r4}}%
+  \or%
+    \Gls{woodspy}%
+    \stepcounter{r4}%
   \or%
     Bear%
     \setcounter{encnum}{3}%
@@ -398,8 +404,10 @@
     Outer \glspl{village}%
   \or%
     Inner \glspl{village}%
-  \else%
+  \or%
     By a town%
+  \else%
+    In a town%
   \fi%
 }
 
@@ -680,7 +688,7 @@
       wounded ranger to the nearest \gls{templeOfSickness}.
       \item
       \gls{talisman} to the nearest \gls{templeOfCuriosity}
-      (one \vpageref{talismanIndex}).
+      (select one \vpageref{talismanIndex}).
       \item
       secret document and drop it at the meeting place (roll $1D6$ for the point on the map).
     \end{dlist}
