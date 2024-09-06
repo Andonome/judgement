@@ -32,59 +32,86 @@
   \stackingDamageChart
 \end{figure*}
 
-\showCycle~\cycleDesc
-
-\multiply\value{temperature} by 2
-\addtocounter{temperature}{0}
-
-%\setcounter{enc}{\value{temperature}}
-%\addtocounter{enc}{13}
-%\setcounter{diceNo}{13}
-%\rowcolors{2}{}{gray!10}
-%\noindent
-%\begin{boxtable}[c|LLL|L]
-%  \hline
-%  \hline
-%  \textbf{Roll} & \textbf{Forest} & \textbf{Lochside} & \textbf{Mountains} & \textbf{Weather} \\
-%  \hline
-%  \Repeat{12}{
-%  \addtocounter{diceNo}{-1}
-%  \addtocounter{enc}{-1}
-%  \arabic{diceNo} & \bigBeastList & \encLochside & \encMountains & \bigWeatherList \\
-%  }
-%  \hline
-%\end{boxtable}
-
 \begin{multicols}{2}
 
-\paragraph{Roll Encounters}
-with 3 dice: \dicef{1} \dicef{2} \dicef{3}.
-
-\setcounter{enc}{5}
-\addtocounter{enc}{\value{temperature}}
 \noindent
-\begin{tabular}{lcll}
-\hiderowcolors
-                             & \dicef{1} & & \dicef{2}\dicef{3}   \\
-  On \glsentrytext{interval} & 1 & beneath the & \bigWeatherList, \\
-\end{tabular}
+\showCycle~\cycleDesc.
 
-\setcounter{enc}{3}
-\addtocounter{enc}{\value{temperature}}
-\noindent
-\begin{tabular}{lcll}
-  \\
-                             & \dicef{1}\dicef{2} & & \dicef{3}   \\
-  the forest brings its & \bigBeastList  & \\
-\end{tabular}
+\paragraph{Encounters:}
+roll $4D6$.
+The days till the encounter equals the
+\ifcase\value{temperature}%
+  first die rolled. 
+\or%
+  the lowest of the first two dice.
+\or%
+  the lowest of the first three dice.
+\or%
+  the lowest of all four dice.
+\fi
 
-\paragraph*{Traders}
+The creature encountered equals
+\ifcase\value{temperature}%
+  the second die.
+\or%
+  the second and third die added together.
+\or%
+  the last three dice all added together.
+\else%
+  the highest three dice added together.
+\fi%
 
-Roll $3D6$ and add all results.
+\ifcase\value{temperature}%
+  \setcounter{enc}{13}
+  \setcounter{diceNo}{7}
+  \begin{boxtable}[L|r|Lc]
+    \Repeat{6}{
+      \addtocounter{enc}{-1}%
+      \addtocounter{diceNo}{-1}
+      \bigWeatherList &
+      \arabic{enc} &
+      \encCivilization[\value{diceNo}] & \dicef{\value{diceNo}}
+      \\
+    }
+    \hline
+    \Repeat{6}{
+      \addtocounter{enc}{-1}%
+      \addtocounter{diceNo}{-1}
+      \bigWeatherList &
+      \arabic{enc} & \bigBeastList &
+      \randomize\showInterval{\value{encnum}}
+      \\
+    }
+  \end{boxtable}
+\or%
+  \setcounter{enc}{13}
+  \begin{boxtable}[L|r|Lc]
+    \Repeat{11}{
+      \addtocounter{enc}{-1}%
+      \bigWeatherList &
+      \arabic{enc} & \bigBeastList &
+      \randomize\showInterval{\value{encnum}}
+      \\
+    }
+  \end{boxtable}
+  \setcounter{diceNo}{5}
+\else%
+  \allEncounterTables%
+\fi
+
+If the first die rolls equal or below the Civilization Rating, encounter a caravan of traders with that many useful goods.
+
+\ifnum\value{temperature}=1
+  \Repeat{4}{
+    \addtocounter{diceNo}{-1}
+    \encCivilization[\value{diceNo}]: encounter traders on \dicef{\value{diceNo}} or less.
+  }
+\fi
 
 \encTraders
 
 \iftoggle{stories}{
+  \columnbreak
   \namesOfHumans
 
   \poshNames
@@ -153,27 +180,31 @@ For example, `poisonous meats' might suggest `Rotwall', while `doula's house', c
 
 \ifnum\value{temperature}=0
   % Temperature 0 (cold)
-  \ghast
   \wolf
+  \auroch
+  \ifodd\value{r3}
+    \chitincrawler[\npc{\A}{Hibernating \Gls{crawler}}]
+  \else
+    \woodspy[\npc{\E}{Hibernating \Gls{woodspy}}]
+  \fi
 \else
   \basilisk
   \chitincrawler
   \bear
+  \mouthdigger
+  \stirgeSwarm
+  \woodspy
 \fi
 
-\mouthdigger
+\boar
 
 \griffin
 
-\ifnum\value{temperature}<3
-  \dryad
-\else
+\ifnum\value{temperature}>1
   \umberhulk
 
-  \stirgeSwarm
+  \crawlerSwarm
 \fi
-
-\woodspy
 
 \end{multicols}
 
