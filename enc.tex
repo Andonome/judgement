@@ -311,33 +311,8 @@ Generate a full encounter instantly by casting four dice like a fist of rune-sto
   Arranging this example roll, we would get \dicef{3}~\dicef{6}~\dicef{2}~\dicef{1}.
 \end{minipage}
 
-\setCycle{1}{1}
-\setcounter{enc}{19}
-\setcounter{diceNo}{7}
-\begin{boxtable}[L|r|Lc]
-  \Repeat{6}{%
-    \addtocounter{enc}{-1}%
-    \addtocounter{diceNo}{-1}
-    \dicef{\value{diceNo}}~\encCivilization[\value{diceNo}] &
-    \arabic{enc} & \bigBeastList &
-      \randomize\showInterval{\value{encnum}}
-    \\
-  }
-  \hline
-  \Repeat{11}{%
-    \addtocounter{enc}{-1}%
-    \bigWeatherList &
-    \arabic{enc} & \bigBeastList &
-      \randomize\showInterval{\value{encnum}}
-    \\
-  }
-  \hline
-  \addtocounter{enc}{-1}%
-  &
-  \arabic{enc} & \bigBeastList &
-  \randomize\showInterval{\value{encnum}}
-  \\
-\end{boxtable}
+\toggletrue{genExamples}
+\allEncounterTables
 
 \begin{exampletext}
 
