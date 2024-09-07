@@ -928,13 +928,16 @@
   \end{center}
 }
 
+\newcommand\showWhenLow{\ifnum\value{encnum}<7\dicef{\value{encnum}}\fi}
+
 \newcommand\funkyPlant[4][]{
+  \stepcounter{encnum}%
   \ifglsentryexists{#2}{%
-    \subsubsection{\Glsfmtname{#2}}
+    \subsubsection[\Glsfmtname{#2}]{\showWhenLow~\Glsfmtname{#2}}
     \glsentrydesc{#2}
   }{%
-    \subsubsection{#2}
-    \index{#2~\glsentrysymbol{plant}}
+    \subsubsection[#2]{\showWhenLow~#2}
+    \index{#2~\glsentrysymbol{plant}}%
     \label{#3}
   }
   #4
@@ -947,7 +950,7 @@
 
 \newcommand\disease[5][]{
   \stepcounter{encnum}%
-  \subsubsection[#2]{\dicef{\value{encnum}}~#2}
+  \subsubsection[#2]{\showWhenLow~#2}
   \index{#2 \glssymbol{eldren}}
   \label{#2}
   #3

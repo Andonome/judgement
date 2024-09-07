@@ -6,13 +6,12 @@
 \begin{multicols}{2}
 \renewcommand\npcsymbol{\glsentrysymbol{plant}}
 
-\noindent
-\Gls{fenestra}'s plants hold a thousand uses and dangers.
-
 \subsection{Fungi}
+\setcounter{encnum}{7}
 
-\subsubsection{\Glsfmtplural{bedshroom}}
-\glsentrydesc{bedshroom}
+\funkyPlant[Air]{bedshroom}%
+  {}%
+  {}%
 
 \funkyPlant{Dryad's Kiss}%
   {dryads_kiss}%
@@ -36,12 +35,15 @@
    Proper preparation of a full patch of these mushrooms will yield \pgls{boon} of the Fire Sphere.
     }
 
-\subsubsection{\Glsfmtname{marchingMushroom}}
-\glsentrydesc{marchingMushroom}
+\funkyPlant[Earth]{marchingMushroom}%
+  {}%
+  {}
+
 
 \subsection{Forest Plants}
 \index{Plants}
 \label{plants}
+\setcounter{encnum}{0}
 
 \funkyPlant{Bedleaves}%
   {bedleaves}%
@@ -56,13 +58,13 @@
   and tends to attract and irritate local wildlife, making procuring it a risky endeavour.
   }
 
-\subsubsection{\Glsfmtplural{disgnome}}
-\glsdesc{disgnome}
+\funkyPlant{disgnome}%
+  {}%
+  {}
 
-\funkyPlant{Downroot}%
-  {downroot}%
-  {gives +2 \glspl{hp} after ingestion and a night's rest, and -1 to all Attributes for the next three days.
-  }
+\funkyPlant{horseDrops}%
+  {}%
+  {}
 
 \funkyPlant{Mage Oak}%
   {mage_oak}%
@@ -83,6 +85,7 @@
     Wearing full armour makes one immune to the cuts, but will not stop the movement problems.}%
 
 \subsection{Wetland Plants}
+\setcounter{encnum}{0}
 
 \funkyPlant{Dirge Fruit}%
   {dirgeFruit}%
@@ -95,13 +98,6 @@
     At -6, the target becomes effectively deaf, as they can hear nothing else.
 
     A cure requires an Air \gls{ingredient}, mixed with hard food and crushed violently (\roll{Strength}{Medicine}, \tn[10]).}%
-
-\funkyPlant{Whistling Cane}%
-  {whistlingCane}%
-  {grows in swamps and play an eerie tune on windy days.
-  Inexperienced travellers might stray from their path, into the dangerous bog, looking for the source of the sound.
-
-  They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.}
 
 
 \funkyPlant{Dreameater Moss}%
@@ -119,13 +115,6 @@
     If bad, the \gls{tn} increases by 1.
   }
 
-\funkyPlant[Earth]{Liskshine}%
-  {liskShine}%
-  {grows on the backs of \glspl{basilisk}, and absorbs the beast's overwhelming stench.
-  When it grows large enough, small clumps of it fall off.
-  A rare find, and also a warning that a basilisk is nearby.
-    }
-
 \funkyPlant[Air]{Seekmist}%
   {seekmist}%
   {sits passively, filling up with dust, waiting for a seed.
@@ -142,21 +131,44 @@
   {slowburnIvy}%
   {does nothing for most of the year, but over \gls{cFive}, it spreads its seed by dumping large amounts in rivers.
   Anyone eating water contaminated with this ivy's seeds gains $1D6$ \glspl{ep}, but only after $1D6$~\glspl{interval}.
-  The slow release always makes the cause difficult to track down.
-    }
+  The slow release always makes the cause difficult to track down.}
 
 \funkyPlant[Air]{Screechmoss}%
   {screechMoss}%
   {screeches like a starving cat when stepped on.
   They tend to form a symbiotic relationship with predators, who always respond to the squeaks by investigating the source, or laying traps around the thickets.
   The moss then feeds off the blood of any victims.
-  Nobles love to encourage screeching moss to grow around their estates, to protect against unwanted intruders.}
+  Nobles love to encourage screeching moss to grow around their estates, to protect against unwanted intruders.
+  }
+
+\funkyPlant{Whistling Cane}%
+  {whistlingCane}%
+  {grows in swamps and play an eerie tune on windy days.
+  Inexperienced travellers might stray from their path, into the dangerous bog, looking for the source of the sound.
+
+  They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.}
+
+\subsection{Other Plants}
+\setcounter{encnum}{8}
+
+\funkyPlant{Downroot}%
+  {downroot}%
+  {gives +2 \glspl{hp} after ingestion and a night's rest, and -1 to all Attributes for the next three days.
+  }
+
+\funkyPlant[Earth]{Liskshine}%
+  {liskShine}%
+  {grows on the backs of \glspl{basilisk}, and absorbs the beast's overwhelming stench.
+  When it grows large enough, small clumps of it fall off.
+  A rare find, and also a warning that a basilisk is nearby.
+    }
 
 \funkyPlant{Uproot}%
   {uproot}%
   {gives you +1 Strength for \pgls{interval} after cooking to the perfect, golden-green.
   Each \gls{interval} thereafter, the player rolls $1D3$.
-  On a `1', the effect stops, on any other number the character loses 1~\gls{hp}, and the effect continues.}
+  On a `1', the effect stops, on any other number the character loses 1~\gls{hp}, and the effect continues.
+  }
 
 \end{multicols}
 
