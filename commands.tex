@@ -908,23 +908,12 @@
     \hline
     \textbf{Roll} & \textbf{Inner Hamlets} \\
     \hline
-    \Repeat{5}{
+    \Repeat{6}{
       \addtocounter{diceNo}{-1}
       \addtocounter{enc}{-1}
       \arabic{diceNo} & \bigBeastList \\
     }
-    \hline
-    \addtocounter{diceNo}{-1}
-    \addtocounter{enc}{-1}
-    \arabic{diceNo} & Bandits \\
-    \hline
-    \Repeat{3}{
-      \addtocounter{diceNo}{-1}
-      \addtocounter{enc}{-1}
-      \arabic{diceNo} & \arabic{diceNo} wagons \\
-    }
-    \hline
-    \Repeat{3}{
+    \Repeat{5}{
       \addtocounter{diceNo}{-1}
       \addtocounter{enc}{-1}
       \arabic{diceNo} & \multiply\value{diceNo} by 4 \arabic{diceNo} goblins! \\
