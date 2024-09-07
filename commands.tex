@@ -805,23 +805,6 @@
   \end{enumerate}
 }
 
-\newcommand\randomDisease{
-  \begin{dlist}
-    \item
-    Breathrot
-    \item
-    Corpse Hands
-    \item
-    Mindflash Syndrome
-    \item
-    Guardbane
-    \item
-    Spychoke
-    \item
-    Torpid Flesh
-  \end{dlist}
-}
-
 \newcommand\missionComplications{
   \label{missionComplications}
   \begin{enumerate}
@@ -853,9 +836,7 @@
     \label{doubleTrouble}
     \item
     The troupe leader has developed a nasty disease (\vpageref{diseases}).
-    \randomDisease
-
-    You'll have to take a detour to town, to visit the \gls{templeOfSickness}.
+    You'll have to visit town's \gls{templeOfSickness} for a cure.
     \item
     A distant \gls{warden} hopes for their failure, and has sent his men to stop them.
     \item
@@ -959,7 +940,8 @@
 }
 
 \newcommand\disease[5][]{
-  \subsubsection{#2}
+  \stepcounter{encnum}%
+  \subsubsection[#2]{\dicef{\value{encnum}}~#2}
   \index{#2 \glssymbol{eldren}}
   \label{#2}
   #3
