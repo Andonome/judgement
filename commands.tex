@@ -929,14 +929,20 @@
 }
 
 \newcommand\funkyPlant[4][]{
-  \subsubsection{#2}
-  \index{#2~\glsentrysymbol{plant}}
-  \label{#3}
+  \ifglsentryexists{#2}{%
+    \subsubsection{\Glsfmtname{#2}}
+    \glsentrydesc{#2}
+  }{%
+    \subsubsection{#2}
+    \index{#2~\glsentrysymbol{plant}}
+    \label{#3}
+  }
   #4
-  \ifstrempty{#1}{}{%
-  \index[mana]{#1!#2~\glsentrysymbol{plant}}
-  \par
-  \textbf{\Gls{ingredient}}: #1}%
+  \ifstrempty{#1}{\par}{%
+    \index[mana]{#1!\glsentryname{#2}~\glsentrysymbol{plant}}
+    \par
+    \textbf{\Gls{ingredient}}: #1
+  }%
 }
 
 \newcommand\disease[5][]{
