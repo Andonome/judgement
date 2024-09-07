@@ -39,7 +39,7 @@
 \subsubsection{\Glsfmtname{marchingMushroom}}
 \glsentrydesc{marchingMushroom}
 
-\subsection{Plants}
+\subsection{Forest Plants}
 \index{Plants}
 \label{plants}
 
@@ -64,28 +64,6 @@
   {gives +2 \glspl{hp} after ingestion and a night's rest, and -1 to all Attributes for the next three days.
   }
 
-\funkyPlant{Dreameater Moss}%
-  {dreameater_moss}%
-  {joins the dreams of anyone who sleeps on it.
-    The \gls{witch} who created it still lives in those dreams, and wanders through them, eating the minds of anyone they find.
-    It provides a powerful but dangerous way to communicate across long distances.
-
-    The sleeper can roll \roll{Wits}{Empathy} to find someone they know, or roll \roll{Wits}{Deceit} to wake up.
-    The \gls{tn} starts at $7 + 1D6$, and every \gls{interval} adjusts by $1D6 - 3$.
-
-    Every failure means a roll on a random `random table' -- flip through the first book to hand, select a random table to roll with, then add that element to the dream.
-    If the sleeper has already encountered this result, the memories invade the dream.
-    If these are good memories, the \gls{tn} decreases by 1.
-    If bad, the \gls{tn} increases.
-  }
-
-\funkyPlant[Earth]{Liskshine}%
-  {liskShine}%
-  {grows on the backs of \glspl{basilisk}, and absorbs the beast's overwhelming stench.
-  When it grows large enough, small clumps of it fall off.
-  A rare find, and also a warning that a basilisk is nearby.
-    }
-
 \funkyPlant{Mage Oak}%
   {mage_oak}%
   {roots tap into some mana source deep underground.
@@ -97,12 +75,55 @@
     Each harvesting has a 1 in 6 chance of killing the tree, at which point it leeches all mana in the \gls{area}.
   }%
 
-\funkyPlant[Air]{Screechmoss}%
-  {screechMoss}%
-  {screeches like a starving cat when stepped on.
-  They tend to form a symbiotic relationship with predators, who always respond to the squeaks by investigating the source, or laying traps around the thickets.
-  The moss then feeds off the blood of any victims.
-  Nobles love to encourage screeching moss to grow around their estates, to protect against unwanted intruders.
+\funkyPlant{Thorny Thickets}%
+  {thorny_thickets}%
+  {create serious complications for anyone moving through them.
+    They reduce running speed by 2~\glspl{step} per \gls{ap} spent, and moving through them requires a \roll{Dexterity}{Survival} \gls{quickaction} (\tn[10]), or the would-be runner receives \pgls{ep} and loses all momentum, as dozens of tiny spikes scratch and pierce them.
+
+    Wearing full armour makes one immune to the cuts, but will not stop the movement problems.}%
+
+\subsection{Wetland Plants}
+
+\funkyPlant{Dirge Fruit}%
+  {dirgeFruit}%
+  {produces tasty tomato-like plants on a vine.
+    After $1D6$~\glspl{interval}, the eater starts to hear a screeching sound, similar to tinnitus.
+    The sound grows louder and louder (though nobody else can hear it), and adds a -1 Penalty to rolls to hear things.
+
+    Every \gls{interval} the `noise' becomes louder and the Penalty increases by 1 step.
+    At -3, the target cannot sleep any more.
+    At -6, the target becomes effectively deaf, as they can hear nothing else.
+
+    A cure requires an Air \gls{ingredient}, mixed with hard food and crushed violently (\roll{Strength}{Medicine}, \tn[10]).}%
+
+\funkyPlant{Whistling Cane}%
+  {whistlingCane}%
+  {grows in swamps and play an eerie tune on windy days.
+  Inexperienced travellers might stray from their path, into the dangerous bog, looking for the source of the sound.
+
+  They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.}
+
+
+\funkyPlant{Dreameater Moss}%
+  {dreameater_moss}%
+  {joins the dreams of anyone who sleeps on it.
+    The \gls{witch} who created it still lives in those dreams, and wanders through them, eating the minds of anyone they find.
+    It provides a powerful but dangerous way to communicate across long distances.
+
+    The sleeper can roll \roll{Wits}{Empathy} to find someone they know, or roll \roll{Wits}{Deceit} to wake up.
+    The \gls{tn} starts at $7 + 1D6$, and every \gls{interval} adjusts by $1D6 - 3$.
+
+    Every failure means a roll on a random `random table' -- flip through the first book to hand, select a random table to roll with, then add that element to the dream.
+    If the sleeper has already encountered this result in their waking life, memories of the encounter invade the dream.
+    If these are good memories, the \gls{tn} decreases by 1.
+    If bad, the \gls{tn} increases by 1.
+  }
+
+\funkyPlant[Earth]{Liskshine}%
+  {liskShine}%
+  {grows on the backs of \glspl{basilisk}, and absorbs the beast's overwhelming stench.
+  When it grows large enough, small clumps of it fall off.
+  A rare find, and also a warning that a basilisk is nearby.
     }
 
 \funkyPlant[Air]{Seekmist}%
@@ -117,19 +138,6 @@
   Preparation requires an \roll{Intelligence}{Medicine} roll (\tn[12]).
     }
 
-
-\funkyPlant{Dirge Fruit}%
-  {dirgeFruit}%
-  {produces tasty tomato-like plants on a vine.
-    After $1D6$~\glspl{interval}, the eater starts to hear a screeching sound, similar to tinnitus.
-    The sound grows louder and louder (though nobody else can hear it), and adds a -1 Penalty to rolls to hear things.
-
-    Every \gls{interval} the `noise' becomes louder and the Penalty increases by 1 step.
-    At -3, the target cannot sleep any more.
-    At -6, the target becomes effectively deaf, as they can hear nothing else.
-
-    A cure requires an Air \gls{ingredient}, mixed with hard food and crushed violently (\roll{Strength}{Medicine}, \tn[10]).}%
-
 \funkyPlant{Slowburn Ivy}%
   {slowburnIvy}%
   {does nothing for most of the year, but over \gls{cFive}, it spreads its seed by dumping large amounts in rivers.
@@ -137,25 +145,18 @@
   The slow release always makes the cause difficult to track down.
     }
 
-\funkyPlant{Thorny Thickets}%
-  {thorny_thickets}%
-  {create serious complications for anyone moving through them.
-    They reduce running speed by 2~\glspl{step} per \gls{ap} spent, and moving through them requires a \roll{Dexterity}{Survival} \gls{quickaction} (\tn[10]), or the would-be runner receives \pgls{ep} and loses all momentum, as dozens of tiny spikes scratch and pierce them.
-
-    Wearing full armour makes one immune to the cuts, but will not stop the movement problems.}%
+\funkyPlant[Air]{Screechmoss}%
+  {screechMoss}%
+  {screeches like a starving cat when stepped on.
+  They tend to form a symbiotic relationship with predators, who always respond to the squeaks by investigating the source, or laying traps around the thickets.
+  The moss then feeds off the blood of any victims.
+  Nobles love to encourage screeching moss to grow around their estates, to protect against unwanted intruders.}
 
 \funkyPlant{Uproot}%
   {uproot}%
   {gives you +1 Strength for \pgls{interval} after cooking to the perfect, golden-green.
   Each \gls{interval} thereafter, the player rolls $1D3$.
-  On a `1', the effect stops, on any other number the character loses 1 \gls{hp}, and the effect continues.}
-
-\funkyPlant{Whistling Cane}%
-  {whistlingCane}%
-  {grows in swamps and play an eerie tune on windy days.
-  Inexperienced travellers might stray from their path, into the dangerous bog, looking for the source of the sound.
-
-  They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.}
+  On a `1', the effect stops, on any other number the character loses 1~\gls{hp}, and the effect continues.}
 
 \end{multicols}
 
