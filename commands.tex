@@ -343,51 +343,51 @@
     $1D3$ Goats%
     \setcounter{encnum}{0}%
   \or%
-    $1D6+6$ Wolves%
+    $1D6+6$ Wolves\iftoggle{genExamples}{ (\autopageref{wolf})}{}
     \setcounter{encnum}{2}%
   \or%
-    $1D6\times 20$ Aurochs%
+    $1D6\times 20$ Aurochs\iftoggle{genExamples}{ (\autopageref{auroch})}{}
     \setcounter{encnum}{1}%
   \or%
-    Warthog%
+    Boar\iftoggle{genExamples}{ (\autopageref{boar})}{}
     \setcounter{encnum}{1}%
   \or%
-    $1D6$ Griffins%
+    $1D6$ Griffins\iftoggle{genExamples}{ (\autopageref{griffin})}{}
     \setcounter{encnum}{0}%
   \or%
-    \Gls{digger}%
+    \Gls{digger}\iftoggle{genExamples}{ (\autopageref{mouthdigger})}{}
     \setcounter{encnum}{\value{r4}}%
   \or%
-    \Gls{woodspy}%
+    \Gls{woodspy}\iftoggle{genExamples}{ (\autopageref{woodspy})}{}
     \stepcounter{r4}%
   \or%
-    Bear%
+    Bear\iftoggle{genExamples}{ (\autopageref{bear})}{}
     \setcounter{encnum}{3}%
   \or%
-    \Gls{crawler}
+    \Gls{crawler}\iftoggle{genExamples}{ (\autopageref{chitincrawler})}{}
   \or%
-    \Gls{basilisk}
+    \Gls{basilisk}\iftoggle{genExamples}{ (\autopageref{basilisk})}{}
     \setcounter{encnum}{\value{temperature}}%
   \or%
-    Stirges
+    Stirges\iftoggle{genExamples}{ (\autopageref{stirge})}{}
     \setcounter{encnum}{0}%
   \or%
-    Bluepins
+    Bluepins\iftoggle{genExamples}{ (\autopageref{bluepin})}{}
     \setcounter{encnum}{1}%
   \or%
-    \nameref{fly_flowers}
+    Strange plant\iftoggle{genExamples}{ (\autopageref{plants})}{}
     \setcounter{encnum}{0}%
   \or%
-    \Gls{crawler} swarm%
+    \Gls{crawler} swarm\iftoggle{genExamples}{ (\autopageref{crawlerSwarm})}{}
     \setcounter{encnum}{1}%
   \or%
-    \nameref{bedleaves}
+    Weird fungus\iftoggle{genExamples}{ (\autopageref{fungi})}{}
     \setcounter{encnum}{0}%
   \or%
-    \Glspl{marchingMushroom}
+    $3D6$ Deer
     \setcounter{encnum}{0}%
   \or%
-    Umber Hulk
+    Umber Hulk\iftoggle{genExamples}{ (\autopageref{umber_hulk})}{}
     \setcounter{encnum}{1}%
   \else%
     Dragons!%
