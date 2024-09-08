@@ -148,6 +148,7 @@ And if your face has contorted with disapproval and you wonder about the point o
 
 Which creatures are active depends on the \gls{cycle}'s temperature.
 
+\toggletrue{genExamples}
 \setcounter{enc}{19}
 \begin{boxtable}[rXc]
   \Repeat{18}{%
@@ -184,6 +185,46 @@ use use the lowest of all four dice to determine how many days until the encount
 The last die determines any quantities.
 
 Rolling \dicef{3}~\dicef{3}~\dicef{1}~\dicef{5} would means `after 1 day, the \glspl{pc} encounter \pgls{basilisk}..
+
+\boxPair{
+  \subsection*{Fast Rolls}
+
+  Nobody likes waiting while \pgls{gm} makes multiple dice rolls.
+  Generate a full encounter instantly by casting four dice like a fist of rune-stones; read their left-to-right order, and interpret the last two as weather.
+
+  \begin{minipage}{.2\linewidth}
+    \dicef{6}
+
+    \qquad\dicef{1}
+
+    \hspace{3pt}\dicef{2}{\par\hspace{-2em}\dicef{3}}
+  \end{minipage}
+  \begin{minipage}{.7\linewidth}
+    \vspace{.5em}
+    Even if the dice-roll looks like a complete mess, every roll has a visible left-to-right order.
+    Arranging this example roll, we would get \dicef{3}~\dicef{6}~\dicef{2}~\dicef{1}.
+  \end{minipage}
+
+  \begin{exampletext}
+
+    One \showTemperature~\gls{cOne}, the \glspl{pc} emerge from \pgls{broch}, and head towards \pgls{village}.
+
+    \dicef{1}~\dicef{4}~\dicef{2}~\dicef{5}: A mild breeze blows.
+    They meet a trader on the road, selling salted meats, but \pgls{jotter} already gave them some rations, so they continue towards the \gls{village}.
+    Work is difficult, and takes three days.
+
+    \dicef{4}~\dicef{3}~\dicef{3}~\dicef{1}: The day they head back, a thick mist rises.
+    A griffin spots them, and begins its mimicry, singing a child's song from the forest (see \vpageref{griffin} for notes on their mimicry).
+
+    Once \gls{cTwo} hits, their next mission involves going past the \gls{edge}.
+    \dicef{2}~\dicef{3}~\dicef{3}~\dicef{6}: After two days of peace, snow falls.
+    As the \glspl{pc} make camp, nine wolves take the opportunity to steal their food.
+
+  \end{exampletext}
+}{
+  \toggletrue{genExamples}
+  \allEncounterTables
+}
 
 \makeAutoRule{morale}{Morale Checks}{When a creature's \glsfmtlongpl{hp} fall below $2D6$, it flees}
 \index{Morale}
@@ -222,6 +263,7 @@ every noise or light becomes a beacon for creatures all around.
 If anyone shouts, makes a fire, or otherwise draws attention to themselves, roll $1D6$; on the roll of a `1', roll on the encounter table immediately.
 
 Deer and auroch flee when they hear a sound, but predators will immediately hunt for the source of the sound, and arrive after \pgls{interval}.
+
 
 \subsection{The Civilization Rating}
 \label{civilizationRating}
@@ -267,43 +309,6 @@ For example, rolling \dicef{8}\dicef{3} would indicate that the \glspl{pc} can b
 \index{Selling Beasts}
 Traders also purchase live \glspl{monster} for a number of \glspl{sp} equal to their \gls{cr}, or half that number if the body is well prepared.
 
-\subsection{Fast Rolls}
-
-Nobody likes waiting while \pgls{gm} makes multiple dice rolls.
-Generate a full encounter instantly by casting four dice like a fist of rune-stones; read their left-to-right order, and interpret the last two as weather.
-
-\begin{minipage}{.2\linewidth}
-  \dicef{6}
-
-  \qquad\dicef{1}
-
-  \hspace{3pt}\dicef{2}{\par\hspace{-2em}\dicef{3}}
-\end{minipage}
-\begin{minipage}{.7\linewidth}
-  \vspace{.5em}
-  Even if the dice-roll looks like a complete mess, every roll has a visible left-to-right order.
-  Arranging this example roll, we would get \dicef{3}~\dicef{6}~\dicef{2}~\dicef{1}.
-\end{minipage}
-
-\toggletrue{genExamples}
-\allEncounterTables
-
-\begin{exampletext}
-
-  One \showTemperature~\gls{cOne}, the \glspl{pc} emerge from \pgls{broch}, and head towards \pgls{village}.
-
-  \dicef{1}~\dicef{4}~\dicef{2}~\dicef{5}: A mild breeze blows.
-  They meet a trader on the road, selling salted meats, but \pgls{jotter} already gave them some rations, so they continue towards the \gls{village}.
-  Work is difficult, and takes three days.
-
-  \dicef{4}~\dicef{3}~\dicef{3}~\dicef{1}: The day they head back, a thick mist rises.
-  A griffin spots them, and begins its mimicry, singing a child's song from the forest (see \vpageref{griffin} for notes on their mimicry).
-
-  Once \gls{cTwo} hits, their next mission involves going past the \gls{edge}.
-  \dicef{2}~\dicef{3}~\dicef{3}~\dicef{6}: After two days of peace, snow falls.
-  As the \glspl{pc} make camp, nine wolves take the opportunity to steal their food.
-
-\end{exampletext}
 
 \end{multicols}
 
@@ -336,6 +341,7 @@ mean the \gls{jotter} will promote the lowest-ranking member of the troupe, or p
 \footnote{Many of the \glsentrytext{guard} actively avoid gaining any kind of rank, as it only leads to more difficult duties.}
 \index{Promotion}
 
+\null
 \begin{itemize}
   \item
   Roll $1D3$ for \glspl{fodder}.
@@ -368,6 +374,7 @@ Add a bonus for rank, as before.
 \Glspl{broch} often run short on supplies, especially when they don't have many \glspl{village} nearby.
 Once the \glspl{pc} arrive at \pgls{broch}, make a roll to see what it lacks.
 
+\null
 \brochDerths
 
 If an area suffers from poverty and death, it always affects supplies to the \glspl{broch}.
