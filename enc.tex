@@ -264,38 +264,31 @@ If anyone shouts, makes a fire, or otherwise draws attention to themselves, roll
 
 Deer and auroch flee when they hear a sound, but predators will immediately hunt for the source of the sound, and arrive after \pgls{interval}.
 
-
 \subsection{The Civilization Rating}
 \label{civilizationRating}
 \index{Civilization Rating}
 
 More civilized areas have fewer creatures and more traders.
-If the first die rolled equal or below the civilization rating, replace the creature encounter with traders.
-
-\null
-\setcounter{encnum}{1}
-\begin{description}
-  \item[\encCivilization] a roll of \dicef{\value{encnum}} indicates a caravan with \arabic{encnum} useful item.
-  \stepcounter{encnum}
-
-  \item[\encCivilization]
-  a roll of \dicef{\value{encnum}} or less means a caravan with up to \arabic{encnum} useful items.
-  \stepcounter{encnum}
-
-  \item[\encCivilization]
-  a roll of \dicef{\value{encnum}} or less means a caravan with up to \arabic{encnum} useful items.
-  \stepcounter{encnum}
-
-  \item[\encCivilization]
-  a roll of \dicef{\value{encnum}} or less means a caravan with up to \arabic{encnum} useful items.
-  \stepcounter{encnum}
-
-  \item[\encCivilization]
-  a roll of \dicef{\value{encnum}} or less means a caravan with up to \arabic{encnum} useful items.
-  \stepcounter{encnum}
-\end{description}
-
+If the first die is equal or below the Civilization Rating, replace the usual creature encounter with traders.
 In this way, anyone approaching a town will slowly find the natural encounters being eaten away by civilization.
+
+The time until the encounter looks at a number of dice equal to the Civilization Rating, and selects the lowest; so a Civilization Rating of `2' means the lowest of the first 2 dice are used to see how many days until the encounter occurs.
+
+\begin{dlist}
+  \item[\encCivilization] a roll of \dicef{\value{dlist}} indicates a caravan with \arabic{dlist} useful item.
+
+  \item[\encCivilization]
+  a roll of \dicef{\value{dlist}} or less means a caravan with up to \arabic{dlist} useful items.
+
+  \item[\encCivilization]
+  a roll of \dicef{\value{dlist}} or less means a caravan with up to \arabic{dlist} useful items.
+
+  \item[\encCivilization]
+  a roll of \dicef{\value{dlist}} or less means a caravan with up to \arabic{dlist} useful items.
+
+  \item[\encCivilization]
+  a roll of \dicef{\value{dlist}} or less means a caravan with up to \arabic{dlist} useful items.
+\end{dlist}
 
 \subsubsection{Items for Sale}
 \label{traders}
