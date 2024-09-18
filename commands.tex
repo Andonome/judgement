@@ -917,11 +917,11 @@
   \end{boxtable}
   }
 
-\newcommand\showEnc[1][A]{%
-  \renewcommand\npcsymbol{\glsentrytext{#1}}%
+\newcommand\showEnc[1][\gls{A}]{%
+  \renewcommand\npcsymbol{#1}%
   \needspace{3em}%
   \begin{center}%
-  \textcolor{\pageSideColor}{\glssymbol{sylf}}\qquad\textbf{Encounters}\qquad\textcolor{\pageSideColor}{\glsentrytext{#1}}
+  \textcolor{\pageSideColor}{\glssymbol{sylf}}\qquad\textbf{Encounters}\qquad\textcolor{\pageSideColor}{#1}
   \end{center}
 }
 
