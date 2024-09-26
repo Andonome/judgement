@@ -390,7 +390,7 @@ If you don't want to draw attention to something the \glspl{pc} can sense, then 
 
 \subsubsection{Another Look at Dice}
 can help elucidate the system.
-Assume the standard statblocks are no different, consider these three sets of rules:
+Consider these \ref{rulesMinusDie} ways to resolve an action (assume all \glspl{trait} remain unchanged):
 
 \begin{enumerate}
   \item
@@ -503,7 +503,7 @@ And if players want to bring someone into the game, you can ask them to donate a
 This helps tie the new person to the world.
 
 \subsubsection{Proper Time-Keeping}
-makes the world solid enough for a spinning table.
+makes the world solid enough for a spinning table.%
 \footnote{Gygax was right.}
 To make this easier, \gls{fenestra}'s time runs in parallel to our own.
 Each real-month, \gls{fenestra} experiences two \glspl{cycle}.
@@ -511,7 +511,7 @@ Each real-month, \gls{fenestra} experiences two \glspl{cycle}.
 Proper time-keeping doesn't just help the \gls{campaign} -- it helps the night.
 Having a proper ending-time means you can signal ahead that the session should come to an end within the hour.
 
-And of course, if a session ends early, this just leaves more time to discuss how the \glspl{pc} will spend their time in town, and what they want to spend their \glspl{xp} on.
+And of course, if a game ends early, this just leaves more time to discuss how the \glspl{pc} will spend their time in town, and what they want to spend their \glspl{xp} on.
 
 \subsubsection{\Glsfmttext{downtime} Flies}
 during the game, as each week's game has thirty days.
@@ -644,14 +644,15 @@ Not everyone can wield illusions well, but when used correctly, they can devasta
 So you have twenty goblins facing off against four \glspl{pc}, but the \glspl{pc} all have plate armour, a round shield, a plan, and an attitude.
 They're invincible.
 The battle looks hopeless.
-So call for a break, and really \textit{think} about what goblins can do.
+It looks \emph{boring}.
+So call for a break, and really \emph{think} about what goblins can do.
 
 \begin{itemize}
   \item
   Have goblins throw rocks, then run away, and throw again.
-  Maybe they'll score \pgls{vitalShot}, or simply wear down the \glspl{pc}~\glspl{ap}.
+  Maybe they'll score \pgls{vitalShot}, or simply wear down the \glspl{pc}'~\glspl{ap}.
   \item
-  Have them pick up a poleaxe; they can wield that weight properly, but they can still wield it.
+  Have them pick up a poleaxe; they can't wield that weight properly, but they can still wield it.
   \item
   They can jump on a player, and weigh them down.
   \item
@@ -672,6 +673,11 @@ Someone could have Partial armour which provides \gls{dr} 5 (meaning just a helm
 
 I wouldn't recommend doing any of that for \glspl{npc}, as it will inevitably turn into a headache.
 
+\subsubsection{Impartiality}
+isn't just good form, it also cuts down on brain-fatigue from making too many rapid decisions.
+
+So if \pgls{npc} attacks the \glspl{pc}, but you have no idea \textit{which} \gls{pc} they would attack first, have them attack whoever has the most \glsentrylongpl{fp}, then keep attacking that \gls{pc} until they have a reason to change their behaviour.
+
 \subsubsection{To Balance Encounters}
 \index{Encounters!Balance}
 bring extra character sheets, and make sure new \glspl{pc} have somewhere they can quickly re-enter the plot once \pgls{pc} dies.
@@ -684,10 +690,9 @@ I meant `run'.
 We should run.
 The trolls will arrive soon, and we know what happens if they find us\ldots
 
-\subsubsection{Creature \Glsfmtlongpl{cr}}
-have been loosely approximated with a formula.
-If you want your own creatures to have \pgls{cr}, I recommend just estimating with a glance.
-Nevertheless, here is that formula:
+\subsubsection{\Glsfmtlongpl{cr}}
+come from an inelegant formula.
+This formula simply multiplies the \glspl{trait} which let \glspl{npc} deal Damage, then multiplies the \glspl{trait} which keep them alive, and adds a bit for having \glsentrylongpl{mp}.
 
 \begin{align*}
   \frac{Att \times Dam \times \glsentrytext{ap}}{50}
@@ -700,8 +705,9 @@ Nevertheless, here is that formula:
 \end{align*}
 
 \noindent
-Here `heft' means the \glspl{ap} cost to wield a weapon.
-Beasts all spend 1~\gls{ap} to attack, while people with larger weapons often spend more.
+Here `heft' means the \gls{ap}~cost to attack, which is `1' for most \glspl{monster}.
+
+This cheap estimation has no more authority or accuracy than a semi-educated guess, so if you make your own \glspl{npc}, and you want to give them \pgls{cr}, it's better to go with your gut than your calculator.
 
 \subsection{Damage, Death \& Dismemberment}
 
