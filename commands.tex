@@ -352,7 +352,7 @@
     Boar\iftoggle{genExamples}{ (\autopageref{boar})}{}
     \setcounter{encnum}{1}%
   \or%
-    $1D6$ Griffins\iftoggle{genExamples}{ (\autopageref{griffin})}{}
+    $1D6$ \Glspl{griffin}\iftoggle{genExamples}{ (\autopageref{griffin})}{}
     \setcounter{encnum}{0}%
   \or%
     \Gls{digger}\iftoggle{genExamples}{ (\autopageref{mouthdigger})}{}
@@ -509,7 +509,7 @@
       \item
       A child steals from one of the characters.
       \item
-      A local archer shot down a griffin. It now sits in the central square, on a spit-roast.
+      A local archer shot down \pgls{griffin}. It now sits in the central square, on a spit-roast.
       \item
       Children have spotted \pgls{woodspy}, camouflaging itself into a tree.
       A dozen have gathered to throw rocks at it from a `safe' distance.
@@ -541,7 +541,7 @@
     \item
     A guard has saved $1D6 \times 30$~\gls{sp}, and now hides in the \gls{village}, having abandoned his duties.
     \item
-    A griffin has picked up a child, and flown into the forest.
+    \Pgls{griffin} has picked up a child, and flown into the forest.
     A dozen farmers prepare to go after it, but they move too slowly.
     \roll{Speed}{Athletics}, \tn[11] to get to the child on time.
     \item
@@ -623,7 +623,7 @@
       help the piper!
       She has a cough, so tonight you can sing to call the forest out to fight.
       \item
-      shoo those griffins off the roof.
+      shoo those \glspl{griffin} off the roof.
       They're making a nest, but nobody can land an arrow on them all the way up there.
       Take this broom and climb up top, there's a good lad!
       \item
@@ -661,7 +661,7 @@
       clear the perimeter -- they need someone to raise and chop all around the edges.
       \item
       \ifodd\value{r4}
-        with a particularly large griffin.
+        with a particularly large \gls{griffin}.
         They say it picked up a pregnant ewe!
       \else
         lay five traps around its border.
@@ -929,6 +929,7 @@
   \ifglsentryexists{#2}{%
     \subsubsection[\Glsfmtname{#2}]{\showWhenLow~\Glsfmtname{#2}}
     \glsentrydesc{#2}
+    \glsadd{#2}
   }{%
     \subsubsection[#2]{\showWhenLow~#2}
     \index{#2~\glsentrysymbol{plant}}%
