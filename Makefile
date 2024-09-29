@@ -15,8 +15,15 @@ shield.pdf: shield.tex commands.tex EXTERNAL config/markets/
 	$(RUN) shield.tex
 	@$(CP) $(DROSS)/shield.pdf .
 
+images/extracted/cover.jpg: images/loh/dragon.jpg images/extracted/inclusion.tex
+	$(CP) $< $@
+$(DROSS)/$(BOOK)_cover.pdf: config/cover.tex cover.tex images/extracted/cover.jpg $(DBOOK)
+	$(RUN) -jobname $(BOOK)_cover $<
+cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
+	$(CP) $< $@
+
 .PHONY: all
-all: $(RELEASE) shield.pdf
+all: $(RELEASE) shield.pdf cover.pdf
 
 clean:
 	$(CLEAN) shield_qr.tex
