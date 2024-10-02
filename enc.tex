@@ -478,16 +478,10 @@ Roll $1D6$ to find this \gls{cycle}'s barkeep (they change all the time):
 Roll $3D6$ -- the \glspl{pc} can order any of these meals.
 
 \newcommand\menuItem[3][(\arabic{r12} \glspl{cp})]{%
-  \randomdozen%
-  \randomthree%
-  \randomfourB%
-  \ifodd\value{enumi}
-    \randomthreeC%
-    \randomfour%
-  \fi
   \item
   \textbf{#2:}
   #3
+  \randomize%
   #1
 }
 
