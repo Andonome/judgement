@@ -4,15 +4,15 @@
 |:-------------------------------------|:------------------------------|
 | [Download][judgement]                | [Wiki][wiki]                  | 
 | [Judge Shield][shield]               | [World Wiki][fenwiki]         |
-| [Condensed Rules][rules summary]     | [Email an idea][issues email] |
-| [Introduction Module][goblin hole]  | [Issues Board][board]         |
+| [Condensed Rules][rules]             | [Email an idea][issues email] |
+| [Introduction Module][goblin hole]   | [Issues Board][board]         |
 
 *The Book of Judgement* lays out the world of the BIND RPG, through procedures and bullet-points.
 It lays out creating your own map, step by step, then describes dangerous vegetation, how to harvest basilisk gizzards to create alchemical concoctions, and what scares liches.
 
 # Getting the Book
 
-Download it from the [link][download], then take it to your local, friendly, print-shop.
+Download it from the [link][judgement], then take it to your local, friendly, print-shop.
 Everything in the book has been optimized for reading on paper.
 Reading two-columns of blinding-white PDF on a monitor will only give you a headache.
 
@@ -69,6 +69,9 @@ To make the document,
 1. type `make`.
 2. Take the pdfs to your local, friendly, printing store.
 
+[rules]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/booklet.pdf?job=build
+[wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
+[fenwiki]: https://gitlab.com/bindrpg/aif/-/wikis/home
 [compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
 [issues email]: mailto:contact-project+bindrpg-judgement-47918887-issue-@incoming.gitlab.com
 [board]: https://gitlab.com/bindrpg/judgement/-/issues
