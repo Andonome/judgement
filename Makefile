@@ -7,13 +7,17 @@ config/vars:
 shield_qr.tex:
 	@printf '\qrcode[height=.7\\textwidth]{$(SHIELD_TARGET)}' > shield_qr.tex
 
+output += shield_qr.tex
+
 $(DBOOK): LOCTEX HANDOUTS STYLE_FILES EXTERNAL | qr.tex shield_qr.tex
 	@$(COMPILER) main.tex
 
-shield.pdf: shield.tex commands.tex EXTERNAL config/markets/
+shield.pdf: shield.tex commands.tex EXTERNAL config/markets/ ## Judge shield
 	$(RUN) shield.tex
 	$(RUN) shield.tex
 	@$(CP) $(DROSS)/shield.pdf .
+
+targets += shield.pdf
 
 images/extracted/cover.jpg: images/loh/dragon.jpg images/extracted/inclusion.tex
 	$(CP) $< $@
@@ -22,8 +26,5 @@ $(DROSS)/$(BOOK)_cover.pdf: config/cover.tex cover.tex images/extracted/cover.jp
 cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 	$(CP) $< $@
 
-.PHONY: all
-all: $(RELEASE) shield.pdf cover.pdf
+targets += cover.pdf
 
-clean:
-	$(CLEAN) shield_qr.tex
