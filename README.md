@@ -80,4 +80,3 @@ To make the document,
 [stories]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Stories.pdf?job=build
 [judgement]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Judgement.pdf?job=build
 [goblin hole]: https://gitlab.com/bindrpg/aif/-/jobs/artifacts/master/raw/The_Goblin_Hole.pdf?job=build
-[shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build

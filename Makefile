@@ -1,6 +1,6 @@
 include config/vars
 
-SHIELD_TARGET = $(shell grep 'shield\.pdf' README.md | cut -d' ' -f2)
+SHIELD_TARGET = $(shell grep 'shield\.pdf' README.md | cut -d' ' -f2 | head -1)
 
 config/vars:
 	@git submodule update --init
