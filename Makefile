@@ -1,3 +1,5 @@
+EXTERNAL_REFERENTS = core stories
+
 include config/vars
 
 SHIELD_TARGET = $(shell grep 'shield\.pdf' README.md | cut -d' ' -f2 | head -1)
@@ -9,10 +11,10 @@ shield_qr.tex:
 
 output += shield_qr.tex
 
-$(DBOOK): LOCTEX HANDOUTS STYLE_FILES EXTERNAL | qr.tex shield_qr.tex
+$(DBOOK): $(DEPS) LOCTEX HANDOUTS STYLE_FILES | qr.tex shield_qr.tex
 	@$(COMPILER) main.tex
 
-shield.pdf: shield.tex commands.tex EXTERNAL config/markets/ ## Judge shield
+shield.pdf: shield.tex commands.tex config/markets/ ## Judge shield
 	$(RUN) shield.tex
 	$(RUN) shield.tex
 	@$(CP) $(DROSS)/shield.pdf .
