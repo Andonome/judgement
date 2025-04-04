@@ -47,22 +47,22 @@ The days till the encounter equals the
 \ifcase\value{temperature}%
   first die rolled. 
 \or%
-  the lowest of the first two dice.
+  lowest of the first two dice.
 \or%
-  the lowest of the first three dice.
+  lowest of the first three dice.
 \or%
-  the lowest of all four dice.
+  lowest of all four dice.
 \fi
 
-The creature encountered equals
+The creature encountered equals the
 \ifcase\value{temperature}%
-  the second die.
+  second die.
 \or%
-  the second and third die added together.
+  second and third die added together.
 \or%
-  the last three dice all added together.
+  last three dice all added together.
 \else%
-  the highest three dice added together.
+  highest three dice added together.
 \fi%
 
 \ifcase\value{temperature}%
