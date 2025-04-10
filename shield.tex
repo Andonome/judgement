@@ -54,16 +54,7 @@ The days till the encounter equals the
   lowest of all four dice.
 \fi
 
-The creature encountered equals the
-\ifcase\value{temperature}%
-  second die.
-\or%
-  second and third die added together.
-\or%
-  last three dice all added together.
-\else%
-  highest three dice added together.
-\fi%
+The last two dice show the weather.
 
 \ifcase\value{temperature}%
   \setcounter{enc}{13}
@@ -113,6 +104,18 @@ If the first die rolls equal or below the Civilization Rating, encounter a carav
 \fi
 
 \encTraders
+
+If the first die rolls above the civilization rating, the troupe encounter \pgls{monster}.
+Use the
+\ifcase\value{temperature}%
+  second die.
+\or%
+  second and third die added together.
+\or%
+  last three dice all added together.
+\else%
+  highest three dice added together.
+\fi%
 
 \textbf{Mana Regeneration}
 
