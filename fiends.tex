@@ -556,6 +556,12 @@ Goblins always play dirty.
 
 \goblin[\npc{\T\N}{Goblins}]
 
+\boxPair[t]{
+  \hobgoblin[\npc{\T\N}{Hobgoblins}]
+}{
+  \exampleGoblinEnc
+}
+
 \newBeast[\N]{Hobgoblins}% Name
   {hobgoblin}% label
   {as big as a man, and twice as dangerous}% description
@@ -564,12 +570,6 @@ Few reach this stage, as they need enormous amounts of food in order to keep the
 
 Out of the hobgoblins, some rare continue feeding until they outgrow even humans, and then become \pgls{ogre}.
 Some theorise a later stage in goblin-gorging, but most people don't like to think about it.
-
-\hobgoblin[\npc{\T\N}{Hobgoblins}]
-
-\pic{Studio_DA/ogre}
-
-\exampleGoblinEnc
 
 \subsubsection{The Goblin Rating}
 \label{goblin_rating}
@@ -588,6 +588,8 @@ the encounter is replaced with a number of goblins equal to four times the encou
 
 As the Goblin Rating increases, they devour the people in the area bit by bit, and anyone on the outskirts of civilization will neither find boars, nor traders on the road.
 Instead, they find goblins, hungry for more.
+
+\pic{Studio_DA/ogre}
 
 \subsection{Plans}
 
@@ -655,7 +657,10 @@ Goblins have more energy than focus, so roll $2D6$ to find two different plans f
   \item
   To brew new potions.
   A goblin druid arrives from a neighbouring realm, deep underground.
-  \begin{enumerate}
+
+  %!
+  \null
+  \begin{enumerate}%
     \item
     Goblin scouts gather \glspl{ingredient} from all around (any potent plants in the area vanish).
     \item
