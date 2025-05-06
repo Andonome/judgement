@@ -1,9 +1,9 @@
-\chapter{\Glsfmtplural{sq}}
+\chapter{\Glsfmtplural{thread}}
 
-\label{sidequests}
+\label{threads}
 \index{Weaving Stories}
 
-\declareSQareas{Forest,Town,Roads}
+\declareRegions{Forest,Town,Roads}
 \togglefalse{genExamples}
 
 \section{Segmented Tails}
@@ -15,15 +15,15 @@ Very few pre-written `adventure modules' manage to entirely escape the sin of `r
 When the module's plot says `the \glspl{pc} go there', or `then they realize this', the \glspl{pc} never go there, and come to an entirely different realization.
 
 BIND has its own way of telling stories, where each \gls{segment} floats free of the others, and many tales are mixed in together.
-To illustrate, I'm going to take some classic stories, and rearrange them as \glspl{sq}, just to show how they look.
+To illustrate, I'm going to take some classic stories, and rearrange them as \glspl{thread}, just to show how they look.
 
-\sidequest[Forest,Roads]{Three Little Pigs}
+\thread[Forest,Roads]{Three Little Pigs}
 
 \noindent
-Each \gls{sq} begins with a summary of its \gls{segment}.
+Each \gls{thread} begins with a summary of its \gls{segment}.
 Each \gls{segment} shows which \gls{region} it takes place in.
 
-\sqpart{Forest}% AREA
+\segment{Forest}% AREA
 {House of Straw}% NAME
 {The troupe find a little straw house, blown apart, next to a bloody pile of bones}% SUMMARY
 
@@ -43,7 +43,7 @@ We can't show the little pig's straw house on any map before the game starts, be
 
 If the \glspl{pc} investigate the fly-covered bones of the little pig, they can get a roll to see how much they understand of what just happened here, but the wolf is long-gone, so tracking him is hopeless.
 
-\sqpart{Roads}% AREA
+\segment{Roads}% AREA
 {House of Sticks}% NAME
 {A little pig invites the troupe to dinner, just before the big, bad, wolf arrives}% SUMMARY
 
@@ -61,7 +61,7 @@ If the \glspl{pc} investigate the fly-covered bones of the little pig, they can 
 
 This scene may take place the very next day, as the troupe exit the forest, and enter the roads.
 Or the \glspl{pc} may remain in the forest for a week, caught up on other missions.
-In the latter case, you can simply give them other \gls{sq} \glspl{segment} until they exit the forest.
+In the latter case, you can simply give them \glspl{segment} from other \glspl{thread} until they exit the forest.
 
 As before, this house might be anywhere on the roads, so it can take place no matter where the \glspl{pc} wander.
 
@@ -72,18 +72,18 @@ At this point, the wolf jumps in, and grabs the little pig, then runs off with h
 If the \glspl{pc} Damage the wolf, he flees immediately.
 
 \paragraph{If the \glspl{pc} chase the wolf into the forest}
-then you can pull up the next \gls{sq}'s \gls{segment}, and start it immediately, interrupting the fight with the wolf.
+then you can pull up the next \gls{thread}'s \gls{segment}, and start it immediately, interrupting the fight with the wolf.
 This mixing of various plots helps weave the stories into a tapestry.
 
 \paragraph{If the \glspl{pc} kill the big, bad, wolf}
-then the \gls{sq} stops here.
-\Glspl{sq} sometimes do that, and that's okay -- sometimes \pgls{sq} finishes early.
+then the \gls{thread} stops here.
+\Glspl{thread} sometimes do that, and that's okay -- sometimes \pgls{thread} finishes early.
 
 \paragraph{If the \glspl{pc} simply leave}
 then the pig dies, and the \glspl{pc} may never find out.
 But the next \gls{segment} can continue anyway.
 
-\sqpart{Roads}% AREA
+\segment{Roads}% AREA
 {House of Bricks}% NAME
 {The big, bad, wolf begins his siege outside the last little pig's brick house}% SUMMARY
 
@@ -99,7 +99,7 @@ But the next \gls{segment} can continue anyway.
   You cannot hear him over the storm, but it's clear he calls for help.
 \end{boxtext}
 
-Each \gls{sq} with a creature should always contain a full statblock on the same page or the next page, so you can see all the information required for the scene at a glance.
+Each \gls{thread} with a creature should always contain a full statblock on the same page or the next page, so you can see all the information required for the scene at a glance.
 
 \Person{\npc{\M\A}{Big, Bad, Wolf}}%
   {{3}{3}{4}}% BODY
@@ -141,9 +141,9 @@ The last little pig knows this, and will spend the entire night bitterly complai
 \paragraph{If the \glspl{pc} try to attack the wolf,}
 it will continue blowing, and if some of the \glspl{pc} fall over, he attacks for a moment, then runs back to the forest, then tries again.
 
-\sidequest[Forest,Roads,Town]{Cinderella}
+\thread[Forest,Roads,Town]{Cinderella}
 
-\sqpart{Town}% AREA
+\segment{Town}% AREA
 {New Recruits}% NAME
 {The troupe must accompany new recruits to the \glsentrytext{guard}, to the nearest \glsentrytext{broch}}% SUMMARY
 
@@ -161,7 +161,7 @@ it will continue blowing, and if some of the \glspl{pc} fall over, he attacks fo
 The \glspl{pc} may not want to, and could argue.
 However the scene ends, the important part is just to establish the existence of Cindarella.
 
-\sqpart{Roads}% AREA
+\segment{Roads}% AREA
 {What Lies on the Roads}% NAME
 {\Pgls{doula} pretends to be \pgls{warden} from `Franchia' to give the troupe orders}% SUMMARY
 
@@ -183,7 +183,7 @@ Or she may meet up with Goutmare the \gls{doula} later.
 Within the scene, Goutmare tries to order the troupe to help out a nearby \gls{village}, cutting back its trees.
 They might argue she has no authority over the \gls{templeOfBeasts}, or may spend a day helping out, instead of doing what they were ordered to.
 
-\sqpart{Forest}% AREA
+\segment{Forest}% AREA
 {Dressing for the Weather}% NAME
 {A group of \glspl{guard} argue with Cindarella that she needs to stop wearing noble clothing}% SUMMARY
 
@@ -193,7 +193,7 @@ They might argue she has no authority over the \gls{templeOfBeasts}, or may spen
 
 Little \glspl{segment} like this provide a conflict to resolve, while laying down some foreshadowing.
 
-\sqpart{Town}% AREA
+\segment{Town}% AREA
 {\squash The Masquerade Comes to Town}% NAME
 {Everyone in town celebrates today with a masked party}% SUMMARY
 
@@ -211,7 +211,7 @@ Whatever happens in the next \gls{segment}, everyone there should be wearing mas
 The \glspl{pc} will almost certainly not be aware of what Cindarella is up to, because that ploy takes place within the town's citadel.
 Various \glspl{segment} may note events within particular locations, but events which happen to the \glspl{pc} must make sense for \textit{anywhere} within \pgls{region}.
 
-\sqpart{Town}% AREA
+\segment{Town}% AREA
 {The Search for the Franchian Woman}% NAME
 {The \gls{warden}'s son searches for that mysterious woman from Franchia}% SUMMARY
 
@@ -223,9 +223,9 @@ The \glspl{pc} can find Cindarella eating with Goutmare, at her home, by the \gl
 If they engage with the ploy, they can earn the hefty reward.
 Otherwise, someone else gets the reward, the \gls{warden}'s son marries her, and further shenanigans ensue.
 
-\sidequest[Forest,Roads,Town]{Snow White}
+\thread[Forest,Roads,Town]{Snow White}
 
-\sqpart{Forest}% AREA
+\segment{Forest}% AREA
 {The Unspeakable Job}% NAME
 {A \gls{guard} \gls{ranger} returns from a shameful job}% SUMMARY
 
@@ -233,13 +233,13 @@ The troupe meet \pgls{ranger}, who was tasked with killing Snow White.
 He just abandoned her, and doesn't want to talk about the mission.
 
 
-\sqpart{Roads}% AREA
+\segment{Roads}% AREA
 {The Missing \Glsfmttext{warden}}% NAME
 {Rumours abound that the \glsentrytext{warden}' daughter is missing}% SUMMARY
 
 In town, everyone is talking about the \gls{warden}'s daughter going missing.
 
-\sqpart{Roads}% AREA
+\segment{Roads}% AREA
 {The Apple Seller}% NAME
 {The Queen dresses as an apple seller, with poisoned apples}% SUMMARY
 
@@ -247,13 +247,13 @@ The troupe meet the \gls{warden}'s new wife, dressed as an old apple seller, wit
 If they try to buy any, she refuses.
 If they press her, she sells them one day's worth of food, and the next scene they begin to suffer \glspl{ep}.
 
-\sqpart{Town}% AREA
+\segment{Town}% AREA
 {Mourning till Sunrise}% NAME
 {Dwarves mourn in the local bar}% SUMMARY
 
 The local bar cannot get rid of these dwarves, who deep drinking, fighting, and singing sad songs. 
 
-\sqpart{Town}% AREA
+\segment{Town}% AREA
 {Iron Shoes}% NAME
 {The Queen dances in iron shoes}% SUMMARY
 
@@ -262,31 +262,31 @@ The town watch her coronation, and during the main event, she makes her step-mot
 
 \end{multicols}
 
-\section{Plotting \Glsfmtplural{sq}}
+\section{Plotting \Glsfmtplural{thread}}
 
 \begin{multicols}{2}
 
 \noindent
-Juggling all these \glspl{sq} and \glspl{segment} threatens to become confusing, so each collection comes with a summary which plots out the \glspl{segment} \emph{per location}.
+Juggling all these \glspl{thread} and \glspl{segment} threatens to become confusing, so each collection comes with a summary which plots out the \glspl{segment} \emph{per location}.
 
 Have a look at the summaries below.
-Notice that the first \gls{segment} comes with the `\sqr' symbol.
-Once it's done, you can mark it off with an `X', then mark the next \gls{segment} in the \gls{sq} as ready with a `\sqr'.
+Notice that the first \gls{segment} comes with the `\sgr' symbol.
+Once it's done, you can mark it off with an `X', then mark the next \gls{segment} in the \gls{thread} as ready with a `\sgr'.
 
-Imagine what would happen if the troupe stick around on the Roads for a while; they could fly through the \glspl{segment} from the first \gls{sq}, before the second arrives as a distraction.
+Imagine what would happen if the troupe stick around on the Roads for a while; they could fly through the \glspl{segment} from the first \gls{thread}, before the second arrives as a distraction.
 Compare that with how the events might unfold if the \glspl{pc} immediately go from the Roads to the Forest.
 
 \end{multicols}
 
 \section*{Forest \Glsfmtplural{segment}}
 \label{sideQuestSummaries}
-\printSideQuestsInRegion{Forest}
+\printThreadsInRegion{Forest}
 
 \section*{Roads \Glsfmtplural{segment}}
-\printSideQuestsInRegion{Roads}
+\printThreadsInRegion{Roads}
 
 \section*{Town \Glsfmtplural{segment}}
-\printSideQuestsInRegion{Town}
+\printThreadsInRegion{Town}
 
 \bigLine
 
@@ -313,14 +313,14 @@ You can spring \pgls{segment} on the \glspl{pc} any time you feel like it.
 When they enter a new region (e.g.`Town', or `Forest') makes a good opportunity for a new \gls{segment}, but you may pull out as many as one per day.
 Pulling out two \glspl{segment} in a day can become a problem, as many of the \glspl{segment} only make sense during the morning, or at night.
 
-The standard random encounters can interrupt \pgls{sq} \gls{segment}, which makes for a lot of action when you put them all together.
+The standard random encounters can interrupt \pgls{thread} \gls{segment}, which makes for a lot of action when you put them all together.
 In fact, it becomes so action-packed that a lot of \glspl{segment} focus on more `human' problems, such as negotiation, gossip, and funny scenes, rather than combat.
 The random encounters inject plenty of combat already!
 
 \subsection{\Glsfmtplural{region} Create Focus}
 
 \Pgls{campaign} can focus on particular places by selecting the right \glspl{region}.
-\Glspl{sq} which use `Forest, Roads, Town', as their \glspl{region}, will focus on overland travel, because the troupe will have to travel the wide lands between those places.
+\Glspl{thread} which use `Forest, Roads, Town', as their \glspl{region}, will focus on overland travel, because the troupe will have to travel the wide lands between those places.
 Conversely, \pgls{campaign} centred on a thieves' guild might have a set of regions all concerned with the local city; e.g. `Slums, Guild Halls, Market, Sewers'.
 Or \pgls{campaign} about a fae wilderness could take place by the `Shining Lakes', `Enchanted Mountains', and `Cursed Swamp'.
 Having exciting, bespoke events occur inside those locations will highlight them as areas of interest.
@@ -332,38 +332,38 @@ Having exciting, bespoke events occur inside those locations will highlight them
 \begin{multicols}{2}
 
 \noindent
-As the \glspl{pc} move around, they will slowly `trigger' new \glspl{sq} until you have four or five \glspl{sq} all activated at once.
-This may sound like it will confuse the players, but it won't, because they won't be aware of any \glspl{sq} -- they simply see individual \glspl{segment}, and most of the early \glspl{segment} only serve as foreshadowing.
+As the \glspl{pc} move around, they will slowly `trigger' new \glspl{thread} until you have four or five \glspl{thread} all activated at once.
+This may sound like it will confuse the players, but it won't, because they won't be aware of any \glspl{thread} -- they simply see individual \glspl{segment}, and most of the early \glspl{segment} only serve as foreshadowing.
 
 All these tangled threads usually result in players seeing just one or two `main plots' at a time.
-In some sense, they are always correct -- if the players take \pgls{sq} as the main one, then it has become their primary \gls{sq}.
-But once that `main' \gls{sq} resolves, others already have their ground-work laid out, in the form of rumours or short encounters with \glspl{npc} who will later become important.
+In some sense, they are always correct -- if the players take \pgls{thread} as the main one, then it has become their primary \gls{thread}.
+But once that `main' \gls{thread} resolves, others already have their ground-work laid out, in the form of rumours or short encounters with \glspl{npc} who will later become important.
 
 However, you can still get too much of a good thing.
-In order to wrap up \pgls{campaign} cleanly, you need some `plot-buffer', where no more \glspl{sq} begin.
-You need \pgls{sq} with nothing but random, unconnected events in the \gls{region}.
+In order to wrap up \pgls{campaign} cleanly, you need some `plot-buffer', where no more \glspl{thread} begin.
+You need \pgls{thread} with nothing but random, unconnected events in the \gls{region}.
 
 Check the summary of \glspl{segment} in each \gls{region}, \vpageref{sideQuestSummaries}, and imagine players deciding to go from one area to the next.
 Notice that if the players decide to stay in the town or forest for a while, they only have two \glspl{segment} available, so nothing more will happen, and the \gls{region} becomes lifeless.
 However, on the roads you will have plenty of material for the players, even if none of the big-and-relevant plots have \pgls{segment} ready.
 
-\sidequest[Roads]{Random Events on the Road}
+\thread[Roads]{Random Events on the Road}
 
-\sqpart{Roads}% AREA
+\segment{Roads}% AREA
 {The Piper}% NAME
 {An unpaid piper enchants all local children to follow him underground}% SUMMARY
 
 The \gls{village}'s children run out, eager to find the source of the enchanted music.
 Roll an encounter check as usual.
 
-\sqpart{Roads}% AREA
+\segment{Roads}% AREA
 {Granny's Soup}% NAME
 {Baba Yaga has no meat for her soup}% SUMMARY
 
 The party meet an old lady, who complains that she has no meat for her soup.
 If the party don't help her out, she will return to her walking house (it has chicken legs) and chase them with spells.
 
-\sqpart{Roads}% AREA
+\segment{Roads}% AREA
 {Dragon-Spotting}% NAME
 {a great wyrm soars overhead}% SUMMARY
 
@@ -373,11 +373,11 @@ Gossip about the dragon will fill every \gls{village} and \gls{bothy} for weeks 
 The \glspl{pc} won't see the dragon again.
 This \gls{segment} exists simply because dragons exist within \gls{fenestra}, and sometimes they have places to be.
 
-\stopcontents[sq]
+\stopcontents[segments]
 
 \subsection{Encounters as \Glsfmtplural{segment}}
 
-\Glspl{gm} who like to prepare random encounters before a game can use them like any other \gls{sq}.
+\Glspl{gm} who like to prepare random encounters before a game can use them like any other \gls{thread}.
 Just roll a few encounters%
 \footnote{Find the chart \vpageref{randomEncounters}.}
 and use them whenever the \glspl{pc} enter a local forest.
