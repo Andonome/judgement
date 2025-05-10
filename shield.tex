@@ -26,35 +26,74 @@
 
 \cleardoublepage
 
-\begin{figure*}[b!]
-  \stackingDamageChart
-\end{figure*}
+\section{Encounters}
 
 \begin{multicols}{2}
 
-\subsection*{Session Start}
-
-\input{config/start.tex}
-
-\orrery
-
 \noindent
-\showCycle~\cycleDesc.
+Roll $4D6$ and read them left-to-right.
 
-\paragraph{Encounters:}
-roll $4D6$.
-The days till the encounter equals the
+\begin{description}
+  \item[How many days until the encounter?]
+  Read the
+  \ifcase\value{temperature}%
+    first die rolled. 
+  \or%
+    lowest of the first two dice.
+  \or%
+    lowest of the first three dice.
+  \or%
+    lowest of all four dice.
+  \fi
+  \item[What kind of weather?]
+  Add the last two dice.
+  \item[Traders or monsters?]
+  It depends on how civilized the area, and how far from a town.
+  \setcounter{encnum}{1}
+  \begin{description}
+    \Repeat{5}{%
+      \item[\encCivilization]
+      \stepcounter{encnum}
+      encounter monsters on \dicef{\value{encnum}} or more.
+    }
+  \end{description}
+\end{description}
+
+\end{multicols}
+
+\bigLine
+
+\begin{multicols}{2}
+
+\subsection*{Traders}
+
+\iftoggle{stories}{
+  \paragraph{What is the trader's name?}
+  Read the second and third die.
+
+  \namesOfHumans
+}{}
+
+\paragraph{How many useful items?}
+The first die indicates how many useful items.
+Read off the items, right-to-left (and roll more when needed).
+
+\encTraders
+
+\columnbreak
+
+\subsection*{\Glsfmtplural{monster}}
+
+\paragraph{What kind of \gls{monster}?}
 \ifcase\value{temperature}%
-  first die rolled. 
+  read the second die.
 \or%
-  lowest of the first two dice.
+  add the second and third die.
 \or%
-  lowest of the first three dice.
-\or%
-  lowest of all four dice.
-\fi
-
-The last two dice show the weather.
+  add the last three dice.
+\else%
+  add the highest three dice.
+\fi%
 
 \ifcase\value{temperature}%
   \setcounter{enc}{13}
@@ -94,88 +133,10 @@ The last two dice show the weather.
   \allEncounterTables%
 \fi
 
-If the first die rolls equal or below the Civilization Rating, encounter a caravan of traders with that many useful goods.
-
-\ifnum\value{temperature}=1
-  \Repeat{4}{
-    \addtocounter{diceNo}{-1}
-    \encCivilization[\value{diceNo}]: encounter traders on \dicef{\value{diceNo}} or less.
-  }
-\fi
-
-\encTraders
-
-If the first die rolls above the civilization rating, the troupe encounter \pgls{monster}.
-Use the
-\ifcase\value{temperature}%
-  second die.
-\or%
-  second and third die added together.
-\or%
-  last three dice all added together.
-\else%
-  highest three dice added together.
-\fi%
-
-\textbf{Mana Regeneration}
-
-\manaRegenChart
-
-\iftoggle{stories}{
-  \namesOfHumans
-
-  \poshNames
-}{}
-
-\iftoggle{core}{
-  \hitLocation
-
-  \larcenyChart
-
-  \begin{figure*}[b!]
-    \projectilesChart
-  \end{figure*}
-}{}
-
-\needspace{8em}
-
-\subsection{\Glsfmttext{bothy} Events}
-
-\bothyEvents
-
-\subsection{\Glsfmttext{village} Features}
-
-Make the village's name from the main feature.
-For example, `poisonous meats' might suggest `Rotwall', while `doula's house', could mean `Witchend'.
-
-\encVillageFeatures
-
-\subsection{\Glsfmttext{village} Events}
-
-\encVillageEvent
-
-\end{multicols}
-
-\encTownEvents
-
-\cleardoublepage
-
-\input{config/markets/bailey.tex}
-
-\cleardoublepage
-
-\input{config/markets/bailey.tex}
-
-\cleardoublepage
-
-\input{config/markets/town.tex}
-
-\cleardoublepage
-
-\begin{multicols}{2}
-
 %%%%% Creatures %%%%%
-\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+%\humansoldier[\npc{\T[8]\Hu}{Bandits}]
+
+\columnbreak
 
 \ifnum\value{temperature}=0
   % Temperature 0 (cold)
@@ -205,6 +166,72 @@ For example, `poisonous meats' might suggest `Rotwall', while `doula's house', c
   \crawlerSwarm
 \fi
 
+%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+
+\subsection*{Session Start}
+
+\begin{figure*}[b!]
+  \stackingDamageChart
+\end{figure*}
+
+\input{config/start.tex}
+
+\orrery
+
+\noindent
+\showCycle~\cycleDesc.
+
+\textbf{Mana Regeneration}
+
+\manaRegenChart
+
+\iftoggle{core}{
+  \hitLocation
+
+  \larcenyChart
+
+  \begin{figure*}[b!]
+    \projectilesChart
+  \end{figure*}
+}{}
+
+\needspace{8em}
+
+\subsection{\Glsfmttext{bothy} Events}
+
+\bothyEvents
+
+\subsection{\Glsfmttext{village} Features}
+
+Make the village's name from the main feature.
+For example, `poisonous meats' might suggest `Rotwall', while `doula's house', could mean `Witchend'.
+
+\encVillageFeatures
+
+\subsection{\Glsfmttext{village} Events}
+
+\encVillageEvent
+
+\iftoggle{stories}{
+  \poshNames
+}{}
+
 \end{multicols}
+
+\encTownEvents
+
+\cleardoublepage
+
+\input{config/markets/bailey.tex}
+
+\cleardoublepage
+
+\input{config/markets/bailey.tex}
+
+\cleardoublepage
+
+\input{config/markets/town.tex}
 
 \end{document}
