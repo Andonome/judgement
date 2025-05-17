@@ -13,6 +13,8 @@ shield_qr.tex:
 
 output += shield_qr.tex
 
+DEPS += $(wildcard *.tex)
+
 $(DBOOK): $(DEPS) qr.tex shield_qr.tex
 
 shield.pdf: shield.tex commands.tex $(wildcard config/markets/*) ## Judge shield
