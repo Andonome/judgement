@@ -10,7 +10,7 @@
 
   \begin{tikzpicture}
     \Large
-    \node[draw, color = \pageSideColor, minimum size = .9\linewidth, regular polygon, regular polygon sides = 5] (a) {};
+    \node[draw, color = background, minimum size = .9\linewidth, regular polygon, regular polygon sides = 5] (a) {};
     \foreach \x in {1,2,...,5} 
         \fill (a.corner \x) circle [radius=2pt];
     \draw (a.corner 1) node[above] {1};
@@ -18,11 +18,11 @@
     \draw (a.corner 3) node[below] {4};
     \draw (a.corner 4) node[below] {3};
     \draw (a.corner 5) node[right] {2};
-    \draw [color = \pageSideColor, name path = seg1] (a.corner 1)--(a.corner 3);
-    \draw [color = \pageSideColor, name path = seg2] (a.corner 3)--(a.corner 5);
-    \draw [color = \pageSideColor, name path = seg3] (a.corner 5)--(a.corner 2);
-    \draw [color = \pageSideColor, name path = seg4] (a.corner 2)--(a.corner 4);
-    \draw [color = \pageSideColor, name path = seg5] (a.corner 4)--(a.corner 1);
+    \draw [color = background, name path = seg1] (a.corner 1)--(a.corner 3);
+    \draw [color = background, name path = seg2] (a.corner 3)--(a.corner 5);
+    \draw [color = background, name path = seg3] (a.corner 5)--(a.corner 2);
+    \draw [color = background, name path = seg4] (a.corner 2)--(a.corner 4);
+    \draw [color = background, name path = seg5] (a.corner 4)--(a.corner 1);
 
     \path [name intersections = {of = seg1 and seg3, by = inter1}];
     \fill (inter1) circle [radius = 2pt];
@@ -102,9 +102,9 @@
 
   \node (C) at (2,2.5){\Large\dicef{3}};
 
-  \draw[\pageSideColor] (A) to[bend left] node[right]{\large\outline{= 9}}(C);
+  \draw[background] (A) to[bend left] node[right]{\large\outline{= 9}}(C);
 
-  \draw[\pageSideColor] (C) to[bend left] node[right,align=center]{\large\outline{= 4}}(B);
+  \draw[background] (C) to[bend left] node[right,align=center]{\large\outline{= 4}}(B);
 
   %\draw (B) to[bend left]node[below]{\outline{7}} (A);
 
@@ -126,17 +126,17 @@
   \addtocounter{age}{#1}
   \begin{tikzpicture}[thick]
 
-  \node (Left) at (2,2.5){(\arabic{age}) \Large\sffamily #4};
+  \node[color = foreground] (Left) at (2,2.5){(\arabic{age}) \Large\sffamily #4};
 
-  \node (Right) at (4,0){(\arabic{diceNo2}) \Large\sffamily #5};
+  \node[color = foreground] (Right) at (4,0){(\arabic{diceNo2}) \Large\sffamily #5};
 
-  \node (Top) at (0,0){(\arabic{diceNo}) \Large\sffamily #6};
+  \node[color = foreground] (Top) at (0,0){(\arabic{diceNo}) \Large\sffamily #6};
 
-  \draw[\pageSideColor] (Top) to[bend left] node[left]{\large \dicef{#1}}(Left);
+  \draw[background] (Top) to[bend left] node[left]{\large \dicef{#1}}(Left);
 
-  \draw[\pageSideColor] (Left) to[bend left] node[right]{\large \dicef{#3}}(Right);
+  \draw[background] (Left) to[bend left] node[right]{\large \dicef{#3}}(Right);
 
-  \draw[\pageSideColor] (Right) to[bend left] node[below]{\large \dicef{#2}} (Top);
+  \draw[background] (Right) to[bend left] node[below]{\large \dicef{#2}} (Top);
 
   \end{tikzpicture}
 }
@@ -154,11 +154,11 @@
 
   \node (Top) at (0,0){\Large\sffamily #6};
 
-  \draw[\pageSideColor] (Top) to[bend left] node[left]{\large \dicef{#1}}(Left);
+  \draw[background] (Top) to[bend left] node[left]{\large \dicef{#1}}(Left);
 
-  \draw[\pageSideColor] (Left) to[bend left] node[right]{\large \dicef{#3}}(Right);
+  \draw[background] (Left) to[bend left] node[right]{\large \dicef{#3}}(Right);
 
-  \draw[\pageSideColor] (Right) to[bend left] node[below]{\large \dicef{#2}} (Top);
+  \draw[background] (Right) to[bend left] node[below]{\large \dicef{#2}} (Top);
 
   \end{tikzpicture}
 }
@@ -904,7 +904,7 @@
   \renewcommand\npcsymbol{#1}%
   \needspace{3em}%
   \begin{center}%
-  \textcolor{\pageSideColor}{\glssymbol{sylf}}\qquad\textbf{Encounters}\qquad\textcolor{\pageSideColor}{#1}
+  \textcolor{background}{\glssymbol{sylf}}\qquad\textbf{Encounters}\qquad\textcolor{background}{#1}
   \end{center}
 }
 
