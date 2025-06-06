@@ -16,16 +16,7 @@ Download it from the [link][judgement], then take it to your local, friendly, pr
 Everything in the book has been optimized for reading on paper.
 Reading two-columns of blinding-white PDF on a monitor will only give you a headache.
 
-## Compiling the Book Yourself
-
-1. Install the required packages:
-    * For Debian/ Mint/ Ubuntu: `apt install inkscape make texlive-full git-lfs latexmk`.
-    * For Arch Linux: `pacman -S inkscape make git git-lfs texlive-binextra texlive-latexextra texlive-fontsrecommended texlive-fontsextra && git lfs install`
-    * For Void Linux: `xbps-install inkscape make texlive-full git-lfs texlive-latexmk`.
-1. Clone this repo.
-1. Enter the repo, and do `make all`.
-
-For full setup instructions, see the [wiki][compiling].
+To compile the books with LaTeX, check the setup in the [wiki][compiling].
 
 # Setting
 
@@ -53,21 +44,6 @@ We finish with a few 'GM tips' just for running campaigns in Fenestra, with a tr
 - For a short introduction module, grab a copy of [the Goblin Hole][goblin hole].
 - The complete [core rules][core] are structured mostly as a reference, rather than required reading.
 - For a more detailed look at the sentient creatures of Fenestra, print a copy of the [players' guide][stories].
-
-# Compiling
-
-The dependencies are
-
-- `texlive-full`
-- `git`
-- `git-lfs`
-- `inkscape`
-- `make`
-
-To make the document,
-
-1. type `make`.
-2. Take the pdfs to your local, friendly, printing store.
 
 [rules]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/booklet.pdf?job=build
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
