@@ -26,3 +26,9 @@ $(DROSS)/$(BOOK)_cover.pdf: config/cover.tex cover.tex images/extracted/cover.jp
 cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 	$(CP) $< $@
 
+######## A7 Almanac ########
+
+a7_minizine/main.tex: almanac/head.tex $(zine_entries) | a7_minizine/
+	cat $^ > $@
+	printf '%s\n' '\end{document}' >> $@
+

@@ -1,0 +1,98 @@
+\documentclass[10pt,twoside]{book}
+
+\usepackage{config/bind}
+
+\hfuzz=5.002pt 
+\emergencystretch 2em
+
+\geometry{%
+  includefoot,
+  %showframe,
+  margin=5mm,
+  marginparsep=10pt,
+  marginparwidth=10pt,
+  paperwidth=74mm,
+  paperheight=105mm,
+  footskip=3mm,
+}
+
+\AddToHook{shipout/background}{%
+  \ifodd\value{page}
+    \def\BGpageanchor{current page.south east}
+    \def\BGadjust{-5mm, 5mm}
+  \else
+    \def\BGpageanchor{current page.south west}
+    \def\BGadjust{5mm, 5mm}
+  \fi
+  \begin{tikzpicture}[overlay,remember picture]
+    \ifnum\value{page}=10
+      \draw[gray, dotted] (-0.15,0) -- (-0.15,-10);
+    \fi
+    \ifnum\value{page}=14
+      \draw[gray, dotted] (-0.15,0) -- (-0.15,-10);
+      \draw[gray, dotted] (0,0) -- (5,0);
+    \fi
+    \path 
+      ++(\BGpageanchor)
+      +(\BGadjust)
+      node[
+        text centered,
+        text=black,
+        font=\titleFont,
+      ] {\small\thepage};
+  \end{tikzpicture}%
+}%
+
+\begin{document}
+
+\small
+
+\frontmatter
+\pagenumbering{gobble}
+
+\begin{center}
+  \includesvg[width=.8\textwidth]{config/logo}
+  \par
+  \vspace{\baselineskip}
+  \orrery
+  {\Large\scshape Almanac}
+\end{center}
+
+\clearpage
+
+\noindent
+\showCycle, day \Roman{fenestraDay}.
+(intro)
+
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\pagestyle{plain}
+
+\humansoldier
+
+\chitincrawler
+
+\woodspy
+
+\elf
+
+\showStdSpells
+
+\elf
+
+\showStdSpells
+
+\elf
+
+\showStdSpells
+
+\elf
+
+\showStdSpells
+
+\elf
+
+\showStdSpells
+
