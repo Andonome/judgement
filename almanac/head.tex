@@ -16,10 +16,14 @@
   footskip=3mm,
 }
 
+\setcounter{fadeout}{0}
+
 \AddToHook{shipout/background}{%
   \ifodd\value{page}
     \def\BGpageanchor{current page.south east}
     \def\BGadjust{-5mm, 5mm}
+    \stepcounter{fadeout}
+    \shiftColours[\value{fadeout}]
   \else
     \def\BGpageanchor{current page.south west}
     \def\BGadjust{5mm, 5mm}
@@ -52,8 +56,6 @@
 
 \begin{center}
   \includesvg[width=.8\textwidth]{config/logo}
-  \par
-  \vspace{\baselineskip}
   \orrery
   {\Large\scshape Almanac}
 \end{center}
