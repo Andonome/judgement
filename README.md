@@ -45,6 +45,7 @@ We finish with a few 'GM tips' just for running campaigns in Fenestra, with a tr
 - The complete [core rules][core] are structured mostly as a reference, rather than required reading.
 - For a more detailed look at the sentient creatures of Fenestra, print a copy of the [players' guide][stories].
 
+[almanac]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/almanac.pdf?job=build
 [rules]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/rules.pdf?job=build
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [fenwiki]: https://gitlab.com/bindrpg/aif/-/wikis/home
