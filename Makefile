@@ -1,6 +1,7 @@
 EXTERNAL_REFERENTS = core stories
 
 pdfs += shield.pdf
+targets += encounters.pdf
 
 include config/vars
 
@@ -28,7 +29,9 @@ cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 
 ######## A7 Almanac ########
 
-a7_minizine/main.tex: almanac/head.tex $(zine_entries) | a7_minizine/
+zine_entries != ls almanac/enc_* | shuf
+
+a7_encounters/main.tex: almanac/head.tex $(zine_entries) $(zine_entries) | a7_encounters/
 	cat $^ > $@
-	printf '%s\n' '\end{document}' >> $@
+	echo '\end{document}' >> $@
 

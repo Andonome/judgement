@@ -1,51 +1,99 @@
 \documentclass[10pt,twoside]{book}
 
 \usepackage{config/bind}
+\usepackage{config/booklet}
 
-\hfuzz=5.002pt 
-\emergencystretch 2em
 
-\geometry{%
-  includefoot,
-  %showframe,
-  margin=5mm,
-  marginparsep=10pt,
-  marginparwidth=10pt,
-  paperwidth=74mm,
-  paperheight=105mm,
-  footskip=3mm,
+\tcbset{ornamented/.style={skin=ornamented,
+  before={\begin{figure}[hb!]},
+  after={\afterStatBlock\end{figure}},
+  }
 }
 
-\setcounter{fadeout}{0}
+\togglefalse{genExamples}
 
-\AddToHook{shipout/background}{%
-  \ifodd\value{page}
-    \def\BGpageanchor{current page.south east}
-    \def\BGadjust{-5mm, 5mm}
-    \stepcounter{fadeout}
-    \shiftColours[\value{fadeout}]
-  \else
-    \def\BGpageanchor{current page.south west}
-    \def\BGadjust{5mm, 5mm}
+\newcommand\stormEffect{%
+  \randomize%
+  \ifcase\value{r4}\relax%
+  \or%
+    \pgls{earthquake}.
+    They \glsentrydesc{earthquake}%
+  \or%
+    \pgls{flood}.
+    They can \glsentrydesc{earthquake}%
+  \or%
+    a lightning storm and fast winds%
+  \else%
+    \pgls{hurricane}.
+    They \glsentrydesc{earthquake}%
+  \fi%
+}
+
+\newcommand\cycleWrath{
+    {\scshape\showCycle\ day 58}
+    \bigLine
+    The \gls{storm} has begun with \stormEffect.
+
+    {\scshape\showCycle\ day 59}
+    \bigLine
+    The \gls{storm} continues with \stormEffect.
+
+    \ifnum\thepage<14
+      {\scshape\showCycle\ day 60}
+      \bigLine
+      The \gls{storm} ends with \stormEffect.
+      \ifnum\value{cycle}=5
+        \par
+        \Gls{cOne} begins with \pgls{eclipse}.
+        At noon, \gls{yonder} decides to \glsentrydesc{eclipse}.
+      \fi
+    \fi
+}
+
+\newcommand\cyclePic{
+  \ifcase\value{cycle}
+    \pic{Irina/curiosity}
+  \or
+    \relax
+  \or
+    \pic{Irina/fury}
+  \or
+    \relax
+  \or
+    \pic{Irina/forest}
+  \or
+    \pic{Irina/old_age}
   \fi
-  \begin{tikzpicture}[overlay,remember picture]
-    \ifnum\value{page}=10
-      \draw[gray, dotted] (-0.15,0) -- (-0.15,-10);
+}
+
+
+\newcommand\stepDay[1]{
+  \ifnum\thepage>12
+    \ifnum\thepage=13
+      \pagebreak
+      \cyclePic
     \fi
-    \ifnum\value{page}=14
-      \draw[gray, dotted] (-0.15,0) -- (-0.15,-10);
-      \draw[gray, dotted] (0,0) -- (5,0);
+    \end{document}
+  \fi
+  \set{track}{fenestraDay}
+  \addtocounter{track}{#1}
+  \addtocounter{fenestraDay}{#1}
+  \ifnum\value{track}>57
+    \cycleWrath
+    \setcounter{fenestraDay}{0}
+    \addtocounter{fenestraDay}{#1}
+    \stepcounter{cycle}
+    \ifnum\value{cycle}>5
+      \setcounter{cycle}{0}
+      \stepcounter{fenestraYear}
     \fi
-    \path 
-      ++(\BGpageanchor)
-      +(\BGadjust)
-      node[
-        text centered,
-        text=black,
-        font=\titleFont,
-      ] {\small\thepage};
-  \end{tikzpicture}%
-}%
+    \setTemperature
+  \fi
+  \Needspace{4\baselineskip}
+  \vspace{1em}
+  {\scshape\showCycle\ day \arabic{fenestraDay}}
+  \bigLine
+}
 
 \begin{document}
 
@@ -54,47 +102,31 @@
 \frontmatter
 \pagenumbering{gobble}
 
-\begin{center}
-  \includesvg[width=.8\textwidth]{config/logo}
-  \orrery
-  {\Large\scshape Almanac}
-\end{center}
+\miniCover{Almanac}{
+  \scshape
+  \set{track}{cycle}
+  \stepcounter{track}
+  \flushright\nobreak
+  \Gls{gmt} \arabic{fenestraYear} \Roman{track} \arabic{fenestraDay}
+}
 
-\clearpage
+\pagebreak
 
-\noindent
-\showCycle, day \Roman{fenestraDay}.
-(intro)
+\setcounter{r2}{\month}
+\setcounter{r2b}{\day}
+\setcounter{r3}{\month}
+\setcounter{r3b}{\day}
+\addtocounter{r3b}{14}
+\ifnum\value{r3b}>30
+  \addtocounter{r3b}{-30}
+  \addtocounter{r3}{1}
+\fi
 
-\clearpage
+\orrery[\value{r2}/\value{r2b}, \value{r3}/\value{r3b}]
 
-\pagenumbering{arabic}
-\setcounter{page}{1}
-\pagestyle{plain}
 
-\humansoldier
+\pagebreak
 
-\chitincrawler
+\pagestyle{minizine}
 
-\woodspy
-
-\elf
-
-\showStdSpells
-
-\elf
-
-\showStdSpells
-
-\elf
-
-\showStdSpells
-
-\elf
-
-\showStdSpells
-
-\elf
-
-\showStdSpells
 
