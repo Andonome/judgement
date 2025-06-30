@@ -1,3 +1,21 @@
+\ifnum\value{cycle}=5
+
+\stepDay{1}
+
+\chitincrawler
+\Pgls{crawler} watches the troupe from the shadows of the forest, just 10~\glspl{step} from them.
+The \glspl{pc} may spot it with a \roll{Wits}{Vigilance} roll at
+\setTN{Wits}{Stealth}
+\tn.
+\ifnum\value{r12}>\value{hp}
+  The \gls{crawler} flees at the first sign of aggression.
+\else
+  The \gls{crawler} attacks immediately.
+  Each Failure Margin on the roll removes \pgls{ap}.
+\fi
+
+\else
+
 \woodspy
 
 \stepDay{3}
@@ -9,3 +27,4 @@ The mist also provides perfect cover for \pgls{woodspy}.
 The troupe can roll \roll{Wits}{Vigilance} against the \gls{woodspy}'s \roll{Dexterity}{Stealth} at \tn.
 If they fail, it grabs the last character by the neck, squeezing the breath from them, and stopping them calling for help.
 
+\fi
