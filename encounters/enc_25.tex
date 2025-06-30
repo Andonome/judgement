@@ -1,0 +1,24 @@
+\ifnum\value{cycle}=0
+
+\stepDay{4}
+
+\begin{boxtext}
+  Thunder roars above, but no rain yet.
+\end{boxtext}
+
+Roaring thunder makes great cover for bears, and they know it.
+
+\bear
+
+\ifnum\value{fenestraDay}>30
+  The bear will hibernate soon, and needs to fatten up.
+  It will assault the troupe directly, sprinting at them, and trying to grab-and-drag the largest member.
+\else
+  The bear follows the troupe for a day, waiting for a chance to steal food, but won't approach while someone's staring at it.
+  Over the next four \glspl{interval}, the \glspl{pc} should make a \roll{Wits}{Vigilance} roll to notice the bear at
+  \setTN{Wits}{Stealth}
+  \tn.
+\fi
+
+\fi
+

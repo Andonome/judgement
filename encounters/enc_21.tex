@@ -1,0 +1,23 @@
+\ifnum\value{cycle}=1
+
+\stepDay{5}
+
+\begin{boxtext}
+  The night air feels dead.
+  No wind, just silence.
+  Then far away, a new sound, somewhere between a cartwheel and a man's footsteps.
+\end{boxtext}
+
+\Pgls{woodspy} is coming.
+If the troupe remain silent and dark, it wanders away.
+
+\woodspy
+
+\ifnum\value{r12}>\value{hp}%
+  If they make any light or sound, it comes to investigate.
+  If anyone spots it, the \gls{woodspy} flees.
+\else%
+  It encircles their camp, or pokes around the walls of their \gls{bothy}.
+\fi%
+
+\fi
