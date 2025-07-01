@@ -109,15 +109,15 @@
 \fi
 
 \miniCover{Almanac}{
-  %\scshape
-  %\set{track}{cycle}
-  %\stepcounter{track}
-  %\flushright\nobreak
-  %\Gls{gmt} \arabic{fenestraYear} \Roman{track} \arabic{fenestraDay}
-  \vspace{-14em}
+  {
+    \scshape\flushright\nobreak
+    \Gls{gmt} \arabic{fenestraYear} \showCycle, day \arabic{fenestraDay}
+  }
+  \par
+  \vspace{-5em}
   \makebox(0,0)[t]{
   \ifnum\value{cycle}<2%
-    \hspace{-12em}%
+    \hspace{-10em}%
   \fi%
   \orrery[\value{r2}/\value{r2b}, \value{r3}/\value{r3b}]}
 }
