@@ -1,9 +1,19 @@
+\ifnum\value{cycle}=1
 
-\ifnum\value{temperature}>1
-  \mouthdigger
-  \stepDay{2}
-  Thunder peels above, and rain beats the ground.
-  This makes it very difficult to notice the \gls{digger} burrowing upwards, towards where the \glspl{pc} sleep.
+\begin{boxtext}
+  Snow dances down.
+  The morning sparkles.
+  A massive web stands frozen between two trees nearby.
+\end{boxtext}
+
+If the troupe search around, they may find \arabic{r2t4} hibernating \glspl{crawler} under a pile of snow (\roll{Intelligence}{Survival}, \tn[10]).
+Any harsh movements (stamping on the ground, or hitting them) awakens them.
+They wake with a -8~Penalty, which decreases by 1 each \gls{round}.
+
+\IfLabelExistsTF{\jobname:harvestCrawler}{
+  Use the stats \vpageref{\jobname:harvestCrawler}.
+}{
+  \chitincrawler[\npc{\T[4]\A}{Hibernating \Glsfmtplural{crawler}}]
+}
 
 \fi
-
