@@ -1,18 +1,6 @@
 
 \ifcase\value{cycle}
 
-\stepDay{3}
-
-\begin{boxtext}
-  Mist on snow makes a bland morning.
-  The world turns into nothing but a series of brown tree-trunk lines which let you know you've walked too far from the road.
-  And when hoof-prints start appearing in the ground, this lets you know that you've entered a path laid by aurochs.
-\end{boxtext}
-
-The aurochs are only a mile away, and can be tracked easily, though getting back won't be easy.
-
-\or
-
 \stepDay{1}
 
 \begin{boxtext}
@@ -25,6 +13,24 @@ The aurochs are only a mile away, and can be tracked easily, though getting back
 
 The sound comes from nearby goats, butting heads.
 Sneaking up on them won't be difficult in the mist: \roll{Dexterity}{Stealth} (\tn[9]).
+
+\or
+
+\stepDay{3}
+
+\begin{boxtext}
+  Mist on snow makes a bland morning.
+  The world turns into nothing but a series of brown tree-trunk lines which let you know you've walked too far from the road.
+  And when hoof-prints start appearing in the ground, this lets you know that you've entered a path laid by aurochs.
+\end{boxtext}
+
+The aurochs are only a mile away, and can be tracked easily, though getting back won't be easy.
+
+\IfLabelExistsTF{\jobname:harvestAuroch}{
+  Use the auroch \gls{statblock} from \vpageref{\jobname:harvestAuroch}.
+}{
+  \auroch
+}
 
 \or
 
