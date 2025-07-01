@@ -98,26 +98,33 @@
 
 \begin{document}
 
-\miniCover{Almanac}{
-  \scshape
-  \set{track}{cycle}
-  \stepcounter{track}
-  \flushright\nobreak
-  \Gls{gmt} \arabic{fenestraYear} \Roman{track} \arabic{fenestraDay}
-}
-
 \setcounter{r2}{\month}
 \setcounter{r2b}{\day}
 \setcounter{r3}{\month}
 \setcounter{r3b}{\day}
-\addtocounter{r3b}{14}
+\addtocounter{r3b}{16}
 \ifnum\value{r3b}>30
   \addtocounter{r3b}{-30}
   \addtocounter{r3}{1}
 \fi
 
-\orrery[\value{r2}/\value{r2b}, \value{r3}/\value{r3b}]
+\miniCover{Almanac}{
+  %\scshape
+  %\set{track}{cycle}
+  %\stepcounter{track}
+  %\flushright\nobreak
+  %\Gls{gmt} \arabic{fenestraYear} \Roman{track} \arabic{fenestraDay}
+  \vspace{-14em}
+  \makebox(0,0)[t]{
+  \ifnum\value{cycle}<2%
+    \hspace{-12em}%
+  \fi%
+  \orrery[\value{r2}/\value{r2b}, \value{r3}/\value{r3b}]}
+}
 
+\noindent
+\showCycle\
+\cycleDesc
 
 \pagebreak
 
