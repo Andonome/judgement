@@ -30,17 +30,14 @@
 }
 
 \newcommand\cycleWrath{
-    {\scshape\showCycle\ day 58}
-    \bigLine
+    \subsubsection{\showCycle\ day 58}
     The \gls{storm} has begun with \stormEffect.
 
-    {\scshape\showCycle\ day 59}
-    \bigLine
+    \subsubsection{\showCycle\ day 59}
     The \gls{storm} continues with \stormEffect.
 
     \ifnum\thepage<14
-      {\scshape\showCycle\ day 60}
-      \bigLine
+      \subsubsection{\showCycle\ day 60}
       The \gls{storm} ends with \stormEffect.
       \ifnum\value{cycle}=5
         \par
@@ -91,9 +88,7 @@
   \fi
   \Needspace{4\baselineskip}
   \vspace{1em}
-  {\scshape\showCycle\ day \arabic{fenestraDay}}
-  \bigLine
-  \noindent%
+  {\noindent\scshape\large\showCycle\ day \arabic{fenestraDay}\quad}
 }
 
 \begin{document}
@@ -122,12 +117,33 @@
   \orrery[\value{r2}/\value{r2b}, \value{r3}/\value{r3b}]}
 }
 
-\noindent
-\showCycle\
-\cycleDesc
+{
+  \footnotesize
+  \noindent
+  \showCycle\
+  \cycleDesc
+  \vspace{0.7em}
 
-\pagebreak
+  \showGls{harvesting}
+  \IfLabelExistsTF{\jobname:harvestBasilisk}{
+    \showGls{basilisk}
+  }{}
 
-\pagestyle{minizine}
+  \IfLabelExistsTF{\jobname:harvestMshrooms}{
+    \showGls{marchingMushroom}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestDigger}{
+    \showGls{digger}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestCrawler}{
+    \showGls{crawler}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestWoodspy}{
+    \showGls{woodspy}
+  }{}
+}
 
 
