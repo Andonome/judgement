@@ -1,0 +1,26 @@
+\ifnum\value{r12}=8
+
+\stepDay{1}
+\Pgls{weapon} has become old and will break soon, if not properly cared for.
+\begin{boxtext}
+  Your longsword's looking rusty, and needs a new grip.
+\end{boxtext}
+
+Which \gls{pc} this affects, depends on a few factors.
+
+\begin{enumerate}
+  \item
+  Start with the \glspl{pc} with the lowest Crafts \gls{skill}.
+  \item
+  Out of those \glspl{pc}, select whoever has the highest Strength Bonus.
+  \item
+  If multiple \glspl{pc} have the same Strength Bonus, select whoever has the most \glspl{fp}.
+  \item
+  If the \gls{weapon} has a name, move to the next \gls{pc} (as it's clearly well tended for).
+\end{enumerate}
+
+Taking care of the \gls{weapon} requires an \roll{Intelligence}{Crafts} roll at \tn[10] (do not tell the player the \gls{tn}).
+Failure indicates that it breaks the next time it's used.
+A tie indicates that the \gls{pc} knows that it's about to break.
+
+\fi

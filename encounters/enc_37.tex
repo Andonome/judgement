@@ -1,0 +1,14 @@
+\ifnum\value{cycle}=1
+
+  \stepDay{5}
+  A boar investigates the \glspl{pc} camp on a cold night with gentle winds.
+  Anyone on \pgls{vigil} spots it instantly.
+  It flees the moment someone moves towards it.
+
+  \boar
+
+  \ifglsused{snow}{}{
+    \Gls{snow} begins to fall soon after.
+    It \glsentrydesc{snow}.
+  }
+\fi
