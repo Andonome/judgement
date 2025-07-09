@@ -364,10 +364,10 @@
     \Gls{crawler} swarm\iftoggle{genExamples}{ (\autopageref{crawlerSwarm})}{}
     \setcounter{encnum}{1}%
   \or%
-    Weird fungus\iftoggle{genExamples}{ (\autopageref{fungi})}{}
+    $3D6$ Deer
     \setcounter{encnum}{0}%
   \or%
-    $3D6$ Deer
+    $2D6 \times 2$ Horses
     \setcounter{encnum}{0}%
   \or%
     \Gls{hulk}\iftoggle{genExamples}{ (\autopageref{umber_hulk})}{}
@@ -391,6 +391,23 @@
     By a town%
   \else%
     In a town%
+  \fi%
+}
+
+\newcommand\encPlant[1][\value{encnum}]{%
+  \ifcase#1\relax%
+  \or%
+    \Glspl{bedshroom}
+  \or%
+    \Glspl{dryadsKiss}
+  \or%
+    \Glspl{marchingMushroom}
+  \or%
+    \Glspl{disgnome}
+  \or%
+    \Glspl{horseDrops}
+  \else%
+    \nameref{thorny_thickets}
   \fi%
 }
 
@@ -1042,7 +1059,7 @@
     \Repeat{6}{%
       \addtocounter{enc}{-1}%
       \addtocounter{diceNo}{-1}
-      \dicef{\value{diceNo}}~\encCivilization[\value{diceNo}] &
+      \dicef{\value{diceNo}}~\encPlant[\value{diceNo}] &
       \arabic{enc} & \bigBeastList &
         \randomize\showInterval{\value{encnum}}
       \\
