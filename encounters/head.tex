@@ -126,8 +126,9 @@
   \showCycle\
   \cycleDesc
   \vspace{0.7em}
-
   \showGls{harvesting}
+}
+
   \IfLabelExistsTF{\jobname:harvestBasilisk}{
     \showGls{basilisk}
   }{}
@@ -144,6 +145,8 @@
     \showGls{digger}
   }{}
 
+\pagestyle{minizine}
+
   \IfLabelExistsTF{\jobname:harvestCrawler}{
     \showGls{crawler}
   }{}
@@ -151,6 +154,5 @@
   \IfLabelExistsTF{\jobname:harvestWoodspy}{
     \showGls{woodspy}
   }{}
-}
 
 
