@@ -6,10 +6,17 @@ Charged with Sunlight, the \gls{basilisk} goes on the hunt, then charges at the 
 
 \else
 
-\horse[\npc{\T[5]\A}{Horses}]
+\ifnum\value{temperature}=0
+  \ifglsused{snow}{}{
+    \Gls{snow} begins to fall soon after.
+    It \glsentrydesc{snow}.
+  }
+\fi
 
 \stepDay{4}
 Five horses wander through a distant clearing by a river.
 The \glspl{pc} can spot them with \roll{Wits}{Survival} at \tn[10].
+
+\horse[\npc{\T[5]\A}{Horses}]
 
 \fi

@@ -3,7 +3,11 @@
 \bear
 
 \stepDay{4}
-You wouldn't imagine that something as heavy as a bear would sneak up on you, but anything can sneak up on you in a storm.
+You wouldn't imagine that something as heavy as a bear would sneak up on you, but anything can sneak up on you in a
+\ifnum\value{temperature}=0
+  \gls{snow}
+\fi
+storm.
 
 \begin{boxtext}
   They say the wind has teeth, perhaps because it bites, but also because it can eat a campfire.

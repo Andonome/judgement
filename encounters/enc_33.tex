@@ -1,3 +1,10 @@
+
+\ifglsused{snow}{}{
+  \ifnum\value{temperature}=0%
+    \Gls{snow} \glsentrydesc{snow}.
+  \fi
+}
+
 \stepDay{1}
 Walnut trees poison other plants so they can take in more Sunlight.
 
@@ -10,3 +17,4 @@ Walnut trees poison other plants so they can take in more Sunlight.
 \end{boxtext}
 
 If the troupe rests, they lose a mile of progress, but gain a nice camping spot, with a +1~Bonus to \glspl{vigil}, making camp, or anything else which could benefit from a nice clearing.
+
