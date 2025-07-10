@@ -32,7 +32,7 @@ cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 
 zine_entries != ls encounters/enc_* | shuf
 
-booklets/a7_almanac.tex: encounters/head.tex $(zine_entries) $(zine_entries) | booklets/
+booklets/a7_almanac.tex: encounters/head.tex $(zine_entries) $(zine_entries) | booklets/ $(DROSS)/$(BOOK).aux
 	cat $^ > $@
 	echo '\end{document}' >> $@
 
