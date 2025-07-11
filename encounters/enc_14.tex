@@ -16,12 +16,12 @@ Everyone regains \arabic{r6}~\glspl{fp}.
   The `tumour' is \pgls{woodspy} who's hiding on the statue.
   It can match colour and texture, but doesn't understand that the statue should represent a man, so it cannot camouflage properly.
 
+  If the troupe approaches,
+  the \gls{woodspy} flees%
+  \ifnum\value{r12}<\value{hp}%
+    , but keeps close by, stalking the \glspl{pc} from afar%
+  \fi.%
+
   \woodspy
 
-  If the troupe approaches, the \gls{woodspy} flees%
-  \ifnum\value{r12}>\value{hp}%
-    .
-  \else%
-    but keeps close by, stalking the \glspl{pc} from afar.
-  \fi%
 \fi
