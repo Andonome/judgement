@@ -2,7 +2,6 @@
 
 \usepackage{config/bind}
 \usepackage{config/booklet}
-\toggletrue{intro}
 \externalReferent{core}
 \externalReferent{judgement}
 
@@ -130,7 +129,11 @@
   \showCycle\
   \cycleDesc
   \vspace{0.7em}
-  \showGls{harvesting}
+  {
+    % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
+    \toggletrue{intro}
+    \showGls{harvesting}
+  }
 }
 
   \IfLabelExistsTF{\jobname:harvestBasilisk}{
