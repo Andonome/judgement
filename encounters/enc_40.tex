@@ -1,0 +1,16 @@
+
+\ifnum\value{cycle}=1
+
+  \stepDay{3}
+  Biting winds pull the heat from every bone, and a nearby auroch herd runs for safety.
+
+  \auroch
+  \set{track}{r12}
+  \addtocounter{track}{-4}
+
+  \nameref{stampede} or take \dmg{track}~Damage.
+
+  Everyone gains an additional \gls{ep}, and \pgls{mp}.
+
+\fi
+
