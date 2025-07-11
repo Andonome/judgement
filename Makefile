@@ -32,7 +32,12 @@ cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 
 zine_entries != ls encounters/enc_* | shuf
 
-booklets/a7_almanac.tex: encounters/head.tex $(zine_entries) $(zine_entries) | booklets/ $(DROSS)/$(BOOK).aux
-	cat $^ > $@
-	echo '\end{document}' >> $@
+no_encounters != ls encounters/enc_* | wc -w
+
+booklets/no_enc.tex: $(wildcard encounters/enc_*.tex) | booklets/
+	printf '\setcounter{noEncounters}{$(no_encounters)}' > $@
+	
+
+booklets/a7_almanac.tex: encounters/head.tex booklets/no_enc.tex $(zine_entries) | booklets/ $(DROSS)/$(BOOK).aux
+	$(CP) $< $@
 

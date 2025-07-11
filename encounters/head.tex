@@ -15,6 +15,9 @@
 
 \togglefalse{genExamples}
 
+\newcounter{noEncounters}
+\input{booklets/no_enc.tex}
+
 \newcommand\stormEffect{%
   \randomize%
   \ifcase\value{r4}\relax%
@@ -157,3 +160,28 @@
   }{}
 
 
+
+\foreach \x in {\arabic{fenestraDay},...,\arabic{noEncounters}}%
+  {
+      \ifnum\thepage<13
+        \IfFileExists{encounters/enc_\x.tex}{
+          \input{encounters/enc_\x.tex}
+        }{}
+      \fi
+  }
+
+\ifnum\thepage<13
+  \foreach \x in {1,...,\arabic{noEncounters}}%
+    {
+        \ifnum\thepage<13
+          \input{encounters/enc_\x.tex}
+        \fi
+    }
+\fi
+
+\ifnum\thepage=13
+  \clearpage
+  \cyclePic
+\fi
+
+\end{document}
