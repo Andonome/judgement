@@ -56,11 +56,11 @@
   \ifcase\value{cycle}
     \pic{Irina/curiosity}
   \or
-    \relax
+    \null
   \or
     \pic{Irina/fury}
   \or
-    \relax
+    \null
   \or
     \pic{Irina/forest}
   \or
@@ -70,13 +70,6 @@
 
 
 \newcommand\stepDay[1]{
-  \ifnum\thepage>12
-    \ifnum\thepage=13
-      \pagebreak
-      \cyclePic
-    \fi
-    \end{document}
-  \fi
   \set{track}{fenestraDay}
   \addtocounter{track}{#1}
   \addtocounter{fenestraDay}{#1}
@@ -142,7 +135,7 @@
 
   \IfLabelExistsTF{\jobname:harvestGriffin}{
     \showGls{griffin}
-  }{}
+  }{ \pagestyle{minizine} }
 
   \IfLabelExistsTF{\jobname:harvestMshrooms}{
     \showGls{marchingMushroom}
@@ -151,8 +144,6 @@
   \IfLabelExistsTF{\jobname:harvestDigger}{
     \showGls{digger}
   }{}
-
-\pagestyle{minizine}
 
   \IfLabelExistsTF{\jobname:harvestCrawler}{
     \showGls{crawler}
