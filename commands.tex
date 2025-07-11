@@ -941,7 +941,11 @@
   }
   #4
   \ifstrempty{#1}{\par}{%
-    \index[mana]{#1!\glsentryname{#2}~\Pl}
+    \ifglsentryexists{#2}{%
+      \index[mana]{#1!\glsentryname{#2}~\Pl}
+    }{
+      \index[mana]{#1!#2~\Pl}
+    }
     \par
     \textbf{\Gls{ingredient}}: #1
   }%
