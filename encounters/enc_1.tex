@@ -1,14 +1,15 @@
-\ifnum\value{temperature}>0
+\ifnum\value{temperature}=0
 
-\stepDay{4}
-\Pgls{crawler} watches the road brazenly on this clear, Sunny day.
-The troupe spot it instantly, an arrow's flight away, hanging upside-down from from an extremely tall tree.
-
-\chitincrawler
-
-Once they move a little farther along the road, they lose sight of its tall perch.
-They don't know if it still sits there, or if it's moved away from them, or if it currently stalks them.
-In fact it continues sitting, motionless, like so many \glspl{crawler} do when the weather remains mild.
-
-
+  \ifnum\value{fenestraDay}<9
+  \stepDay{4}
+  \Pgls{crawler} watches the road brazenly on this clear, Sunny day.
+  The troupe spot it instantly, an arrow's flight away, hanging upside-down from from an extremely tall tree.
+  
+  \chitincrawler
+  
+  Once they move a little farther along the road, they lose sight of its tall perch.
+  They don't know if it still sits there, or if it's moved away from them, or if it currently stalks them.
+  In fact it continues sitting, motionless, like so many \glspl{crawler} do when the weather remains mild.
+  
+  \fi
 \fi
