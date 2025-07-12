@@ -30,7 +30,9 @@
     a lightning storm and fast winds%
   \else%
     \pgls{hurricane}.
-    They \glsentrydesc{hurricane}%
+    \ifglsused{hurricane}{
+      They \glsentrydesc{hurricane}%
+    }{}
   \fi%
 }
 
