@@ -36,22 +36,29 @@
   \fi%
 }
 
-\newcommand\cycleWrath{
-    \subsubsection{\showCycle\ day 58}
-    The \gls{storm} has begun with \stormEffect.
+\newcommand\startWrath{
+  \randomize
+  \ifnum\value{fenestraDay}=58
+    \bigLine
+    That night, \gls{storm} begins with \stormEffect.
+  \else
+    \stepDay{1}
+    \Gls{storm} has begun with \stormEffect.
+  \fi
+  \stepDay{1}
+  The \gls{storm} continues with \stormEffect.
+  \ifnum\thepage<14
+    \stepDay{1}
+    The \gls{storm} ends with \stormEffect.
+  \fi
 
-    \subsubsection{\showCycle\ day 59}
-    The \gls{storm} continues with \stormEffect.
-
-    \ifnum\thepage<14
-      \subsubsection{\showCycle\ day 60}
-      The \gls{storm} ends with \stormEffect.
-      \ifnum\value{cycle}=5
-        \par
-        \Gls{cOne} begins with \pgls{eclipse}.
-        At noon, \gls{yonder} decides to \glsentrydesc{eclipse}.
-      \fi
-    \fi
+  \setcounter{fenestraDay}{0}
+  \stepcounter{cycle}
+  \ifnum\value{cycle}>5
+    \setcounter{cycle}{0}
+    \stepcounter{fenestraYear}
+  \fi
+  \setTemperature
 }
 
 \newcommand\cyclePic{
@@ -72,19 +79,20 @@
 
 
 \newcommand\stepDay[1]{
-  \set{track}{fenestraDay}
-  \addtocounter{track}{#1}
-  \addtocounter{fenestraDay}{#1}
-  \ifnum\value{track}>57
-    \cycleWrath
-    \setcounter{fenestraDay}{0}
+  % Each Cycle has 60 days.  If an encounter waits 6 days and the current day is
+  % 30, then the encounter occurs on day 36.  However, if the current day is 56,
+  % then the encounter cannot skip ahead to day 62.  Instead, the encounter
+  % waits 2 days, and the wrath begins.
+  % The wrath starts stormy effects on day 58, then 59, and day 60.  After that,
+  % a new Cycle begins.
+  \ifnum\value{fenestraDay}<53
     \addtocounter{fenestraDay}{#1}
-    \stepcounter{cycle}
-    \ifnum\value{cycle}>5
-      \setcounter{cycle}{0}
-      \stepcounter{fenestraYear}
+  \else
+    \ifnum\value{fenestraDay}>56
+      \stepcounter{fenestraDay}
+    \else
+      \addtocounter{fenestraDay}{2}
     \fi
-    \setTemperature
   \fi
   \Needspace{4\baselineskip}
   \vspace{1em}
@@ -155,29 +163,41 @@
     \showGls{woodspy}
   }{}
 
-
-
 \foreach \x in {\arabic{fenestraDay},...,\arabic{noEncounters}}%
   {
-      \ifnum\thepage<13
-        \IfFileExists{encounters/enc_\x.tex}{
-          \input{encounters/enc_\x.tex}
-        }{}
+      \ifnum\thepage<12
+        \ifnum\value{fenestraDay}<58
+          \IfFileExists{encounters/enc_\x.tex}{
+            \input{encounters/enc_\x.tex}
+          }{}
+        \else
+          \startWrath
+        \fi
       \fi
   }
 
-\ifnum\thepage<13
+\ifnum\thepage<12
   \foreach \x in {1,...,\arabic{noEncounters}}%
     {
         \ifnum\thepage<13
-          \input{encounters/enc_\x.tex}
+          \ifnum\value{fenestraDay}<58
+            \input{encounters/enc_\x.tex}
+          \else
+            \startWrath
+          \fi
         \fi
     }
 \fi
 
-\ifnum\thepage=13
+\null
+\ifnum\thepage<13
   \clearpage
   \cyclePic
+\fi
+
+\ifnum\thepage<14
+  \clearpage
+  \null
 \fi
 
 \end{document}
