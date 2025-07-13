@@ -9,14 +9,13 @@
 
 \Pgls{woodspy} is coming.
 If the troupe remain silent and dark, it wanders away.
+If they make any light or sound, it comes to investigate,
+\ifnum\value{r12}>\value{hp}%
+  but if anyone spots it, the \gls{woodspy} flees.
+\else%
+  encircles their camp, or pokes around the walls of their \gls{bothy}, trying to find someone tasty to take into a private spot in the forest.
+\fi%
 
 \woodspy
-
-\ifnum\value{r12}>\value{hp}%
-  If they make any light or sound, it comes to investigate.
-  If anyone spots it, the \gls{woodspy} flees.
-\else%
-  It encircles their camp, or pokes around the walls of their \gls{bothy}.
-\fi%
 
 \fi
