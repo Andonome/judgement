@@ -185,14 +185,22 @@
           \else
             \startWrath
           \fi
+        \else
+          \ifnum\thepage=13
+            \null
+            \needspace{10\baselineskip}
+            \input{encounters/enc_\x.tex}
+          \fi
         \fi
     }
 \fi
 
 \null
-\ifnum\thepage<13
+
+\ifnum\thepage<14
   \clearpage
   \cyclePic
+  \null
 \fi
 
 \ifnum\thepage<14
