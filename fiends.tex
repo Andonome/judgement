@@ -509,170 +509,6 @@ Add +1 during mild \glspl{cycle}, and +2 during warm \glspl{cycle}.
 
 \end{multicols}
 
-\needspace{6\baselineskip}
-\section{\Glsfmtplural{ogre}}
-\label{ogre}
-
-\begin{multicols}{2}
-
-\noindent
-In many ways, \glspl{ogre} seem like more natural inhabitants of \gls{fenestra} than humans.
-They can lounge outdoors comfortably, occasionally clubbing \pgls{crawler} to death, or trying to chase down deer.
-The only thing stopping a peaceful life of free-range fruit and arachnid salads is their stomachs, which need constant maintenance.
-Their appetites outstrip even goblins.
-
-Goblinoid creatures don't have legal agreements, but they do have certain laws of nature, and one of those is the law of the \gls{ogre} king.
-Ogres take charge because they're large.
-The standard solution for goblins is warriors in full plate armour.
-And the standard solution for warriors in full plate armour is \pgls{ogre} hitting them with a tree.
-
-If a horde of goblins, lead by \pgls{ogre}, becomes hungry, they all start to think the same thing: they must find food soon, or one will eat the other.
-This unspoken knowledge pushes any goblinoid horde to constant raids on any nearby farms.
-
-Ogres are not born, but created by a `stuffing'.
-This is when one goblin stuffs himself full, then keeps on eating.
-Eventually, this larger goblin grows broad shoulders, and a belly, and grow as tall as a human.
-
-\armouredOgre[\npc{\N\M}{Ogre King}]
-
-\newBeast[\N]{Goblins}% Name
-  {goblin}% label
-  {pale, little humanoids, with extreme hunger}% description
-love law and order.
-They stare at order with a sense of wonder, and love finding out new laws.
-They discuss how these systems work, and how the systems might react to different circumstances.
-And then they test every theory at once.
-
-Goblins remain the subject of \glspl{seeker}' theories about whether they really form a `people', like elves or humans, or if the world `goblin' lazily addresses a number of different peoples.
-On the one hand, goblins are highly dimorphic, as some sprout claws, fangs, or even tentacles.
-On the other hand, these unique advantages seem to sprout from random goblins, rather than being linked to a populace.
-
-Goblins demand a separation of intelligence from cunning, as they have all of the latter, but none of the former.
-They nearly-never enter into `combat', in the sense that humans might understand it.
-They might poison someone's food, lift heavy rocks to the top of a ravine to drop on people's heads, throw spears at horses, or make a high pitched whistle (audible to dogs and elves, but not to humans) to confuse and divide a group.
-If they finally `attack', they will wear their enemies down, lead them through a muddy path, wait for them to slip over; then they descend, ten or twenty at a time.
-
-Goblins always play dirty.
-
-\goblin[\npc{\T\N}{Goblins}]
-
-\boxPair[t]{
-  \hobgoblin[\npc{\T\N}{Hobgoblins}]
-}{
-  \exampleGoblinEnc
-}
-
-\newBeast[\N]{Hobgoblins}% Name
-  {hobgoblin}% label
-  {as big as a man, and twice as dangerous}% description
-begins as goblins who bathe in the Sunlight and grow big and strong, and soon seek out weapons worthy of a warrior.
-Few reach this stage, as they need enormous amounts of food in order to keep their growth-spurts up.
-
-Out of the hobgoblins, some rare continue feeding until they outgrow even humans, and then become \pgls{ogre}.
-Some theorise a later stage in goblin-gorging, but most people don't like to think about it.
-
-\pic{Studio_DA/ogre}
-
-\subsubsection{The Goblin Rating}
-\label{goblin_rating}
-\index{Goblin Rating}
-determines the quantity of goblins in the area (not the quality).
-They eat standard encounters from the bottom-up.
-If the Goblin Rating ever equals or beats a random encounter roll,%
-\footnote{See \autopageref{encounters}.}
-the encounter is replaced with a number of goblins equal to four times the encounter roll.
-
-\begin{exampletext}
-  The troupe journeys down the road where traders reported goblin raids occurring with increasing frequency.
-  The Civilization Rating is `7', and the current Goblin Rating is `4'.
-  If the \gls{gm} rolls `3', 12 goblins have arrived to eye-up the troupe.
-\end{exampletext}
-
-As the Goblin Rating increases, they devour the people in the area bit by bit, and anyone on the outskirts of civilization will neither find boars, nor traders on the road.
-Instead, they find goblins, hungry for more.
-
-\subsection{Plans}
-
-Goblins have more energy than focus, so roll $2D6$ to find two different plans for the goblins.
-
-\begin{dlist}
-  \item
-  To feast on crawlers.
-  \begin{enumerate}
-    \item
-      The troupe spot a group of goblins, sitting in the forest, eating a spear-peppered \gls{crawler}.
-    They turn from their meal, then jeer at the troupe.
-
-    ``Back on the road, and bolt!''
-    \item
-    Goblin-sightings quiet-down for a while, as they learn new recipes.
-    However, the Goblin Rating increases by~1.
-    \item
-    Eventually, they run low on \glspl{crawler}.
-    As a result, the \gls{griffin} population explodes during the next warm season (as noted \vpageref{crawlerBalance}).
-  \end{enumerate}
-  \item
-  To lay siege to \pgls{broch}!
-  Each new scene brings $2D6$ more goblins.
-  \begin{enumerate}
-    \item
-    People report faces watching them from high in the forest.
-    \item
-    The goblins steal a saw, and manage to weaken two trees on the road to the \gls{bothy}.
-    The trees will fall onto the road by the next storm, or the goblins can bring them down by climbing up, and swinging back-and-forth together.
-    \item
-    Goblins sneak out with picks to pull stones from the \gls{broch}'s base, then run away with them.
-    \item
-    $1D6+4$ hobgoblin cooks arrive with supplies.
-    They set up fires in a great circle around the \gls{broch} (just out of sight), and start cooking.
-
-    From this point on, no more supplies reach the \gls{broch} -- the goblins eat every trader, including those with \glspl{guard}.
-    If the troupe destroy the food, the goblins will be forced to attack directly.
-    \item
-    If things are going well for the goblins, the \gls{ogre} king himself arrives.
-    If the goblins bring down the \gls{broch}, increase the Goblin Rating by~1.
-  \end{enumerate}
-  \item
-  To annoy the \glspl{pc}.
-  A massive troupe of goblins follow the troupe, waiting for them to sleep.
-  They dare one of their number to scout ahead and follow the troupe, so the \glspl{pc} may spot the scout, but that won't help them find the rest.
-  If they kill the scout, the other goblins will follow the screams, and bully another member into following the troupe.
-
-  Over the night, they try to steal food, frighten horses, throw rocks, cut ropes, and sing (goblin singing can stop anyone sleeping, no exceptions).
-  They will not attack unless the right moment strikes.
-  If they become too bored, they run ahead on the road -- roll the next encounter immediately.
-  If they encounter a trader, they may eat them.
-  If they find \pgls{basilisk}, they will run back to the \glspl{pc} so it eats them instead.
-  \item
-  To map the area.
-  Each week, the \gls{ogre} king sends $2D6$ goblins to a new area on the map, starting with 1, then 2, and so on.
-
-  As they travel, they leave poisoned horse-biscuits on roads, so that the horses on a caravan's first wagon stop to eat the biscuits, then die shortly afterwards.
-  \item
-  To make tunnels underneath the nearest settlement (lowest point first).
-  If those creatures live underground, the goblins will attempt a surprise-attack.
-  If the nearest settlement is human, the goblins will try to dig a tunnel under an important structure.
-
-  The larger the settlement, the longer this plan takes.
-  \item
-  To brew new potions.
-  A goblin druid arrives from a neighbouring realm, deep underground.
-
-  %!
-  \null
-  \begin{enumerate}%
-    \item
-    Goblin scouts gather \glspl{ingredient} from all around (any potent plants in the area vanish).
-    \item
-    The druid experiments with new potion ideas -- various goblins gain tentacles, claws, and a few gain wings.
-    \item
-    The druid dumps the failed experiments in the local river\ldots upstream from a settlement.
-    People there become afflicted with unpleasant spells from the Life Sphere.
-  \end{enumerate}
-\end{dlist}
-
-\end{multicols}
-
 \section{\Glsfmtplural{hag}}
 \label{hag}
 \index{Hags|textbf}
@@ -775,3 +611,168 @@ Roll $1D6$ to find the hag's primary plan.
 \end{dlist}
 
 \end{multicols}
+
+\needspace{6\baselineskip}
+\section{\Glsfmtplural{ogre}}
+\label{ogre}
+
+\begin{multicols}{2}
+
+\noindent
+In many ways, \glspl{ogre} seem like more natural inhabitants of \gls{fenestra} than humans.
+They can lounge outdoors comfortably, occasionally clubbing \pgls{crawler} to death, or trying to chase down deer.
+The only thing stopping a peaceful life of free-range fruit and arachnid salads is their stomachs, which need constant maintenance.
+Their appetites outstrip even goblins.
+
+Goblinoid creatures don't have legal agreements, but they do have certain laws of nature, and one of those is the law of the \gls{ogre} king.
+Ogres take charge because they're large.
+The standard solution for goblins is warriors in full plate armour.
+And the standard solution for warriors in full plate armour is \pgls{ogre} hitting them with a tree.
+
+If a horde of goblins, lead by \pgls{ogre}, becomes hungry, they all start to think the same thing: they must find food soon, or one will eat the other.
+This unspoken knowledge pushes any goblinoid horde to constant raids on any nearby farms.
+
+Ogres are not born, but created by a `stuffing'.
+This is when one goblin stuffs himself full, then keeps on eating.
+Eventually, this larger goblin grows broad shoulders, and a belly, and grow as tall as a human.
+
+\newBeast[\N]{Goblins}% Name
+  {goblin}% label
+  {pale, little humanoids, with extreme hunger}% description
+love law and order.
+They stare at order with a sense of wonder, and love finding out new laws.
+They discuss how these systems work, and how the systems might react to different circumstances.
+And then they test every theory at once.
+
+Goblins remain the subject of \glspl{seeker}' theories about whether they really form a `people', like elves or humans, or if the world `goblin' lazily addresses a number of different peoples.
+On the one hand, goblins are highly dimorphic, as some sprout claws, fangs, or even tentacles.
+On the other hand, these unique advantages seem to sprout from random goblins, rather than being linked to a populace.
+
+Goblins demand a separation of intelligence from cunning, as they have all of the latter, but none of the former.
+They nearly-never enter into `combat', in the sense that humans might understand it.
+They might poison someone's food, lift heavy rocks to the top of a ravine to drop on people's heads, throw spears at horses, or make a high pitched whistle (audible to dogs and elves, but not to humans) to confuse and divide a group.
+If they finally `attack', they will wear their enemies down, lead them through a muddy path, wait for them to slip over; then they descend, ten or twenty at a time.
+
+Goblins always play dirty.
+
+\goblin[\npc{\T\N}{Goblins}]
+
+\boxPair[t]{
+  \hobgoblin[\npc{\T\N}{Hobgoblins}]
+}{
+  \exampleGoblinEnc
+}
+
+\newBeast[\N]{Hobgoblins}% Name
+  {hobgoblin}% label
+  {as big as a man, and twice as dangerous}% description
+begins as goblins who bathe in the Sunlight and grow big and strong, and soon seek out weapons worthy of a warrior.
+Few reach this stage, as they need enormous amounts of food in order to keep their growth-spurts up.
+
+Out of the hobgoblins, some rare continue feeding until they outgrow even humans, and then become \pgls{ogre}.
+Some theorise a later stage in goblin-gorging, but most people don't like to think about it.
+
+\subsubsection{The Goblin Rating}
+\label{goblin_rating}
+\index{Goblin Rating}
+determines the quantity of goblins in the area (not the quality).
+They eat standard encounters from the bottom-up.
+If the Goblin Rating ever equals or beats a random encounter roll,%
+\footnote{See \autopageref{encounters}.}
+the encounter is replaced with a number of goblins equal to four times the encounter roll.
+
+\begin{exampletext}
+  The troupe journeys down the road where traders reported goblin raids occurring with increasing frequency.
+  The Civilization Rating is `7', and the current Goblin Rating is `4'.
+  If the \gls{gm} rolls `3', 12 goblins have arrived to eye-up the troupe.
+\end{exampletext}
+
+As the Goblin Rating increases, they devour the people in the area bit by bit, and anyone on the outskirts of civilization will neither find boars, nor traders on the road.
+Instead, they find goblins, hungry for more.
+
+\pic{Studio_DA/ogre}
+
+\armouredOgre[\npc{\N\M}{Ogre King}]
+
+\subsection{Plans}
+
+Goblins have more energy than focus, so roll $2D6$ to find two different plans for the goblins.
+
+\begin{dlist}
+  \item
+  To feast on crawlers.
+  \begin{enumerate}
+    \item
+      The troupe spot a group of goblins, sitting in the forest, eating a spear-peppered \gls{crawler}.
+    They turn from their meal, then jeer at the troupe.
+
+    ``Back on the road, and bolt!''
+    \item
+    Goblin-sightings quiet-down for a while, as they learn new recipes.
+    However, the Goblin Rating increases by~1.
+    \item
+    Eventually, they run low on \glspl{crawler}.
+    As a result, the \gls{griffin} population explodes during the next warm season (as noted \vpageref{crawlerBalance}).
+  \end{enumerate}
+  \item
+  To lay siege to \pgls{broch}!
+  Each new scene brings $2D6$ more goblins.
+  \begin{enumerate}
+    \item
+    People report faces watching them from high in the forest.
+    \item
+    The goblins steal a saw, and manage to weaken two trees on the road to the \gls{bothy}.
+    The trees will fall onto the road by the next storm, or the goblins can bring them down by climbing up, and swinging back-and-forth together.
+    \item
+    Goblins sneak out with picks to pull stones from the \gls{broch}'s base, then run away with them.
+    \item
+    $1D6+4$ hobgoblin cooks arrive with supplies.
+    They set up fires in a great circle around the \gls{broch} (just out of sight), and start cooking.
+
+    From this point on, no more supplies reach the \gls{broch} -- the goblins eat every trader, including those with \glspl{guard}.
+    If the troupe destroy the food, the goblins will be forced to attack directly.
+    \item
+    If things are going well for the goblins, the \gls{ogre} king himself arrives.
+    If the goblins bring down the \gls{broch}, increase the Goblin Rating by~1.
+  \end{enumerate}
+  \item
+  To annoy the \glspl{pc}.
+  A massive troupe of goblins follow the troupe, waiting for them to sleep.
+  They dare one of their number to scout ahead and follow the troupe, so the \glspl{pc} may spot the scout, but that won't help them find the rest.
+  If they kill the scout, the other goblins will follow the screams, and bully another member into following the troupe.
+
+  Over the night, they try to steal food, frighten horses, throw rocks, cut ropes, and sing (goblin singing can stop anyone sleeping, no exceptions).
+  They will not attack unless the right moment strikes.
+  If they become too bored, they run ahead on the road -- roll the next encounter immediately.
+  If they encounter a trader, they may eat them.
+  If they find \pgls{basilisk}, they will run back to the \glspl{pc} so it eats them instead.
+  \item
+  To map the area.
+  Each week, the \gls{ogre} king sends $2D6$ goblins to a new area on the map, starting with 1, then 2, and so on.
+
+  As they travel, they leave poisoned horse-biscuits on roads, so that the horses on a caravan's first wagon stop to eat the biscuits, then die shortly afterwards.
+  \item
+  To make tunnels underneath the nearest settlement (lowest point first).
+  If those creatures live underground, the goblins will attempt a surprise-attack.
+  If the nearest settlement is human, the goblins will try to dig a tunnel under an important structure.
+
+  The larger the settlement, the longer this plan takes.
+  \item
+  To brew new potions.
+  A goblin druid arrives from a neighbouring realm, deep underground.
+
+  %!
+  \null
+  \begin{enumerate}%
+    \item
+    Goblin scouts gather \glspl{ingredient} from all around (any potent plants in the area vanish).
+    \item
+    The druid experiments with new potion ideas -- various goblins gain tentacles, claws, and a few gain wings.
+    \item
+    The druid dumps the failed experiments in the local river\ldots upstream from a settlement.
+    People there become afflicted with unpleasant spells from the Life Sphere.
+  \end{enumerate}
+\end{dlist}
+
+\end{multicols}
+
