@@ -117,7 +117,9 @@
     \Gls{gmt} \arabic{fenestraYear} \showCycle, day \arabic{fenestraDay}
   }
   \par
-  \vspace{-4em}
+  \ifnum\value{cycle}=0
+    \vspace{-4em}
+  \fi
   \makebox(0,0)[t]{
     \ifnum\value{cycle}<2%
       \hspace{-10em}%
