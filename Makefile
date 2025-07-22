@@ -36,6 +36,6 @@ booklets/no_enc.tex: $(wildcard encounters/enc_*.tex) | booklets/
 	printf '\setcounter{noEncounters}{$(no_encounters)}' > $@
 	
 
-booklets/a7_almanac.tex: encounters/head.tex booklets/no_enc.tex | $(DROSS)/$(BOOK).aux
+booklets/a7_almanac.tex: encounters/head.tex booklets/no_enc.tex $(DBOOK)
 	$(CP) $< $@
 

@@ -143,11 +143,13 @@
 
   \IfLabelExistsTF{\jobname:harvestBasilisk}{
     \showGls{basilisk}
-  }{}
+  }{ \clearpage }
 
   \IfLabelExistsTF{\jobname:harvestGriffin}{
     \showGls{griffin}
   }{ \pagestyle{minizine} }
+
+  \pagestyle{minizine}
 
   \IfLabelExistsTF{\jobname:harvestMshrooms}{
     \showGls{marchingMushroom}
@@ -164,6 +166,8 @@
   \IfLabelExistsTF{\jobname:harvestWoodspy}{
     \showGls{woodspy}
   }{}
+
+\clearpage
 
 \foreach \x in {\arabic{fenestraDay},...,\arabic{noEncounters}}%
   {
