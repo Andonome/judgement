@@ -1,7 +1,7 @@
 EXTERNAL_REFERENTS = core stories
 
-pdfs += shield.pdf
-targets += almanac.pdf
+targets += shield.pdf
+zines += almanac.pdf
 output += booklets
 
 include config/common.mk
