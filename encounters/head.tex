@@ -29,10 +29,12 @@
   \or%
     a lightning storm and fast winds%
   \else%
-    \pgls{hurricane}.
-    \ifglsused{hurricane}{
+    \ifglsused{hurricane}{%
+      \pgls{hurricane}%
+    }{
+      \pgls{hurricane}.
       They \glsentrydesc{hurricane}%
-    }{}
+    }%
   \fi%
 }
 
@@ -132,7 +134,7 @@
   \footnotesize
   \noindent
   \showCycle\
-  \cycleDesc
+  \cycleDesc.
   \vspace{0.7em}
   {
     % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
