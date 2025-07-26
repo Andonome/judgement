@@ -17,4 +17,33 @@ They wake with a -8~Penalty, which decreases by 1 each \gls{round}.
   \chitincrawler[\npc{\T[4]\A}{Hibernating \Glsfmtplural{crawler}}]
 }
 
+\else
+
+\ifnum\value{r12}=8
+
+\stepDay{1}
+\Pgls{pc} armour has become ragged with age, and needs some better care.
+
+\begin{boxtext}
+  Your leather armour's getting old.
+  The straps look worn out, and pieces have begun flaking off as you walk.
+\end{boxtext}
+
+Which \gls{pc} this affects, depends on a few factors.
+
+\begin{enumerate}
+  \item
+  Start with the \glspl{armour} with the highest \gls{dr}.
+  \item
+  Out of those, look at the \gls{pc} with the lowest \roll{Intelligence}{Crafts} total.
+  \item
+  If multiple \glspl{pc} have the same Bonus, select whoever has the most \glspl{fp}.
+\end{enumerate}
+
+Taking care of the \gls{armour} requires an \roll{Intelligence}{Crafts} roll at \tn[10] and a workshop.
+Until then, each time the \gls{pc} moves quickly (sprinting, fighting, et c.) the armour has a 1-in-6 chance of something snapping, making it open in all the wrong places, and flail about.
+When this happens, the \gls{armour}'s \gls{covering} decreases by~2, and the \gls{pc} takes a -2~Penalty to Speed as straps fall around their legs or a breastplate starts banging into their legs.
+
+\fi
+
 \fi
