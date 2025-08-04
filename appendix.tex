@@ -153,6 +153,38 @@
 
 \end{multicols}
 
+\section{Formulae}
+
+\begin{multicols}{2}
+
+\subsubsection{\Glsfmttext{weight}}
+usually increases when \gls{equipment} has larger bonuses.
+So \pgls{weapon} might have any Attack Bonus, but the larger the Bonus, the larger the \gls{weight}.
+
+\[
+  \mbox{ Weapon \glsentrytext{weight} } = \frac{ | \mbox{ Bonus } | + \max \{ 0, \mbox{ Damage } \} } { 2 }
+\]
+
+\[
+  \mbox{ Armour \glsentrytext{weight} } = \frac{ \left( 2 \times \mbox{ \glsentrytext{dr} } \right) + \mbox{ \glsentrytext{covering} } } { 4 }
+\]
+
+\subsubsection{\Glsfmtlongpl{cr}}
+are made of two numbers: an `attack-rating', and `defence-rating'.
+The two are added together, and divided by 10, just to make the numbers smaller.
+This cheap estimation has no more authority or accuracy than a semi-educated guess, so if you make your own \glspl{npc}, and you want to give them \pgls{cr}, it's better to go with your gut than your calculator.
+
+\end{multicols}
+
+\[
+  \mbox{ \glsentrytext{cr} } = \frac{
+  ( \mbox{ \glsentrytext{tn} } - \mbox{ \glsentrytext{ap} cost } ) \times ( \mbox{ Damage Total } + \mbox{ \glsentrytext{ap} } )
+  +
+  ( \mbox{ \glsentrytext{dr} } + 1 ) \times ( \mbox{ \glsentrytext{hp} } + \mbox{ \glsentrytext{mp} } )
+  - 40
+  } {10}
+\]
+
 \printindex[talismans]
 \label{talismanIndex}
 
