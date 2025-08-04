@@ -124,8 +124,18 @@
     \vspace{-4em}
   \fi
   \makebox(0,0)[t]{
-    \ifnum\value{cycle}<2%
-      \hspace{-10em}%
+    \ifcase\value{cycle}%
+      \hspace{-9em}%
+    \or%
+      \hspace{-1em}%
+    \or%
+      \hspace{1em}%
+    \or%
+      \hspace{3em}%
+    \or%
+      \hspace{3em}%
+    \else%
+      \hspace{-3em}%
     \fi%
     \orrery[\value{r2}/\value{r2b}, \value{r3}/\value{r3b}]
   }
