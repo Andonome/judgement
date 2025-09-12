@@ -17,8 +17,10 @@
 \togglefalse{wrath}
 \newcommand\Wraths{}
 \newcommand*\wrath{%
-  Wrath!%
+  Wrath! %
   \global\toggletrue{wrath}%
+  (\vpageref{wrath:\thetrack})
+  \stepcounter{track}
 }
 
 \newcommand\showEncounterFiles[1][\thealmatrack]{
@@ -148,6 +150,7 @@
 
 \noindent
 \textbf{\large\thefenestraYear: \showCycle}
+\setcounter{track}{1}
 
 Encounters \vpageref{encI}.
 
@@ -190,10 +193,12 @@ Encounters \vpageref{encI}.
   \ifodd\thefenestraYear%
     \addtocounter{track}{2}%
   \fi%
+  \setcounter{age}{1}%
   \foreach \n in {1,...,3}%
     {
-      Wrath \thetrack, 
-      \stepcounter{track}
+      \input{encounters/wrath_\n.tex}
+      \label{wrath:\theage}
+      \stepcounter{age}
     }%
 }{}
 
