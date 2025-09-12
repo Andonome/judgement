@@ -35,6 +35,8 @@ no_encounters != ls encounters/enc_* | wc -w
 booklets/no_enc.tex: $(wildcard encounters/enc_*.tex) | booklets/
 	printf '%s\n' '\setcounter{noEncounters}{$(no_encounters)}' > $@
 	
+booklets/a7_al.tex: al.tex
+	$(CP) $< $@
 
 booklets/a7_almanac.tex: encounters/head.tex booklets/no_enc.tex $(DBOOK)
 	$(CP) $< $@
