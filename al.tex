@@ -17,7 +17,6 @@
 \togglefalse{wrath}
 \newcommand\Wraths{}
 \newcommand*\wrath{%
-  Wrath! %
   \randomize%
   \global\toggletrue{wrath}%
   \ifcase\value{r4}\relax\or%
@@ -130,17 +129,50 @@
   }
 }
 
-{
-  \footnotesize
-  \noindent
-  \showCycle\
-  \cycleDesc.
-  \vspace{0.7em}
+\noindent%
+\bfseries\showCycle\mdseries\ %
+\cycleDesc.
+\setcounter{segNoSpare}{1}
+
+\noindent
+Encounters \vpageref{encI}.
+
+\foreach \d in {1,...,28}%
   {
-    % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
-    \toggletrue{intro}
-    \showGls{harvesting}
+  \advanceTheDate[1]%
+  \ifnum\thefenestraDay=1%
+    \vspace{1\baselineskip}
+    \needspace{5\baselineskip}%
+    \noindent%
+    \bfseries\showCycle\mdseries\ %
+    \cycleDesc.
+    Encounters \vpageref{encII}.%
+    \par
+  \fi%
+  \noindent
+  \thefenestraDay.~%
+  \ifnum\thefenestraDay>57%
+    \wrath\par%
+  \else%
+    \randomize%
+    \ifodd\value{r3c}%
+      \lightDots%
+    \else%
+      Encounter!%
+    \fi%
+  \fi\par%
   }
+
+\pagestyle{minizine}
+
+\setCycle{\month}{\day}
+
+
+\vspace{0.7em}
+{
+  % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
+  \toggletrue{intro}
+  \showGls{harvesting}
 }
 
   \IfLabelExistsTF{\jobname:harvestBasilisk}{
@@ -149,9 +181,7 @@
 
   \IfLabelExistsTF{\jobname:harvestGriffin}{
     \showGls{griffin}
-  }{ \pagestyle{minizine} }
-
-  \pagestyle{minizine}
+  }{}
 
   \IfLabelExistsTF{\jobname:harvestMshrooms}{
     \showGls{marchingMushroom}
@@ -169,42 +199,10 @@
     \showGls{woodspy}
   }{}
 
-\clearpage
-
-\griffin
-
-\begin{multicols}{2}
-\noindent
-\textbf{\large\thefenestraYear: \showCycle}
-\setcounter{track}{1}
-
-Encounters \vpageref{encI}.
-
-\foreach \d in {1,...,28}%
-  {
-  \advanceTheDate[1]%
-  \ifnum\thefenestraDay=1%
-    \textbf{\large\thefenestraYear: \showCycle}\par%
-    Encounters \vpageref{encII}.%
-  \fi%
-  \thefenestraDay.\qquad%
-  \ifnum\thefenestraDay>57%
-    \wrath\par%
-  \else%
-    \randomize%
-    \ifodd\value{r3c}\else%
-      Encounter!%
-    \fi%
-  \fi\par%
-  }
-\end{multicols}
-
-\setCycle{\month}{\day}
-
 \vspace{2\baselineskip}
+\needspace{5\baselineskip}%
 \textbf{\scshape\large Encounters in \showCycle}
 \label{encI}
-
 
 \setcounter{encnum}{\day}
 
