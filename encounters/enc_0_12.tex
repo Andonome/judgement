@@ -1,3 +1,4 @@
+\ifnum\thefenestraDay>20%
 \Pgls{woodspy} hangs from a tree, above the road, and the clear blue sky makes it particularly easy to spot.
 The troupe can roll \roll{Wits}{Vigilance} at \tn[10].
 Each Success Margin gives them 10~\glspl{step} distance, while failure removes \pgls{ap}.
@@ -6,3 +7,25 @@ Each Success Margin gives them 10~\glspl{step} distance, while failure removes \
 
 If the \gls{woodspy} dies, it turns white with rage, then fades to brown as its blue blood drains.
 
+\else%
+If the troupe make \emph{any} noise over the next half hour, \pgls{basilisk} arrives.
+\ifodd\day
+  If they kill it, they may find something interesting during \gls{harvesting} ---
+  \ifcase\value{r3}\relax\or%
+    the bones of a gnome, and \lootBig.
+  \or%
+    a sealed scroll-case, containing a \safetyScroll.
+
+    \showTalisman
+  \else%
+    a human skull, and a \lootJewellery.
+  \fi
+\fi
+
+\basilisk
+
+\begin{boxtext}
+  A mild breeze blows, and it smells like pond-scum and rotten eggs.
+\end{boxtext}
+
+\fi
