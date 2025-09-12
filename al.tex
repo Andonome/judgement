@@ -23,11 +23,14 @@
   \stepcounter{track}
 }
 
-\newcommand\showEncounterFiles[1][\thealmatrack]{
-  \foreach \n in {1,...,#1}%
+\newcommand\showEncounterFiles[2]{
+  \foreach \n in {#1,...,#2}%
     {%
       \stepcounter{encnum}
-      \IfFileExists{encounters/enc_\theencnum.tex}{\theencnum, }{ \setcounter{encnum}{1} none }
+      \IfFileExists{encounters/enc_\thecycle_\theencnum.tex}{%
+        \subsubsection{Encounter \n}
+        \input{encounters/enc_\thecycle_\theencnum.tex}
+      }{ \setcounter{encnum}{1} \n,}
     }
 }
 
@@ -182,7 +185,7 @@ Encounters \vpageref{encI}.
 
 \setcounter{encnum}{\day}
 
-\showEncounterFiles
+\showEncounterFiles{1}{\thealmatrack}
 
 \iftoggle{wrath}{
   \textbf{\scshape\large \glsfmtname{storm}}
@@ -209,8 +212,7 @@ Encounters \vpageref{encI}.
   \setcounter{almatrack}{\thetrack}
   \textbf{\scshape\large Encounters in \showCycle}
   \label{encII}
-  \showEncounterFiles
+  \showEncounterFiles{\thealmatrack}{7}
 }{}
-
 
 \end{document}
