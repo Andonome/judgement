@@ -31,6 +31,17 @@
   \fi
 }
 
+\setcounter{r3}{\month}
+\setcounter{r3b}{\day}
+\addtocounter{r3b}{14}
+\ifnum\value{r3b}>30
+  \addtocounter{r3b}{-30}
+  \ifnum\value{r3}=12
+    \setcounter{r3}{1}
+  \else
+    \addtocounter{r3}{1}
+  \fi
+\fi
 
 \begin{document}
 
@@ -40,9 +51,15 @@
     \Gls{gmt} \arabic{fenestraYear} \showCycle, day \arabic{fenestraDay}
   }
   \par
-  \ifnum\value{cycle}=0
+  \ifcase\value{cycle}
     \vspace{-4em}
-  \fi
+  \or%
+  \or%
+  \or%
+  \or%
+      \vspace{-3em}%
+  \else%
+  \fi%
   \makebox(0,0)[t]{
     \ifcase\value{cycle}%
       \hspace{-9em}%
@@ -57,7 +74,7 @@
     \else%
       \hspace{-3em}%
     \fi%
-    \orrery[\value{r2}/\value{r2b}, \value{r3}/\value{r3b}]
+    \orrery[\month/\day, \value{r3}/\value{r3b}]
   }
 }
 
