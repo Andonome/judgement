@@ -5,7 +5,32 @@
 \setcounter{bookLevel}{2}
 \externalReferent{core}
 \externalReferent{judgement}
+\newcounter{almatrack}
+\setcounter{almatrack}{60}
+\addtocounter{almatrack}{-\thefenestraDay}
+\divide\value{almatrack} by 4
+\ifnum\thealmatrack>6
+  \setcounter{almatrack}{6}
+\fi
 
+\newtoggle{wrath}
+\togglefalse{wrath}
+\newcommand\Wraths{}
+\newcommand*\wrath{%
+  Wrath!%
+  \global\toggletrue{wrath}%
+}
+
+\newcommand\showEncounterFiles[1][\thealmatrack]{
+  \foreach \n in {1,...,#1}%
+    {%
+      \stepcounter{encnum}
+      \IfFileExists{encounters/enc_\theencnum.tex}{\theencnum, }{ \setcounter{encnum}{1} none }
+    }
+}
+
+%!
+\newcommand\stepDay[1]{}
 
 \tcbset{ornamented/.style={skin=ornamented,
   before={\begin{figure}[hb!]},
@@ -133,7 +158,7 @@
   \fi%
   \thefenestraDay.\qquad%
   \ifnum\thefenestraDay>57%
-    Wrath!\par%
+    \wrath\par%
   \else%
     \randomize%
     \ifodd\value{r3c}\else%
@@ -142,6 +167,40 @@
   \fi\par%
   }
 
+\setCycle{\month}{\day}
+
+\vspace{2\baselineskip}
+\textbf{\scshape\large Encounters in \showCycle}
+
+\setcounter{encnum}{\day}
+
+\showEncounterFiles
+
+\iftoggle{wrath}{
+  \textbf{\scshape\large \glsfmtname{storm}}
+  \setcounter{track}{1}%
+  \ifodd\month%
+    \addtocounter{track}{1}%
+  \fi%
+  \ifodd\thefenestraYear%
+    \addtocounter{track}{2}%
+  \fi%
+  \foreach \n in {1,...,3}%
+    {
+      Wrath \thetrack, 
+      \stepcounter{track}
+    }%
+}{}
+
+
+\iftoggle{wrath}{
+  \advanceTheDate[28]
+  \setcounter{track}{7}
+  \addtocounter{track}{-\value{almatrack}}
+  \setcounter{almatrack}{\thetrack}
+  \textbf{\scshape\large Encounters in \showCycle}
+  \showEncounterFiles
+}{}
 
 
 \end{document}
