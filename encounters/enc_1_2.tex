@@ -1,19 +1,14 @@
+Biting winds in the evening inflict an additional \gls{ep} on anyone outdoors.
+In the distance, an auroch herd calls out in distress.
+Soon after, they stampede right through the \glspl{pc}.
 
-\ifnum\value{cycle}=1
-  \stepDay{2}
-  Biting winds in the evening inflict an additional \gls{ep} on anyone outdoors.
-  In the distance, an auroch herd calls out in distress.
-  Soon after, they stampede right through the \glspl{pc}.
+\auroch
+\set{track}{r12}
+\addtocounter{track}{-4}
 
-  \auroch
-  \set{track}{r12}
-  \addtocounter{track}{-4}
+\nameref{stampede} or take \dmg{track}~Damage.
 
-  \nameref{stampede} or take \dmg{track}~Damage.
-
-  At the end of the \gls{interval}, the troupe receive 4~\glspl{mp}, and \gls{snow} begins to fall as the winds calm down.
-  \ifglsused{snow}{}{
-    \Gls{snow} \glsentrydesc{snow}.
-  }
-\fi
-
+At the end of the \gls{interval}, the troupe receive 4~\glspl{mp}, and \gls{snow} begins to fall as the winds calm down.
+\ifglsused{snow}{}{
+  \Gls{snow} \glsentrydesc{snow}.
+}

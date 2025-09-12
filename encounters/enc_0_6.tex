@@ -1,37 +1,9 @@
-\ifnum\value{temperature}>1
+The troupe find a clump of liskshine on the road.
+The silvery lichen serves as \pgls{ingredient} of the Earth \gls{sphere}.
+It also indicates that \pgls{basilisk} was nearby recently.
 
-\ifnum\value{temperature}=3
-  \stepDay{2}
-  The troupe find a clump of liskshine on the road.
-  The silvery lichen serves as \pgls{ingredient} of the Earth \gls{sphere}.
-  It also indicates that \pgls{basilisk} was nearby recently.
-\fi
+The troupe can track down the \gls{basilisk} with a \roll{Wits}{Survival} roll at \tn[5].
+It lies 4~miles away.
 
 \basilisk
 
-\stepDay{1}
-Charged with Sunlight from a dazzling sky, \pgls{basilisk} hunts.
-The \glspl{pc} can roll \roll{Wits}{Survival} at \tn[5] to notice the stench; each Success Margin gives them \pgls{round} to prepare.
-
-If the troupe kill it, they find enough liskshine lichen growing on its back for three Earth \glspl{ingredient}.%
-\exRef{judgement}{Judgement}{liskShine}
-
-\else
-
-\ifnum\value{temperature}=0
-  \ifglsused{snow}{}{
-    \Gls{snow} begins to fall soon after.
-    It \glsentrydesc{snow}.
-  }
-\fi
-
-\horse[\npc{\T[5]\A}{Horses}]
-
-\stepDay{4}
-Five horses wander through a distant clearing by a river.
-Any \gls{pc} with a \roll{Wits}{Survival} total of 2 or more spots them.
-Sneaking up requires a \roll{Dexterity}{Stealth} roll, at
-\setTN{Wits}{Vigilance}
-\tn.
-
-\fi

@@ -1,17 +1,12 @@
-\ifnum\value{cycle}=1
-
-\ifglsused{snow}{}{
-  \Gls{snow} begins to fall soon after.
-  It \glsentrydesc{snow}.
-}
-
-\stepDay{2}
 A boar snuffles around the troupe's camp in the morning.
 If they're in \pgls{bothy}, they hear grunts outside.
 If they're camping, they hear it pulling up the earth in search of the remains of mushrooms.
 It flees the moment it sees anyone.
 
-\boar
+\Gls{snow} begins to fall soon after.
+\ifglsused{snow}{}{%
+  It \glsentrydesc{snow}.
+}
 
-\fi
+\boar
 
