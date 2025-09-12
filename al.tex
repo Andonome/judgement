@@ -18,9 +18,28 @@
 \newcommand\Wraths{}
 \newcommand*\wrath{%
   Wrath! %
+  \randomize%
   \global\toggletrue{wrath}%
-  (\vpageref{wrath:\thetrack})
+  \ifcase\value{r4}\relax\or%
+    \composeWrath{hurricane}
+  \or%
+    \composeWrath{earthquake}
+  \or%
+    \composeWrath{snow}
+  \else%
+    \composeWrath{flood}
+  \fi%
   \stepcounter{track}
+}
+
+\newcommand\composeWrath[1]{
+  \Glsfmtname{#1}
+  (\vpageref{wrath:\thetrack})
+  \gappto{\Wraths}{%
+    \subsubsection{\glsfmtname{#1}}
+    \label{wrath:\thetrack}
+    \glsentrydesc{#1}.%
+  }%
 }
 
 \newcommand\showEncounterFiles[2]{
@@ -189,20 +208,8 @@ Encounters \vpageref{encI}.
 
 \iftoggle{wrath}{
   \textbf{\scshape\large \glsfmtname{storm}}
-  \setcounter{track}{1}%
-  \ifodd\month%
-    \addtocounter{track}{1}%
-  \fi%
-  \ifodd\thefenestraYear%
-    \addtocounter{track}{2}%
-  \fi%
-  \setcounter{age}{1}%
-  \foreach \n in {1,...,3}%
-    {
-      \input{encounters/wrath_\n.tex}
-      \label{wrath:\theage}
-      \stepcounter{age}
-    }%
+  \setcounter{track}{1}
+  \Wraths
 }{}
 
 \iftoggle{wrath}{
