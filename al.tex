@@ -173,6 +173,7 @@
 
 \griffin
 
+\begin{multicols}{2}
 \noindent
 \textbf{\large\thefenestraYear: \showCycle}
 \setcounter{track}{1}
@@ -185,7 +186,6 @@ Encounters \vpageref{encI}.
   \ifnum\thefenestraDay=1%
     \textbf{\large\thefenestraYear: \showCycle}\par%
     Encounters \vpageref{encII}.%
-    \par%
   \fi%
   \thefenestraDay.\qquad%
   \ifnum\thefenestraDay>57%
@@ -197,6 +197,7 @@ Encounters \vpageref{encI}.
     \fi%
   \fi\par%
   }
+\end{multicols}
 
 \setCycle{\month}{\day}
 
