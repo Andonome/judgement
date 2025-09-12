@@ -149,12 +149,15 @@
 \noindent
 \textbf{\large\thefenestraYear: \showCycle}
 
+Encounters \vpageref{encI}.
 
 \foreach \d in {1,...,28}%
   {
   \advanceTheDate[1]%
   \ifnum\thefenestraDay=1%
     \textbf{\large\thefenestraYear: \showCycle}\par%
+    Encounters \vpageref{encII}.%
+    \par%
   \fi%
   \thefenestraDay.\qquad%
   \ifnum\thefenestraDay>57%
@@ -171,6 +174,8 @@
 
 \vspace{2\baselineskip}
 \textbf{\scshape\large Encounters in \showCycle}
+\label{encI}
+
 
 \setcounter{encnum}{\day}
 
@@ -192,13 +197,13 @@
     }%
 }{}
 
-
 \iftoggle{wrath}{
   \advanceTheDate[28]
   \setcounter{track}{7}
   \addtocounter{track}{-\value{almatrack}}
   \setcounter{almatrack}{\thetrack}
   \textbf{\scshape\large Encounters in \showCycle}
+  \label{encII}
   \showEncounterFiles
 }{}
 
