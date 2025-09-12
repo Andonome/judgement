@@ -29,20 +29,23 @@
   \else%
     \composeWrath{flood}
   \fi%
-  \stepcounter{track}
+  \stepcounter{segNoSpare}
 }
 
 \newcommand\composeWrath[1]{
   \Glsfmtname{#1}
-  (\vpageref{wrath:\thetrack})
+  (\vpageref{wrath:\thesegNoSpare})
   \gappto{\Wraths}{%
     \subsubsection{\glsfmtname{#1}}
-    \label{wrath:\thetrack}
+    \label{wrath:\thesegNoSpare}
+    \stepcounter{segNoSpare}
     \glsentrydesc{#1}.%
+    \par%
   }%
 }
 
 \newcommand\showEncounterFiles[2]{
+  \setcounter{encnum}{#1}%
   \foreach \n in {#1,...,#2}%
     {%
       \stepcounter{encnum}
@@ -208,7 +211,7 @@ Encounters \vpageref{encI}.
 
 \iftoggle{wrath}{
   \textbf{\scshape\large \glsfmtname{storm}}
-  \setcounter{track}{1}
+  \setcounter{segNoSpare}{1}
   \Wraths
 }{}
 
