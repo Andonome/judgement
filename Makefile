@@ -3,9 +3,9 @@ EXTERNAL_REFERENTS = core stories
 targets += shield.pdf
 zines += almanac.pdf
 
-almanac.pdf : $(DBOOK)
-
 include config/common.mk
+
+a7_almanac.pdf almanac.pdf : $(DBOOK) $(wildcard encounters/*.tex)
 
 SHIELD_TARGET = $(shell grep 'shield\.pdf' README.md | cut -d' ' -f2 | head -1)
 
