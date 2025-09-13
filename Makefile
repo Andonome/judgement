@@ -2,7 +2,8 @@ EXTERNAL_REFERENTS = core stories
 
 targets += shield.pdf
 zines += almanac.pdf
-output += booklets
+
+almanac.pdf : $(DBOOK)
 
 include config/common.mk
 
@@ -26,18 +27,5 @@ images/extracted/cover.jpg: images/loh/dragon.jpg images/extracted/inclusion.tex
 $(DROSS)/$(BOOK)_cover.pdf: config/share/cover.tex cover.tex images/extracted/cover.jpg $(DBOOK)
 	$(RUN) -jobname $(BOOK)_cover $<
 cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
-	$(CP) $< $@
-
-######## A7 Almanac ########
-
-no_encounters != ls encounters/enc_* | wc -w
-
-booklets/no_enc.tex: $(wildcard encounters/enc_*.tex) | booklets/
-	printf '%s\n' '\setcounter{noEncounters}{$(no_encounters)}' > $@
-	
-booklets/a7_al.tex: al.tex
-	$(CP) $< $@
-
-booklets/a7_almanac.tex: encounters/head.tex booklets/no_enc.tex $(DBOOK)
 	$(CP) $< $@
 
