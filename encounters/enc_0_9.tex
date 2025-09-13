@@ -1,3 +1,21 @@
-A boar, hearing the troop's footsteps, flees.
+\ifnum\thefenestraDay>45
+  A boar, hearing the troop's footsteps, flees.
 
-\boar
+  \boar
+\else
+
+  \begin{boxtext}
+    Last night, the rain started.
+    This morning, it continued.
+    Buckets of rain, so loud it's hard to speak.
+    Everything feels heavy, and the road has started to turn into a bog.
+  \end{boxtext}
+
+  A long head rears over the forest's canopy in the distance.
+  A \roll{Wits}{Vigilance} roll at \tn[10] lets the \glspl{pc} spot the \gls{basilisk}, with three \glspl{round} to prepare.
+
+  Otherwise, they hear it coming when it's twenty~\glspl{step} away, slinking through the forest, and charges them.
+
+  \basilisk
+
+\fi

@@ -1,18 +1,18 @@
-Walnut trees poison other plants so they can take in more Sunlight.
-
-\begin{boxtext}
-  Walking along in the \showTemperature\ winds, you spot an inviting clearing, with a walnut tree in the middle%
-  \ifnum\value{temperature}=0%
-    \space of the flat bed of snow%
-  \fi.
-  You have a few more hours till dusk, but it looks like a good place to rest.
-\end{boxtext}
-
-If the troupe rests, they lose a mile of progress, but gain a nice camping spot, with a +1~Bonus to \glspl{vigil}, making camp, or anything else which could benefit from a nice clearing.
-
-\ifglsused{snow}{}{
-  \ifnum\value{temperature}=0%
-    \Gls{snow} \glsentrydesc{snow}.
-  \fi
+A lightning storm rages throughout the night (\glspl{pc} receive 4~\glspl{mp}).
+A few fires start nearby, all across the forest (and perhaps in \pgls{village} if the \glspl{pc} are present).
+\ifglsused{snow}{}{%
+  By morning, \gls{snow} falls.
+  It \glsentrydesc{snow}.
 }
 
+\begin{boxtext}
+  The white forest smells of charcoal, and old eggs.
+\end{boxtext}
+
+What the \glspl{pc} may not have realized, is that the lightning storm woke three \glspl{basilisk} from hibernation.%
+\footnote{Their cavern lies nearby, full of \gls{basilisk} bones.  It leads down into the \gls{deep}.}
+They are starving, and will fight to the death.
+
+Each \gls{basilisk} heads in a different direction, but they will hear any nearby fights and come running.
+
+\basilisk[\npc{\T[3]\A}{Sleepy \Glsfmtplural{basilisk}}\addtocounter{weight}{3}]

@@ -1,15 +1,10 @@
+\Pgls{griffin} watches the \glspl{pc}, over a quiet afternoon, listening to their every word.
+Once night falls, it begins to echo what they have said to each other --- random sentence fragments and such.
+It hopes to lure one outside, alone, then strike.
 
-\ifnum\value{cycle}=1
+\ifglsused{snow}{}{
+  \Gls{snow} falls overnight, making a complete blanket over \gls{fenestra}.
+  It \glsentrydesc{snow}.
+}
 
-  \stepDay{3}
-  \begin{boxtext}
-    Thunder roars above, and a boar stands on the road, staring vindictively with bright-red eyes.
-  \end{boxtext}
-
-  This boar won't fight, it's too ill (players can notice with a \roll{Wits}{Survival} roll at \tn[10]).
-  Anyone handling the corpse contracts \nameref{Guardbane}.%
-  \exRef{judgement}{Judgement}{Guardbane}
-  The cook should roll \roll{Intelligence}{Cultivation} at \tn[10]; failure indicates everyone eating the meal has contracted the disease too.
-
-\fi
-
+\griffin[\npc{\A}{\Glsfmttext{griffin}}]

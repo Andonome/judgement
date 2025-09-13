@@ -1,12 +1,14 @@
-A boar snuffles around the troupe's camp in the morning.
-If they're in \pgls{bothy}, they hear grunts outside.
-If they're camping, they hear it pulling up the earth in search of the remains of mushrooms.
-It flees the moment it sees anyone.
+An auroch herd wanders a mile away, and can be tracked more easily than the road (which they have mostly destroyed), though getting back won't be easy.
 
-\Gls{snow} begins to fall soon after.
-\ifglsused{snow}{}{%
-  It \glsentrydesc{snow}.
+\begin{boxtext}
+  Mist on snow makes a bland morning.
+  The world turns into nothing but a series of brown tree-trunk lines which let you know you've walked too far from the road.
+  And when hoof-prints start appearing in the ground, this lets you know that you've entered a path laid by aurochs.
+\end{boxtext}
+
+\IfLabelExistsTF{\jobname:harvestAuroch}{
+  Use the auroch \gls{statblock} from \vpageref{\jobname:harvestAuroch}.
+}{
+  \auroch
 }
-
-\boar
 

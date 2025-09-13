@@ -6,7 +6,9 @@ Soon after, they stampede right through the \glspl{pc}.
 \set{track}{r12}
 \addtocounter{track}{-4}
 
-\nameref{stampede} or take \dmg{track}~Damage.
+\iftoggle{judgement}{
+  \nameref{stampede} or take \dmg{track}~Damage.
+}{}
 
 At the end of the \gls{interval}, the troupe receive 4~\glspl{mp}, and \gls{snow} begins to fall as the winds calm down.
 \ifglsused{snow}{}{
