@@ -72,16 +72,22 @@
 \newcommand\cyclePic{
   \ifcase\value{cycle}
     \pic{Irina/curiosity}
+    \showGls{yonder}
   \or
     \null
+    \showGls{sable}
   \or
     \pic{Irina/fury}
+    \showGls{wrecan}
   \or
     \null
+    \showGls{abderian}
   \or
     \pic{Irina/forest}
+    \showGls{sylf}
   \or
     \pic{Irina/old_age}
+    \showGls{eldren}
   \fi
 }
 
@@ -234,6 +240,8 @@ Select the next encounter \vpageref{encI}.
 \label{encI}
 \cycleDesc.
 
+\cyclePic
+
 \setcounter{segNo}{\month}
 
 \foreach \d in {1,...,27}%
@@ -255,6 +263,8 @@ Select the next encounter \vpageref{encI}.
         \showCycle%
         \label{encII}
         \cycleDesc.\par%
+        \cyclePic%
+        \par%
       \fi%
       \ifnum\thealmatrack>4%
         \addtocounter{almatrack}{-5}%
