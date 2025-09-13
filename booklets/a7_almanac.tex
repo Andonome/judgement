@@ -109,6 +109,8 @@
 \begin{document}
 
 \frontmatter
+\setCycle{\month}{\day}
+
 \miniCover{Almanac}{
   {
     \scshape\flushright\nobreak
@@ -140,8 +142,6 @@
     \orrery[\month/\day, \value{r3}/\value{r3b}]
   }
 }
-
-\setcounter{segNoSpare}{1}
 
 \setcounter{track}{\thecycle}%
 \stepcounter{track}%
@@ -179,14 +179,14 @@ Select the next encounter \vpageref{encI}.
     \IfLabelExistsTF{wrathSection}{%
       \vspace{\baselineskip}
       \noindent%
-      The `\glsentrysymbol{grummel}' symbols indicate \pgls{storm}, \vpageref{wrathSection}.
+      `\glsentrysymbol{grummel}' indicates \pgls{storm}, \vpageref{wrathSection}.
     }{}
     \IfLabelExistsTF{encII}{%
       \vspace{1\baselineskip}
       \needspace{5\baselineskip}%
       \noindent%
-      \bfseries\showCycle\mdseries\ %
-      Find encounters for \showCycle\ \vpageref{encII}.%
+      \bfseries\showCycle\mdseries:
+      encounters listed \vpageref{encII}.%
       \par%
     }{}
   \fi%
@@ -204,37 +204,7 @@ Select the next encounter \vpageref{encI}.
 
 \setCycle{\month}{\day}
 
-
-\vspace{0.7em}
-{
-  % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
-  \toggletrue{intro}
-  \showGls{harvesting}
-}
-
-  \IfLabelExistsTF{\jobname:harvestBasilisk}{
-    \showGls{basilisk}
-  }{}
-
-  \IfLabelExistsTF{\jobname:harvestGriffin}{
-    \showGls{griffin}
-  }{}
-
-  \IfLabelExistsTF{\jobname:harvestMshrooms}{
-    \showGls{marchingMushroom}
-  }{}
-
-  \IfLabelExistsTF{\jobname:harvestDigger}{
-    \showGls{digger}
-  }{}
-
-  \IfLabelExistsTF{\jobname:harvestCrawler}{
-    \showGls{crawler}
-  }{}
-
-  \IfLabelExistsTF{\jobname:harvestWoodspy}{
-    \showGls{woodspy}
-  }{}
+\clearpage
 
 \subsection*{\showCycle}%
 \showCycle
@@ -279,12 +249,57 @@ Select the next encounter \vpageref{encI}.
     \fi%
   }
 
-\clearpage
-\subsection{\Glsfmtname{bothy}}
+\subsection{\Glsfmtname{bothy} \& \Glsfmtname{broch}}
+
+\input{encounters/broch_\arabic{r2}.tex}
 
 \input{encounters/bothy_\arabic{r3}.tex}
-\randomize
-\input{encounters/bothy_\arabic{r3}.tex}
 
+\ifnum\thepage<12
+  \input{encounters/bothy_\arabic{r3}.tex}
+\fi
+
+\pagebreak
+
+\subsection{Glossary}
+
+\ifnum\thepage<13
+  \showGls{bothy}
+  \showGls{broch}
+\fi
+
+{
+  % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
+  \toggletrue{intro}
+  \showGls{harvesting}
+}
+
+  \IfLabelExistsTF{\jobname:harvestBasilisk}{
+    \showGls{basilisk}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestGriffin}{
+    \showGls{griffin}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestMshrooms}{
+    \showGls{marchingMushroom}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestDigger}{
+    \showGls{digger}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestCrawler}{
+    \showGls{crawler}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestWoodspy}{
+    \showGls{woodspy}
+  }{}
+
+\ifnum\thepage<14
+  \clearpage
+\fi
 
 \end{document}
