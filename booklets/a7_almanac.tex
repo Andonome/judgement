@@ -29,7 +29,8 @@
     \fi%
   \fi%
   \ifnum\theenc>\value{r12}%
-    \A%
+    \stepcounter{rn1t2}%
+    \A~\showInterval{\value{rn1t2}}%
   \else%
     \stepcounter{segNo}%
   \fi%
