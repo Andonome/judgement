@@ -49,6 +49,7 @@
   {}%
   {}
 
+\needspace{18\baselineskip}
 
 \subsection{Forest Plants}
 \index{Plants}
@@ -60,6 +61,8 @@
   {are massive plants appear a little like gunnera, but larger.
   Anyone sufficiently small (\gls{weight} 5 or less) can rest on them overnight and heal an additional~\gls{ep}.}%
 
+\null
+
 \funkyPlant{Bloodwood}%
   {bloodwood}%
   {sap gives a scent that makes blood rush.
@@ -67,6 +70,8 @@
   Unfortunately, the sap is secreted only during the harshest cold snaps, 
   and tends to attract and irritate local wildlife, making procuring it a risky endeavour.
   }
+
+\null
 
 \funkyPlant{disgnome}%
   {}%
@@ -120,7 +125,7 @@
     Every failure means a roll on a random `random table' -- flip through the first book to hand, select a random table to roll with, then add that element to the dream.
     If the sleeper has already encountered this result in their waking life, memories of the encounter invade the dream.
     If these are good memories, the \gls{tn} decreases by 1.
-    If bad, the \gls{tn} increases by 1.
+    If bad, the \gls{tn} increases by~1.
   }
 
 \funkyPlant[Air]{Seekmist}%
@@ -137,9 +142,11 @@
 
 \funkyPlant{Slowburn Ivy}%
   {slowburnIvy}%
-  {does nothing for most of the year, but over \gls{cFive}, it spreads its seed by dumping large amounts in rivers.
-  Anyone eating water contaminated with this ivy's seeds gains $1D6$ \glspl{ep}, but only after $1D6$~\glspl{interval}.
-  The slow release always makes the cause difficult to track down.}
+  {%
+    does nothing for most of the year, but over \gls{cFive}, it spreads its seed by dumping large amounts in rivers.
+    Anyone eating water contaminated with this ivy's seeds gains $1D6$ \glspl{ep}, but only after $1D6$~\glspl{interval}.
+    The slow release always makes the cause difficult to track down.
+  }
 
 \funkyPlant[Air]{Screechmoss}%
   {screechMoss}%
@@ -156,6 +163,7 @@
 
   They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.}
 
+\needspace{10\baselineskip}
 \subsection{Other Plants}
 \setcounter{encnum}{8}
 
@@ -180,7 +188,6 @@
 
 \end{multicols}
 
-\needspace{8\baselineskip}
 \section[Diseases]{Diseases~\glssymbol{eldren}}
 \label{diseases}
 \index{Diseases}
@@ -191,13 +198,14 @@
 
 \noindent
 \Gls{fenestra} has no plagues, but plenty of rare diseases.
-Each one corresponds to an Elemental \gls{sphere}, so \pgls{elixir} must be crafted from \pgls{ingredient} opposing \gls{sphere}.
+Each one corresponds to an Elemental \gls{sphere}, so curing the disease requires \pgls{elixir} crafted from \pgls{ingredient} of opposing \gls{sphere}.
 
-The character requires a workshop (but might use basic cooking utensils around a campfire with a -1~Penalty) then rolls \roll{Intelligence}{Medicine} roll (\gls{tn} listed with each disease) along with one \gls{ingredient} of the correct Elemental \gls{sphere}.
+Creating \pgls{elixir} from \pgls{ingredient} requires a workshop or kitchen (but might use a simple pot around a campfire with a -1~Penalty) then rolling \roll{Intelligence}{Medicine} at \pgls{tn} listed with the disease.
 If the preparation goes awry, new \glspl{ingredient} must be procured for a cure.
 
 \disease{Breathrot}%
-  {makes breath foul, as the lungs slowly fill with stagnant air.
+  {%
+    makes breath foul, as the lungs slowly fill with stagnant air.
     One affected can never have less than 1~\gls{ep}.
     Every day this effect increases by~1.
   }%
@@ -360,12 +368,6 @@ If the preparation goes awry, new \glspl{ingredient} must be procured for a cure
 
 \end{exampletext}
 
-\disease{Torpid Flesh}%
-  {turns the flesh turns pinkish-pale, then flaky.
-  Whenever the character spends more than 3~\glspl{ap} in a single round, they gain \pgls{ep} as the skin splits and hair begins to fall out.}%
-  {Fire}%
-  {9}
-
 \disease{Thinblood}%
   {results in blood-loss every time the character pushes themselves too far, from sneezing, pissing, or crying blood.
   Every time the character would lose \pgls{ep}, they lose \pgls{hp} instead.
@@ -375,5 +377,11 @@ If the preparation goes awry, new \glspl{ingredient} must be procured for a cure
   Rolling 12 or more means they will be cured by the next morning.}%
   {Water}%
   {10}
+
+\disease{Torpid Flesh}%
+  {turns the flesh turns pinkish-pale, then flaky.
+  Whenever the character spends more than 3~\glspl{ap} in a single round, they gain \pgls{ep} as the skin splits and hair begins to fall out.}%
+  {Fire}%
+  {9}
 
 \end{multicols}
