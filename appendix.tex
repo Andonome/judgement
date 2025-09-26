@@ -186,12 +186,14 @@
 usually increases when \gls{equipment} has larger bonuses.
 So \pgls{weapon} might have any Attack Bonus, but the larger the Bonus, the larger the \gls{weight}.
 
+Round all results down, so $5.9 = 5$.
+
 \[
-  \mbox{ Weapon \glsentrytext{weight} } = \frac{ | \mbox{ Bonus } | + \max \{ 0, \mbox{ Damage } \} } { 2 }
+  \mbox{ Armour \glsentrytext{weight} } = \frac{ \mbox{ \glsentrytext{dr} } + \mbox{ \glsentrytext{covering} } + 1 } { 3 }
 \]
 
 \[
-  \mbox{ Armour \glsentrytext{weight} } = \frac{ \left( 2 \times \mbox{ \glsentrytext{dr} } \right) + \mbox{ \glsentrytext{covering} } } { 4 }
+  \mbox{ Weapon \glsentrytext{weight} } = \frac{ | \mbox{ Bonus } | + \max \{ 0, \mbox{ Damage } \} } { 2 }
 \]
 
 \subsubsection{\Glsfmtlongpl{cr}}
