@@ -13,6 +13,19 @@
   \subsection{Encounters}
 }
 
+\newcommand\disasters{
+  \subsection{Disasters over the \Glsfmttext{storm}}
+}
+
+\newcommand\wrath[1]{%
+  \Glsentrytext{#1}
+  \gappto{\disasters}{%
+    \ifglsused{#1}{}{%
+      \showGls{#1}
+    }
+  }
+}
+
 % Does the day have an encounter?  If so, mark it with the '\A' symbol for
 % 'animal' (encounter).  The macro rolls 6 + temperature against 2D6, and
 % success brings the encounter.
@@ -32,6 +45,25 @@
   \addtocounter{enc}{\thetemperature}%
   \ifnum\thefenestraDay>57%
     \glsentrysymbol{grummel} %
+    \ifnum\thefenestraDay=58%
+      \ifcase\thetemperature%
+        \wrath{coldsnap}
+      \or%
+        \wrath{flood}
+      \else%
+        \ifnum\thecycle<4%
+          \wrath{heatwave}%
+        \else%
+          \wrath{hurricane}%
+        \fi%
+      \fi%
+    \else%
+      \ifodd\thefenestraDay%
+        \wrath{flood}%
+      \else%
+        \wrath{landslide}%
+      \fi%
+    \fi%
   \else%
     \ifnum\thetn>0%
       \addtocounter{enc}{\thetn}%
@@ -185,6 +217,7 @@ Select the next encounter \vpageref{encI}.
       \IfFileExists{encounters/enc_\thecycle_\thesegNo}{}{\setcounter{segNo}{1}}%
       \xappto{\encounterList}{\setcounter{segNoSpare}{\thesegNo}}
       \gappto{\encounterList}{%
+        \bigLine\par%
         \input{encounters/enc_\thecycle_\thesegNoSpare.tex}%
       }%
       \stepcounter{segNo}%
@@ -192,13 +225,15 @@ Select the next encounter \vpageref{encI}.
     \fi%
   }
 
-\clearpage
+\pagestyle{minizine}
+
+\disasters
+
+\encounterList
 
 \subsection{\Glsfmtname{bothy} \& \Glsfmtname{broch}}
 
 \input{encounters/broch_\arabic{r2}.tex}
-
-\encounterList
 
 \ifnum\thepage<12
   \input{encounters/bothy_\arabic{r3}.tex}
