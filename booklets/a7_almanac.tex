@@ -6,14 +6,18 @@
 \externalReferent{stories}
 \externalReferent{judgement}
 \newcounter{almatrack}
-\setcounter{almatrack}{6}
-\setcounter{segNo}{-22}
+\setcounter{almatrack}{0}
+\setcounter{tn}{-22}
+
+\newcommand\encounterList{
+  \subsection{Encounters}
+}
 
 % Does the day have an encounter?  If so, mark it with the '\A' symbol for
 % 'animal' (encounter).  The macro rolls 6 + temperature against 2D6, and
 % success brings the encounter.
 % 
-% We want at least 6 encounters, so each failure increases the counter 'segNo'. 
+% We want at least 6 encounters, so each failure increases the counter 'tn'. 
 % This counter starts at -22, and if it ever goes above 0 then it gets added to
 % the 'roll'.
 \newcommand\noteEncounter{%
@@ -22,46 +26,20 @@
   \randomize%
   \setcounter{enc}{6}%
   \addtocounter{enc}{\thetemperature}%
-  \ifnum\thesegNo>0%
-    \addtocounter{enc}{\thesegNo}%
-    \ifnum\thesegNo>4%
-      \addtocounter{segNo}{-5}%
+  \ifnum\thetn>0%
+    \addtocounter{enc}{\thetn}%
+    \ifnum\thetn>4%
+      \addtocounter{tn}{-5}%
     \fi%
   \fi%
   \ifnum\theenc>\value{r12}%
     \stepcounter{rn1t2}%
     \A~\showInterval{\value{rn1t2}}%
   \else%
-    \stepcounter{segNo}%
+    \stepcounter{tn}%
   \fi%
-  \lightDots%
 }
 
-\newcommand*\wrath{%
-  \randomize%
-  \ifcase\value{r4}\relax\or%
-    \composeWrath{hurricane}
-  \or%
-    \composeWrath{earthquake}
-  \or%
-    \composeWrath{flood}
-  \else%
-    \ifcase\thetemperature%
-      \composeWrath{snow}
-    \or%
-      \composeWrath{landslide}
-    \else%
-      \composeWrath{heatwave}
-    \fi%
-  \fi%
-  \par%
-}
-
-\newcommand\composeWrath[1]{
-  \paragraph{\Glspl{#1}}
-  \glsentrydesc{#1}.%
-  \par%
-}
 
 \tcbset{ornamented/.style={skin=ornamented,
   before={\begin{figure}[hb!]},
@@ -175,76 +153,33 @@ Days with a `\A' symbol show an encounter.
 Select the next encounter \vpageref{encI}.
 
 \foreach \d in {1,...,28}%
-  {
-  \ifnum\thefenestraDay=1%
-    \IfLabelExistsTF{wrathSection}{%
-      \vspace{\baselineskip}
-      \noindent%
-      `\glsentrysymbol{grummel}' indicates \pgls{storm}, \vpageref{wrathSection}.
-    }{}
-    \IfLabelExistsTF{encII}{%
-      \vspace{1\baselineskip}
-      \needspace{5\baselineskip}%
-      \noindent%
-      \bfseries\showCycle\mdseries:
-      encounters listed \vpageref{encII}.%
-      \par%
-    }{}
-  \fi%
-  \noindent
-  \thefenestraDay.~%
-  \ifnum\thefenestraDay>57%
-    \glsentrysymbol{grummel} %
-  \else%
-    \noteEncounter%
-  \fi\par%
-  \advanceTheDate[1]%
-  }
-
-\pagestyle{minizine}
-
-\setCycle{\month}{\day}
-
-\subsection*{\showCycle}%
-\showCycle
-\label{encI}
-\cycleDesc.
-
-\cyclePic
-
-\setcounter{segNo}{\month}
-
-\foreach \d in {1,...,27}%
   {%
-    \advanceTheDate[1]%
-    \stepcounter{almatrack}%
-    \ifnum\thefenestraDay>57%
-      \ifnum\thefenestraDay=58%
-        \needspace{5\baselineskip}%
-        \subsection{\Glsfmtname{storm}}
-        \label{wrathSection}%
-      \fi%
-        \wrath%
-      \addtocounter{almatrack}{-1}%
-    \else%
-      \ifnum\thefenestraDay=1%
-        \par%
-        \subsection*{\showCycle}%
-        \showCycle%
-        \label{encII}
-        \cycleDesc.\par%
-        \cyclePic%
-        \par%
-      \fi%
+    \stepDate%
+    \ifnum\thefenestraDay=1%
+      \appto{\encounterList}{New cycle!  \thecycle: \thefenestraDay.  }%
       \ifnum\thealmatrack>4%
-        \addtocounter{almatrack}{-5}%
-        \IfFileExists{encounters/enc_\thecycle_\thesegNo.tex}{}%
-          { \setcounter{segNo}{1}  }
-        \bigLine\par\noindent%
-        \input{encounters/enc_\thecycle_\thesegNo.tex}%
-        \par%
-        \addtocounter{segNo}{\value{r2c}}%
+        \addtocounter{almatrack}{-2}%
       \fi%
+    \fi%
+    \noindent
+    \thefenestraDay.~%
+    \ifnum\thefenestraDay>57%
+      \glsentrysymbol{grummel} %
+    \else%
+      \noteEncounter%
+    \fi%
+    \lightDots%
+    \par%
+    %%%%%%%%%%%
+    \stepcounter{almatrack}%
+    \ifnum\thealmatrack>3%
+      \IfFileExists{encounters/enc_\thecycle_\thesegNo}{}{\setcounter{segNo}{1}}%
+      \xappto{\encounterList}{\setcounter{segNoSpare}{\thesegNo}}
+      \gappto{\encounterList}{%
+        \input{encounters/enc_\thecycle_\thesegNoSpare.tex}%
+      }%
+      \stepcounter{segNo}%
+      \setcounter{almatrack}{0}%
     \fi%
   }
 
@@ -254,7 +189,7 @@ Select the next encounter \vpageref{encI}.
 
 \input{encounters/broch_\arabic{r2}.tex}
 
-\input{encounters/bothy_\arabic{r3}.tex}
+\encounterList
 
 \ifnum\thepage<12
   \input{encounters/bothy_\arabic{r3}.tex}
