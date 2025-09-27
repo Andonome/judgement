@@ -24,19 +24,27 @@
   \randomize%
   \randomize%
   \randomize%
+  \ifnum\thefenestraDay=1%
+    \xappto{\encounterList}{\setcounter{cycle}{\thecycle}}
+    \gappto{\encounterList}{\cyclePic}%
+  \fi%
   \setcounter{enc}{6}%
   \addtocounter{enc}{\thetemperature}%
-  \ifnum\thetn>0%
-    \addtocounter{enc}{\thetn}%
-    \ifnum\thetn>4%
-      \addtocounter{tn}{-5}%
-    \fi%
-  \fi%
-  \ifnum\theenc>\value{r12}%
-    \stepcounter{rn1t2}%
-    \A~\showInterval{\value{rn1t2}}%
+  \ifnum\thefenestraDay>57%
+    \glsentrysymbol{grummel} %
   \else%
-    \stepcounter{tn}%
+    \ifnum\thetn>0%
+      \addtocounter{enc}{\thetn}%
+      \ifnum\thetn>4%
+        \addtocounter{tn}{-5}%
+      \fi%
+    \fi%
+    \ifnum\theenc>\value{r12}%
+      \stepcounter{rn1t2}%
+      \A~\showInterval{\value{rn1t2}}%
+    \else%
+      \stepcounter{tn}%
+    \fi%
   \fi%
 }
 
@@ -50,6 +58,7 @@
 \togglefalse{genExamples}
 
 \newcommand\cyclePic{
+  \par%
   \ifcase\value{cycle}
     \pic{Irina/curiosity}
     \showGls{yonder}
@@ -156,18 +165,18 @@ Select the next encounter \vpageref{encI}.
   {%
     \stepDate%
     \ifnum\thefenestraDay=1%
-      \appto{\encounterList}{New cycle!  \thecycle: \thefenestraDay.  }%
       \ifnum\thealmatrack>4%
         \addtocounter{almatrack}{-2}%
       \fi%
     \fi%
     \noindent
     \thefenestraDay.~%
-    \ifnum\thefenestraDay>57%
-      \glsentrysymbol{grummel} %
-    \else%
-      \noteEncounter%
-    \fi%
+      \ifnum\thefenestraDay=57%
+        \ifnum\d>23%
+          \breakforeach%
+        \fi%
+      \fi%
+    \noteEncounter%
     \lightDots%
     \par%
     %%%%%%%%%%%
