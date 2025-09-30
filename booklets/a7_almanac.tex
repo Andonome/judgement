@@ -13,16 +13,15 @@
   \subsection{Encounters}
 }
 
-\newcommand\disasters{
-  \subsection{Disasters over the \Glsfmttext{storm}}
-}
+\newcommand\disasters{}
 
 \newcommand\wrath[1]{%
   \Glsentrytext{#1}
   \gappto{\disasters}{%
     \ifglsused{#1}{}{%
       \showGls{#1}
-    }
+      \glsunset{#1}
+    }%
   }
 }
 
@@ -46,8 +45,11 @@
   \ifnum\thefenestraDay>57%
     \glsentrysymbol{grummel} %
     \ifnum\thefenestraDay=58%
+      \gpreto{\disasters}{%
+        \subsection{Disasters over the \Glsfmttext{storm}}
+      }%
       \ifcase\thetemperature%
-        \wrath{coldsnap}
+        \wrath{cold}
       \or%
         \wrath{flood}
       \else%
@@ -80,6 +82,30 @@
   \fi%
 }
 
+\newcommand\noteEclipse{%
+  \ifcase\thecycle%
+    \ifnum\thefenestraDay=3%
+      eclipse
+    \fi%
+  \or%
+    \ifnum\thefenestraDay=30%
+      eclipse (15 hours)
+    \fi%
+  \or%
+    \ifnum\thefenestraDay=57%
+      eclipse
+    \fi%
+  \or%
+  \or%
+    \ifnum\thefenestraDay=1%
+      eclipse
+    \fi%
+  \else%
+    \ifnum\thefenestraDay=1%
+      eclipse
+    \fi%
+  \fi%
+}%
 
 \tcbset{ornamented/.style={skin=ornamented,
   before={\begin{figure}[hb!]},
@@ -209,6 +235,7 @@ Select the next encounter \vpageref{encI}.
         \fi%
       \fi%
     \noteEncounter%
+    \noteEclipse%
     \lightDots%
     \par%
     %%%%%%%%%%%
@@ -217,8 +244,8 @@ Select the next encounter \vpageref{encI}.
       \IfFileExists{encounters/enc_\thecycle_\thesegNo}{}{\setcounter{segNo}{1}}%
       \xappto{\encounterList}{\setcounter{segNoSpare}{\thesegNo}}
       \gappto{\encounterList}{%
-        \bigLine\par%
         \input{encounters/enc_\thecycle_\thesegNoSpare.tex}%
+        \bigLine\par%
       }%
       \stepcounter{segNo}%
       \setcounter{almatrack}{0}%
