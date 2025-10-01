@@ -45,9 +45,6 @@
   \ifnum\thefenestraDay>57%
     \glsentrysymbol{grummel} %
     \ifnum\thefenestraDay=58%
-      \gpreto{\disasters}{%
-        \subsection{Disasters over the \Glsfmttext{storm}}
-      }%
       \ifcase\thetemperature%
         \wrath{cold}
       \or%
@@ -82,27 +79,33 @@
   \fi%
 }
 
-\newcommand\noteEclipse{%
+\newcommand\addEclipes[1][]{%
+  \Gls{eclipse} (\vpageref{disasters}#1)%
+  \gappto{\disasters}{\showGls{eclipse}}
+}
+
+
+\newcommand\checkEclipse{%
   \ifcase\thecycle%
     \ifnum\thefenestraDay=3%
-      eclipse
+      \addEclipes
     \fi%
   \or%
     \ifnum\thefenestraDay=30%
-      eclipse (15 hours)
+      \addEclipes[, lasts 15 hours]
     \fi%
   \or%
     \ifnum\thefenestraDay=57%
-      eclipse
+      \addEclipes
     \fi%
   \or%
   \or%
     \ifnum\thefenestraDay=1%
-      eclipse
+      \addEclipes
     \fi%
   \else%
     \ifnum\thefenestraDay=1%
-      eclipse
+      \addEclipes
     \fi%
   \fi%
 }%
@@ -160,7 +163,7 @@
 \miniCover{Almanac}{
   {
     \scshape\flushright\nobreak
-    \Gls{gmt} \arabic{fenestraYear} \showCycle, day \arabic{fenestraDay}
+    \Glsfmttext{gmt} \arabic{fenestraYear}, \showCycle, day \arabic{fenestraDay}
   }
   \par
   \ifcase\value{cycle}
@@ -235,7 +238,7 @@ Select the next encounter \vpageref{encI}.
         \fi%
       \fi%
     \noteEncounter%
-    \noteEclipse%
+    \checkEclipse%
     \lightDots%
     \par%
     %%%%%%%%%%%
@@ -254,7 +257,11 @@ Select the next encounter \vpageref{encI}.
 
 \pagestyle{minizine}
 
-\disasters
+\ifdefempty{\disasters}{}{
+  \subsection{Disasters}
+  \label{disasters}
+  \disasters
+}
 
 \encounterList
 
