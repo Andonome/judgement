@@ -219,8 +219,6 @@ This is
 \fi%
 Today is day \thefenestraDay, and these are the days ahead.
 
-Days with a `\A' symbol show an encounter.
-Select the next encounter \vpageref{encI}.
 
 \foreach \d in {1,...,28}%
   {%
@@ -232,11 +230,11 @@ Select the next encounter \vpageref{encI}.
     \fi%
     \noindent
     \thefenestraDay.~%
-      \ifnum\thefenestraDay=57%
-        \ifnum\d>23%
-          \breakforeach%
-        \fi%
+    \ifnum\thefenestraDay=57%
+      \ifnum\d>23%
+        \breakforeach%
       \fi%
+    \fi%
     \noteEncounter%
     \checkEclipse%
     \lightDots%
@@ -256,6 +254,15 @@ Select the next encounter \vpageref{encI}.
   }
 
 \pagestyle{minizine}
+
+\begin{nametable}{Legend}
+  \A & Encounter at\ldots \\
+  \gls{morning} & \glsentrydesc{morning} \\
+  \gls{afternoon} & \glsentrydesc{afternoon} \\
+  \gls{evening} & \glsentrydesc{evening} \\
+  \gls{night} & \glsentrydesc{night} \\
+\end{nametable}
+
 
 \ifdefempty{\disasters}{}{
   \subsection{Disasters}
