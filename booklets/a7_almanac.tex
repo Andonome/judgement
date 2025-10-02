@@ -209,7 +209,7 @@
 \noindent
 The black dot on the cover represents \gls{fenestra}.
 This is
-\gls{cycle}~\Roman{track}, when \gls{fenestra}
+\gls{cycle}~\Roman{track} (known as `\stateCycle'), when \gls{fenestra}
 \ifcase\thecycle%
   circles behind the \gls{ainumar}, and cooling rapidly.
 \or%
@@ -228,7 +228,7 @@ This is
 \else%
   cools down, as it moves away from the Sun, at the end of the year.
 \fi%
-Today is day \thefenestraDay\ of \stateCycle, and these are the days ahead.
+Today is day \thefenestraDay, and these are the days ahead.
 
 \vspace{2\baselineskip}
 
@@ -305,6 +305,8 @@ Today is day \thefenestraDay\ of \stateCycle, and these are the days ahead.
 \subsection{Cosmology}
 \label{disasters}
 
+\cyclePic
+
 \foreach \term in {cOne,cTwo,cThree,cFour,cFive,cSix,eclipse,coldSnap,earthquake,flood,hurricane,storm,heatwave,landslide,grummel}%
   {
     \ifglsused{\term}{\showGls{\term}}{}
@@ -353,6 +355,7 @@ Today is day \thefenestraDay\ of \stateCycle, and these are the days ahead.
   \input{encounters/bothy_\arabic{r3}.tex}
 \fi
 
+\null
 \ifnum\thepage<14
   \clearpage\null
 \fi
