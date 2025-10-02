@@ -9,20 +9,34 @@
 \setcounter{almatrack}{0}
 \setcounter{tn}{-22}
 
-\newcommand\encounterList{
-  \subsection{Encounters}
+\newcommand\stateCycle{%
+  \ifcase\thecycle%
+    \gls{cOne}%
+  \or%
+    \gls{cTwo}%
+  \or%
+    \gls{cThree}%
+  \or%
+    \gls{cFour}%
+  \or%
+    \gls{cFive}%
+  \else%
+    \gls{cSix}%
+  \fi%
 }
 
-\newcommand\disasters{}
+\newcommand\encounterList{
+  \ifnum\thefenestraDay<57
+  \subsection*{Encounters in \showCycle}
+  \fi
+}
 
 \newcommand\wrath[1]{%
-  \Glsentrytext{#1}
-  \gappto{\disasters}{%
-    \ifglsused{#1}{}{%
-      \showGls{#1}
-      \glsunset{#1}
-    }%
-  }
+  \ifnum\thefenestraDay=58%
+    \Gls{storm} begins with \pgls{#1}
+  \else%
+    \Gls{#1}
+  \fi%
 }
 
 % Does the day have an encounter?  If so, mark it with the '\A' symbol for
@@ -36,10 +50,6 @@
   \randomize%
   \randomize%
   \randomize%
-  \ifnum\thefenestraDay=1%
-    \xappto{\encounterList}{\setcounter{cycle}{\thecycle}}
-    \gappto{\encounterList}{\cyclePic}%
-  \fi%
   \setcounter{enc}{6}%
   \addtocounter{enc}{\thetemperature}%
   \ifnum\thefenestraDay>57%
@@ -80,8 +90,7 @@
 }
 
 \newcommand\addEclipes[1][]{%
-  \Gls{eclipse} (\vpageref{disasters}#1)%
-  \gappto{\disasters}{\showGls{eclipse}}
+  \Gls{eclipse}#1%
 }
 
 
@@ -92,7 +101,7 @@
     \fi%
   \or%
     \ifnum\thefenestraDay=30%
-      \addEclipes[, lasts 15 hours]
+      \addEclipes[ (lasts 15 hours)]
     \fi%
   \or%
     \ifnum\thefenestraDay=57%
@@ -217,8 +226,9 @@ This is
 \else%
   cools down, as it moves away from the Sun, at the end of the year.
 \fi%
-Today is day \thefenestraDay, and these are the days ahead.
+Today is day \thefenestraDay\ of \stateCycle, and these are the days ahead.
 
+\vspace{2\baselineskip}
 
 \foreach \d in {1,...,28}%
   {%
@@ -227,6 +237,14 @@ Today is day \thefenestraDay, and these are the days ahead.
       \ifnum\thealmatrack>4%
         \addtocounter{almatrack}{-2}%
       \fi%
+    \vspace{1\baselineskip}
+    A new \gls{cycle} begins: \stateCycle.
+    Use the encounters \vpageref{encII}.
+    \gappto{\encounterList}{\advanceTheDate[60] \subsection*{Encounters in \showCycle}}
+
+  
+    \gappto{\encounterList}{\label{encII}}
+    \par
     \fi%
     \noindent
     \thefenestraDay.~%
@@ -261,6 +279,8 @@ Today is day \thefenestraDay, and these are the days ahead.
   \gls{afternoon} & \glsentrydesc{afternoon} \\
   \gls{evening} & \glsentrydesc{evening} \\
   \gls{night} & \glsentrydesc{night} \\
+  \ifglsused{storm}{\glssymbol{storm} & \glsfmtname{storm} \\}
+  \hline
 \end{nametable}
 
 \clearpage
@@ -270,16 +290,17 @@ Today is day \thefenestraDay, and these are the days ahead.
   \showGls{bothy}
   \showGls{broch}
 
-\ifdefempty{\disasters}{}{
-  \label{disasters}
-  \disasters
-}
+\setCycle{\month}{\day}
+\subsection{Cosmology}
+\label{disasters}
 
-{
-  % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
-  \toggletrue{intro}
-  \showGls{harvesting}
-}
+\foreach \term in {cOne,cTwo,cThree,cFour,cFive,cSix,eclipse,coldSnap,earthquake,flood,hurricane,storm,heatwave,landslide,grummel}%
+  {
+    \ifglsused{\term}{\showGls{\term}}{}
+  }
+
+\needspace{6\baselineskip}
+\subsection{\Glsfmtname{monster}}
 
   \IfLabelExistsTF{\jobname:harvestBasilisk}{
     \showGls{basilisk}
@@ -305,6 +326,12 @@ Today is day \thefenestraDay, and these are the days ahead.
     \showGls{woodspy}
   }{}
 
+{
+  % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
+  \toggletrue{intro}
+  \showGls{harvesting}
+}
+
 \encounterList
 
 \subsection{\Glsfmtname{bothy} \& \Glsfmtname{broch}}
@@ -315,5 +342,8 @@ Today is day \thefenestraDay, and these are the days ahead.
   \input{encounters/bothy_\arabic{r3}.tex}
 \fi
 
+\ifnum\thepage<14
+  \clearpage\null
+\fi
 
 \end{document}
