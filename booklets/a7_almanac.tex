@@ -263,12 +263,47 @@ Today is day \thefenestraDay, and these are the days ahead.
   \gls{night} & \glsentrydesc{night} \\
 \end{nametable}
 
+\clearpage
+
+\subsection{Glossary}
+
+  \showGls{bothy}
+  \showGls{broch}
 
 \ifdefempty{\disasters}{}{
-  \subsection{Disasters}
   \label{disasters}
   \disasters
 }
+
+{
+  % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
+  \toggletrue{intro}
+  \showGls{harvesting}
+}
+
+  \IfLabelExistsTF{\jobname:harvestBasilisk}{
+    \showGls{basilisk}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestGriffin}{
+    \showGls{griffin}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestMshrooms}{
+    \showGls{marchingMushroom}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestDigger}{
+    \showGls{digger}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestCrawler}{
+    \showGls{crawler}
+  }{}
+
+  \IfLabelExistsTF{\jobname:harvestWoodspy}{
+    \showGls{woodspy}
+  }{}
 
 \encounterList
 
@@ -280,52 +315,5 @@ Today is day \thefenestraDay, and these are the days ahead.
   \input{encounters/bothy_\arabic{r3}.tex}
 \fi
 
-\pagebreak
-
-\ifnum\thepage<14
-  \subsection{Glossary}
-
-  \ifnum\thepage<13
-    \showGls{bothy}
-    \showGls{broch}
-  \fi
-
-  {
-    % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
-    \toggletrue{intro}
-    \showGls{harvesting}
-  }
-
-    \IfLabelExistsTF{\jobname:harvestBasilisk}{
-      \showGls{basilisk}
-    }{}
-
-    \IfLabelExistsTF{\jobname:harvestGriffin}{
-      \showGls{griffin}
-    }{}
-
-    \IfLabelExistsTF{\jobname:harvestMshrooms}{
-      \showGls{marchingMushroom}
-    }{}
-
-    \IfLabelExistsTF{\jobname:harvestDigger}{
-      \showGls{digger}
-    }{}
-
-    \IfLabelExistsTF{\jobname:harvestCrawler}{
-      \showGls{crawler}
-    }{}
-
-    \IfLabelExistsTF{\jobname:harvestWoodspy}{
-      \showGls{woodspy}
-    }{}
-
-  \ifnum\thepage<14
-    \clearpage
-  \fi
-\else
-  \null
-  \newpage
-\fi
 
 \end{document}
