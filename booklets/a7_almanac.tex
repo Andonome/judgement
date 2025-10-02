@@ -7,6 +7,7 @@
 \externalReferent{judgement}
 \newcounter{almatrack}
 \setcounter{almatrack}{0}
+\newcounter{randomEncounter}
 \setcounter{tn}{-22}
 
 \newcommand\stateCycle{%
@@ -27,7 +28,8 @@
 
 \newcommand\encounterList{
   \ifnum\thefenestraDay<57
-  \subsection*{Encounters in \showCycle}
+    \subsection*{Encounters in \showCycle}
+    \setcounter{randomEncounter}{0}%
   \fi
 }
 
@@ -240,7 +242,11 @@ Today is day \thefenestraDay\ of \stateCycle, and these are the days ahead.
     \vspace{1\baselineskip}
     A new \gls{cycle} begins: \stateCycle.
     Use the encounters \vpageref{encII}.
-    \gappto{\encounterList}{\advanceTheDate[60] \subsection*{Encounters in \showCycle}}
+    \gappto{\encounterList}{%
+      \advanceTheDate[60]
+      \subsection*{Encounters in \showCycle}
+      \setcounter{randomEncounter}{0}%
+    }
 
   
     \gappto{\encounterList}{\label{encII}}
@@ -263,8 +269,13 @@ Today is day \thefenestraDay\ of \stateCycle, and these are the days ahead.
       \IfFileExists{encounters/enc_\thecycle_\thesegNo}{}{\setcounter{segNo}{1}}%
       \xappto{\encounterList}{\setcounter{segNoSpare}{\thesegNo}}
       \gappto{\encounterList}{%
+        \par%
+        \stepcounter{randomEncounter}%
+        \vspace{1\baselineskip}%
+        \needspace{4\baselineskip}%
+        \qquad{\scshape Encounter \therandomEncounter}%
+        \quad\bigLine\par
         \input{encounters/enc_\thecycle_\thesegNoSpare.tex}%
-        \bigLine\par%
       }%
       \stepcounter{segNo}%
       \setcounter{almatrack}{0}%
