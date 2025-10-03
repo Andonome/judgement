@@ -239,13 +239,27 @@ Today is day \thefenestraDay, and these are the days ahead.
       \ifnum\thealmatrack>4%
         \addtocounter{almatrack}{-2}%
       \fi%
-    \vspace{1\baselineskip}
+    \vspace{1\baselineskip}\noindent
     A new \gls{cycle} begins: \stateCycle.
     Use the encounters \vpageref{encII}.
     \gappto{\encounterList}{%
       \advanceTheDate[60]
       \subsection*{Encounters in \showCycle}
-      \setcounter{randomEncounter}{0}%
+      The \gls{storm} settles, \showTemperature\ wind in the forest.
+      \MakeUppercase{\expandafter}\
+      \ifcase\thetemperature%%
+        Snow falls gently.
+        Traders shiver.
+      \or%
+        Birds chirp.
+        Small, shrivelled leaves.
+      \or%
+        Wagon wheels squeak.
+        The \gls{ainumar} shines bright throughout the night.
+      \else%
+        Insect buzz.
+        The engorged \gls{ainumar} lights the ground at night.
+      \fi%
     }
 
   
@@ -345,6 +359,7 @@ Today is day \thefenestraDay, and these are the days ahead.
   \showGls{harvesting}
 }
 
+\label{encI}
 \encounterList
 
 \subsection{\Glsfmtname{bothy} \& \Glsfmtname{broch}}
