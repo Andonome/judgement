@@ -1,6 +1,7 @@
-\stepcounter{footnote}
 \subsubsection{Wondershine}%
-\footnotemark[\thefootnote]
+\ifnum\thepage<14%
+  \footnote{Humans believe the forest eats the best things in life, so giving something a beatiful name has become a kind of curse.}%
+\fi%
 is \pgls{broch} which sits in an idyllic clearing,
 \ifcase\thetemperature%
   with flat, white, snow, for a hundred steps in every direction, next to a frozen pool.
@@ -8,7 +9,7 @@ is \pgls{broch} which sits in an idyllic clearing,
   bursting with flowers, which surround a shimmering pool.
 \fi%
 It has all the amenities --- a nearby stream, a privy on the stairway, and twenty halberds for anyone who needs a weapon.
-\sidebox[50]{
+\sidebox[40]{
   \begin{boxtable}
     $\arabic{r6} \times$ & \rations \\
     \randomize
@@ -23,7 +24,6 @@ It has all the amenities --- a nearby stream, a privy on the stairway, and twent
 Unfortunately, too many locals have been taken by the forest, and they blame the \glspl{guard}, especially \Gls{jotter}~\composeHumanName, for the lack of aid.
 As a result, the nearby \glspl{village} will not sell anything to \glspl{guard} who frequent Droch, so the \gls{broch} has no arrows, and has nearly run out of food.
 
-\footnotetext{Humans believe the forest eats the best things in life, so giving something a beatiful name has become a kind of curse.}
 The \gls{broch} currently hosts twelve \glspl{guard}.
 Three \glspl{gDigger} stay here while they heal from their injuries,
 three senior members stay because they don't like going out (\pgls{thane}, \pgls{builder}, and the \gls{jotter}), 

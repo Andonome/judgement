@@ -28,12 +28,14 @@
 
 \newcommand\encounterList{
   \ifnum\thefenestraDay<57
+    \needspace{9\baselineskip}
     \subsection*{Encounters in \showCycle}
     \setcounter{randomEncounter}{0}%
   \fi
 }
 
 \newcommand\wrath[1]{%
+  \label{storm}%
   \ifnum\thefenestraDay=58%
     \Gls{storm} begins with \pgls{#1}
   \else%
@@ -206,14 +208,26 @@
 \setcounter{track}{\thecycle}%
 \stepcounter{track}%
 
-\noindent
+\noindent%
 The large circle on the cover is a Sun.
 The \gls{ainumar} is a massive planet, with a raging storm on its face.
 The black dot is \gls{fenestra} --- a moon, slightly smaller than Earth.
 
+\sidebox[4]{
+  \vspace{-1\baselineskip}
+  \scriptsize
+  \begin{nametable}{Legend}
+    \A & Encounter at\ldots \\
+    \gls{morning} & \glsentrydesc{morning} \\
+    \gls{afternoon} & \glsentrydesc{afternoon} \\
+    \gls{evening} & \glsentrydesc{evening} \\
+    \gls{night} & \glsentrydesc{night} \\
+    \IfLabelExistsTF{storm}{\glssymbol{storm} & \glsfmtname{storm} \\}{}
+  \end{nametable}
+}%
 Today is \gls{cycle}~\Roman{track} (known as `\stateCycle'), when \gls{fenestra}
 \ifcase\thecycle%
-  circles behind the \gls{ainumar}, and cooling rapidly.
+  cools down as it begins its journey to the dark behind the \gls{ainumar}, away from the Sun.
 \or%
   moves behind the \gls{ainumar}, away from the Sun.
   \ifnum\thefenestraDay<4%
@@ -233,7 +247,7 @@ Today is \gls{cycle}~\Roman{track} (known as `\stateCycle'), when \gls{fenestra}
 Today is day \thefenestraDay, and these are the days ahead.
 Whenever a day has an encounter, select the next \vpageref{encI}.
 
-\vspace{2\baselineskip}
+\medskip
 
 \foreach \d in {1,...,28}%
   {%
@@ -243,8 +257,8 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
         \addtocounter{almatrack}{-2}%
       \fi%
     \vspace{1\baselineskip}\noindent
-    A new \gls{cycle} begins: \stateCycle.
-    Use the encounters \vpageref{encII}.
+    A new \gls{cycle} begins.
+    Use the encounters for \stateCycle\ \vpageref{encII}.
     \gappto{\encounterList}{%
       \advanceTheDate[60]
       \subsection*{Encounters in \showCycle}
@@ -288,10 +302,10 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
       \gappto{\encounterList}{%
         \par%
         \stepcounter{randomEncounter}%
-        \vspace{1\baselineskip}%
-        \needspace{4\baselineskip}%
+        \bigLine\par
+        \needspace{2\baselineskip}%
         \qquad{\scshape Encounter \therandomEncounter}%
-        \quad\bigLine\par
+        \quad\bigLine\par\noindent%
         \input{encounters/enc_\thecycle_\thesegNoSpare.tex}%
       }%
       \stepcounter{segNo}%
@@ -300,16 +314,6 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
   }
 
 \pagestyle{minizine}
-
-\begin{nametable}{Legend}
-  \A & Encounter at\ldots \\
-  \gls{morning} & \glsentrydesc{morning} \\
-  \gls{afternoon} & \glsentrydesc{afternoon} \\
-  \gls{evening} & \glsentrydesc{evening} \\
-  \gls{night} & \glsentrydesc{night} \\
-  \ifglsused{storm}{\glssymbol{storm} & \glsfmtname{storm} \\}
-  \hline
-\end{nametable}
 
 \clearpage
 
@@ -364,6 +368,8 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
 
 \label{encI}
 \encounterList
+
+\clearpage
 
 \subsection{\Glsfmtname{bothy} \& \Glsfmtname{broch}}
 
