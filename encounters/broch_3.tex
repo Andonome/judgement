@@ -1,0 +1,67 @@
+\subsubsection{Spatloch}%
+overlooks a three mile salt-loch, half a mile downhill.
+The surrounding coast hosts short, unusual, plants which can withstand the salt deposited by the heavy waves over \gls{storm}.
+
+\Pgls{village} sits below, hiding from the sea behind a hundred \glspl{step} of the forest.
+One path winds out to a clearing where people come to fish, or place
+\ifnum\thefenestraDay>40%
+	tarpaulins between trees, ready to catch the salty waves over the coming \gls{storm} (they take in enough to supply the local town).
+\else%
+  lobster-traps%
+\fi.%
+
+\Gls{foraging} for food along the blasted coast is pointless.
+But the coast has other plants, so a successful \glspl{foraging} roll reveals
+\ifcase\thetemperature%
+	a Mage Oak tree,\exRef{judgement}{Judgement}{mage_oak}
+	which spills mana, granting an additional 3~\glspl{mp} over \pgls{interval}.
+\or%
+	a bloodwood tree,\exRef{judgement}{Judgement}{bloodwood}
+	which fetches a high price if one can find the right buyer.
+\or%
+	seekmist\exRef{judgement}{Judgement}{seekmist}
+	-- a patch of sticky seeds which cause hallucinations, but also serve as an Air \gls{ingredient}.
+\else%
+	downroot trees,\exRef{judgement}{Judgement}{bloodwood}
+	which can heal 2~\glspl{hp} when eaten, but inflict \pgls{attribute}~Penalty of -1 for three days.
+\fi%
+
+Spatloch \gls{broch} maintains a workshop on the upper floor, where farmers process salt and others process \glspl{ingredient} (\glspl{mixer} from \pgls{templeOfSickness} nearby visit regularly).
+The workshop grants a +2~Bonus to making \glspl{boon} and \glspl{elixir}.
+
+\Gls{jotter}~\composeHumanName\ spends each spare moment pondering the latest malady;
+\ifcase\thecycle%
+  bards continuously arrive to compose songs to the sea (which have become very fashionable lately).
+  The noise often attracts \glspl{monster} to the \gls{village} downhill when the \glspl{guard} have not prepared any defence.
+  A dozen extra people also puts a strain on the local food supplies.
+
+  \humanbard
+  \humanbard
+\or%
+  \pgls{ghast} wanders the frozen lands, occasionally killing farmers.
+  \currentName\ has no idea where it hides, or when it might strike again, and the farmers feel terrified.
+
+  \ghast
+\or%
+  an acidic ooze stalks the area at night, sometimes attacking the \gls{village}.
+  It does not have the intelligence to flee from an attack, but it moves constantly, and hides during daylight, so nobody has been able to kill it.
+
+  \jelly
+\or%
+  a mutated cat stalks the coast.
+  It has killed two people, and if the \gls{templeOfBeasts} does not kill it, the farmers threaten to make trouble.
+
+  \morphcat
+\or%
+  the stirge population has exploded over \gls{cFive}.
+  At least three nests lie close enough to the \gls{broch} to harrass or kill visitors, and the \gls{broch}'s reputation has suffered.
+
+  \stirgeSwarm
+  \stirgeSwarm
+\else%
+  Every few days, a dragon flies overhead.
+  Nobody knows what it wants, where it goes, or why has not disturbed anyone yet.
+  But the \gls{broch}'s reputation has suffered, and \glspl{mixer} come less regularly after the sighting began.
+
+  \dragon
+\fi%
