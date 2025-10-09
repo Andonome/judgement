@@ -369,19 +369,26 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
 \label{encI}
 \encounterList
 
+\setcounter{almatrack}{\value{r3}}
+
 \clearpage
 
 \subsection{\Glsfmtname{bothy} \& \Glsfmtname{broch}}
 
-\input{encounters/broch_\arabic{r3}.tex}
+\stepcounter{almatrack}%
+\IfFileExists{encounters/broch_\thealmatrack.tex}{}{\setcounter{almatrack}{1}}%
+\input{encounters/broch_\thealmatrack.tex}
 
-\ifnum\thepage<12
-  \input{encounters/bothy_\arabic{r3}.tex}
-\fi
+\Repeat{2}{\ifnum\thepage<14%
+  \stepcounter{almatrack}%
+  \IfFileExists{encounters/bothy_\thealmatrack.tex}{}{\setcounter{almatrack}{1}}%
+  \input{encounters/bothy_\thealmatrack.tex}%
+\fi}
 
 \null
+
 \ifnum\thepage<14
-  \clearpage\null
+  \pagebreak\null
 \fi
 
 \end{document}
