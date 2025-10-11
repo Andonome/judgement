@@ -379,15 +379,21 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
 
 \setcounter{almatrack}{\value{r3}}
 
-\clearpage
+\ifnum\thepage<13%
+  \subsection{Hearths at the \Glsfmttext{edge}}
 
-\subsection{\Glsfmtname{bothy} \& \Glsfmtname{broch}}
+  \stepcounter{almatrack}%
+  \IfFileExists{encounters/broch_\thealmatrack.tex}{}{\setcounter{almatrack}{1}}%
+  \input{encounters/broch_\thealmatrack.tex}
+\else%
+  \ifnum\thepage<14%
+    \subsection{\Glsfmtname{bothy}}
+    \IfFileExists{encounters/bothy_\thealmatrack.tex}{}{\setcounter{almatrack}{1}}%
+    \input{encounters/bothy_\thealmatrack.tex}%
+  \fi%
+\fi%
 
-\stepcounter{almatrack}%
-\IfFileExists{encounters/broch_\thealmatrack.tex}{}{\setcounter{almatrack}{1}}%
-\input{encounters/broch_\thealmatrack.tex}
-
-\Repeat{2}{\ifnum\thepage<14%
+\Repeat{2}{\ifnum\thepage<13%
   \stepcounter{almatrack}%
   \IfFileExists{encounters/bothy_\thealmatrack.tex}{}{\setcounter{almatrack}{1}}%
   \input{encounters/bothy_\thealmatrack.tex}%
