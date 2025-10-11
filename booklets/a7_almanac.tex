@@ -262,11 +262,15 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
     \gappto{\encounterList}{%
       \advanceTheDate[60]
       \subsection*{Encounters in \showCycle}
-      The \gls{storm} settles, \showTemperature\ wind in the forest.
-      \MakeUppercase{\expandafter}\
+      The \gls{storm} settles.
+      \ifodd\thecycle Sounds of \else Branches swing to a \fi\showTemperature\ wind through a crowded forest.
       \ifcase\thetemperature%%
         Snow falls gently.
-        Traders shiver.
+        \ifodd\month%
+          Traders shiver.
+        \else%
+          Footsteps crackle.
+        \fi%
       \or%
         Birds chirp.
         Small, shrivelled leaves.
@@ -274,7 +278,11 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
         Wagon wheels squeak.
         The \gls{ainumar} shines bright throughout the night.
       \else%
-        Insect buzz.
+        \ifodd\month%
+          Insects buzz.
+        \else%
+          Bestial cacophony from the \gls{edge}.
+        \fi%
         The engorged \gls{ainumar} lights the ground at night.
       \fi%
     }
