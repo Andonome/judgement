@@ -412,7 +412,7 @@
   \or%
     \Glspl{horseDrops}
   \else%
-    \nameref{thorny_thickets}
+    \Glspl{thornyThicket}
   \fi%
 }
 
@@ -874,10 +874,9 @@
   \end{dlist}
 }
 
-\newcommand\newBeast[4][\A]{
-  \subsubsection[#2 (#1): #4.]{#1~#2}
-  \label{#3}
-  \index{#2 (#1)}
+\newcommand\newBeast[2]{%
+  \subsubsection{#1}%
+  \label{#2}%
 }
 
 \newcommand\exampleGoblinEnc{
