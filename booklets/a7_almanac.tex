@@ -8,7 +8,7 @@
 \newcounter{almatrack}
 \setcounter{almatrack}{0}
 \newcounter{randomEncounter}
-\setcounter{tn}{-22}
+\setcounter{tn}{0}
 
 \newcommand\stateCycle{%
   \ifcase\thecycle%
@@ -59,6 +59,7 @@
   \ifnum\thefenestraDay>57%
     \glsentrysymbol{grummel} %
     \ifnum\thefenestraDay=58%
+      \setcounter{tn}{0}%
       \ifcase\thetemperature%
         \wrath{coldSnap}
       \or%
@@ -80,15 +81,18 @@
   \else%
     \ifnum\thetn>0%
       \addtocounter{enc}{\thetn}%
-      \ifnum\thetn>4%
-        \addtocounter{tn}{-5}%
-      \fi%
+    \else%
     \fi%
     \ifnum\theenc>\value{r12}%
-      \stepcounter{rn1t2}%
-      \A~\showInterval{\value{rn1t2}}%
+      \ifnum\thetn>-18%
+        \stepcounter{rn1t2}%
+        \A~\showInterval{\value{rn1t2}}%
+        \addtocounter{tn}{-4}%
+      \else%
+        \setcounter{tn}{0}%
+      \fi%
     \else%
-      \stepcounter{tn}%
+      \addtocounter{tn}{1}%
     \fi%
   \fi%
 }
