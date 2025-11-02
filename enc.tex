@@ -158,6 +158,7 @@ Which creatures are active depends on the \gls{cycle}'s temperature.
   }
 \end{boxtable}
 
+\bigbreak
 \setcounter{temperature}{0}
 \paragraph{During \showTemperature\ \gls{cTwo}}
 encounters use the first $1D6$ to find the number of days until the encounter, the second $1D6$ for the result, and the last to determine the number.%
@@ -234,6 +235,12 @@ give the \gls{gm} an impartial way to rule when antagonists flee from combat.
 At the start of an encounter, roll $2D6$ and leave the result on the table.
 If the creature has more \glspl{hp} than the roll, it attacks; otherwise, it watches quietly.
 
+
+\Glspl{crawler} often have 10~\glspl{hp}, so they often attack people the moment they spot them.
+\Glspl{griffin} have fewer \glspl{hp} than \glspl{crawler}, so they are more likely to stalk the party, or simply leave.
+And goblins might have only 5 or 6~\glspl{hp} -- they know how small they are, and prefer to spend time laying traps, or stealing equipment, rather than engaging directly.
+Every \gls{hp} a creature loses could prompt it to turn and flee, so sometimes only wounded creatures will flee, while others keep fighting.
+
 \sidebox{
   \begin{boxtable}
     \textbf{Roll} & \textbf{\glsfmtlongpl{hp}} \\
@@ -245,12 +252,6 @@ If the creature has more \glspl{hp} than the roll, it attacks; otherwise, it wat
     \twoDice{8} &  2 (\textit{RUN!}) \\
   \end{boxtable}
 }
-
-\Glspl{crawler} often have 10~\glspl{hp}, so they often attack people the moment they spot them.
-\Glspl{griffin} have fewer \glspl{hp} than \glspl{crawler}, so they are more likely to stalk the party, or simply leave.
-And goblins might have only 5 or 6~\glspl{hp} -- they know how small they are, and prefer to spend time laying traps, or stealing equipment, rather than engaging directly.
-Every \gls{hp} a creature loses could prompt it to turn and flee, so sometimes only wounded creatures will flee, while others keep fighting.
-
 On a tie, the creature pauses to reassess the situation.
 A single \gls{crawler} eyeing up a party might display its claws, then observe their reactions; if the troupe do nothing to change the situation (such as casting a spell, or making a loud noise) then the creature rolls again.
 
@@ -357,7 +358,6 @@ mean the \gls{jotter} will promote the lowest-ranking member of the troupe, or p
 \footnote{Many of the \glsentrytext{guard} actively avoid gaining any kind of rank, as it only leads to more difficult duties.}
 \index{Promotion}
 
-\null
 \begin{itemize}
   \item
   Roll $1D3$ for \glspl{fodder}.
@@ -390,7 +390,6 @@ Add a bonus for rank, as before.
 \Glspl{broch} often run short on supplies, especially when they don't have many \glspl{village} nearby.
 Once the \glspl{pc} arrive at \pgls{broch}, make a roll to see what it lacks.
 
-\null
 \brochDerths
 
 If an area suffers from poverty and death, it always affects supplies to the \glspl{broch}.
@@ -501,10 +500,10 @@ Roll $3D6$ -- the \glspl{pc} can order any of these meals.
   \menuItem{Griffin-wing}{freshly killed this morning, after the \gls{griffin} tried to fly away with a gnomish patron.}
   \menuItem{Mystery-stew}{why are you hesitating?
   It goes rotten quick, so get eating!
-  \footnote{\Glsfmttext{crawler} `meat' (webbing as sauce!)}
+  \hint{\Glsfmttext{crawler} `meat' (webbing as sauce!)}
   }
     \menuItem{Sunrise Soup}{the chef found a new plant this morning, and he's already learning how to cook it!
-    \footnote{In fact this is \nameref{uproot}, see \autopageref{uproot}, for the effects.}
+    \hint{In fact this is \nameref{uproot}, see \autopageref{uproot}, for the effects.}
     }
   \menuItem{Deer}{thank the man in green, sitting in the corner -- he caught it this morning.}
   \ifodd\value{r4}
@@ -546,7 +545,6 @@ Roll $3D6$ for the rest, and accept the unique results.
 When looking for a legal verdict, in the \gls{court} the accuser and accused make speeches, and make a resisted roll of \roll{Charisma}{Empathy}.%
 \footnote{See \autopageref{pitOfJustice} for the building's structure.}
 
-%\null
 \begin{itemize}
   \item
   The accuser always gets +1.
@@ -568,7 +566,6 @@ When looking for a legal verdict, in the \gls{court} the accuser and accused mak
 
 The jester is fickle, the crowds love a twist, and the \gls{warden}'s patience grows thin.
 
-\null
 \begin{description}
   \item[A successful Accusation]
   means a roll for punishment.
@@ -598,8 +595,8 @@ The jester is fickle, the crowds love a twist, and the \gls{warden}'s patience g
     To everyone's shock, the \gls{warden} agrees!
   \item
   The accused seems like capable person\ldots Capable of violence!
-  Time to join the \gls{guard} as fodder.%
-  \footnote{See \autopageref{fodder}. Anyone already in the \gls{guard} becomes demoted, but has no other punishment.}
+  Time to join the \gls{guard} as fodder.
+  \hint{See \autopageref{fodder}. Anyone already in the \gls{guard} becomes demoted, but has no other punishment.}
   \item
   Death by irony!
   The accused will be killed by the very thing they inflicted on others.
