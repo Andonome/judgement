@@ -397,28 +397,14 @@ In this case, you might roll two dice at each \gls{broch} to see what's missing,
 
 \end{multicols}
 
-
 \section{Emergent Situations}
 \label{roadEncounters}
 
 \begin{multicols}{2}
 
 \noindent
-The \glspl{pc} will find more trouble than monsters as they travel.
-Whenever a journey ends, a situation begins.
-
-\begin{itemize}
-  \item
-  \Glspl{bothy}: \vpageref{bothyEvents}.
-  \item
-  \Glspl{village}: \vpageref{villageEvents}.
-  \item
-  \Glspl{lonelyTavern}: \vpageref{lonelyTaverns}.
-  \item
-  Town: \vpageref{townEvents}.
-  \item
-  \Glspl{court}: \vpageref{courtVerdicts}.
-\end{itemize}
+The \glspl{pc} will find more trouble than \glspl{monster} as they travel.
+Wherever a journey ends, a situation begins.
 
 \subsubsection{\Glsfmtplural{bothy}}
 \label{bothyEvents}
@@ -464,8 +450,8 @@ Roll $1D6$ to find this \gls{cycle}'s barkeep (they change all the time):
 
 \begin{dlist}
   \item
-  A veteran of the \gls{guard}, with a hundred war-stories. Of course
-  when he tells them, nobody can get a drink, so don't ask!
+  A retired \gls{thane}, with a hundred war-stories.
+  Of course when he tells them, nobody can get a drink, so don't ask!
   \item
   Someone from point 4 on the map, hiding here with a bounty on their head for thieving from \pgls{warden}.
   \item
@@ -527,7 +513,16 @@ Roll $3D6$ for the rest, and accept the unique results.
   \item
   An elf who doesn't speak the \gls{tradeTongue}.
   \item
-  \Pgls{mixer} from the \gls{templeOfSickness}, on a mission to recruit from the \glspl{village}.
+  \ifcase\value{r0t3}%
+    A blind and cheerful
+  \or%
+    An obsessive and narrow-minded
+  \or%
+    A deaf but talkative
+  \else%
+    A one-legged, singing,
+  \fi%
+  \gls{mixer} from the \gls{templeOfSickness}, on a mission to recruit from the \glspl{village}.
   \item
   \Pgls{doula}, carrying a map of one point (roll $1D6+4$), and preparing to make another.
   \item
