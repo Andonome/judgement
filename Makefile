@@ -1,6 +1,7 @@
 EXTERNAL_REFERENTS = core stories
 
 targets += shield.pdf
+targets += $(TITLE)_cover.pdf
 zines += almanac.pdf
 
 include config/common.mk
@@ -22,10 +23,5 @@ $(DBOOK): $(DEPS) qr.tex shield_qr.tex
 
 $(DROSS)/shield.pdf: $(wildcard config/markets/*) | $(DBOOK) ## Judge shield
 
-images/extracted/cover.jpg: images/loh/dragon.jpg images/extracted/inclusion.tex
+images/extracted/cover.jpg: images/loh/dragon.jpg | images/extracted/inclusion.tex
 	$(CP) $< $@
-$(DROSS)/$(BOOK)_cover.pdf: config/share/cover.tex cover.tex images/extracted/cover.jpg $(DBOOK)
-	$(RUN) -jobname $(BOOK)_cover $<
-cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
-	$(CP) $< $@
-
