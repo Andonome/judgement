@@ -1,5 +1,24 @@
-The air goes dead.
-The troupe receive only 2~\glspl{mp} at the end of the morning.
-And at the start, they receive lots of tiny, baby, \glspl{crawler}.
+\ifnum\thefenestraDay>30
+  \begin{boxtext}
+    Nearby bushes twitch, and the long grass bends slightly, but nothing else moves, and the air remains silent.
+    The bushes twitch closer, as something underneath them approaches.
+  \end{boxtext}
 
-\crawlerSwarm
+  \crawlerSwarm
+
+  The \gls{crawler}~\gls{swarm} approaches, steadily, but flees once it receives \arabic{r4b}~Damage.
+\else
+  \chitincrawler
+
+  \noindent
+  \Pgls{crawler} watches the troupe patiently, 50~\glspl{step} away.
+
+  \act{spot it hiding}{Intelligence}{Survival}{\roll{Wits}{Stealth}}
+  But if the troupe move away, it charges.
+  Knife-like prongs on the front legs stab and grab anything it can carry easily, then flees back, holding its victim.
+  If the tropue track the \gls{crawler} back to its web, half a mile away, they can find anyone grabbed, and a trader (mostly dead, and captured some days ago).
+
+  \setcounter{wounds}{5}
+  \humantrader
+
+\fi
