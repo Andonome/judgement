@@ -1,16 +1,17 @@
-\Pgls{woodspy} is coming.
-If the troupe remain silent and dark, it wanders away.
-If they make any light or sound, it comes to investigate,
+\begin{boxtext}
+  Dead, silent, air can be comforting, as everything sounds louder, and noises come from a long distance.
+  Right now, for example, this sounds somewhere between a cartwheel and footsteps.
+\end{boxtext}
+
+\woodspy
+
+\Pgls{woodspy} wanders nearby, and if the troupe make any sound, it comes to investigate,
+It watches them from afar,
 \ifnum\value{r12}>\value{hp}%
-  but if anyone spots it, the \gls{woodspy} flees.
+  but if anyone approaches, the \gls{woodspy} flees as rain begins to fall.
+  \act{track it down}{Wits}{Survival}{\roll{Speed}{Stealth}}
 \else%
   encircles their camp, or pokes around the walls of their \gls{bothy}, trying to find someone tasty to take into a private spot in the forest.
 \fi%
 
-\begin{boxtext}
-  The night air feels dead.
-  No wind, just silence.
-  Then far away, a new sound, somewhere between a cartwheel and a man's footsteps.
-\end{boxtext}
-
-\woodspy
+The \gls{interval} brings only 2~\glspl{mp}.
