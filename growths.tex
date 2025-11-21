@@ -7,9 +7,49 @@
 \begin{multicols}{2}
 \renewcommand\npcsymbol{\glsentrysymbol{plant}}
 
-\subsection{Fungi}
+\subsection{Forest Plants}
+\index{Plants}
+\label{plants}
+\setcounter{encnum}{0}
+
+\funkyPlant[Fire]{Bedleaves}%
+  {bedleaves}%
+  {are massive plants appear a little like genera, but larger.
+  Anyone sufficiently small (\gls{weight} 18 or less) can rest on them overnight and heal an additional~\gls{ep}.}%
+
+\funkyPlant{Bloodwood}%
+  {bloodwood}%
+  {sap gives a scent that makes blood rush.
+  Refined, this sap is considered a potent aphrodisiac, so \glspl{warden} past their prime pay well for it.
+  Unfortunately, the sap is secreted only during the harshest cold snaps, 
+  and tends to attract and irritate local wildlife, making procuring it a risky endeavour.
+  }
+
+\funkyPlant{dryadsKiss}%
+  {}%
+  {}%
+
+\funkyPlant{Mage Oak}%
+  {mage_oak}%
+  {roots tap into some mana source deep underground.
+    It restores 3~\glsentrylongpl{mp} for every \gls{interval} spent near it.
+    The tree will also repeat every spell cast near it, with random targets.
+
+    Proper preparation of a single branch makes a dust which provides 3~\glspl{mp} to \emph{everyone} across \pgls{area}.
+    However, the tree can die easily.
+    The roll is \roll{Dexterity}{Survival} at \tn[10].
+    Failure kills the tree, at which point it leeches all mana in the \gls{area}.
+  }%
+
+\funkyPlant{thornyThicket}%
+  {}%
+  {}%
+
+\bigbreak
+
+\subsection{\Glsfmttext{deep} Plants}
 \label{fungi}
-\setcounter{encnum}{7}
+\setcounter{encnum}{0}
 
 \funkyPlant[Air]{bedshroom}%
   {}%
@@ -19,9 +59,9 @@
   {}%
   {}%
 
-\funkyPlant{dryadsKiss}%
+\funkyPlant{disgnome}%
   {}%
-  {}%
+  {}
 
 \funkyPlant{Eyepact}%
   {eye_pact}%
@@ -40,66 +80,44 @@
     The effects of eating eyepact fungus begin after 4~\glspl{interval} plus the eater's Speed Bonus, and wear off after 8 \glspl{interval} plus \emph{double} the eater's Speed Bonus.
   }%
 
+\funkyPlant[Fire]{glowshroom}%
+  {}%
+  {}
+
+\subsection{Roadside Plants}
+\setcounter{encnum}{0}
+
+\funkyPlant{Downroot}%
+  {downroot}%
+  {gives +2 \glspl{hp} after ingestion and a night's rest, and -1 to all \glspl{attribute} for the next three days.
+  }
+
 \funkyPlant{Fly Flowers}%
   {fly_flowers}%
   {take their name from the swarms of flies that surround them at all times.
   The stench doesn't wash off, and anyone who comes in contact with this mucus will attract enough insects to make hearing speech difficult.}%
 
-\funkyPlant[Fire]{glowshroom}%
+\funkyPlant{horseDrops}%
   {}%
   {}
+
+\funkyPlant[Earth]{Liskshine}%
+  {liskShine}%
+  {grows on the backs of \glspl{basilisk}, and absorbs the beast's overwhelming stench.
+  When it grows large enough, small clumps of it fall off.
+  A rare find, and also a warning that \pgls{basilisk} is nearby.
+    }
 
 \funkyPlant[Earth]{marchingMushroom}%
   {}%
   {}
 
-\needspace{18\baselineskip}
-
-\subsection{Forest Plants}
-\index{Plants}
-\label{plants}
-\setcounter{encnum}{0}
-
-\funkyPlant[Fire]{Bedleaves}%
-  {bedleaves}%
-  {are massive plants appear a little like genera, but larger.
-  Anyone sufficiently small (\gls{weight} 18 or less) can rest on them overnight and heal an additional~\gls{ep}.}%
-
-\null
-
-\funkyPlant{Bloodwood}%
-  {bloodwood}%
-  {sap gives a scent that makes blood rush.
-  Refined, this sap is considered a potent aphrodisiac, so \glspl{warden} past their prime pay well for it.
-  Unfortunately, the sap is secreted only during the harshest cold snaps, 
-  and tends to attract and irritate local wildlife, making procuring it a risky endeavour.
+\funkyPlant{Uproot}%
+  {uproot}%
+  {gives you +1 Strength for \pgls{interval} after cooking to the perfect, golden-green.
+  Each \gls{interval} thereafter, the player rolls $1D3$.
+  On a `1', the effect stops, on any other number the character loses 1~\gls{hp}, and the effect continues.
   }
-
-\null
-
-\funkyPlant{disgnome}%
-  {}%
-  {}
-
-\funkyPlant{horseDrops}%
-  {}%
-  {}
-
-\funkyPlant{Mage Oak}%
-  {mage_oak}%
-  {roots tap into some mana source deep underground.
-    It restores 3~\glsentrylongpl{mp} for every \gls{interval} spent near it.
-    The tree will also repeat every spell cast near it, with random targets.
-
-    Proper preparation of a single branch makes a dust which provides 3~\glspl{mp} to \emph{everyone} across \pgls{area}.
-    However, the tree can die easily.
-    The roll is \roll{Dexterity}{Survival} at \tn[10].
-    Failure kills the tree, at which point it leeches all mana in the \gls{area}.
-  }%
-
-\funkyPlant{thornyThicket}%
-  {}%
-  {}%
 
 \subsection{Wetland Plants}
 \setcounter{encnum}{0}
@@ -167,28 +185,6 @@
 
   They can be crafted into musical instruments, but they're never popular, since their sound is always sorrowful.}
 
-\needspace{10\baselineskip}
-\subsection{Other Plants}
-\setcounter{encnum}{8}
-
-\funkyPlant{Downroot}%
-  {downroot}%
-  {gives +2 \glspl{hp} after ingestion and a night's rest, and -1 to all \glspl{attribute} for the next three days.
-  }
-
-\funkyPlant[Earth]{Liskshine}%
-  {liskShine}%
-  {grows on the backs of \glspl{basilisk}, and absorbs the beast's overwhelming stench.
-  When it grows large enough, small clumps of it fall off.
-  A rare find, and also a warning that \pgls{basilisk} is nearby.
-    }
-
-\funkyPlant{Uproot}%
-  {uproot}%
-  {gives you +1 Strength for \pgls{interval} after cooking to the perfect, golden-green.
-  Each \gls{interval} thereafter, the player rolls $1D3$.
-  On a `1', the effect stops, on any other number the character loses 1~\gls{hp}, and the effect continues.
-  }
 
 \end{multicols}
 
