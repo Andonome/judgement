@@ -1,0 +1,340 @@
+\documentclass[10pt,a3paper]{book}
+\usepackage{config/bind}
+\externalReferent{core}
+\input{commands.tex}
+
+\geometry{%
+  paperwidth=420mm,
+  paperheight=148mm,
+  %showframe,
+  left=4mm,
+  right=4mm,
+  %footskip=3mm,
+  foot=3mm,
+  %margin=5mm,
+  bottom=5mm,
+  %includefoot,
+}
+
+\renewcommand\statblock[1]{
+      \begin{minipage}{\linewidth}
+      \footnotesize
+      #1%
+      \colorlet{background}{white!25!black}%
+      \setcounter{rownum}{0}% Reset row counter, so the first line is always white.
+      \begin{tabularx}{\linewidth}{@{}r@{\hskip.8em}L@{}}\hline%
+      \showrowcolors%
+      \ent{\normalsize\npcsymbol} & \ent{\name}%
+      \ifdefempty{\NPCdescription}{~}{%
+        --- \NPCdescription, \mannerism.  \textbf{Wants:}~\npcGoal.%
+        \ifdefempty{\currentQuote}{}{\space\textbf{Quote:}~\textit{``\currentQuote''}}%
+      }%
+      \hfill\calculateXP \\\hline%
+      \ent{\Glsfmtplural{attribute}} &
+        {\scshape Str}~\arabic{Strength},
+        {\scshape Dex}~\arabic{Dexterity},
+        {\scshape Spd}~\arabic{Speed},
+        \ifnum\value{Intelligence}>-6%
+          {\scshape Int}~\arabic{Intelligence},
+        \fi%
+        {\scshape Wts}~\arabic{Wits}%
+        \ifnum\value{Charisma}>-6%
+          , {\scshape Cha}~\arabic{Charisma}
+        \fi%
+        %\foreach \s in {Strength,Dexterity,Speed,Intelligence,Wits,Charisma}%
+        %  {\ifnum\value{\s}>-6\s~\arabic{\s}\quad\fi}
+      \\
+      \ent{Skills} & \showSkills
+      \ifnum\value{mp}>0%
+        \foreach \s in {Air,Earth,Fate,Fire,Water}%
+          {\ifnum\value{\s}>0 \s~\arabic{\s}, \fi}
+      \fi
+      \\
+      \ifdefempty{\Abilities}{
+        \ifnum\value{knacks}>0
+          \ent{Knacks} & \Knacks \\
+        \fi
+      }{%
+        \ent{Abilities} & \Abilities%
+        \ifnum\value{knacks}>0,
+          \Knacks
+        \fi
+        \\
+      }
+      \ifdefempty{\equipment}{}{%
+        \ent{Equipment} &
+        \ifdefempty{\weaponName}{}{%
+          \weaponName, %
+        }%
+        \ifdefempty{\armourName}{}{%
+          \armourName, %
+        }%
+        \equipment.
+        \\
+      }%
+      \ifdefempty{\mount}{}{%
+        \mount \\
+      }%
+      \hline
+      \end{tabularx}
+      \ifnum\value{xp}>0
+        \par\toggletrue{examplecharacter}% Stop CR showing
+        \derivedstats%
+        \color{background}\hrulefill
+      \fi
+      \end{minipage}
+}
+
+\renewcommand\swarm[6][]%
+{
+  \begin{minipage}{\linewidth}
+  \small
+  \randomize
+  \clean
+  \renewcommand\name{#2}
+  \set{hp}{#3}
+  \set{Dexterity}{#4}
+  \set{Strength}{-5}
+  \set{toHit}{#4}
+  \addtocounter{toHit}{10}
+  \set{Speed}{#5}
+  \set{ap}{#5}
+  \addtocounter{ap}{3}
+  \setcounter{dr}{8}
+  \set{Wits}{#6}
+  #1
+  \set{freeHP}{hp}
+  \setcounter{freeHP}{\value{hp}}%
+  \addtocounter{freeHP}{-\value{weight}}%
+  \scshape
+  \begin{tabularx}{\textwidth}{rL}\hline
+  \rowcolors{2}{}{background!6}
+  \ent{\normalsize\glsentrysymbol{swarm}} & \ent{\name} 
+    \hfil\textcolor{background}{\scriptsize\calculateXP} \\\hline
+  \Gls{ap}: \arabic{ap} & Att: $\arabic{toHit} - HP$
+  \iftoggle{intro}{
+    \quad
+    Speed: \arabic{Speed},
+    \quad
+    Wits: \arabic{Wits}
+  }{
+    Dam: 1
+  }
+  \\
+  \ent{Abilities} & \Abilities \\
+  \hline
+  \end{tabularx}%
+  \end{minipage}
+  \par
+}
+
+
+
+\begin{document}
+\frontmatter
+\pagestyle{empty}
+
+\begin{tcolorbox}[ornamented]
+  \setcounter{enc}{1}
+  \Repeat{11}{
+    \stepcounter{enc}%
+    \underline{\twoDice{\value{enc}}~\bigWeatherList}\quad%
+  }
+
+  \begin{multicols}{4}
+
+  \setcounter{r3}{\month}
+  \setcounter{r3b}{\day}
+  \addtocounter{r3b}{15}
+  \ifnum\value{r3b}>30
+    \addtocounter{r3b}{-30}
+    \ifnum\value{r3}=12
+      \setcounter{r3}{1}
+    \else
+      \addtocounter{r3}{1}
+    \fi
+  \fi
+  \orrery[\month/\day, \value{r3}/\value{r3b}]
+
+  \begin{tikzpicture}[black]
+      %\draw [fill=lightgray] (-3,2.0) -- ++(6,0) -- ++(0,-6) -- ++(-6,0) -- cycle ;
+      \begin{scope}
+        \path[clip] (-3,2) rectangle (3,-4);
+        \coordinate (town) at (0.4,-2.0);
+        \coordinate (crossing) at (0,-1);
+        %\draw [step=0.2, thin, lightgray] (-3,2) grid (3,-4);
+        \draw [opacity=0, fill opacity=0.92, inner color=white, outer color=white] (town) circle(10em);
+
+        \foreach \x/\y in {-2.6/-2.2, -0.9/0.6, 1.4/0.7, 3.8/-1.9, -0.8/-4.8}%
+          {%
+            \randomize
+            \set{track}{r4}
+            \addtocounter{track}{5}
+            \draw [very thick, background, dotted] (\x,\y) circle (1.4em) ;
+            \draw [very thick, background, dotted] (\x,\y) circle (2.1em) ;
+            \draw [very thick, background, dotted] (\x,\y) circle (2.8em) ;
+            \draw [very thick, background, dotted] (\x,\y) circle (3.5em) ;
+            \draw [very thick, background, dotted] (\x,\y) circle (4.2em) ;
+            %%%%%%%%%%%%%%%%%%
+            \coordinate (road1) at ($ (\x,\y)+(1.2, -0.2) $);
+            \ifodd\value{r2}
+              \coordinate (bothy1) at ($ (\x,\y) + (0.8\arabic{r4t5},0.\arabic{track}) $) ;
+            \else
+              \coordinate (bothy1) at ($ (\x,\y) + (0.\arabic{r4t6},-0.\arabic{r4t5}) $) ;
+            \fi
+            \coordinate (bothy2) at ($ (\x,\y)+(-0.\arabic{r4t6},0.\arabic{track}) $) ;
+            \draw [gray, dashed] (bothy1) to[bend right] (road1) to[bend left] (town);
+            \draw [gray, dashed] (\x,\y) to[bend right] (bothy2) to[bend left] (road1) ;
+            \ifodd\value{r3}%
+              %\draw [gray, dashed] (bothy2) to[bend right] (crossing) ;
+            \else%
+              \coordinate (crossing) at ($ (bothy1) + (town) $);
+            \fi%
+            \draw [fill=foreground] (bothy1) circle (0.8em) ;
+            \draw [fill=background] (bothy1) circle (0.6em) node {\small\Hu} ;
+            \draw [fill=foreground] (bothy2) circle (0.7em) ;
+            \draw [fill=background] (bothy2) circle (0.5em) node {\footnotesize\Hu} ;
+            %%%%%%%%%%%%%%%%%%
+            \draw [fill=background] (\x,\y) circle (0.6em)  node { \glsentrysymbol{sylf} } ;
+          }
+        \foreach \x in {0.5, 0.9}%
+          {%
+            \draw [white, fill=background] ($ (town) + (\x,\x) + (0.\arabic{r3},0.\arabic{r2}) $) circle (0.\arabic{r4}em) node { . } ;
+            \randomize
+            \draw [white, fill=background] ($ (town) + (-\x,\x)  + (0.\arabic{r3},0.\arabic{r2}) $) circle (0.\arabic{r4}em) node { . } ;
+            \randomize
+            \draw [white, fill=background] ($ (town) + (\x,-\x)  + (0.\arabic{r3},0.\arabic{r2}) $) circle (0.\arabic{r4}em) node { . } ;
+            \randomize
+            \draw [white, fill=background] ($ (town) + (-\x,-\x)  + (0.\arabic{r3},0.\arabic{r2}) $) circle (0.\arabic{r4}em) node { . } ;
+          }
+        \draw [background, fill=background] (town) circle (1.3em) node {\color{foreground}\large\glsentrysymbol{paik}} ;
+      \end{scope}
+  \end{tikzpicture}
+
+  \columnbreak
+
+  \Large
+  \input{config/share/start.tex}
+
+  \columnbreak
+
+  \subsection{Missions}
+  \large
+
+  \subsubsection{\Glsfmtplural{fodder}!}
+  \Gls{cutter}~\composeHumanName\ needs his armour polished.
+  First volunteer gets to sleep inside the \gls{broch}.
+
+  \subsubsection{\Glsfmtplural{gDigger}!}
+  get out to the North \gls{village} and deal with
+  \ifnum\thetemperature>1 that \gls{basilisk} \else those \glspl{griffin}\fi.
+  And bring back the corpse!
+
+  \subsubsection{\Glsfmtplural{soldier}!}
+  Who the fuck is that elf who keeps selling \glspl{ingredient}?
+  He doesn't pay taxes, which is theft, so he's also a fence, and the buyers are co-conspirators.
+
+  \subsubsection{\Glsfmtplural{cutter}!}
+  Anyone still here, go help the salt-seller.
+  The idiot's out alone with his donkey again.
+
+  \end{multicols}
+\end{tcolorbox}
+
+\small
+\clearpage
+
+\begin{minipage}{.24\linewidth}
+
+\ifnum\value{temperature}=0
+  % Temperature 0 (cold)
+  \wolf
+  \auroch
+  \ifodd\value{r3}
+    \chitincrawler[\npc{\A}{Hibernating \Gls{crawler}}]
+  \else
+    \woodspy[\npc{\E}{Hibernating \Gls{woodspy}}]
+  \fi
+\else
+  \basilisk
+  \chitincrawler
+  \bear
+\fi
+
+\mouthdigger
+
+\end{minipage}
+\hfill
+\begin{minipage}{.47\linewidth}
+\begin{tcolorbox}[ornamented]
+
+  \begin{multicols}{2}
+
+  \subsection{Traders}
+  \encTraders
+
+  \begin{boxtable}[c|YY]
+  \Hu & \textbf{Prefix} & \textbf{Suffix} \\\hline
+  \dicef{1} & \humanNamePrefix & --\humanNameSuffix \\
+  \dicef{2} & \humanNamePrefix & --\humanNameSuffix \\
+  \dicef{3} & \humanNamePrefix & --\humanNameSuffix \\
+  \dicef{4} & \humanNamePrefix & --\humanNameSuffix \\
+  \dicef{5} & \humanNamePrefix & --\humanNameSuffix \\
+  \dicef{6} & \humanNamePrefix & --\humanNameSuffix \\
+  \end{boxtable}
+
+  \ifnum\thetemperature<2
+    \hitLocation
+  \fi
+
+  \begin{boxtable}[r|Lc]
+    \ifcase\thetemperature
+      \setcounter{enc}{7}
+      \Repeat{6}{
+        \addtocounter{enc}{-1}%
+        \arabic{enc} & \bigBeastList &
+        \randomize\showInterval{\value{encnum}}
+        \\
+      }
+    \or%
+      \setcounter{enc}{13}
+      \Repeat{11}{
+        \addtocounter{enc}{-1}%
+        \arabic{enc} & \bigBeastList &
+        \randomize\showInterval{\value{encnum}}
+        \\
+      }
+    \else%
+      \setcounter{enc}{19}
+      \Repeat{16}{
+        \addtocounter{enc}{-1}%
+        \arabic{enc} & \bigBeastList &
+        \randomize\showInterval{\value{encnum}}
+        \\
+      }
+    \fi%
+  \end{boxtable}
+
+  \ifcase\thetemperature%
+    $D6$ days till encounter.
+  \or%
+    Roll $2D6$: time till encounter is lowest die.
+  \or%
+    Roll $3D6$: days till encounter equals lowest, encounter equals total.
+  \else%
+    Roll $4D6$: days till encounter equals lowest, encounter equals highest three.
+  \fi
+  \end{multicols}
+\end{tcolorbox}
+\end{minipage}
+\hfill
+\begin{minipage}{.24\linewidth}
+
+\stirgeSwarm
+\woodspy
+\boar
+\griffin
+
+\end{minipage}
+
+\end{document}
