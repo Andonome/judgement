@@ -37,9 +37,9 @@
 \newcommand\wrath[1]{%
   \label{storm}%
   \ifnum\thefenestraDay=58%
-    \Gls{storm} begins with \pgls{#1}
+    \Gls{storm} begins with \pgls{#1}%
   \else%
-    \Gls{#1}
+    \Gls{#1}%
   \fi%
 }
 
@@ -61,21 +61,21 @@
     \ifnum\thefenestraDay=58%
       \setcounter{tn}{0}%
       \ifcase\thetemperature%
-        \wrath{coldSnap}
+        \wrath{coldSnap}.
       \or%
-        \wrath{flood}
+        \wrath{flood}.
       \else%
         \ifnum\thecycle<4%
-          \wrath{heatwave}%
+          \wrath{heatwave}.
         \else%
-          \wrath{hurricane}%
+          \wrath{hurricane}.
         \fi%
       \fi%
     \else%
       \ifodd\thefenestraDay%
-        \wrath{flood}%
+        \wrath{flood}.
       \else%
-        \wrath{landslide} across nearby mountains%
+        \wrath{landslide} across nearby mountains.
       \fi%
     \fi%
   \else%
@@ -104,11 +104,11 @@
 
 \newcommand\checkEclipse{%
   \ifcase\thecycle%
-    \ifnum\thefenestraDay=3%
+    \ifnum\thefenestraDay=2%
       \addEclipes
     \fi%
   \or%
-    \ifnum\thefenestraDay=30%
+    \ifnum\thefenestraDay=29%
       \addEclipes[ (lasts 15 hours)]
     \fi%
   \or%
@@ -116,14 +116,14 @@
       \addEclipes
     \fi%
   \or%
+    \ifnum\thefenestraDay=60%
+      \addEclipes
+    \fi%
   \or%
-    \ifnum\thefenestraDay=1%
+    \ifnum\thefenestraDay=60%
       \addEclipes
     \fi%
   \else%
-    \ifnum\thefenestraDay=1%
-      \addEclipes
-    \fi%
   \fi%
 }%
 
