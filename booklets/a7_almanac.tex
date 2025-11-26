@@ -316,8 +316,7 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
         \stepcounter{randomEncounter}%
         \bigLine\par
         \needspace{2\baselineskip}%
-        \qquad{\scshape Encounter \therandomEncounter}%
-        \quad\bigLine\par\noindent%
+        \subsubsection{Encounter \therandomEncounter}%
         \input{encounters/enc_\thecycle_\thesegNoSpare.tex}%
       }%
       \stepcounter{segNo}%
