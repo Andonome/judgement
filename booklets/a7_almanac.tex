@@ -9,7 +9,10 @@
 \setcounter{almatrack}{0}
 \newcounter{randomEncounter}
 \setcounter{tn}{0}
-\setcounter{segNo}{\value{r3}}
+\setcounter{segNo}{\day}
+\ifnum\value{segNo}>15
+  \addtocounter{segNo}{-15}
+\fi
 
 \newcommand\stateCycle{%
   \ifcase\thecycle%
