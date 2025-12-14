@@ -24,6 +24,8 @@ The \gls{templeOfHate} encourages reconciliations, the \gls{templeOfFrost} offer
   \renewcommand\npcsymbol{\glssymbol{#1}}
   \needspace{16em}
   \subsection[The Temple of #2]{\glssymbol{#1}~\gls{#1}~\glssymbol{#1} \\ \& \\ the Temple of #2}
+  \gdef\subsectionList{}
+  \gappto{\sectionList}{#2~\flourish~}%
   \index{Gods}
   \label{god:#2}
 
