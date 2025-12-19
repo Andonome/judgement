@@ -15,16 +15,26 @@ processes the flour for the surrounding \glspl{village} with the massive windmil
 \or%
   But not today.
 
-  \chitincrawler
+  \IfLabelExistsTF{\jobname:harvestCrawler}{
+    \chitincrawler
 
-  \begin{boxtext}
-    Approaching the famous Millbroch, you can see dirty blades spinning slowly in the wind.
-    As a blade rises, something on it wriggles, it cries out for help.
-    Then the dark centre stretches legs, and in one single stride jumps up from the middle of the mill, to the top, and the voice cries out in pain.
-  \end{boxtext}
+    \begin{boxtext}
+      Approaching the famous Millbroch, you can see dirty blades spinning slowly in the wind.
+      As a blade rises, something on it wriggles, it cries out for help.
+      Then the dark centre stretches legs, and in one single stride jumps up from the middle of the mill, to the top, and the voice cries out in pain.
+    \end{boxtext}
 
-  \Gls{cutter} \composeHumanName\ won't shout again, as he knows it attracts the \gls{crawler} to deposite more webbing.
-  He just bleeds silently from the creature's knife-like appendages.
+    \Gls{cutter} \composeHumanName\ won't shout again, as he knows it attracts the \gls{crawler} to deposit more webbing.
+    He just bleeds silently from the creature's knife-like appendages.
+  }{
+    \begin{boxtext}
+      Approaching the famous Millbroch, you can see dirty blades have stopped, stuck.
+    \end{boxtext}
+
+    \Pgls{crawler} has left its webbing on the mill, then left out of irritation with the moving blades.
+    The \gls{crawler} has left hours ago, but the blades remain stuck.
+  }
+
 \or%
   \Glspl{ranger} always avoid the \gls{broch}, complaining that they have better things to do than `militant milling'.
 
