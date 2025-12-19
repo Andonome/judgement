@@ -323,7 +323,7 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
         \subsubsection{Encounter \therandomEncounter}%
         \input{encounters/enc_\thecycle_\thesegNoSpare.tex}%
       }%
-      \stepcounter{segNo}%
+      \addtocounter{segNo}{\value{r3}}%
       \setcounter{almatrack}{0}%
     \fi%
   }
