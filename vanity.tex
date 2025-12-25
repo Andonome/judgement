@@ -2,6 +2,7 @@
 \usepackage{config/bind}
 \externalReferent{core}
 \input{commands.tex}
+\input{missions.tex}
 
 \geometry{%
   paperwidth=420mm,
@@ -129,6 +130,7 @@
 }
 
 
+\randomize
 
 \begin{document}
 \frontmatter
@@ -221,29 +223,22 @@
   \subsection{Missions}
   \large
 
-  \subsubsection{\Glsfmtplural{fodder}!}
-  \Gls{cutter}~\composeHumanName\ needs his armour polished.
-  First volunteer gets to sleep inside the \gls{broch}.
-
-  \subsubsection{\Glsfmtplural{gDigger}!}
-  get out to the North \gls{village} and deal with
-  \ifnum\thetemperature>1 that \gls{basilisk} \else those \glspl{griffin}\fi.
-  And bring back the corpse!
+  \randomize
+  \subsubsection{\Glsfmtplural{fodder} and \Glsfmtplural{gDigger}!}
+  \fodderMissions
 
   \subsubsection{\Glsfmtplural{soldier}!}
-  Who the fuck is that elf who keeps selling \glspl{ingredient}?
-  He doesn't pay taxes, which is theft, so he's also a fence, and the buyers are co-conspirators.
+  \soldierMissions
 
   \subsubsection{\Glsfmtplural{cutter}!}
-  Anyone still here, go help the salt-seller.
-  The idiot's out alone with his donkey again.
+  \cutterMissions
 
   \end{multicols}
 \end{tcolorbox}
 
-\small
 \clearpage
 
+\small
 \begin{minipage}{.24\linewidth}
 
 \ifnum\value{temperature}=0
@@ -324,6 +319,10 @@
   \else%
     Roll $4D6$: days till encounter equals lowest, encounter equals highest three.
   \fi
+
+  \paragraph{Missions:}
+  \currentComplications% from missions.tex
+
   \end{multicols}
 \end{tcolorbox}
 \end{minipage}

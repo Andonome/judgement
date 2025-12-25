@@ -1,0 +1,60 @@
+\newcommand\currentComplications{}
+
+\newcommand\fodderMissions[1][\value{r0t3}]{
+  \ifcase#1
+    \ifnum\thetemperature=3%
+      The bushes have grown back.
+      Time to set a serious fire!
+      \gappto\currentComplications{Small swarms start attack with each fire.  }
+    \else%
+      \Gls{gDigger}~\composeHumanName\ just felled \pgls{woodspy}.
+      Time to learn how \gls{harvesting} works!
+    \fi%
+  \or
+    We're out of \glspl{torch}.
+    Here's \pgls{sp} --- go buy twenty and bring back change!
+    \gappto\currentComplications{Half the \glspl{torch} don't work.  }
+  \else%
+    \Gls{cutter}~\composeHumanName\ needs his armour polished.
+    First volunteer gets to sleep inside the \gls{broch}.
+    \gappto\currentComplications{The polish is unprocessed \gls{basilisk}-fat.  Avoid vomiting with \roll{Strength}{Survival} at \tn[8].  }
+  \fi
+}
+
+\gappto\currentComplications{  \par  }
+
+\newcommand\soldierMissions[1][\value{r0t3}]{
+  \ifcase#1
+    get out to the North \gls{village} and deal with
+    \ifnum\thetemperature>1 that \gls{basilisk} \else those \glspl{griffin}\fi.
+    And bring back the corpse!
+    \gappto\currentComplications{The \gls{basilisk} in the North swallowed a trader, along with his bag of \lootBig, and his \lootJewellery.
+    Two \glspl{cutter} know the secret and want the money.  }
+  \or%
+    Clear the wreckage and any dead from the road.
+    Just keep walking --- you'll see them.
+    \gappto\currentComplications{The wreckage has \arabic{r4t6} carts from various \glspl{temple}, and \lootBig.}
+  \else%
+    Anyone still here, go help that salt-seller on the road.
+    The idiot's out alone with his donkey again.
+    \gappto\currentComplications{The salt-seller (\composeHumanName) has been cursed to `wander'.
+    He heads in a random direction each \gls{interval} until home.}
+  \fi%
+}
+
+\gappto\currentComplications{  \par  }
+
+\newcommand\cutterMissions[1][\value{r0t3}]{
+  \ifcase#1
+    Who the fuck is that elf who keeps selling \glspl{ingredient}?
+    He doesn't pay taxes, which is theft, so he's also a fence, and the buyers are co-conspirators.
+    \gappto\currentComplications{The elven \gls{ingredient}-seller doesn't care about local laws, and tells people his mum will destroy the local town if people interfere with him.}
+  \or%
+    Rumours of a fence --- \marketFence\ --- have been circulating.
+    Ask around the local \glspl{village} and in \marketInnOne's in the town.
+    Find the git, and take him to the \gls{court}.
+  \else%
+    \fodderVagrant\ hasn't been seen in a week.
+    Track the little shit down, and make sure they've not gone vagrant.
+  \fi%
+}
