@@ -180,6 +180,10 @@
 
 \frontmatter
 \setCycle{\month}{\day}
+\ifnum\thefenestraDay>57
+  \advanceTheDate[2]
+\fi
+
 
 \miniCover{Almanac}{
   {
@@ -346,6 +350,13 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
 \needspace{6\baselineskip}
 \subsection{\Glsfmtname{monster}}
 
+{
+  % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
+  \toggletrue{intro}
+  \showGls{harvesting}
+}
+\ifodd\thepage\else\clearpage\fi
+
   \IfLabelExistsTF{\jobname:harvestBasilisk}{
     \showGls{basilisk}
   }{}
@@ -370,11 +381,6 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
     \showGls{woodspy}
   }{}
 
-{
-  % We just need this to show the summary TN in harvesting, not an explanation for each cycle.
-  \toggletrue{intro}
-  \showGls{harvesting}
-}
 
 \label{encI}
 \encounterList
