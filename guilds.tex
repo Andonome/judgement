@@ -1,7 +1,7 @@
 \chapter{Guilded Temples}
 \label{cosmology}
 
-\newcommand\guildRank[1]{\item[#1]\index{#1 (\npcsymbol)|textbf}}
+\newcommand\guildRank[1]{\item[#1]}
 
 \begin{multicols}{2}
 
@@ -21,9 +21,9 @@ Even a `guild hall' which is nothing more than an old lady's house still offers 
 The \gls{templeOfHate} encourages reconciliations, the \gls{templeOfFrost} offers warmth, and the \gls{guard} work for the \gls{templeOfBeasts}, where they kill the \gls{sylf}'s children.
 
 \newcommand\guild[7]{
-  \renewcommand\npcsymbol{\glssymbol{#1}}
+  \renewcommand\npcsymbol{\glsentrysymbol{#1}}
   \needspace{16em}
-  \subsection[The Temple of #2]{\glssymbol{#1}~\gls{#1}~\glssymbol{#1} \\ \& \\ the Temple of #2}
+  \subsection{The Temple of #2}
   \gdef\subsectionList{}
   \gappto{\sectionList}{#2~\flourish~}%
   \index{Gods}
@@ -32,6 +32,8 @@ The \gls{templeOfHate} encourages reconciliations, the \gls{templeOfFrost} offer
   \begin{exampletext}
   #3
   \end{exampletext}
+
+  \paragraph{God:} \glsfmtname{#1}
 
   \paragraph{Domain:} #4
 
@@ -159,8 +161,6 @@ These payments form something like a pension, as those who donate well always re
 As a result, this temple may have more wealth than all the others, or may not.
 They don't keep open books, but rumours abound of hidden, underground vaults, which store rubies the size of a fist, elven necklaces with magical abilities, and orbs which summon a thousand dragons to serve the user.
 The least likely element in these stories is the \gls{healersGuild} building somewhere with a lot of stairs.
-
-\columnbreak
 
 \guild{nulla}% Name
   {Misgenesis}% Death
