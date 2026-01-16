@@ -45,7 +45,7 @@
         %\foreach \s in {Strength,Dexterity,Speed,Intelligence,Wits,Charisma}%
         %  {\ifnum\value{\s}>-6\s~\arabic{\s}\quad\fi}
       \\
-      \ent{Skills} & \showSkills
+      \ent{\Glsfmtplural{skill}} & \showSkills
       \ifnum\value{mp}>0%
         \foreach \s in {Air,Earth,Fate,Fire,Water}%
           {\ifnum\value{\s}>0 \s~\arabic{\s}, \fi}
