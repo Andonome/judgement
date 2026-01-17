@@ -656,6 +656,7 @@
       by widening their road.
       Spend the next week going along the road, cutting, burning, and pushing back the forest.
       The \gls{village} will feed you.
+      Probably.
       \item
       \ifnum\value{temperature}=0
         deal with its undead problem, but \emph{don't} come back here a dead, moaning failure, alright!?.
@@ -671,7 +672,8 @@
         They say it picked up a pregnant ewe!
       \else
         lay five traps around its border.
-        They have \pgls{weight} of 10 each, so you can take this old donkey and cart to help.
+        They have \pgls{weight} of 20 each, so you can take this old donkey and cart to help
+        (it carries \pgls{weight} of 60).
       \fi
       \item
       to defeat the local bandits.
@@ -691,15 +693,14 @@
       guild leader to town
       (bandits killed the rest of their entourage).
       \item
-      wounded ranger to the nearest \gls{templeOfSickness}.
+      wounded \gls{ranger} to the nearest \gls{templeOfSickness}.
       \item
       \gls{talisman} to the nearest \gls{templeOfCuriosity}
       (select one \vpageref{talismanIndex}).
       \item
       secret document and drop it at the meeting place (roll $1D6$ for the point on the map).
     \end{dlist}
-    This one's serious.
-    \textit{If you screw this up, I'll see you in the \gls{court}, and make sure you swing.}
+    Return with confirmation, and you'll each get 3~\glspl{sp}.
     \item
     The \gls{jotter} says to
     \label{riderMissions}
@@ -724,34 +725,36 @@
       \item
       hunt down a half-elven \gls{witch} who leads a crew of bandits.
     \end{dlist}
+    Return with confirmation, and you'll each get 5~\glspl{sp}.
     \item
-    A travelling tradesman wants you to
+    A travelling trader wants you to
       \begin{dlist}
         \item
         come guard his caravan on a journey to the next town.
-        He'll pay you 30~\glspl{sp}.
+        He'll pay a total of 20~\glspl{sp}.
         \item
         take this crossbow -- it should keep you safe.
         \item
-        \ifodd\value{r4b}
-          tell him about what the \gls{guard} are up to.
-          He will join you on the road and pay 5 \glspl{sp} per person for the `news'.
-        \else
-          join her going to the next town, and vouch that the bag of 300 \glspl{sp} belongs to the \gls{guard} and not her, so she doesn't have to pay a tax on it.
-        \fi
+        \ifodd\value{r4b}%
+          talk about what the \gls{guard} are up to.
+          He will join you on the road and pay 3~\glspl{sp} to one \gls{guard} to hear the `news' (but it had better be good).
+        \else%
+          join her going to the next town, and vouch that the bag of 200~\glspl{sp} belongs to the \gls{guard} and not her, so she doesn't have to pay a tax on it.
+        \fi%
         \item
         tell her about any interesting things you might have found on the road\ldots
         anything you maybe haven't reported to the \gls{jotter}\ldots
         maybe something you need help getting rid of\ldots?
         \item
         deliver something to a local \gls{fiend}.
-        The tradesman has just what it wants.
-        She can pay a total of 60~\glspl{sp}.
+        The tradesman has just what the \gls{fiend} wants.
+        She can pay a total of 60~\glspl{sp} if you return with a receipt.
 
         \textit{Nevermind `why', \gls{yonder} take ye!}
         \item
         break a friend out of jail in a nearby town.
         He had no idea those items were stolen!
+        I reckon he can pay at least 20~\glspl{gp} once he's out.
       \end{dlist}
     \textit{Tell nobody -- you could get in a lot of trouble for moonlighting!}
     (re-roll to find your orders)
@@ -772,6 +775,7 @@
       \item
       local \gls{fiend}, and find everything they can about it.
     \end{dlist}
+    Complete the task and the \gls{thane} will owe you a favour.
   \item
   \Pgls{builder} orders you to capture a
     \begin{dlist}
@@ -782,13 +786,15 @@
       \item
       place where mana wells up from the ground. It lies somewhere in the forest, or so the bards sing.
       \item
-      creature for the arena; the \glspl{warden} want to see some good sport.
+      \gls{monster} for games in \pgls{court}; the \glspl{warden} want to see some good sport.
       \item
       ray of full moonlight.
-      The \gls{doula} need it for something, but won't explain what they mean.
+      Some \glspl{doula} need it for something, but won't explain what they mean.
       \item
-      thief in the act. He robs \glspl{warden} at night, but nobody has seen his face.
+      thief in the act. He robs \glspl{warden} at night.
+      Nobody has seen his face.
     \end{dlist}
+    Don't fail, or the \gls{builder} will see you in the \gls{court}.
   \item
   The \gls{overseer} needs you to travel beyond the \gls{edge} and
     \begin{dlist}
@@ -807,6 +813,7 @@
     \item
     deliver this message to the local elves, or gnomes, or whatever they are.
     \end{dlist}
+    The \gls{templeOfBeasts} can pay 20~\glspl{sp} to the troupe's leader, and 30~\glspl{sp} to divide among the rest.
   \item
   Take the day off -- you've earned it!
   \end{enumerate}
