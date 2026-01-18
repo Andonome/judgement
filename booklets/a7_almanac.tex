@@ -402,7 +402,7 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
   \fi%
 \fi%
 
-\Repeat{2}{\ifnum\thepage<13%
+\Repeat{3}{\ifnum\thepage<13%
   \stepcounter{almatrack}%
   \IfFileExists{encounters/bothy_\thealmatrack.tex}{}{\setcounter{almatrack}{1}}%
   \input{encounters/bothy_\thealmatrack.tex}%
