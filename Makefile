@@ -3,7 +3,9 @@ EXTERNAL_REFERENTS = core stories
 targets += shield.pdf
 targets += $(TITLE)_cover.pdf
 zines += almanac.pdf
-zines += faces.pdf
+zines += deep.pdf
+zines += warren.pdf
+zines += roads.pdf
 output += shield_qr.tex
 
 include config/common.mk

@@ -1,0 +1,97 @@
+\documentclass[10pt,twoside]{book}
+\usepackage{config/bind}
+\usepackage{config/booklet}
+\setcounter{bookLevel}{2}
+\externalReferent{core}
+\externalReferent{stories}
+\externalReferent{judgement}
+
+\begin{document}
+
+\frontmatter
+
+\miniCover{Faces}{
+  \par on the \Glsfmttext{lonelyRoad}
+}
+
+\noindent
+Need some \glspl{npc} for past the \gls{edge}?
+Here's a collection of \glspl{statblock}.
+
+\clearpage
+\pagestyle{minizine}
+
+\subsection{Traders on the \Glsfmttext{lonelyRoad}}
+
+\humantrader
+
+\humantrader
+
+\doula
+
+\humandiplomat
+
+\clearpage
+
+\subsection{\Glsfmtplural{hag}}
+
+\Gls{hag} \glsentrydesc{hag}.
+
+\hag
+
+\showStdSpells
+
+\morphcat
+
+\morphhuman
+
+\morphrat
+
+\morphrat
+
+\morphspider
+
+\clearpage
+
+\subsection{Enchanted Forests}
+
+\Gls{dryad} \glsentrydesc{dryad}.
+
+\dryad
+
+\showStdSpells
+
+\morphslug
+
+\morphhuman
+
+\elf
+
+\ifnum\themp>2
+  \showStdSpells
+\fi
+
+\elf
+\ifnum\themp>2
+  \showStdSpells
+\fi
+
+\null
+
+\ifnum\thepage<13
+  \morphwoodspy
+
+  \morphhorse
+\fi
+
+\clearpage
+\ifnum\thepage<14
+  \elf
+  \showStdSpells
+\else
+  \ifnum\thepage<16
+    \newpage
+  \fi
+\fi
+
+\end{document}
