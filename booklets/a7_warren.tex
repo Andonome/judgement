@@ -1,0 +1,204 @@
+\documentclass[10pt,twoside]{book}
+\usepackage{config/bind}
+\usepackage{config/booklet}
+\setcounter{bookLevel}{2}
+\externalReferent{core}
+\externalReferent{stories}
+\externalReferent{judgement}
+
+\begin{document}
+
+\frontmatter
+
+\miniCover{Faces}{
+  \par in the warren
+}
+
+\noindent
+Need some \glspl{npc} for a warren?
+Here's a collection of \glspl{statblock}.
+
+\clearpage
+\pagestyle{minizine}
+
+\subsection{Gnomish Plans}
+
+\begin{dlist}
+  \item Discussing a rock-hiding game (it's only \emph{played} in the dark).
+  \item Drawing schematics for a spike-pit-trap on the ground with a stick.
+  \item Discussing next year's carrot harvest.
+  \item Competitive pipe-smoking.
+  \item Discussing how to return home with their enormous clay-jar-trap.
+  It's as tall as a human, and full to the brim with an ooze!
+  \item Walking slowly, while tapping every bit of ground with a walking stick
+  (there is no trap).
+\end{dlist}
+
+\jelly
+
+\gnome
+
+\gnome
+
+\gnomishsoldier
+
+\gnomishsoldier
+
+\gnomishillusionist
+
+\showStdSpells
+
+\gnomishillusionist
+
+\showStdSpells
+
+\subsection{Goblin Ideas}
+
+\begin{dlist}
+  \item A night on the town! (or \gls{village})
+  Let's race!
+  \item {\large \underline{Screeching}} competition!
+  \item All sleep with a gentle snore like a distant earthquake.
+  \ifnum\thetemperature=0%
+    \item Let's build sleds!
+    \item Let's use the sleds!
+    \item Half sleep silently while the rest spit snot at the fire to hear it crackle.
+  \else%
+    \item Let's imitate birdies to see if it lures them down.
+    \item Blind the thief!
+    Stab his eyes out!
+    He stole my stuff!
+    {\sffamily (\lootGoblin)}
+    \item Is it moral to eat human babies when they haven't even tried to kill us yet?
+  \fi%
+\end{dlist}
+
+\goblin
+
+\goblin
+
+\goblin[\NPC{\N}% Symbol
+  {\ifcase\value{r2b} Hunchbacked \or Half-toothless \else Sweaty\fi~Goblin}% Name
+  {\ifcase\theStrength%
+    Pustule-covered
+  \else%
+    Black-spotted
+  \fi
+  \ifcase\theSpeed%
+    feet%
+  \or%
+    ears
+  \else%
+    face%
+  \fi%
+  }% Description
+  {\ifodd\value{r3} scratches \else rubs \fi \ifodd\value{r2} eyeballs\else chest\fi}% Mannerism
+  {\ifodd\thexp to eat snails\else to collect rocks\fi}% Wants
+  ]
+
+\goblin[\NPC{\N}% Symbol
+  {\ifcase\value{r2b} Hunchbacked \or Half-toothless \else Sweaty\fi~Goblin}% Name
+  {\ifcase\theStrength%
+    Pustule-covered
+  \else%
+    Black-spotted
+  \fi
+  \ifcase\theSpeed%
+    feet%
+  \or%
+    ears
+  \else%
+    face%
+  \fi%
+  }% Description
+  {\ifodd\value{r3} scratches \else rubs \fi \ifodd\value{r2} eyeballs \else chest\fi}% Mannerism
+  {\ifodd\thexp to eat snails\else to collect rocks\fi}% Wants
+  ]
+
+\wolf
+
+\goblincaster
+
+\showStdSpells
+
+\ifnum\theWater>1
+  \morphwolf
+\fi
+
+\hobgoblin[\NPC{\T[\arabic{r12}]\N}% Symbol
+  {\ifodd\theSpeed Stinking \else Vomit-Stained\fi~Hobgoblins}% Name
+  {\ifnum\theDexterity<-1%
+    Flaking, ragged,
+  \else%
+    Hairy
+  \fi
+  \ifcase\theWits%
+    toenails%
+  \or%
+    ear-tips%
+  \else%
+    face-scabs%
+  \fi%
+  \ifodd\value{r3}\else, missing eye\fi%
+  }% Description
+  {\ifodd\value{r3} chews on own \else gently massages \fi \ifodd\value{r2} hands \else tongue\fi}% Mannerism
+  {\ifcase\value{r3} to find somewhere {\ifnum\thetemperature=0 warm \else to sleep \fi}\or to eat dogs\else sharper teeth\fi}% Wants
+]
+
+\hobgoblin[\NPC{\ifodd\theStrength\M\else\F\fi\N}% Symbol
+  {\ifodd\theSpeed Stinking \else Vomit-Stained\fi~Hobgoblin}% Name
+  {\ifnum\theDexterity<-1%
+    Flaking, ragged,
+  \else%
+    Hairy
+  \fi
+  \ifcase\theWits%
+    toenails%
+  \or%
+    ear-tips%
+  \else%
+    face-scabs%
+  \fi%
+  \ifodd\value{r3}\else, missing eye\fi%
+  }% Description
+  {\ifodd\value{r3} chews on own \else gently massages \fi \ifodd\value{r2} hands \else tongue\fi}% Mannerism
+  {\ifcase\value{r3} to find somewhere {\ifnum\thetemperature=0 warm \else to sleep \fi}\or to eat dogs\else sharper teeth\fi}% Wants
+]
+
+\ogre
+
+\ogre
+
+\armouredOgre
+
+\armouredOgre
+
+\ifnum\thetemperature>1
+  \hulk
+  \hulk
+\else
+  \watcher
+  \jelly
+\fi
+
+\clearpage
+
+\subsection{Things Lying on the Ground}
+
+\setcounter{goblinLoot}{6}
+\addtocounter{goblinLoot}{\value{r6}}
+\begin{dlist}
+  \item \lootGoblin
+  \item \lootGoblin
+  \item \lootGoblin
+  \item \lootGoblin
+  \item \lootGoblin
+  \item \lootGoblin
+\end{dlist}
+
+\ifnum\thepage<16
+  \newpage
+  \jelly
+\fi
+
+\end{document}
