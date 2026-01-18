@@ -1,0 +1,128 @@
+\documentclass[10pt,twoside]{book}
+\usepackage{config/bind}
+\usepackage{config/booklet}
+\setcounter{bookLevel}{2}
+\externalReferent{core}
+\externalReferent{stories}
+\externalReferent{judgement}
+
+\begin{document}
+
+\frontmatter
+
+\miniCover{Faces}{
+  \par in the \Glsfmttext{deep}
+}
+
+\noindent
+Need some \glspl{npc} for the \gls{deep}?
+Here's a collection of \glspl{statblock}.
+
+\clearpage
+\pagestyle{minizine}
+
+\subsection{Trade in the \Glsfmttext{deep}}
+
+Dwarven traders move small produce in a backpack, and larger produce in a hand-cart.
+
+\dwarventrader
+
+\dwarventrader
+
+\stepcounter{treasure}
+
+\begin{dlistDouble}
+  \item Have this \gls{talisman}: \lootTalisman.
+  Nearly free.
+  Just looking for \arabic{r3}0 goblin heads.
+
+  \showTalisman
+  \item Have 4 barrels of spirits, want a proper tale from the surface world (3 hours, minimum).
+  \item Have \lootJewellery, want \glspl{coin}.
+  \item Have contracted Mindflash syndrome, and want a cure.
+  \item Have $1D6$ alcohol-lanterns, want 8~\glspl{sp} each for them.
+  \item Have information on how to leave, want food.
+  \item Have $1D6$ shortswords and $1D6$ coils of rope (15~\glspl{step} long), want novel weapons.
+  \item Have chainmail of all sizes, want to hear an oath to protect the mountain at all cost and any call.
+  \item Have beard-dyes (\textit{all the colours of the furnace!}), want 2~\glspl{gp} per phial.
+  \item Have this idea for making money by selling in a non-transitive circle.
+  \textit{It'll make money from nothing, honestly.
+  Just gimme some coin and return in a year or so.}
+  \item Wedding invitations to be delivered to the next settlement, want to know how much it'll cost if you carry them all.
+\end{dlistDouble}
+
+Dwarven traders often refuse to sell to people who don't know how to use what they're buying.
+Waste is worse than theft.
+
+\dwarventrader
+
+\subsection{Dwarven Plans}
+
+\begin{dlist}
+  \item Find more birdies for the mine --- we only have two\ldots ONE left.
+  \item Making a model stone bridge out of pebbles.
+  \item Discussing how to test how tasy an ooze is befor eating it.
+  \item Competitive pipe-smoking.
+  \item Singing down a deep hole (the echo is part of the song).
+  \item Pleating beards.
+\end{dlist}
+
+\dwarvensoldier
+
+\dwarvensoldier
+
+\dwarvensoldier
+
+\dwarvenrunemaster
+
+\showStdSpells
+
+\clearpage
+
+\subsection{The Dead in the \Glsfmttext{deep}}
+
+\Glsfmtname{undead} \glsentrydesc{undead}
+
+\ifnum\thepage<9
+  \ghoul
+\fi
+
+\ghoul
+
+\ghast
+
+\ghast
+
+\clearpage
+
+\demilich
+
+\showStdSpells
+
+\ifnum\thepage<12
+  \ghast
+
+  \ghast
+\fi
+
+\clearpage
+
+\demilich
+
+\showStdSpells
+
+\clearpage
+
+\ifnum\thepage<13
+  \undeadgoblin
+
+  \undeadhobgoblin
+\fi
+
+
+\ifnum\thepage<14
+  \clearpage
+  \undeadogre
+\fi
+
+\end{document}
