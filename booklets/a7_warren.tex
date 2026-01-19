@@ -36,11 +36,29 @@ Here's a collection of \glspl{statblock}.
 
 \jelly
 
-\gnome
+\ifnum\value{r12}>5
+  \gnome[\npc{\ifodd\thetrack\M\else\F\fi\Gn}{\Glsfmttext{talisman} Trader}]
+
+  \begin{itemize}
+    \item The \lootTalisman\ costs \mkPrice{21}.
+
+    \showTalisman
+    \item The \lootTalisman\ costs \mkPrice{21}.
+
+    \showTalisman
+    \item The \lootTalisman\ costs \mkPrice{20}.
+
+    \showTalisman
+  \end{itemize}
+\else
+  \gnome
+\fi
 
 \gnome
 
-\gnomishsoldier
+\ifnum\thepage<3
+  \gnomishsoldier
+\fi
 
 \gnomishsoldier
 
@@ -48,9 +66,11 @@ Here's a collection of \glspl{statblock}.
 
 \showStdSpells
 
-\gnomishillusionist
+\ifnum\thepage<6{
+  \gnomishillusionist
 
-\showStdSpells
+  \showStdSpells
+}\fi
 
 \subsection{Goblin Ideas}
 
@@ -73,7 +93,9 @@ Here's a collection of \glspl{statblock}.
   \fi%
 \end{dlist}
 
-\goblin
+\ifnum\thepage<8
+  \goblin
+\fi
 
 \goblin
 
@@ -115,35 +137,27 @@ Here's a collection of \glspl{statblock}.
   {\ifodd\thexp to eat snails\else to collect rocks\fi}% Wants
   ]
 
-\wolf
-
-\goblincaster
-
-\showStdSpells
-
-\ifnum\theWater>1
-  \morphwolf
+\ifnum\thepage<10
+  \hobgoblin[\NPC{\T[\arabic{r12}]\N}% Symbol
+    {\ifodd\theSpeed Stinking \else Vomit-Stained\fi~Hobgoblins}% Name
+    {\ifnum\theDexterity<-1%
+      Flaking, ragged,
+    \else%
+      Hairy
+    \fi
+    \ifcase\theWits%
+      toenails%
+    \or%
+      ear-tips%
+    \else%
+      face-scabs%
+    \fi%
+    \ifodd\value{r3}\else, missing eye\fi%
+    }% Description
+    {\ifodd\value{r3} chews on own \else gently massages \fi \ifodd\value{r2} hands \else tongue\fi}% Mannerism
+    {\ifcase\value{r3} to find somewhere {\ifnum\thetemperature=0 warm \else to sleep \fi}\or to eat dogs\else sharper teeth\fi}% Wants
+  ]
 \fi
-
-\hobgoblin[\NPC{\T[\arabic{r12}]\N}% Symbol
-  {\ifodd\theSpeed Stinking \else Vomit-Stained\fi~Hobgoblins}% Name
-  {\ifnum\theDexterity<-1%
-    Flaking, ragged,
-  \else%
-    Hairy
-  \fi
-  \ifcase\theWits%
-    toenails%
-  \or%
-    ear-tips%
-  \else%
-    face-scabs%
-  \fi%
-  \ifodd\value{r3}\else, missing eye\fi%
-  }% Description
-  {\ifodd\value{r3} chews on own \else gently massages \fi \ifodd\value{r2} hands \else tongue\fi}% Mannerism
-  {\ifcase\value{r3} to find somewhere {\ifnum\thetemperature=0 warm \else to sleep \fi}\or to eat dogs\else sharper teeth\fi}% Wants
-]
 
 \hobgoblin[\NPC{\ifodd\theStrength\M\else\F\fi\N}% Symbol
   {\ifodd\theSpeed Stinking \else Vomit-Stained\fi~Hobgoblin}% Name
