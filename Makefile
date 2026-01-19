@@ -4,8 +4,9 @@ targets += shield.pdf
 targets += $(TITLE)_cover.pdf
 zines += almanac.pdf
 zines += deep.pdf
-zines += warren.pdf
+zines += forest.pdf
 zines += roads.pdf
+zines += warren.pdf
 output += shield_qr.tex
 
 include config/common.mk
