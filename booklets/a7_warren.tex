@@ -6,6 +6,8 @@
 \externalReferent{stories}
 \externalReferent{judgement}
 
+\randomize\randomize\randomize
+
 \begin{document}
 
 \frontmatter
@@ -62,6 +64,7 @@ Here's a collection of \glspl{statblock}.
 
 \gnomishsoldier
 
+\clearpage
 \gnomishillusionist
 
 \showStdSpells
@@ -72,6 +75,7 @@ Here's a collection of \glspl{statblock}.
   \showStdSpells
 }\fi
 
+\needspace{5\baselineskip}
 \subsection{Goblin Ideas}
 
 \begin{dlist}
@@ -181,22 +185,34 @@ Here's a collection of \glspl{statblock}.
 
 \ogre
 
-\ogre
-
 \armouredOgre
 
-\armouredOgre
-
-\ifnum\thetemperature>1
-  \hulk
-  \hulk
-\else
-  \watcher
-  \jelly
+\ifnum\thepage<11
+  \ogre
+  \armouredOgre
 \fi
 
 \clearpage
+\ifnum\thepage<13
+  \goblincaster
 
+  \showStdSpells
+
+  \ifnum\theWater>1
+    \morphwolf
+  \fi
+\else
+  \wolf
+  \ifnum\thetemperature>1
+    \hulk
+    \hulk
+  \else
+    \watcher
+    \jelly
+  \fi
+\fi
+
+\needspace{5\baselineskip}
 \subsection{Things Lying on the Ground}
 
 \setcounter{goblinLoot}{6}
@@ -210,8 +226,15 @@ Here's a collection of \glspl{statblock}.
   \item \lootGoblin
 \end{dlist}
 
-\ifnum\thepage<16
+\clearpage
+\ifnum\thepage<14
+  \jelly
+  \jelly
   \newpage
+\fi
+
+\ifnum\thepage<15
+  \jelly
   \jelly
 \fi
 
