@@ -1,0 +1,180 @@
+\documentclass[10pt,twoside]{book}
+\usepackage{config/bind}
+\usepackage{config/booklet}
+\setcounter{bookLevel}{2}
+\externalReferent{core}
+\externalReferent{stories}
+\externalReferent{judgement}
+
+\begin{document}
+
+\frontmatter
+
+\miniCover{Faces}{
+  \par past the \Glsfmttext{edge}
+}
+
+\noindent
+Need some \glspl{npc} for the \glspl{lonelyRoad}?
+Here's a collection of \glspl{statblock}.
+
+\clearpage
+\pagestyle{minizine}
+
+\subsection{Traders on the \Glsfmttext{lonelyRoad}}
+
+\begin{quotation}
+  You look like you could use some\ldots
+\end{quotation}
+
+\begin{dlist}
+  \item
+  \ifnum\thetemperature=0%
+    \rations, only \mkPrice[cp]{5}.
+    \item warm clothes, only \mkPrice[cp]{80}.
+  \else%
+    \rations, only \mkPrice[cp]{2}.
+    \item \rations, only \mkPrice[cp]{2}.
+  \fi%
+  \item rope (15~\glspl{step}), only \mkPrice{2}.
+  \item arrows, only \mkPrice[cp]{13} each and \mkPrice{2} for a quiver.
+  \item \glspl{torch}, only \mkPrice[cp]{9}, and \mkPrice[cp]{7} for a tinder box.
+  \ifodd\day%
+    \item daggers, only \mkPrice{3}.
+  \else%
+    \item `spearfishing equipment', only \mkPrice{4}.%
+    \footnote{The \glsfmttext{templeOfJustice} taxes weapons, but not fishing.}
+  \fi%
+\end{dlist}
+
+Traders have $1D6\times 10$ of each item.
+
+They'll buy \glspl{ingredient} for \mkPrice{8}.
+
+\humantrader
+
+\humantrader
+
+\donkey
+
+\doula
+\ifnum\themp>2
+  {\showStdSpells}
+\fi
+
+\doula
+\ifnum\themp>2
+  {\showStdSpells}
+\fi
+
+\humansoldier[\NPC{\glsentrysymbol{sylf}\T[\arabic{r2t4}]\Hu}% Symbol
+  {\Glsfmtplural{cutter}}% Name
+  {missing fingers and teeth}% Description
+  {\ifcase\value{r4}\relax\or jumping at shadows\or looking up at sky\else hands on neck\fi}% Mannerism
+  {\ifcase\thetemperature to avoid bandits\or to look busy\or find nearby \glsfmtplural{marchingMushroom}\else a drink of water\fi}% Wants
+  ]
+
+\humanhealer
+
+\randomize
+\humanhealer
+
+\humanfarmer
+
+\humanfarmer
+
+\clearpage
+\subsection{The Convoy}
+
+\ifcase\value{r0t3}
+  \def\wardName{Paradel}
+\or
+  \def\wardName{Tulip}
+\or
+  \def\wardName{Perspic}
+\else
+  \def\wardName{Simfoil}
+\fi
+
+\Glspl{warden} can't afford to travel without style (people would wonder where the money went).
+All have an entourage.
+
+\humandiplomat[\npc{\glsentrysymbol{paik}\ifodd\value{r0t3}\F\else\M\fi\Hu}{\Glsfmttext{warden}~\wardName}]
+\humandiplomat
+
+\mule
+
+\sunguard
+
+\humanmaid
+
+\clearpage
+\ifodd\value{r3}
+  \humanbard
+  \ifnum\themp>2
+    {\showStdSpells}
+  \else
+    \humanbard
+  \fi
+\else
+  \humanalchemist
+
+  {\showStdSpells}
+\fi
+
+\clearpage
+\subsection{Bandits}
+
+\begin{quotation}
+  We're not bandits!
+  We're
+  \ifcase\thetemperature
+    just really cold farmers.
+    Hand over your clothes or we plant a blade in your chest!
+  \or
+    farmers with diverse incomes!
+  \or
+    fighters for truth and justice.
+    Now we're going to teach you a lesson!
+  \else
+    independent mercenaries between contracts.
+  \fi
+\end{quotation}
+
+\humansoldier[\NPC{\T[\arabic{r4t6}]\Hu}% Symbol
+  {Bandits}% Name
+  {\ifnum\theStrength>1 missing fingers and teeth\else twitchy and scared\fi}% Description
+  {\ifcase\value{r4}\relax\or sharpening blades\or whispering among themselves\else hand signals towards the bushes\fi}% Mannerism
+  {\ifcase\thetemperature to avoid \glsfmtplural{guard}\or to look scary\or to know where the richest convoys go\else return home with at least 6~\glspl{sp}\fi}% Wants
+  ]
+
+\ifnum\thepage<11
+  \humanthief[\npc{\ifodd\theStrength\F\else\M\fi\Hu}{\composeHumanName, Thief}]
+\fi
+
+\humanarcher
+
+\humanarcher
+
+\humanthief[\npc{\ifodd\theStrength\F\else\M\fi\Hu}{\composeHumanName, Thief}]
+
+\humanthief[\npc{\ifodd\theStrength\F\else\M\fi\Hu}{\composeHumanName, Thief}]
+
+\clearpage
+
+\ifnum\thepage<13
+  \gnollshaman
+  {\showStdSpells}
+\else
+  \ifnum\thepage<14
+    \gnollhunter
+    \gnollhunter
+  \fi
+\fi
+
+\null
+\foreach \x in {2,3,4}{%
+  \ifnum\thepage<14\clearpage\null\par\fi
+}
+
+\end{document}
