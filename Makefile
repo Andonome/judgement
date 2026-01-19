@@ -7,11 +7,14 @@ zines += deep.pdf
 zines += forest.pdf
 zines += roads.pdf
 zines += warren.pdf
+targets += statblocks.pdf
 output += shield_qr.tex
+zine_builds = $(patsubst %, $(DROSS)/a7_%, $(zines))
 
 include config/common.mk
 
-$(DROSS)/a7_almanac.pdf: $(DBOOK) $(wildcard encounters/*.tex)
+$(zine_builds): $(DBOOK)
+$(DROSS)/a7_almanac.pdf: $(wildcard encounters/*.tex)
 
 SHIELD_TARGET = $(shell grep 'shield\.pdf' README.md | cut -d' ' -f2 | head -1)
 
@@ -29,3 +32,9 @@ $(DROSS)/flip.pdf: $(DROSS)/vanity.pdf | $(DROSS)/
 	pdfjam --papersize 420mm,148mm  $< '1' --angle 180 -o $@
 shield.pdf: $(DROSS)/flip.pdf | $(DROSS)/vanity.pdf ## Judge shield
 	pdfjam $< '1' $| '2' --landscape --nup 1x2 -o $@
+
+statblocks.pdf: $(zines)
+	pdfjam --pdftitle $(basename $@) --pdfsubject "BIND RPG" \
+	--pdfkeywords "RPG,TTRPG,roleplaying" \
+	$^ \
+	--outfile $@
