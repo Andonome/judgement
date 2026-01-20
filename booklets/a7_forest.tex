@@ -75,9 +75,11 @@ Currently \seasonalActivities.
   \showStdSpells
 \fi
 
-\elf
-\ifnum\themp>2
-  \showStdSpells
+\ifnum\thepage<13
+  \elf
+  \ifnum\themp>2
+    \showStdSpells
+  \fi
 \fi
 
 \null
@@ -86,16 +88,12 @@ Currently \seasonalActivities.
   \morphwoodspy
 
   \morphhorse
+  \clearpage
 \fi
 
-\clearpage
 \ifnum\thepage<14
-  \elf
-  \showStdSpells
-\else
-  \ifnum\thepage<16
-    \newpage
-  \fi
+  \clearpage\null
 \fi
+
 
 \end{document}
