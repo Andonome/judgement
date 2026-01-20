@@ -7,7 +7,7 @@ zines += deep.pdf
 zines += forest.pdf
 zines += roads.pdf
 zines += warren.pdf
-targets += statblocks.pdf
+targets += Statblocks.pdf
 output += shield_qr.tex
 zine_builds = $(patsubst %, $(DROSS)/a7_%, $(zines))
 
@@ -33,7 +33,15 @@ $(DROSS)/flip.pdf: $(DROSS)/vanity.pdf | $(DROSS)/
 shield.pdf: $(DROSS)/flip.pdf | $(DROSS)/vanity.pdf ## Judge shield
 	pdfjam $< '1' $| '2' --landscape --nup 1x2 -o $@
 
-statblocks.pdf: $(zines)
+config/%.pdf:
+	make -C config $(notdir $@ )
+
+
+$(DROSS)/bailey_1.pdf: config/markets.pdf | $(DROSS)/
+	pdfjam $^ 1-2 \
+ 	--outfile $@
+
+Statblocks.pdf: $(DROSS)/bailey_1.pdf $(zines)
 	pdfjam --pdftitle $(basename $@) --pdfsubject "BIND RPG" \
 	--pdfkeywords "RPG,TTRPG,roleplaying" \
 	$^ \

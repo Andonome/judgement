@@ -51,7 +51,7 @@ We finish with a few 'GM tips' just for running campaigns in Fenestra, with a tr
 [roads]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/roads.pdf?job=build
 [warren]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/warren.pdf?job=build
 [rules]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/rules.pdf?job=build
-[statblocks]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/statblocks.pdf?job=build
+[statblocks]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/Statblocks.pdf?job=build
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [fenwiki]: https://gitlab.com/bindrpg/aif/-/wikis/home
 [compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
