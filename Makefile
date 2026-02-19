@@ -38,7 +38,7 @@ config/%.pdf:
 
 
 $(DROSS)/bailey_1.pdf: config/markets.pdf | $(DROSS)/
-	pdfjam $^ 1-2 \
+	pdfjam $^ 1-4,9-10 \
  	--outfile $@
 
 Statblocks.pdf: $(DROSS)/bailey_1.pdf $(zines) ## Make NPC statblock zines
