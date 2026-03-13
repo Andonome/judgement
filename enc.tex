@@ -147,7 +147,89 @@ The interpretation depends on the \gls{cycle}.
 
 \begin{multicols}{2}
 
+\subsection{The Civilization Rating}
+\label{civilizationRating}
+\index{Civilization Rating}
+
+The most common things one encounters are \emph{traders}.  Each morning and
+afternoon, roll a die; if the die rolls equal or less than the
+\textit{Civilization Rating} then the troupe encounter traders.
+
+Out on \pgls{lonelyRoad}, the troupe encounter traders on the roll of `1'.  The
+closer they come to a town, the more chance of finding traders.
+
+%The time until the encounter looks at a number of dice equal to the Civilization Rating, and selects the lowest; so a Civilization Rating of `2' means the lowest of the first 2 dice are used to see how many days until the encounter occurs.
+
+\setcounter{encnum}{0}
+\setcounter{dlist}{0}
+
+\begin{boxtable}
+  \bf Rating & \bf Type of Place \\\hline
+  \dicef{\arabic{dlist}} &
+  Means the troupe is in a forest, far from any reasonable location.
+  \stepcounter{dlist}
+  \stepcounter{encnum}
+  \\
+  \arabic{dlist} &
+  \encCivilization, between two \glspl{village}, perhaps by \pgls{bothy}.
+  \stepcounter{encnum}
+  \stepcounter{dlist}
+  \\
+  \arabic{dlist} &
+  \encCivilization\ traders arrive on the roll of `\arabic{dlist}' because they
+  often need to visit to ask for an escort, but dislike wandering out where to
+  many \glspl{monster} roam.
+  \stepcounter{encnum}
+  \stepcounter{dlist}
+  \\
+  \arabic{dlist} &
+  \encCivilization\ have plenty of traders dropping by every few days.
+  \stepcounter{encnum}
+  \stepcounter{dlist}
+  \\
+
+  \arabic{dlist} &
+  \encCivilization\ often have one side looking towards open fields, with peaceful hamlets in the distance.
+  \stepcounter{encnum}
+  \stepcounter{dlist}
+  \\
+
+  \arabic{dlist} &
+  \encCivilization\ \glspl{monster} become rare, as most never make it this
+  far.
+  \stepcounter{encnum}
+  \stepcounter{dlist}
+  \\
+
+  \arabic{dlist} &
+  \encCivilization\ means no possible monster encounters, and \glspl{pc} can use the local, massive, markets.
+  \\
+\end{boxtable}
+
+\subsubsection{Items for Sale}
+\label{traders}
+depend on the other dice.  Roll 3 more to determine what the traders have which
+might interest the \glspl{pc}.  Traders always shout this information ahead of
+them, to entice people to buy their goods.
+
+\encTraders
+
+For example, rolling \dicef{8}\dicef{3} would indicate that the \glspl{pc} can buy some rope and \glspl{torch}.
+
+\index{Selling Beasts}
+Traders also purchase live \glspl{monster} for a number of \glspl{sp} equal to
+their \gls{cr}, or half that number if the body is not well prepared (for
+example, if the \glspl{pc} failed their \gls{harvesting} roll).  Legally, the
+troupe should give half of this money to the \gls{templeOfBeasts}, but that's
+\emph{their business} --- most traders don't care about another guild's laws
+once they're outside a town.
+
+\subsubsection{The Time Until the Encounter}
+depends on the season, just like creature-encounters, \vpageref{creatureEncounters}.
+
+\needspace{8em}
 \subsection{Creatures}
+\label{creatureEncounters}
 
 Which creatures are active depends on the \gls{cycle}'s temperature.
 
@@ -270,71 +352,6 @@ every noise or light becomes a beacon for creatures all around.
 If anyone shouts, makes a fire, or otherwise draws attention to themselves, roll $1D6$; on the roll of a `1', roll on the encounter table immediately.
 
 Deer and auroch flee when they hear a sound, but predators will immediately hunt for the source of the sound, and arrive after \pgls{interval}.
-
-\subsection{The Civilization Rating}
-\label{civilizationRating}
-\index{Civilization Rating}
-
-More civilized areas have fewer creatures and more traders.
-If the first die is equal or below the Civilization Rating, replace the usual creature encounter with traders.
-In this way, anyone approaching a town will slowly find the natural encounters being eaten away by civilization.
-
-The time until the encounter looks at a number of dice equal to the Civilization Rating, and selects the lowest; so a Civilization Rating of `2' means the lowest of the first 2 dice are used to see how many days until the encounter occurs.
-
-\setcounter{encnum}{1}
-\setcounter{dlist}{0}
-
-\begin{boxtable}
-  \bf Rating & \bf Type of Place \\\hline
-  \dicef{\arabic{dlist}} &
-  Means the troupe is in a forest, far from any reasonable location.
-  \stepcounter{dlist}
-  \\
-  \arabic{dlist} &
-  \encCivilization\ indicates a caravan with \arabic{dlist} useful item.
-  \stepcounter{encnum}
-  \stepcounter{dlist}
-  \\
-  \arabic{dlist} &
-  \encCivilization\ indicates a caravan with \arabic{dlist} useful item.
-  \stepcounter{encnum}
-  \stepcounter{dlist}
-  \\
-  \arabic{dlist} &
-  \encCivilization\ indicates a caravan with \arabic{dlist} useful item.
-  \stepcounter{encnum}
-  \\
-
-  \arabic{dlist} &
-  \encCivilization\ indicates a caravan with \arabic{dlist} useful item.
-  \stepcounter{encnum}
-  \stepcounter{dlist}
-  \\
-
-  \arabic{dlist} &
-  \encCivilization\ indicates a caravan with \arabic{dlist} useful item.
-  \stepcounter{encnum}
-  \stepcounter{dlist}
-  \\
-
-  \arabic{dlist} &
-  \encCivilization\ means no possible monster encounters, and \glspl{pc} can use the local, massive, markets.
-  \\
-\end{boxtable}
-
-\subsubsection{Items for Sale}
-\label{traders}
-use the remaining dice to determine what the traders have which might interest the \glspl{pc}.
-Traders always shout this information ahead of them, to entice people to buy their goods.
-
-\encTraders
-
-Each of your encounter dice also represent an interesting item the traders have.
-For example, rolling \dicef{8}\dicef{3} would indicate that the \glspl{pc} can buy some rope and \glspl{torch}.
-
-\index{Selling Beasts}
-Traders also purchase live \glspl{monster} for a number of \glspl{sp} equal to their \gls{cr}, or half that number if the body is well prepared.
-
 
 \end{multicols}
 
