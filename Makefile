@@ -29,20 +29,21 @@ images/extracted/cover.jpg: images/loh/dragon.jpg | images/extracted/inclusion.t
 	$(CP) $< $@
 
 $(DROSS)/flip.pdf: $(DROSS)/vanity.pdf | $(DROSS)/
-	pdfjam --papersize 420mm,148mm  $< '1' --angle 180 -o $@
+	pdfjam $(TEX_ARGS) --papersize 420mm,148mm  $< '1' --angle 180 -o $@
 shield.pdf: $(DROSS)/flip.pdf | $(DROSS)/vanity.pdf ## Judge shield
-	pdfjam $< '1' $| '2' --landscape --nup 1x2 -o $@
+	pdfjam $(TEX_ARGS) $< '1' $| '2' --landscape --nup 1x2 -o $@
 
 config/%.pdf:
 	make -C config $(notdir $@ )
 
 
 $(DROSS)/bailey_1.pdf: config/markets.pdf | $(DROSS)/
-	pdfjam $^ 1-4,9-10 \
+	pdfjam $(TEX_ARGS) $^ 1-4,9-10 \
  	--outfile $@
 
 Statblocks.pdf: $(DROSS)/bailey_1.pdf $(zines) ## Make NPC statblock zines
-	pdfjam --pdftitle $(basename $@) --pdfsubject "BIND RPG" \
+	pdfjam $(TEX_ARGS) --pdftitle $(basename $@) --pdfsubject "BIND RPG" \
+	$(TEX_ARGS) \
 	--pdfkeywords "RPG,TTRPG,roleplaying" \
 	$^ \
 	--outfile $@
