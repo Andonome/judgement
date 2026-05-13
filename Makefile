@@ -34,7 +34,7 @@ shield.pdf: $(DROSS)/flip.pdf | $(DROSS)/vanity.pdf ## Judge shield
 	pdfjam $(TEX_ARGS) $< '1' $| '2' --landscape --nup 1x2 -o $@
 
 config/%.pdf:
-	$(MAKE) -C config $(notdir $@ )
+	make -C config $(notdir $@ )
 
 
 $(DROSS)/bailey_1.pdf: config/markets.pdf | $(DROSS)/
