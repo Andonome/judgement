@@ -41,7 +41,7 @@ $(DROSS)/bailey_1.pdf: config/markets.pdf | $(DROSS)/
 	pdfjam $(TEX_ARGS) $^ 1-4,9-10 \
  	--outfile $@
 
-Statblocks.pdf: $(DROSS)/bailey_1.pdf $(zines) ## Make NPC statblock zines
+Statblocks.pdf: $(DROSS)/bailey_1.pdf $(zines) config/spells.pdf ## Make NPC statblock zines
 	pdfjam $(TEX_ARGS) --pdftitle $(basename $@) --pdfsubject "BIND RPG" \
 	$(TEX_ARGS) \
 	--pdfkeywords "RPG,TTRPG,roleplaying" \
