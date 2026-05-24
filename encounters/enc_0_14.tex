@@ -1,0 +1,18 @@
+\begin{boxtext}
+  Today the branches drip, ferns drip, hats drip, and any donkeys or carts also drip.
+  The world has little swirls of shining movement whenever the wind dislodges more drips from the persistent rain.
+\end{boxtext}
+
+Once of these shining swirles comes from \pgls{woodspy}.
+
+\woodspy
+
+\randomize
+\ifnum\thehp<\value{r12}
+  The \gls{woodspy} stalks the troupe, then attacks at night.
+\else
+  The \gls{woodspy} watches silently, then leaves.
+\fi
+
+\setTN{Dexterity}{Stealth}
+\act{spot the \gls{woodspy}}{Wits}{Vigilance}{\arabic{tn}}
