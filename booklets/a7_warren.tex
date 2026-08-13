@@ -160,7 +160,7 @@ Here's a collection of \glspl{statblock}.
     \fi%
     \ifodd\value{r3}\else, missing eye\fi%
     }% Description
-    {\ifodd\value{r3} chews on own \else gently massages \fi \ifodd\value{r2} hands \else tongue\fi}% Mannerism
+    {\ifodd\value{r3} chews on own \else gently massages \fi \ifodd\value{r2} hands\else tongue\fi}% Mannerism
     {\ifcase\value{r3} to find somewhere {\ifnum\thetemperature=0 warm \else to sleep \fi}\or to eat dogs\else sharper teeth\fi}% Wants
   ]
 \fi
