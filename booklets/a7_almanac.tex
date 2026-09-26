@@ -357,6 +357,9 @@ Whenever a day has an encounter, select the next \vpageref{encI}.
 }
 \needspace{3em}
 
+  \IfLabelExistsTF{\jobname:harvestStirge}{
+    \label{\jobname:harvestStirge}%
+  }{}
   \IfLabelExistsTF{\jobname:harvestBasilisk}{
     \showGls{basilisk}
   }{}
