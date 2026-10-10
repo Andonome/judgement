@@ -45,6 +45,7 @@ We finish with a few 'GM tips' just for running campaigns in Fenestra, with a tr
 - The complete [core rules][core] are structured mostly as a reference, rather than required reading.
 - For a more detailed look at the sentient creatures of Fenestra, print a copy of the [players' guide][stories].
 
+[compiling]: https://gitlab.com/bindrpg/core/-/wikis/Development/Compiling
 [almanac]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/almanac.pdf?job=build
 [deep]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/deep.pdf?job=build
 [forest]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/forest.pdf?job=build
@@ -54,8 +55,8 @@ We finish with a few 'GM tips' just for running campaigns in Fenestra, with a tr
 [statblocks]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/Statblocks.pdf?job=build
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [fenwiki]: https://gitlab.com/bindrpg/aif/-/wikis/home
-[compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
-[issues email]: mailto:contact-project+bindrpg-judgement-47918887-issue-@incoming.gitlab.com
+[issues email]: 
+mailto:contact-project+bindrpg-judgement-47918887-issue-@incoming.gitlab.com
 [board]: https://gitlab.com/bindrpg/judgement/-/issues
 [shield]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/shield.pdf?job=build
 [core]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Core_Rules.pdf?job=build
