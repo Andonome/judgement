@@ -468,8 +468,14 @@
                         Nine confused patrons sit in a corner, surrounded by a wedding party of hundreds.
                         \\
             & \Large\dicef{1} &
-                        Four thugs, waiting to rob anyone who looks weak. &
-                        \Pgls{tender} is raving at people to fetch him \pgls{mixer} for \pgls{elixir} for his illness (Mindflash Syndrome, \autopageref{Mindflash Syndrome}), but none will come since he insulted \pgls{helper} last year.
+              Four thugs, waiting to rob anyone who looks weak. &
+              \ifodd\value{r4}%
+                \Pgls{tender} is raving at people to fetch him \pgls{mixer} for \pgls{elixir} for his illness (Mindflash Syndrome, \autopageref{Mindflash Syndrome}), but none will come since he insulted \pgls{helper} last year.
+              \else%
+                People pour out of a smokey tavern.
+                The fire inside will spread soon.%
+                \exRef{core}{Core Rules}{townFires}
+              \fi%
                         \\
   \hline
   \end{wideTable}
