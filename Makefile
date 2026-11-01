@@ -7,6 +7,7 @@ zines += deep.pdf
 zines += forest.pdf
 zines += roads.pdf
 zines += warren.pdf
+zines += war_of_lies.pdf
 targets += Statblocks.pdf
 output += shield_qr.tex
 zine_builds = $(patsubst %, $(DROSS)/a7_%, $(zines))
